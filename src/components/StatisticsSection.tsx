@@ -4,8 +4,8 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { MapPin } from 'lucide-react';
 
 const ageData = [
-  { name: '20-30', value: 35, color: 'hsl(75, 100%, 55%)' },
-  { name: '30-40', value: 40, color: 'hsl(75, 100%, 45%)' },
+  { name: '20-30', value: 35, color: 'hsl(125, 33%, 48%)' },
+  { name: '30-40', value: 40, color: 'hsl(125, 33%, 38%)' },
   { name: '40-50', value: 18, color: 'hsl(220, 60%, 20%)' },
   { name: '50+', value: 7, color: 'hsl(220, 60%, 30%)' },
 ];

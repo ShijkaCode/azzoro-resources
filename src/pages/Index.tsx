@@ -1,10 +1,12 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import IntroSection from '@/components/IntroSection';
+import WhatWeDo from '@/components/WhatWeDo';
 import BentoGrid from '@/components/BentoGrid';
-import StatisticsSection from '@/components/StatisticsSection';
+import ESGSection from '@/components/ESGSection';
 import FooterCards from '@/components/FooterCards';
 import PartnerLogos from '@/components/PartnerLogos';
+import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -14,10 +16,12 @@ const Index = () => {
       <main>
         <HeroSection />
         <IntroSection />
+        <WhatWeDo />
         <BentoGrid />
-        <StatisticsSection />
+        <ESGSection />
         <FooterCards />
         <PartnerLogos />
+        <Newsletter />
       </main>
       <Footer />
     </div>
