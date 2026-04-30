@@ -20,10 +20,7 @@ const imagesToPreload = [
   '/partner_logos/untitled-2_3.png',
 ];
 
-const videoSources = [
-  { src: '/videos/hero-720.webm', type: 'video/webm' },
-  { src: '/videos/hero-720.mp4', type: 'video/mp4' },
-];
+const videoSources = [{ src: '/videos/hero-720.mp4', type: 'video/mp4' }];
 
 const preloadImage = (src: string) =>
   new Promise<void>((resolve) => {

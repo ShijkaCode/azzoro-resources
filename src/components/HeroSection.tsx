@@ -43,7 +43,6 @@ const HeroSection = () => {
             playsInline
             preload="metadata"
           >
-            <source src="/videos/hero-720.webm" type="video/webm" />
             <source src="/videos/hero-720.mp4" type="video/mp4" />
           </video>
 
