@@ -20,7 +20,10 @@ const imagesToPreload = [
   '/partner_logos/untitled-2_3.png',
 ];
 
-const videoToPreload = '/videos/9310157-uhd_3840_2160_30fps.mp4';
+const videoSources = [
+  { src: '/videos/hero-1080.webm', type: 'video/webm' },
+  { src: '/videos/hero-1080.mp4', type: 'video/mp4' },
+];
 
 const preloadImage = (src: string) =>
   new Promise<void>((resolve) => {
@@ -157,12 +160,15 @@ const IntroGate = ({ onEnter }: { onEnter: () => void }) => {
       {/* Hidden preload video */}
       <video
         ref={videoRef}
-        src={videoToPreload}
         preload="auto"
         muted
         playsInline
         className="absolute w-px h-px opacity-0 pointer-events-none"
-      />
+      >
+        {videoSources.map((s) => (
+          <source key={s.src} src={s.src} type={s.type} />
+        ))}
+      </video>
     </motion.div>
   );
 };

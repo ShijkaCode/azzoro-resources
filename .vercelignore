@@ -1,0 +1,14 @@
+# Local-only assets that should never be uploaded to Vercel.
+# Vercel does NOT read .gitignore — this file is required.
+
+# Local build artifact (Vercel rebuilds remotely)
+dist/
+
+# 4K video master kept for re-encoding; not used at runtime
+videos-source/
+
+# Misc local cruft
+.vscode/
+.idea/
+.DS_Store
+coverage/
