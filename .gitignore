@@ -11,14 +11,25 @@ node_modules
 dist
 dist-ssr
 *.local
+.vercel
+coverage
+*.tsbuildinfo
+tmp
+temp
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.claude
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.*
+!.env.example

@@ -34,13 +34,16 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 lg:px-12 pt-6"
       >
         <nav
-          className={`max-w-6xl mx-auto transition-all duration-300 rounded-2xl ${
+          className={`relative max-w-6xl mx-auto transition-all duration-500 rounded-2xl border border-white/10 overflow-hidden ${
             isScrolled
-              ? 'bg-navy-dark/95 backdrop-blur-lg shadow-2xl'
-              : 'bg-navy-dark/80 backdrop-blur-md shadow-lg'
+              ? 'bg-navy-dark/55 backdrop-blur-2xl backdrop-saturate-150 shadow-[0_18px_50px_-15px_rgba(0,0,0,0.6)]'
+              : 'bg-navy-dark/30 backdrop-blur-xl backdrop-saturate-150 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.45)]'
           }`}
         >
-          <div className="px-6 sm:px-8 lg:px-10">
+          {/* Inner glass highlight */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent" />
+          <div className="relative px-6 sm:px-8 lg:px-10">
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <a href="#home" className="flex items-center">
@@ -57,7 +60,7 @@ const Navbar = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="px-4 py-2 text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium hover-underline"
+                    className="relative px-4 py-2 text-white/75 hover:text-white transition-colors duration-200 text-sm font-medium tracking-wide rounded-full hover:bg-white/[0.06]"
                   >
                     {link.label}
                   </a>
@@ -103,7 +106,7 @@ const Navbar = () => {
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div
-              className="absolute inset-0 bg-navy-dark/95 backdrop-blur-lg"
+              className="absolute inset-0 bg-navy-dark/70 backdrop-blur-md"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
@@ -113,7 +116,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               className="absolute top-28 left-0 right-0 px-6 sm:px-8 lg:px-12"
             >
-              <div className="max-w-6xl mx-auto bg-navy-dark/95 backdrop-blur-lg rounded-2xl p-6 shadow-2xl">
+              <div className="max-w-6xl mx-auto bg-navy-dark/60 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 rounded-2xl p-6 shadow-2xl">
                 <div className="flex flex-col gap-2">
                   {navLinks.map((link, index) => (
                     <motion.a
