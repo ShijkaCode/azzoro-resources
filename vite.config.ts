@@ -24,19 +24,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-          if (/node_modules\/(react|react-dom|react-router-dom|scheduler)\//.test(id)) {
-            return "react-vendor";
-          }
-          if (id.includes("framer-motion")) return "motion";
-          if (id.includes("@radix-ui")) return "radix";
-          return "vendor";
-        },
-      },
-    },
-  },
 }));
