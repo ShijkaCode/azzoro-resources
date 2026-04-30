@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const imagesToPreload = [
@@ -20,8 +20,6 @@ const imagesToPreload = [
   '/partner_logos/untitled-2_3.png',
 ];
 
-const videoSources = [{ src: '/videos/hero-720.mp4', type: 'video/mp4' }];
-
 const preloadImage = (src: string) =>
   new Promise<void>((resolve) => {
     const img = new Image();
@@ -32,7 +30,6 @@ const preloadImage = (src: string) =>
 
 const IntroGate = ({ onEnter }: { onEnter: () => void }) => {
   const [ready, setReady] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     let loaded = 0;
@@ -154,18 +151,6 @@ const IntroGate = ({ onEnter }: { onEnter: () => void }) => {
         </motion.div>
       </motion.div>
 
-      {/* Hidden preload video */}
-      <video
-        ref={videoRef}
-        preload="auto"
-        muted
-        playsInline
-        className="absolute w-px h-px opacity-0 pointer-events-none"
-      >
-        {videoSources.map((s) => (
-          <source key={s.src} src={s.src} type={s.type} />
-        ))}
-      </video>
     </motion.div>
   );
 };
