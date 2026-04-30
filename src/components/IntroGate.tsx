@@ -21,8 +21,8 @@ const imagesToPreload = [
 ];
 
 const videoSources = [
-  { src: '/videos/hero-1080.webm', type: 'video/webm' },
-  { src: '/videos/hero-1080.mp4', type: 'video/mp4' },
+  { src: '/videos/hero-720.webm', type: 'video/webm' },
+  { src: '/videos/hero-720.mp4', type: 'video/mp4' },
 ];
 
 const preloadImage = (src: string) =>
