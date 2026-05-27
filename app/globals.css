@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 213 83% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 201 89% 92%;
+    --accent-foreground: 213 83% 32%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 213 83% 48%;
+    --radius: 1rem;
+
+    --navy-dark: 222 47% 11%;
+    --navy-soft: 215 55% 18%;
+    --sky-line: 199 86% 69%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .hero-shell {
+    @apply relative overflow-hidden rounded-[2rem] border border-white/10 bg-hero-grid text-white shadow-[0_32px_80px_-32px_rgba(15,23,42,0.7)];
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-primary;
+  }
+
+  .surface-card {
+    @apply rounded-[1.5rem] border border-white/60 bg-white/80 shadow-[0_18px_50px_-24px_rgba(15,23,42,0.28)] backdrop-blur;
+  }
+
+  .dark-card {
+    @apply rounded-[1.5rem] border border-white/10 bg-white/5 shadow-[0_18px_50px_-24px_rgba(15,23,42,0.65)] backdrop-blur;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
