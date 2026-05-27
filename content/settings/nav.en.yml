@@ -1,0 +1,14 @@
+items:
+  - label: About us
+    href: /about
+  - label: Projects
+    href: /projects
+  - label: ESG
+    href: /esg
+  - label: Gallery
+    href: /gallery
+  - label: Investor Center
+    href: https://investors.azzororesources.com
+    external: true
+  - label: Contact us
+    href: /contact

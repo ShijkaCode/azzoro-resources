@@ -1,0 +1,25 @@
+tagline: Corporate website foundation for Azzuro Resources with locale-aware routing and CMS-backed page content.
+link_columns:
+  - heading: Company
+    links:
+      - label: About us
+        href: /about
+      - label: Projects
+        href: /projects
+      - label: ESG
+        href: /esg
+  - heading: Resources
+    links:
+      - label: Gallery
+        href: /gallery
+      - label: Investor Center
+        href: https://investors.azzororesources.com
+        external: true
+      - label: Contact us
+        href: /contact
+copyright_holder: Azzuro Resources PLC
+legal_links:
+  - label: Privacy
+    href: /legal/privacy
+  - label: Terms
+    href: /legal/terms

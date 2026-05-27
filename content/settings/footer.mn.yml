@@ -1,0 +1,25 @@
+tagline: Azzuro Resources сайтын locale-aware routing болон CMS-backed контенттой суурийн хувилбар.
+link_columns:
+  - heading: Компани
+    links:
+      - label: Бидний тухай
+        href: /about
+      - label: Төслүүд
+        href: /projects
+      - label: Тогтвортой байдал
+        href: /esg
+  - heading: Нөөц
+    links:
+      - label: Галерей
+        href: /gallery
+      - label: Хөрөнгө оруулагчдад
+        href: https://investors.azzororesources.com
+        external: true
+      - label: Холбоо барих
+        href: /contact
+copyright_holder: Azzuro Resources PLC
+legal_links:
+  - label: Нууцлал
+    href: /legal/privacy
+  - label: Нөхцөл
+    href: /legal/terms

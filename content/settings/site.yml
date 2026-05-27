@@ -1,0 +1,9 @@
+brand_name: Azzuro Resources PLC
+logo: /new_logo.png
+logo_dark: /new_logo.png
+stock_ticker: AZ9
+stock_api_enabled: false
+investor_portal_url: https://investors.azzororesources.com
+social:
+  linkedin: https://www.linkedin.com
+default_locale: en
