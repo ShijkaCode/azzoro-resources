@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.next
 dist
 dist-ssr
 *.local
@@ -19,6 +20,9 @@ temp
 
 # Local-only video masters (kept out of git and Vercel deploy)
 videos-source/
+
+# Working files from PPT analysis (not for commit)
+docs/.pptx_extract/
 
 # Editor directories and files
 .vscode/*
