@@ -10,6 +10,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'imagedelivery.net' },
       { protocol: 'https', hostname: '**.cloudflarestream.com' },
+      { protocol: 'https', hostname: 'api.maptiler.com' },
     ],
   },
 };

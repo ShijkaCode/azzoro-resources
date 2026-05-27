@@ -39,7 +39,7 @@ leadership_teaser:
   cta_label: Багтай танилцах
   cta_href: /about
 news_section_enabled: false
-stock_section_enabled: false
+stock_section_enabled: true
 ---
 
 Нүүр хуудасны түр markdown body.

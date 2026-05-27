@@ -39,7 +39,7 @@ leadership_teaser:
   cta_label: Meet the team
   cta_href: /about
 news_section_enabled: false
-stock_section_enabled: false
+stock_section_enabled: true
 ---
 
 Placeholder home markdown body.
