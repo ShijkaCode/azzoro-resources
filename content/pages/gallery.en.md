@@ -1,6 +1,6 @@
 ---
 intro_heading: Gallery
-intro_body: Placeholder gallery introduction while the photo, video, and case study collections remain empty.
+intro_body: Azzuro's gallery is structured to mix field photography, video, and long-form case studies in one editorial surface. This seeded version uses placeholder assets so the layout, lightbox, and detail routing can be reviewed before client media arrives.
 filter_tags:
   - slug: all
     label: All
@@ -8,4 +8,8 @@ filter_tags:
     label: Field
   - slug: community
     label: Community
+  - slug: drilling
+    label: Drilling
+  - slug: events
+    label: Events
 ---
