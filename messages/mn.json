@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "Бидний тухай",
+    "projects": "Төслүүд",
+    "esg": "Тогтвортой байдал",
+    "gallery": "Галерей",
+    "investorCenter": "Хөрөнгө оруулагчдад",
+    "contact": "Холбоо барих"
+  },
+  "common": {
+    "readMore": "Дэлгэрэнгүй",
+    "viewAll": "Бүгдийг харах",
+    "visitInvestorPortal": "Хөрөнгө оруулагчийн порталд зочлох",
+    "languageEnglish": "English",
+    "languageMongolian": "Монгол"
+  },
+  "footer": {
+    "copyright": "© {year} Azzuro Resources PLC. Бүх эрх хуулиар хамгаалагдсан."
+  }
+}

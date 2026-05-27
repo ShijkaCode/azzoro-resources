@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "About us",
+    "projects": "Projects",
+    "esg": "ESG",
+    "gallery": "Gallery",
+    "investorCenter": "Investor Center",
+    "contact": "Contact us"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "visitInvestorPortal": "Visit investor portal",
+    "languageEnglish": "English",
+    "languageMongolian": "Монгол"
+  },
+  "footer": {
+    "copyright": "© {year} Azzuro Resources PLC. All rights reserved."
+  }
+}
