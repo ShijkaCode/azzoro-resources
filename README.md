@@ -1,13 +1,14 @@
-# Mongolia Engineering Hub
+# Azzuro
 
-Marketing site for Asian Battery Metals PLC, built with React, Vite, TypeScript, Tailwind CSS, and shadcn/ui components.
+Foundation migration for the Azzuro Resources marketing site, built with Next.js App Router, TypeScript, Tailwind CSS, next-intl, and shadcn/ui primitives.
 
 ## Stack
 
+- Next.js 14
 - React 18
 - TypeScript
-- Vite 5
 - Tailwind CSS
+- next-intl
 - Framer Motion
 - shadcn/ui
 - Vitest
@@ -20,21 +21,22 @@ Marketing site for Asian Battery Metals PLC, built with React, Vite, TypeScript,
 ## Getting Started
 
 ```bash
-git clone https://github.com/ShijkaCode/mongolia-engineering-hub.git
-cd mongolia-engineering-hub
+git clone <your-repository-url>
+cd azzuro
 npm install
 npm run dev
 ```
 
-The local dev server runs through Vite. By default, the project is configured to serve on port `8080`.
+The local dev server runs through Next.js on port `3000`.
 
 ## Available Scripts
 
 ```bash
 npm run dev        # Start local development server
-npm run build      # Create production build in dist/
-npm run preview    # Preview the production build locally
-npm run lint       # Run ESLint
+npm run build      # Create a production build
+npm run start      # Run the production server
+npm run lint       # Run Next.js ESLint checks
+npm run typecheck  # Run TypeScript without emitting
 npm run test       # Run Vitest once
 npm run test:watch # Run Vitest in watch mode
 ```
@@ -42,13 +44,12 @@ npm run test:watch # Run Vitest in watch mode
 ## Project Structure
 
 ```text
-src/
-	components/   Reusable UI and page sections
-	hooks/        Shared React hooks
-	lib/          Small utilities
-	pages/        Route-level page components
-	test/         Test setup and examples
-public/         Static assets served directly by Vite
+app/            App Router routes and layouts
+components/     Shared layout, home, and UI components
+content/        CMS-managed markdown and YAML content
+lib/            Content loaders, i18n config, and utilities
+messages/       UI string translations
+public/         Static assets and Sveltia admin shell
 ```
 
 ## GitHub Push Checklist
@@ -57,17 +58,16 @@ Before pushing to GitHub, verify the following:
 
 1. Run `npm run build` and confirm it passes.
 2. Run `npm run test` if you changed behavior.
-3. Do not commit local output such as `node_modules/`, `dist/`, `.vercel/`, or coverage reports.
+3. Do not commit local output such as `node_modules/`, `.next/`, `dist/`, `.vercel/`, or coverage reports.
 4. Review large media assets in `public/` before pushing. GitHub rejects files larger than 100 MB.
 5. Confirm any secrets are stored in Vercel environment variables, not committed to the repo.
 
 ## Deployment Notes
 
-This project deploys cleanly to Vercel as a standard Vite application with these settings:
+This project deploys to Vercel as a Next.js App Router application with these settings:
 
-- Framework Preset: Vite
+- Framework Preset: Next.js
 - Build Command: `npm run build`
-- Output Directory: `dist`
 
 ## Notes About Assets
 

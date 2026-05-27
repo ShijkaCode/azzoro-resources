@@ -1,0 +1,134 @@
+backend:
+  name: github
+  repo: ShijkaCode/mongolia-engineering-hub
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+logo_url: /new_logo.png
+site_url: https://azzororesources.com
+display_url: https://azzororesources.com
+
+i18n:
+  structure: multiple_files
+  locales: [en, mn]
+  default_locale: en
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: content/pages/home
+        i18n: true
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Video ID, name: video_id, widget: string, required: false }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subline, name: subline, widget: text }
+              - { label: CTA Label, name: cta_label, widget: string }
+              - { label: CTA Href, name: cta_href, widget: string }
+          - label: Metrics
+            name: metrics
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+              - { label: Source, name: source, widget: string, required: false }
+      - name: about
+        label: About
+        file: content/pages/about
+        i18n: true
+        fields:
+          - { label: Story body, name: story_body, widget: text }
+          - { label: Mission, name: mission, widget: text }
+      - name: esg
+        label: ESG
+        file: content/pages/esg
+        i18n: true
+        fields:
+          - { label: Approach body, name: approach_body, widget: text }
+      - name: gallery
+        label: Gallery
+        file: content/pages/gallery
+        i18n: true
+        fields:
+          - { label: Intro heading, name: intro_heading, widget: string }
+          - { label: Intro body, name: intro_body, widget: text }
+      - name: contact
+        label: Contact
+        file: content/pages/contact
+        i18n: true
+        fields:
+          - { label: Intro body, name: intro_body, widget: text }
+          - { label: General email, name: general_email, widget: string }
+  - name: team
+    label: Team
+    folder: content/team
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Role, name: role, widget: string }
+      - { label: Team section, name: team_section, widget: select, options: [Board, Technical] }
+      - { label: Photo, name: photo, widget: image, required: false }
+      - { label: Bio, name: bio, widget: text }
+      - { label: Order, name: order, widget: number, value_type: int }
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Commodity, name: commodity, widget: list }
+      - { label: Status, name: status, widget: string }
+      - { label: Region, name: region, widget: string }
+      - { label: Latitude, name: lat, widget: number }
+      - { label: Longitude, name: lng, widget: number }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Body, name: body, widget: text }
+  - name: partners
+    label: Partners
+    folder: content/partners
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Logo, name: logo, widget: image, required: false }
+      - { label: URL, name: url, widget: string, required: false }
+      - { label: Order, name: order, widget: number, value_type: int }
+  - name: settings
+    label: Settings
+    files:
+      - name: site
+        label: Site
+        file: content/settings/site.yml
+        fields:
+          - { label: Brand name, name: brand_name, widget: string }
+          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Investor portal URL, name: investor_portal_url, widget: string }
+      - name: nav
+        label: Navigation
+        file: content/settings/nav
+        i18n: true
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+              - { label: External, name: external, widget: boolean, required: false }
+      - name: footer
+        label: Footer
+        file: content/settings/footer
+        i18n: true
+        fields:
+          - { label: Tagline, name: tagline, widget: text }
