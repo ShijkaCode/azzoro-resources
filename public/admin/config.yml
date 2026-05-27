@@ -2,6 +2,7 @@ backend:
   name: github
   repo: ShijkaCode/mongolia-engineering-hub
   branch: main
+  # app_id: <set during GitHub App setup>
 
 media_folder: public/uploads
 public_folder: /uploads
@@ -39,19 +40,78 @@ collections:
               - { label: Value, name: value, widget: string }
               - { label: Label, name: label, widget: string }
               - { label: Source, name: source, widget: string, required: false }
+          - { label: Why Mongolia intro, name: why_mongolia_intro, widget: text }
+          - label: Why Mongolia cards
+            name: why_mongolia_cards
+            widget: list
+            fields:
+              - { label: Icon, name: icon, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - { label: Why Azzuro intro, name: why_azzuro_intro, widget: text }
+          - label: Why Azzuro cards
+            name: why_azzuro_cards
+            widget: list
+            fields:
+              - { label: Icon, name: icon, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Sustainability teaser
+            name: sustainability_teaser
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: CTA label, name: cta_label, widget: string }
+              - { label: CTA href, name: cta_href, widget: string }
+          - label: Leadership teaser
+            name: leadership_teaser
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: CTA label, name: cta_label, widget: string }
+              - { label: CTA href, name: cta_href, widget: string }
+          - { label: Show news section, name: news_section_enabled, widget: boolean, default: true, required: false }
+          - { label: Show stock section, name: stock_section_enabled, widget: boolean, default: true, required: false }
       - name: about
         label: About
         file: content/pages/about
         i18n: true
         fields:
+          - { label: Hero image, name: hero_image, widget: image, required: false }
           - { label: Story body, name: story_body, widget: text }
           - { label: Mission, name: mission, widget: text }
+          - label: Values
+            name: values
+            widget: list
+            fields:
+              - { label: Icon, name: icon, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - { label: Leadership & governance body, name: leadership_governance_body, widget: text }
+          - { label: Governance documents intro, name: governance_documents_intro, widget: text, required: false }
       - name: esg
         label: ESG
         file: content/pages/esg
         i18n: true
         fields:
+          - { label: Hero image, name: hero_image, widget: image, required: false }
           - { label: Approach body, name: approach_body, widget: text }
+          - label: Environment
+            name: environment
+            widget: object
+            fields:
+              - { label: Body, name: body, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+          - label: Community
+            name: community
+            widget: object
+            fields:
+              - { label: Body, name: body, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+          - { label: Reports intro, name: reports_intro, widget: text }
       - name: gallery
         label: Gallery
         file: content/pages/gallery
@@ -59,12 +119,39 @@ collections:
         fields:
           - { label: Intro heading, name: intro_heading, widget: string }
           - { label: Intro body, name: intro_body, widget: text }
+          - label: Filter tags
+            name: filter_tags
+            widget: list
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: Label, name: label, widget: string }
       - name: contact
         label: Contact
         file: content/pages/contact
         i18n: true
         fields:
           - { label: Intro body, name: intro_body, widget: text }
+          - label: Offices
+            name: offices
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Address, name: address, widget: text }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Hours, name: hours, widget: string, required: false }
+              - { label: Latitude, name: lat, widget: number, required: false, value_type: float }
+              - { label: Longitude, name: lng, widget: number, required: false, value_type: float }
+          - label: Phone groups
+            name: phone_groups
+            widget: list
+            fields:
+              - { label: Category, name: category, widget: string }
+              - label: Numbers
+                name: numbers
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Number, name: number, widget: string }
           - { label: General email, name: general_email, widget: string }
   - name: team
     label: Team
@@ -79,6 +166,18 @@ collections:
       - { label: Photo, name: photo, widget: image, required: false }
       - { label: Bio, name: bio, widget: text }
       - { label: Order, name: order, widget: number, value_type: int }
+  - name: governance
+    label: Governance
+    folder: content/governance
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Category, name: category, widget: select, options: [Constitution, Charters, Policies, Reports, Disclosures] }
+      - { label: File, name: file, widget: file }
+      - { label: Effective date, name: effective_date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+      - { label: Description, name: description, widget: text, required: false }
   - name: projects
     label: Projects
     folder: content/projects
@@ -88,12 +187,69 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Commodity, name: commodity, widget: list }
-      - { label: Status, name: status, widget: string }
+      - { label: Status, name: status, widget: select, options: [Active exploration, Drilling, Resource definition, Paused] }
       - { label: Region, name: region, widget: string }
       - { label: Latitude, name: lat, widget: number }
       - { label: Longitude, name: lng, widget: number }
+      - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int }
+      - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+      - { label: Hero image, name: hero_image, widget: image }
+      - { label: Gallery images, name: gallery_images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
       - { label: Summary, name: summary, widget: text }
-      - { label: Body, name: body, widget: text }
+      - label: Data cards
+        name: data_cards
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: string }
+      - label: Documents
+        name: documents
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: File, name: file, widget: file }
+      - { label: Body, name: body, widget: markdown }
+  - name: gallery_photos
+    label: Gallery Photos
+    folder: content/gallery/photos
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Image, name: image, widget: image }
+      - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+      - { label: Featured, name: featured, widget: boolean, required: false, default: false }
+  - name: gallery_videos
+    label: Gallery Videos
+    folder: content/gallery/videos
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Stream UID, name: stream_uid, widget: string }
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false }
+      - { label: Tags, name: tags, widget: list }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+  - name: case_studies
+    label: Case Studies
+    folder: content/gallery/case-studies
+    create: true
+    i18n: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Hero image, name: hero_image, widget: image }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+      - { label: Pull quote, name: pull_quote, widget: text, required: false }
+      - { label: Related slugs, name: related, widget: list, required: false }
+      - { label: Body, name: body, widget: markdown }
   - name: partners
     label: Partners
     folder: content/partners
@@ -113,7 +269,18 @@ collections:
         fields:
           - { label: Brand name, name: brand_name, widget: string }
           - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Dark logo, name: logo_dark, widget: image, required: false }
+          - { label: Stock ticker, name: stock_ticker, widget: string }
+          - { label: Enable stock API, name: stock_api_enabled, widget: boolean, required: false, default: true }
           - { label: Investor portal URL, name: investor_portal_url, widget: string }
+          - label: Social links
+            name: social
+            widget: object
+            required: false
+            fields:
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+              - { label: X, name: x, widget: string, required: false }
+          - { label: Default locale, name: default_locale, widget: select, options: [en, mn] }
       - name: nav
         label: Navigation
         file: content/settings/nav
@@ -132,3 +299,23 @@ collections:
         i18n: true
         fields:
           - { label: Tagline, name: tagline, widget: text }
+          - label: Link columns
+            name: link_columns
+            widget: list
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+                  - { label: External, name: external, widget: boolean, required: false }
+          - { label: Copyright holder, name: copyright_holder, widget: string }
+          - label: Legal links
+            name: legal_links
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+              - { label: External, name: external, widget: boolean, required: false }

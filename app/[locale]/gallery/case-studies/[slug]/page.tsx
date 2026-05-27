@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
@@ -5,6 +6,7 @@ import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import { loadCollection } from '@/lib/content/loadCollection';
 import type { CaseStudy } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 
 export async function generateStaticParams() {
   const params: Array<{ locale: 'en' | 'mn'; slug: string }> = [];
@@ -17,6 +19,33 @@ export async function generateStaticParams() {
   }
 
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}): Promise<Metadata> {
+  const { locale, slug } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const cases = await loadCollection<CaseStudy>('gallery/case-studies', locale);
+  const study = cases.find((entry) => entry.slug === slug);
+
+  if (!study) {
+    return {};
+  }
+
+  return buildPageMetadata({
+    title: study.title,
+    description: study.summary,
+    locale,
+    path: `/gallery/case-studies/${slug}`,
+    type: 'article',
+  });
 }
 
 export default async function CaseStudyPage({ params }: { params: { locale: string; slug: string } }) {
@@ -36,7 +65,7 @@ export default async function CaseStudyPage({ params }: { params: { locale: stri
   }
 
   return (
-    <main>
+    <main id="main-content">
       <section className="relative h-[50vh] min-h-[24rem] overflow-hidden bg-navy-dark">
         <Image src={study.hero_image} alt={study.title} fill priority className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/30 to-transparent" />

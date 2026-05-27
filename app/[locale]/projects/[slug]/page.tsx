@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
@@ -7,6 +8,7 @@ import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 
 export async function generateStaticParams() {
   const params: Array<{ locale: 'en' | 'mn'; slug: string }> = [];
@@ -19,6 +21,33 @@ export async function generateStaticParams() {
   }
 
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}): Promise<Metadata> {
+  const { locale, slug } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const projects = await loadCollection<Project>('projects', locale);
+  const project = projects.find((entry) => entry.slug === slug);
+
+  if (!project) {
+    return {};
+  }
+
+  return buildPageMetadata({
+    title: `${project.title} | ${project.commodity.join(', ')}`,
+    description: project.summary,
+    locale,
+    path: `/projects/${slug}`,
+    imagePath: `/${locale}/projects/${slug}/opengraph-image`,
+  });
 }
 
 export default async function ProjectDetailPage({
@@ -44,14 +73,14 @@ export default async function ProjectDetailPage({
   const nearby = projects.filter((entry) => entry.slug !== slug && entry.region === project.region).slice(0, 3);
 
   return (
-    <main>
+    <main id="main-content">
       <ProjectDetailHero project={project} />
 
       <section className="container-wide grid gap-12 py-16 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div>
           <MarkdownBody>{project.markdown || project.body}</MarkdownBody>
         </div>
-        <aside className="space-y-4">
+        <div className="space-y-4">
           {project.data_cards?.map((card) => (
             <div key={card.label} className="surface-card p-5">
               <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{card.label}</div>
@@ -76,7 +105,7 @@ export default async function ProjectDetailPage({
               {project.lat.toFixed(2)}, {project.lng.toFixed(2)}
             </div>
           </div>
-        </aside>
+        </div>
       </section>
 
       {nearby.length > 0 ? (

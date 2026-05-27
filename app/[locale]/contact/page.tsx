@@ -1,11 +1,30 @@
+import type { Metadata } from 'next';
 import { OfficeCard } from '@/components/contact/OfficeCard';
 import { PhoneDropdown } from '@/components/contact/PhoneDropdown';
 import { loadGlobal } from '@/lib/content/loadGlobal';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import type { ContactContent, SiteSettings } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const contact = await loadSingleton<ContactContent>('pages/contact', locale);
+
+  return buildPageMetadata({
+    title: locale === 'mn' ? 'Холбоо барих' : 'Contact',
+    description: contact.intro_body,
+    locale,
+    path: '/contact',
+  });
+}
 
 export default async function ContactPage({ params }: { params: { locale: string } }) {
   const { locale } = params;
@@ -43,7 +62,7 @@ export default async function ContactPage({ params }: { params: { locale: string
         };
 
   return (
-    <main className="container-wide py-16 sm:py-20">
+    <main id="main-content" className="container-wide py-16 sm:py-20">
       <section className="surface-card p-8 sm:p-10 lg:p-12">
         <p className="section-kicker">{labels.title}</p>
         <h1 className="mt-4 text-balance text-4xl font-semibold sm:text-5xl">{labels.title}</h1>

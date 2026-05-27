@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import type { Project } from '@/lib/content/types';
-import { colorForCommodity } from '@/lib/map/markers';
+import { colorForCommodity, textColorForCommodity } from '@/lib/map/markers';
 import { localizeHref } from '@/lib/i18n/pathname';
 
 type ProjectSidePanelProps = {
@@ -52,8 +52,8 @@ export function ProjectSidePanel({ project, onClose }: ProjectSidePanelProps) {
           {project.commodity.map((commodity) => (
             <span
               key={commodity}
-              className="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white"
-              style={{ backgroundColor: colorForCommodity(commodity) }}
+              className="rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ backgroundColor: colorForCommodity(commodity), color: textColorForCommodity(commodity) }}
             >
               {commodity}
             </span>

@@ -20,7 +20,7 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
         <div className="grid gap-8 sm:grid-cols-2">
           {settings.link_columns.map((column) => (
             <div key={column.heading}>
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-white/45">{column.heading}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-white/72">{column.heading}</p>
               <ul className="mt-4 space-y-3 text-sm text-white/80">
                 {column.links.map((link) => (
                   <li key={`${column.heading}-${link.label}`}>
@@ -42,7 +42,7 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-wide flex flex-col gap-4 py-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-wide flex flex-col gap-4 py-6 text-sm text-white/72 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {settings.copyright_holder}.
           </p>

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { CaseStudyCard } from '@/components/gallery/CaseStudyCard';
 import { PhotoMasonry } from '@/components/gallery/PhotoMasonry';
 import { VideoGrid } from '@/components/gallery/VideoGrid';
@@ -5,8 +6,26 @@ import { loadCollection } from '@/lib/content/loadCollection';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import type { CaseStudy, GalleryContent, GalleryPhoto, GalleryVideo } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const gallery = await loadSingleton<GalleryContent>('pages/gallery', locale);
+
+  return buildPageMetadata({
+    title: locale === 'mn' ? 'Галерей' : 'Gallery',
+    description: gallery.intro_body,
+    locale,
+    path: '/gallery',
+  });
+}
 
 export default async function GalleryPage({ params }: { params: { locale: string } }) {
   const { locale } = params;
@@ -25,7 +44,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
   ]);
 
   return (
-    <main className="container-wide py-16 sm:py-20">
+    <main id="main-content" className="container-wide py-16 sm:py-20">
       <section className="surface-card p-8 sm:p-10 lg:p-12">
         <p className="section-kicker">Gallery</p>
         <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">{gallery.intro_heading}</h1>

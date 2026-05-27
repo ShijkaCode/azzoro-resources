@@ -17,7 +17,7 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
         <div className="flex h-36 items-center justify-center bg-muted text-sm text-muted-foreground">Map preview unavailable</div>
       )}
       <div className="p-5">
-        <h3 className="text-xl font-semibold">{office.name}</h3>
+        <h2 className="text-xl font-semibold">{office.name}</h2>
         <address className="mt-3 whitespace-pre-line text-sm not-italic leading-7 text-muted-foreground">{office.address}</address>
         {office.hours ? <p className="mt-3 text-sm text-muted-foreground">{office.hours}</p> : null}
         {office.email ? (

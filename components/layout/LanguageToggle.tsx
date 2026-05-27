@@ -16,9 +16,9 @@ export default function LanguageToggle() {
       href={switchLocaleInPath(pathname, nextLocale)}
       className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/80 transition hover:bg-white/10 hover:text-white"
     >
-      <span className={currentLocale === 'en' ? 'text-white' : 'text-white/45'}>EN</span>
-      <span className="text-white/30">/</span>
-      <span className={currentLocale === 'mn' ? 'text-white' : 'text-white/45'}>MN</span>
+      <span className={currentLocale === 'en' ? 'text-white' : 'text-white/75'}>EN</span>
+      <span className="text-white/55">/</span>
+      <span className={currentLocale === 'mn' ? 'text-white' : 'text-white/75'}>MN</span>
     </Link>
   );
 }

@@ -1,82 +1,98 @@
-# Azzuro
+# Azzuro Resources Website
 
-Foundation migration for the Azzuro Resources marketing site, built with Next.js App Router, TypeScript, Tailwind CSS, next-intl, and shadcn/ui primitives.
+Marketing and investor-facing website for Azzuro Resources PLC, built on Next.js 14 App Router with bilingual EN/MN routing, markdown-backed content, and a Git-based CMS at `/admin`.
 
 ## Stack
 
-- Next.js 14
-- React 18
-- TypeScript
-- Tailwind CSS
-- next-intl
-- Framer Motion
-- shadcn/ui
-- Vitest
+- Next.js 14 App Router
+- React 18 + TypeScript
+- Tailwind CSS 3
+- next-intl locale routing with `/en` and `/mn`
+- Sveltia CMS shell in `public/admin`
+- Markdown/YAML content loaders in `lib/content`
+- MapLibre GL for projects mapping
+- Vitest for loader coverage
+- Playwright + axe-core for launch accessibility scans
 
-## Requirements
-
-- Node.js 20 or newer
-- npm 10 or newer
-
-## Getting Started
+## Local Setup
 
 ```bash
-git clone <your-repository-url>
-cd azzuro
 npm install
+cp .env.example .env.local
 npm run dev
 ```
 
-The local dev server runs through Next.js on port `3000`.
+The app runs on `http://localhost:3000`.
 
-## Available Scripts
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and fill what you have:
+
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_MAPTILER_KEY`
+- `NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID`
+- `STOCK_API_PROVIDER`
+- `STOCK_API_KEY`
+- `STOCK_TICKER_FALLBACK`
+- `INVESTOR_FEED_URL`
+- `GITHUB_APP_ID`
+- `GITHUB_APP_CLIENT_ID`
+- `GITHUB_APP_CLIENT_SECRET`
+
+The site degrades gracefully when `NEXT_PUBLIC_MAPTILER_KEY`, `NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID`, or `INVESTOR_FEED_URL` are missing.
+
+## Scripts
 
 ```bash
-npm run dev        # Start local development server
-npm run build      # Create a production build
-npm run start      # Run the production server
-npm run lint       # Run Next.js ESLint checks
-npm run typecheck  # Run TypeScript without emitting
-npm run test       # Run Vitest once
-npm run test:watch # Run Vitest in watch mode
+npm run dev
+npm run build
+npm run start
+npm run lint
+npm run typecheck
+npm run test
+npm run test:watch
+npm run a11y:scan
 ```
+
+For bundle analysis, run `ANALYZE=true npm run build`.
+
+## Content Editing
+
+- `/admin` loads the Sveltia CMS shell from `public/admin`
+- Collections map directly to `content/` markdown and YAML files
+- Each save commits back to the repo and triggers a Vercel deploy once the GitHub App is configured
+
+Current launch-state note: the schema in `public/admin/config.yml` is aligned to the current page, project, governance, gallery, team, partner, and settings content models, but GitHub App credentials still need to be entered during environment setup.
 
 ## Project Structure
 
 ```text
-app/            App Router routes and layouts
-components/     Shared layout, home, and UI components
-content/        CMS-managed markdown and YAML content
-lib/            Content loaders, i18n config, and utilities
-messages/       UI string translations
-public/         Static assets and Sveltia admin shell
+app/                App Router routes, metadata routes, API routes
+components/         Page sections and reusable UI
+content/            CMS-managed markdown and YAML source files
+docs/               Specs, plans, launch docs, editor/client guides
+lib/                Content loaders, i18n, SEO, maps, stock/news fetchers
+messages/           Locale message bundles
+public/             Static assets and Sveltia admin shell
+scripts/            Launch and maintenance scripts
+src.legacy/         Archived pre-migration reference app
 ```
 
-## GitHub Push Checklist
+## Deployment
 
-Before pushing to GitHub, verify the following:
+Vercel is the intended host.
 
-1. Run `npm run build` and confirm it passes.
-2. Run `npm run test` if you changed behavior.
-3. Do not commit local output such as `node_modules/`, `.next/`, `dist/`, `.vercel/`, or coverage reports.
-4. Review large media assets in `public/` before pushing. GitHub rejects files larger than 100 MB.
-5. Confirm any secrets are stored in Vercel environment variables, not committed to the repo.
+- Framework preset: Next.js
+- Build command: `npm run build`
+- Output: standard Next.js app
+- Production and Preview env vars should match `.env.example`
 
-## Deployment Notes
+See `docs/staging.md`, `docs/admin-setup.md`, and `docs/launch-readiness.md` for launch workflow notes.
 
-This project deploys to Vercel as a Next.js App Router application with these settings:
+## Contribution Flow
 
-- Framework Preset: Next.js
-- Build Command: `npm run build`
-
-## Notes About Assets
-
-Large video or image assets can block GitHub pushes and slow Vercel builds. Prefer one of these approaches for oversized media:
-
-- Compress the file below GitHub's 100 MB limit
-- Store it with Git LFS
-- Host it externally and reference it by URL
-
-## License
-
-No license file has been added yet. If this repository will be public, add an explicit license before publishing.
+1. Make changes in a branch or on `main`, depending on your release workflow.
+2. Run `npm run typecheck`, `npm run lint`, and `npm test`.
+3. Run `npm run build` for any routing, metadata, or config changes.
+4. If you touched major UI surfaces, run `npm run a11y:scan` against a local server.
+5. Push to GitHub and verify the Vercel preview.

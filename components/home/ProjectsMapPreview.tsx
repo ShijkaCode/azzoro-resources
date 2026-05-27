@@ -31,6 +31,7 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
         center: [105, 47],
         zoom: 4,
         interactive: false,
+        attributionControl: false,
       });
 
       projects.forEach((project) => {
@@ -66,7 +67,25 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
           Explore all projects →
         </Link>
       </div>
-      <div ref={containerRef} className="h-[24rem] overflow-hidden rounded-[1.75rem] border border-border shadow-[0_18px_50px_-28px_rgba(15,23,42,0.24)]" />
+      <div className="overflow-hidden rounded-[1.75rem] border border-border shadow-[0_18px_50px_-28px_rgba(15,23,42,0.24)]">
+        <div ref={containerRef} className="h-[24rem]" />
+        <div className="border-t border-border bg-background/95 px-4 py-3 text-xs text-muted-foreground sm:px-5">
+          Map rendering by{' '}
+          <a href="https://maplibre.org/" target="_blank" rel="noreferrer" className="font-medium underline underline-offset-2">
+            MapLibre
+          </a>
+          . Basemap data ©{' '}
+          <a
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium underline underline-offset-2"
+          >
+            OpenStreetMap contributors
+          </a>
+          .
+        </div>
+      </div>
     </section>
   );
 }

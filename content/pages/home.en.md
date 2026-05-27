@@ -38,7 +38,7 @@ leadership_teaser:
   body: Placeholder leadership teaser copy for the foundation release.
   cta_label: Meet the team
   cta_href: /about
-news_section_enabled: false
+news_section_enabled: true
 stock_section_enabled: true
 ---
 

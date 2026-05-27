@@ -48,8 +48,9 @@ export default function Navbar({ items, locale }: { items: NavItem[]; locale: Lo
       >
         <div className="flex items-center justify-between gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-3">
-            <Image src="/new_logo.png" alt="Azzuro Resources" width={160} height={40} className="h-10 w-auto" priority />
-            <span className="hidden text-xs font-semibold uppercase tracking-[0.28em] text-white/60 sm:inline">Azzuro Resources</span>
+            <Image src="/new_logo.png" alt="" width={160} height={40} className="h-10 w-auto" priority />
+            <span className="sr-only">Azzuro Resources</span>
+            <span aria-hidden="true" className="hidden text-xs font-semibold uppercase tracking-[0.28em] text-white/72 sm:inline">Azzuro Resources</span>
           </Link>
 
           <nav className="hidden items-center gap-6 lg:flex">

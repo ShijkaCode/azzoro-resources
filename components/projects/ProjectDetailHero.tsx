@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { Project } from '@/lib/content/types';
-import { colorForCommodity } from '@/lib/map/markers';
+import { colorForCommodity, textColorForCommodity } from '@/lib/map/markers';
 
 export function ProjectDetailHero({ project }: { project: Project }) {
   return (
@@ -15,7 +15,7 @@ export function ProjectDetailHero({ project }: { project: Project }) {
             <span
               key={commodity}
               className="rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]"
-              style={{ backgroundColor: colorForCommodity(commodity) }}
+              style={{ backgroundColor: colorForCommodity(commodity), color: textColorForCommodity(commodity) }}
             >
               {commodity}
             </span>

@@ -38,7 +38,7 @@ leadership_teaser:
   body: Суурийн хувилбарын манлайллын teaser-ийн түр агуулга.
   cta_label: Багтай танилцах
   cta_href: /about
-news_section_enabled: false
+news_section_enabled: true
 stock_section_enabled: true
 ---
 

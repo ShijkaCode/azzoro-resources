@@ -1,6 +1,8 @@
+import bundleAnalyzer from '@next/bundle-analyzer';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./lib/i18n/request.ts');
+const withBundleAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === 'true' });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,6 +15,15 @@ const nextConfig = {
       { protocol: 'https', hostname: 'api.maptiler.com' },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/about', destination: '/en/about', permanent: true },
+      { source: '/projects', destination: '/en/projects', permanent: true },
+      { source: '/our-team', destination: '/en/about', permanent: true },
+      { source: '/sustainability', destination: '/en/esg', permanent: true },
+      { source: '/contact', destination: '/en/contact', permanent: true },
+    ];
+  },
 };
 
-export default withNextIntl(nextConfig);
+export default withBundleAnalyzer(withNextIntl(nextConfig));

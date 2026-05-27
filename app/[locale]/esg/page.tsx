@@ -1,10 +1,29 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { EsgContent } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const esg = await loadSingleton<EsgContent>('pages/esg', locale);
+
+  return buildPageMetadata({
+    title: locale === 'mn' ? 'Тогтвортой байдал' : 'ESG',
+    description: esg.reports_intro,
+    locale,
+    path: '/esg',
+  });
+}
 
 export default async function EsgPage({ params }: { params: { locale: string } }) {
   const { locale } = params;
@@ -33,7 +52,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         };
 
   return (
-    <main className="container-wide py-16 sm:py-20">
+    <main id="main-content" className="container-wide py-16 sm:py-20">
       {esg.hero_image ? (
         <section className="relative mb-12 overflow-hidden rounded-[2rem]">
           <div className="relative h-[40vh] min-h-[18rem] w-full">

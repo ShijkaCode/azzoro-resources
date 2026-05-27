@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import { GovernanceList } from '@/components/about/GovernanceList';
@@ -5,8 +6,26 @@ import { TeamGrid } from '@/components/about/TeamGrid';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { AboutContent, GovernanceDocument, TeamMember } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
+import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
+
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const about = await loadSingleton<AboutContent>('pages/about', locale);
+
+  return buildPageMetadata({
+    title: locale === 'mn' ? 'Azzuro Resources-ийн тухай' : 'About Azzuro Resources',
+    description: about.mission,
+    locale,
+    path: '/about',
+  });
+}
 
 export default async function AboutPage({ params }: { params: { locale: string } }) {
   const { locale } = params;
@@ -43,7 +62,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
         };
 
   return (
-    <main className="container-wide py-16 sm:py-20">
+    <main id="main-content" className="container-wide py-16 sm:py-20">
       <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-5">
           <p className="section-kicker">{labels.kicker}</p>
