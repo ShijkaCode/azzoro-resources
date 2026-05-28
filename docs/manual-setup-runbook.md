@@ -111,20 +111,16 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 
 ---
 
-### 1.3 ⬜ Cloudflare account + Stream subscription
+### 1.3 ⏸️ Cloudflare Stream — DEFERRED per client decision (2026-05-28)
 
-**Why:** Hosts the hero video. The Stream service handles encoding, adaptive bitrate streaming, and a built-in player. Alternative is self-hosting MP4 in `public/` which doesn't adapt to viewer bandwidth.
+**Decision:** Client opted to self-host a compressed MP4 first, only upgrade to Cloudflare Stream if real perf becomes a problem. Avoid the $60/year subscription unless data justifies it.
 
-**Cost:** $5/month for first 1000 minutes stored + 1000 minutes delivered. For one hero video looping, you're well under the cap.
+**What replaces this:**
+- Compress the hero footage to ~3-5 MB MP4 (see Phase 4 for compression specs)
+- Drop at `public/uploads/hero.mp4`
+- The existing `CloudflareStreamHero` component will be swapped for a `<video>` element wired to the local file. Cloudflare wiring stays in the codebase as a switchable option.
 
-**Steps:**
-1. If you don't have a Cloudflare account, sign up at https://dash.cloudflare.com/sign-up
-2. Verify email
-3. In the dashboard, click **Stream** in the left sidebar
-4. Click **Enable Stream** → enter payment details → confirm $5/month plan
-5. Once enabled, note the **Account ID** — top of the page, OR shown in the URL like `dash.cloudflare.com/<ACCOUNT_ID>/stream`
-
-**Hand to me when done:** Account ID. (You'll upload the actual video in Phase 4 once the client gives you footage.)
+**Revisit trigger:** if Lighthouse / RUM data shows the hero video is materially slowing TTI on mobile, or visitors report buffering, re-enable this phase.
 
 ---
 
@@ -424,38 +420,36 @@ Then update `content/settings/site.yml` `logo` and `logo_dark` fields to point a
 
 ---
 
-## PHASE 4 — Cloudflare Stream upload (after Phase 1.3 + Phase 3.2)
+## PHASE 4 — Self-host compressed hero video (after Phase 3.2)
+
+Replaces the original Cloudflare Stream flow per the 2026-05-28 client decision.
 
 ---
 
-### 4.1 ⬜ Upload hero video
+### 4.1 ⬜ Compress the client's footage
 
-**Steps:**
-1. Cloudflare Dashboard → Stream
-2. Click **Upload Video**
-3. Drag the footage from the client (Phase 3.2)
-4. Wait ~2-5 minutes for encoding (Cloudflare shows a progress bar)
-5. Once done, click the video to open its detail page
-6. Note the **Video UID** (looks like a 32-char hex string, e.g. `1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d`)
+**Targets:**
+- Container: MP4 · Codec: H.264 · Resolution: 1920×1080 · 24-30 fps
+- Duration: 15-30s loop
+- **Audio: strip it** (we autoplay muted anyway)
+- **Target file size: 3-5 MB**
+- Enable `+faststart` so playback begins before full download
 
-**Optional — custom poster:**
-- Stream auto-generates a thumbnail at the 1-second mark
-- If you want a specific frame: Stream → video detail → Thumbnails → Upload Custom
+**Tools:**
+- **HandBrake** (free, GUI): https://handbrake.fr/ → "Web Optimized" preset → quality RF ~28 → uncheck audio
+- **ffmpeg** one-liner:
+  ```bash
+  ffmpeg -i input.mov -c:v libx264 -crf 28 -preset slow -vf "scale=1920:-2" -an -movflags +faststart -t 25 hero.mp4
+  ```
+
+Verify the output: open in browser, confirm it autoplays muted, loops smoothly, file is under 5 MB.
 
 ---
 
-### 4.2 ⬜ Wire UID into CMS
+### 4.2 ⬜ Drop the file in repo and ping Claude
 
-**Steps:**
-1. Visit `https://staging.azzororesources.com/admin`
-2. Sign in
-3. Pages → Home (EN tab)
-4. Find the **Hero** section
-5. Paste the Video UID into the **Cloudflare Stream video ID** field
-6. Switch to MN tab → paste the same UID
-7. Save
-
-**Verify:** Wait ~90s for Vercel to redeploy. Visit `/en` — video autoplays muted, loops. If `NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID` env var is set (Phase 2.1), video plays. Otherwise the poster image shows.
+1. Save the compressed file as `public/uploads/hero.mp4`
+2. Hand to Claude — Claude swaps the existing `CloudflareStreamHero` component for a `<video>` element wired to the local file (~5 min code change). The Cloudflare component stays in place as a switchable option for later.
 
 ---
 
