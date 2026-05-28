@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ShijkaCode/mongolia-engineering-hub
   branch: main
-  # app_id: <set during GitHub App setup>
+  app_id: 3895018
 
 media_folder: public/uploads
 public_folder: /uploads
