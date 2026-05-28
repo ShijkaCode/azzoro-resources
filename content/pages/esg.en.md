@@ -1,7 +1,7 @@
 ---
 hero_image: /forest.jpg
 approach_body: |-
-  Azzuro Resources is developing the new public site with ESG as a first-class narrative rather than a compliance afterthought. The goal is to explain how exploration activity, field programs, community presence, and governance practices relate to one another.
+  Azzoro Resources is developing the new public site with ESG as a first-class narrative rather than a compliance afterthought. The goal is to explain how exploration activity, field programs, community presence, and governance practices relate to one another.
 
   This route is intentionally structured so the client can later expand it with fuller disclosures, imagery, and reports without changing the page architecture.
 environment:

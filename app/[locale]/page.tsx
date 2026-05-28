@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const home = await loadSingleton<HomeContent>('pages/home', locale);
 
   return buildPageMetadata({
-    title: locale === 'mn' ? 'Azzuro Resources' : 'Azzuro Resources',
+    title: locale === 'mn' ? 'Azzoro Resources' : 'Azzoro Resources',
     description: home.hero.subline,
     locale,
     path: '/',
@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
     <main id="main-content">
       <HeroSection locale={locale} hero={home.hero} metrics={home.metrics} />
       <IntroSection locale={locale} intro={home.why_mongolia_intro} cards={home.why_mongolia_cards} />
-      <WhatWeDo locale={locale} intro={home.why_azzuro_intro} cards={home.why_azzuro_cards} />
+      <WhatWeDo locale={locale} intro={home.why_azzoro_intro} cards={home.why_azzoro_cards} />
       <ProjectsMapPreview projects={projects} />
       <ESGSection locale={locale} teaser={home.sustainability_teaser} />
       {home.news_section_enabled ? <LatestNewsSection investorPortalUrl={site.investor_portal_url} locale={locale} /> : null}

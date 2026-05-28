@@ -22,6 +22,6 @@ data_cards:
 documents: []
 ---
 
-OVAL is the current placeholder for Azzuro's southern Gobi polymetallic exploration story. The project detail route is now ready for real geology, exploration history, and resource-summary content to be added through the CMS.
+OVAL is the current placeholder for Azzoro's southern Gobi polymetallic exploration story. The project detail route is now ready for real geology, exploration history, and resource-summary content to be added through the CMS.
 
 This draft body is intentionally lean. In the next content pass it can be expanded with sections for geology, exploration history, drilling highlights, and infrastructure advantages.

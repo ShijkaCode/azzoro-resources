@@ -1,7 +1,7 @@
-# Azzuro Resources — Website Renewal Design Spec
+# Azzoro Resources — Website Renewal Design Spec
 
 **Date:** 2026-05-27
-**Client:** Azzuro Resources PLC (formerly Asian Battery Metals PLC)
+**Client:** Azzoro Resources PLC (formerly Asian Battery Metals PLC)
 **Project:** Brand renewal + content-managed rebuild of the corporate marketing site
 **Target launch:** 5-8 weeks from kickoff
 **Old site:** https://asianbatterymetals.com/
@@ -12,7 +12,7 @@
 
 ## 1. Project context
 
-The current site (`asianbatterymetals.com`) is dated and the client is rebranding to "Azzuro Resources PLC" with a green-to-blue color shift and a refreshed information architecture. The current POC in this repo (`src/`) was built in React + Vite + Tailwind + shadcn/ui to demonstrate visual direction.
+The current site (`asianbatterymetals.com`) is dated and the client is rebranding to "Azzoro Resources PLC" with a green-to-blue color shift and a refreshed information architecture. The current POC in this repo (`src/`) was built in React + Vite + Tailwind + shadcn/ui to demonstrate visual direction.
 
 The client explicitly wants ongoing **self-service maintenance** — adding/removing team members, swapping governance PDFs, publishing case studies, updating pages — without coming back to the developer. This drives the Git-based CMS decision.
 
@@ -34,7 +34,7 @@ A separate **external investor portal** at `investors.asianbatterymetals.com` (b
 | Stock price | Live API, ticker TBD post-rebrand, configured via CMS |
 | Auth | Sveltia GitHub App, 1-3 client editors as repo collaborators |
 | Contact form | None on the marketing site; Contact page is informational only |
-| Repo | Continue current repo, rename to `azzuro-resources`, restructure |
+| Repo | Continue current repo, rename to `azzoro-resources`, restructure |
 | Content seed | AI-drafted EN from PPT + old site, machine-translated MN, client edits |
 | Analytics | Vercel Analytics + Speed Insights |
 | Investor center | External link only; do not build a `/investor-center/` route |
@@ -79,7 +79,7 @@ Mark each block as **[CMS]** (client edits via /admin) or **[static]** (dev edit
 2. **Key metrics strip** — 4-6 stat cards (value, label, source) [CMS]
 3. **Projects preview** — small embedded map (400px), reads project pins [CMS]
 4. **Why Mongolia** — bullet cards + "Visit investor portal →" CTA [CMS]
-5. **Why Azzuro** — bullet cards + "Visit investor portal →" CTA [CMS]
+5. **Why Azzoro** — bullet cards + "Visit investor portal →" CTA [CMS]
 6. **Sustainability teaser** — heading, body, image, CTA → /esg [CMS]
 7. **Leadership teaser** — heading, body, CTA → /about#governance [CMS]
 8. **Latest news** — 3 items, auto-pulled from external investor portal [feed]
@@ -158,7 +158,7 @@ Config lives at `public/admin/config.yml`. Bilingual via `i18n: { structure: mul
 |---|---|---|
 | `site` | `content/settings/site.yml` (not i18n) | `brand_name`, `logo`, `logo_dark`, `stock_ticker`, `stock_api_enabled`, `investor_portal_url`, social links, `default_locale` |
 | `nav` | `content/settings/nav.{en,mn}.yml` | `items[]` of `{label, href, external}` |
-| `home` | `content/pages/home.{en,mn}.md` | hero (video_id, headline, subline, cta), metrics[], why_mongolia (intro + cards[]), why_azzuro (intro + cards[]), sustainability_teaser, leadership_teaser, section toggles |
+| `home` | `content/pages/home.{en,mn}.md` | hero (video_id, headline, subline, cta), metrics[], why_mongolia (intro + cards[]), why_azzoro (intro + cards[]), sustainability_teaser, leadership_teaser, section toggles |
 | `about` | `content/pages/about.{en,mn}.md` | hero_image, story_body, mission, values[], leadership_governance_body, governance_documents_intro |
 | `esg` | `content/pages/esg.{en,mn}.md` | hero_image, approach_body, environment, community, reports_intro |
 | `gallery` | `content/pages/gallery.{en,mn}.md` | intro_heading, intro_body, filter_tags[] |
@@ -197,7 +197,7 @@ UI label translations · privacy/terms bodies · routing/design tokens/animation
 ### 6.1 Repo structure
 
 ```
-azzuro-resources/
+azzoro-resources/
 ├── app/
 │   ├── [locale]/
 │   │   ├── layout.tsx
@@ -274,7 +274,7 @@ Branch protection on `main` requires build + typecheck + lint to pass.
 
 1. Register a GitHub App (or use the Sveltia-hosted shared app for fastest setup)
 2. Permissions: **Contents: Read & Write**, **Metadata: Read**
-3. Install on the `azzuro-resources` repo
+3. Install on the `azzoro-resources` repo
 4. Configure `public/admin/config.yml` with `backend: { name: github, repo, branch: main, app_id, base_url }`
 5. Cost: $0
 
@@ -372,7 +372,7 @@ Sveltia has a "local backend" mode (`local_backend: true` + `sveltia-cms-proxy-s
 
 These are not blockers for design approval but must resolve before / during build:
 
-1. **New Azzuro Resources logo files** (SVG + dark/light variants) — needed week 2
+1. **New Azzoro Resources logo files** (SVG + dark/light variants) — needed week 2
 2. **Stock ticker symbol** post-rebrand — needed week 6
 3. **External investor portal feed** — what platform powers `investors.asianbatterymetals.com`? Does it expose RSS/JSON? — needed week 6
 4. **Real geo coordinates** for OVAL, KHUKH TAG, TSAGAAN DERS — needed week 5

@@ -1,4 +1,4 @@
-# Azzuro Resources — Content & Map Implementation Plan (Plan 2 of 3)
+# Azzoro Resources — Content & Map Implementation Plan (Plan 2 of 3)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack additions vs Plan 1:** maplibre-gl, yet-another-react-lightbox, react-markdown (for rendering long-form bodies), @cloudflare/stream-react (or plain iframe), date-fns (already in package.json from POC).
 
-**Reference spec:** `docs/superpowers/specs/2026-05-27-azzuro-website-renewal-design.md`
+**Reference spec:** `docs/superpowers/specs/2026-05-27-azzoro-website-renewal-design.md`
 
 **What Plan 1 already shipped (skip in this plan):**
 - Next.js + i18n + middleware infrastructure
@@ -1308,7 +1308,7 @@ export default async function AboutPage({
 
   return (
     <main className="container-wide py-16">
-      <h1 className="text-5xl font-bold mb-12">About Azzuro</h1>
+      <h1 className="text-5xl font-bold mb-12">About Azzoro</h1>
 
       <section className="grid gap-12 lg:grid-cols-2 mb-16">
         <MarkdownBody>{about.story_body}</MarkdownBody>
@@ -2403,7 +2403,7 @@ export function CloudflareStreamHero({ streamUid, poster, className }: Props) {
         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
         allowFullScreen
         className="absolute inset-0 w-full h-full"
-        title="Azzuro hero video"
+        title="Azzoro hero video"
       />
     </div>
   );
@@ -2486,15 +2486,15 @@ Gather:
 
 - [ ] **Step 2:** Run Claude with this prompt
 
-> Read the attached PPT and old website content. Write fresh English marketing copy for an Azzuro Resources home page. Required sections, each with the field shape from the current home.en.md:
+> Read the attached PPT and old website content. Write fresh English marketing copy for an Azzoro Resources home page. Required sections, each with the field shape from the current home.en.md:
 > - hero.headline (max 8 words, evocative, brand-aligned)
 > - hero.subline (1-2 sentences, investor- and analyst-facing)
 > - hero.cta_label + cta_href ("Explore projects" → /en/projects)
 > - 4 metrics (active projects, license area, commodities tracked, years of activity)
 > - why_mongolia_intro (1 paragraph)
 > - 4 why_mongolia_cards (each: title + 2-3 sentence body)
-> - why_azzuro_intro (1 paragraph)
-> - 4 why_azzuro_cards
+> - why_azzoro_intro (1 paragraph)
+> - 4 why_azzoro_cards
 > - sustainability_teaser (heading, 2-3 sentence body, cta_label "Read our ESG approach", cta_href "/en/esg")
 > - leadership_teaser (heading, 2-3 sentence body, cta_label "Meet the team", cta_href "/en/about")
 >
@@ -2591,7 +2591,7 @@ git commit -m "feat: AI-drafted case study — Khukh Tag community engagement [D
 
 - [ ] **Step 1:** For each `.en.md` file just updated, run Claude with the prompt:
 
-> Translate the following Azzuro Resources Mongolian mining company web copy from English to formal Mongolian Cyrillic. Preserve all YAML frontmatter structure exactly; translate only string values, not field names or hrefs. Use industry-appropriate technical vocabulary. Output ready-to-save .mn.md content.
+> Translate the following Azzoro Resources Mongolian mining company web copy from English to formal Mongolian Cyrillic. Preserve all YAML frontmatter structure exactly; translate only string values, not field names or hrefs. Use industry-appropriate technical vocabulary. Output ready-to-save .mn.md content.
 
 - [ ] **Step 2:** Apply each output to the matching `.mn.md`
 

@@ -1,11 +1,11 @@
-# Azzuro Resources - Content Review Checklist
+# Azzoro Resources - Content Review Checklist
 
 Site URL: `https://staging.azzororesources.com`
 Password: sent separately
 
 ## What to check
 
-- [ ] Home: hero, metrics, Why Mongolia, Why Azzuro, sustainability teaser, leadership teaser, stock/news behavior
+- [ ] Home: hero, metrics, Why Mongolia, Why Azzoro, sustainability teaser, leadership teaser, stock/news behavior
 - [ ] About: story, mission, values, board members, technical team, governance intro, document categories
 - [ ] Projects: map pins, project summaries, project detail bodies, data cards, coordinates
 - [ ] ESG: approach, environment, community, reports intro
@@ -18,7 +18,7 @@ Use `/admin` once GitHub access is enabled. Content updates deploy automatically
 
 ## What still needs client input
 
-- [ ] Final Azzuro logo assets
+- [ ] Final Azzoro logo assets
 - [ ] Final stock ticker
 - [ ] Investor portal feed URL or format
 - [ ] Hero video footage and Cloudflare Stream account details

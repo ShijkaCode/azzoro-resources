@@ -1,4 +1,4 @@
-tagline: Corporate website foundation for Azzuro Resources with locale-aware routing and CMS-backed page content.
+tagline: Corporate website foundation for Azzoro Resources with locale-aware routing and CMS-backed page content.
 link_columns:
   - heading: Company
     links:
@@ -17,7 +17,7 @@ link_columns:
         external: true
       - label: Contact us
         href: /contact
-copyright_holder: Azzuro Resources PLC
+copyright_holder: Azzoro Resources PLC
 legal_links:
   - label: Privacy
     href: /legal/privacy

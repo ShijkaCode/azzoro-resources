@@ -1,7 +1,7 @@
 ---
 hero_image: ''
 story_body: |-
-  Azzuro Resources is the renewed corporate identity for the business formerly known as Asian Battery Metals. The site now has the structure to tell that story properly across exploration, governance, and sustainability surfaces in both English and Mongolian.
+  Azzoro Resources is the renewed corporate identity for the business formerly known as Asian Battery Metals. The site now has the structure to tell that story properly across exploration, governance, and sustainability surfaces in both English and Mongolian.
 
   This About route is now designed around long-form narrative content instead of short placeholder cards. That gives the client room to refine the company story, update leadership information, and maintain governance materials without returning to development for every change.
 mission: Build a modern, bilingual public company website that supports exploration storytelling, governance transparency, and self-service content updates.

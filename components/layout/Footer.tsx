@@ -10,7 +10,7 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
     <footer className="mt-20 bg-navy-dark text-white">
       <div className="container-wide grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:py-20">
         <div>
-          <p className="section-kicker text-sky-line">Azzuro Resources</p>
+          <p className="section-kicker text-sky-line">Azzoro Resources</p>
           <h2 className="mt-5 max-w-2xl text-balance text-4xl font-semibold sm:text-5xl">
             Discover, develop, and communicate the next phase of the corporate site.
           </h2>

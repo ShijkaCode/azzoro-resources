@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const about = await loadSingleton<AboutContent>('pages/about', locale);
 
   return buildPageMetadata({
-    title: locale === 'mn' ? 'Azzuro Resources-ийн тухай' : 'About Azzuro Resources',
+    title: locale === 'mn' ? 'Azzoro Resources-ийн тухай' : 'About Azzoro Resources',
     description: about.mission,
     locale,
     path: '/about',
@@ -46,7 +46,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
     locale === 'mn'
       ? {
           kicker: 'Бидний тухай',
-          title: 'Azzuro Resources-ийн тухай',
+          title: 'Azzoro Resources-ийн тухай',
           mission: 'Эрхэм зорилго',
           governance: 'Манлайлал ба засаглал',
           board: 'Төлөөлөн удирдах зөвлөл',
@@ -54,7 +54,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
         }
       : {
           kicker: 'About us',
-          title: 'About Azzuro Resources',
+          title: 'About Azzoro Resources',
           mission: 'Mission',
           governance: 'Leadership & Governance',
           board: 'Board of Directors',

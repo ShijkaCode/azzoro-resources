@@ -1,4 +1,4 @@
-tagline: Azzuro Resources сайтын locale-aware routing болон CMS-backed контенттой суурийн хувилбар.
+tagline: Azzoro Resources сайтын locale-aware routing болон CMS-backed контенттой суурийн хувилбар.
 link_columns:
   - heading: Компани
     links:
@@ -17,7 +17,7 @@ link_columns:
         external: true
       - label: Холбоо барих
         href: /contact
-copyright_holder: Azzuro Resources PLC
+copyright_holder: Azzoro Resources PLC
 legal_links:
   - label: Нууцлал
     href: /legal/privacy

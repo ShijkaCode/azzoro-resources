@@ -1,4 +1,4 @@
-# Azzuro Resources - Handoff Document
+# Azzoro Resources - Handoff Document
 
 ## What the client receives
 

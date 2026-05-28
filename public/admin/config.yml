@@ -48,9 +48,9 @@ collections:
               - { label: Icon, name: icon, widget: string, required: false }
               - { label: Title, name: title, widget: string }
               - { label: Body, name: body, widget: text }
-          - { label: Why Azzuro intro, name: why_azzuro_intro, widget: text }
-          - label: Why Azzuro cards
-            name: why_azzuro_cards
+          - { label: Why Azzoro intro, name: why_azzoro_intro, widget: text }
+          - label: Why Azzoro cards
+            name: why_azzoro_cards
             widget: list
             fields:
               - { label: Icon, name: icon, widget: string, required: false }

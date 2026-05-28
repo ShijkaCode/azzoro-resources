@@ -29,8 +29,8 @@ export type HomeContent = {
   metrics: { value: string; label: string; source?: string }[];
   why_mongolia_intro: string;
   why_mongolia_cards: { icon?: string; title: string; body: string }[];
-  why_azzuro_intro: string;
-  why_azzuro_cards: { icon?: string; title: string; body: string }[];
+  why_azzoro_intro: string;
+  why_azzoro_cards: { icon?: string; title: string; body: string }[];
   sustainability_teaser: { heading: string; body: string; image?: string; cta_label: string; cta_href: string };
   leadership_teaser: { heading: string; body: string; cta_label: string; cta_href: string };
   news_section_enabled: boolean;

@@ -4,7 +4,7 @@ import type { Locale } from '@/lib/i18n/config';
 type WhatWeDoProps = {
   locale: Locale;
   intro: string;
-  cards: HomeContent['why_azzuro_cards'];
+  cards: HomeContent['why_azzoro_cards'];
 };
 
 const fallbackCards = [
@@ -29,7 +29,7 @@ export default function WhatWeDo({ intro, cards }: WhatWeDoProps) {
     <section className="bg-white/70 py-12 sm:py-16">
       <div className="container-wide grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
-          <p className="section-kicker">Why Azzuro</p>
+          <p className="section-kicker">Why Azzoro</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold sm:text-4xl">The corporate story is ready to be filled with actual launch content.</h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">{intro}</p>
         </div>

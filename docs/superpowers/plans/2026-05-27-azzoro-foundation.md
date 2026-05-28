@@ -1,4 +1,4 @@
-# Azzuro Resources — Foundation Implementation Plan (Plan 1 of 3)
+# Azzoro Resources — Foundation Implementation Plan (Plan 1 of 3)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack:** Next.js 14+, TypeScript, Tailwind CSS, shadcn/ui (preserved from POC), framer-motion (preserved), next-intl, Sveltia CMS, Vitest, Vercel.
 
-**Reference spec:** `docs/superpowers/specs/2026-05-27-azzuro-website-renewal-design.md`
+**Reference spec:** `docs/superpowers/specs/2026-05-27-azzoro-website-renewal-design.md`
 
 **Out of scope for this plan:** projects map, content seeding, stock price API, investor news feed, contact info wiring, real images/videos, accessibility audit, performance tuning, production DNS cutover. All deferred to Plan 2 or Plan 3.
 
@@ -17,7 +17,7 @@
 ## File structure produced by this plan
 
 ```
-azzuro/                                       (current repo, will rename to azzuro-resources on GitHub)
+azzoro/                                       (current repo, will rename to azzoro-resources on GitHub)
 ├── app/
 │   ├── [locale]/
 │   │   ├── layout.tsx                        Locale layout: IntlProvider + Navbar + Footer
@@ -42,7 +42,7 @@ azzuro/                                       (current repo, will rename to azzu
 │   └── home/
 │       ├── HeroSection.tsx                   (ported from POC, placeholder content)
 │       ├── IntroSection.tsx                  (ported)
-│       ├── WhatWeDo.tsx                      (ported, "WhyAzzuro" rename later)
+│       ├── WhatWeDo.tsx                      (ported, "WhyAzzoro" rename later)
 │       ├── ESGSection.tsx                    (ported)
 │       └── FooterCards.tsx                   (ported)
 ├── content/
@@ -84,7 +84,7 @@ azzuro/                                       (current repo, will rename to azzu
 │   │   └── config.yml                        All CMS collections defined
 │   └── uploads/                              CMS-uploaded media (gitkeep'd)
 ├── next.config.mjs
-├── tailwind.config.ts                        Blue palette (Azzuro brand)
+├── tailwind.config.ts                        Blue palette (Azzoro brand)
 ├── tsconfig.json                             Next.js compatible
 ├── vitest.config.ts                          Existing, kept for unit tests
 └── package.json                              Next.js deps, Vite removed
@@ -417,7 +417,7 @@ git commit -m "chore: add next/core-web-vitals ESLint config"
 
 ---
 
-### Task 9: Update Tailwind config with Azzuro blue palette
+### Task 9: Update Tailwind config with Azzoro blue palette
 
 **Files:**
 - Modify: `tailwind.config.ts`
@@ -452,7 +452,7 @@ const config: Config = {
         display: ['var(--font-display)', 'serif'],
       },
       colors: {
-        // Brand: Azzuro blue scale (replaces lime/green from POC)
+        // Brand: Azzoro blue scale (replaces lime/green from POC)
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -489,7 +489,7 @@ export default config;
 Run:
 ```bash
 git add tailwind.config.ts
-git commit -m "feat: switch Tailwind palette to Azzuro blue brand"
+git commit -m "feat: switch Tailwind palette to Azzoro blue brand"
 ```
 
 ---
@@ -510,8 +510,8 @@ Create `app/globals.css`:
 
 @layer base {
   :root {
-    /* Azzuro blue brand */
-    --primary: 215 90% 48%;              /* #1A6FE0 — Azzuro blue */
+    /* Azzoro blue brand */
+    --primary: 215 90% 48%;              /* #1A6FE0 — Azzoro blue */
     --primary-foreground: 0 0% 100%;
     --navy-dark: 222 47% 11%;            /* #0F172A — deep navy bg */
 
@@ -562,7 +562,7 @@ Create `app/globals.css`:
 Run:
 ```bash
 git add app/globals.css
-git commit -m "feat: add globals.css with Azzuro brand tokens"
+git commit -m "feat: add globals.css with Azzoro brand tokens"
 ```
 
 ---
@@ -594,7 +594,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: { default: 'Azzuro Resources', template: '%s — Azzuro Resources' },
+  title: { default: 'Azzoro Resources', template: '%s — Azzoro Resources' },
   description: 'Mining exploration in Mongolia',
 };
 
@@ -710,7 +710,7 @@ git commit -m "feat: add next-intl getRequestConfig with locale validation"
     "languageMongolian": "Монгол"
   },
   "footer": {
-    "copyright": "© {year} Azzuro Resources PLC. All rights reserved."
+    "copyright": "© {year} Azzoro Resources PLC. All rights reserved."
   }
 }
 ```
@@ -735,7 +735,7 @@ git commit -m "feat: add next-intl getRequestConfig with locale validation"
     "languageMongolian": "Монгол"
   },
   "footer": {
-    "copyright": "© {year} Azzuro Resources PLC. Бүх эрх хуулиар хамгаалагдсан."
+    "copyright": "© {year} Azzoro Resources PLC. Бүх эрх хуулиар хамгаалагдсан."
   }
 }
 ```
@@ -860,7 +860,7 @@ export default async function HomePage({
 
   return (
     <main className="container-wide py-24">
-      <h1 className="text-4xl font-bold">Azzuro Resources</h1>
+      <h1 className="text-4xl font-bold">Azzoro Resources</h1>
       <p className="mt-4 text-muted-foreground">Locale: {locale}</p>
       <p className="mt-2 text-sm">Placeholder home page — content arrives in Plan 2.</p>
     </main>
@@ -891,8 +891,8 @@ Expected: "▲ Next.js 14.x.x · Local: http://localhost:3000"
 
 In a browser, open:
 - `http://localhost:3000/` — expect redirect to `/en`
-- `http://localhost:3000/en` — expect to see "Azzuro Resources" + "Locale: en"
-- `http://localhost:3000/mn` — expect to see "Azzuro Resources" + "Locale: mn"
+- `http://localhost:3000/en` — expect to see "Azzoro Resources" + "Locale: en"
+- `http://localhost:3000/mn` — expect to see "Azzoro Resources" + "Locale: mn"
 - `http://localhost:3000/admin` — expect 404 (we haven't built admin yet)
 
 - [ ] **Step 3:** Stop the dev server (Ctrl+C)
@@ -989,8 +989,8 @@ export type HomeContent = {
   metrics: { value: string; label: string; source?: string }[];
   why_mongolia_intro: string;
   why_mongolia_cards: { icon?: string; title: string; body: string }[];
-  why_azzuro_intro: string;
-  why_azzuro_cards: { icon?: string; title: string; body: string }[];
+  why_azzoro_intro: string;
+  why_azzoro_cards: { icon?: string; title: string; body: string }[];
   sustainability_teaser: { heading: string; body: string; image?: string; cta_label: string; cta_href: string };
   leadership_teaser: { heading: string; body: string; cta_label: string; cta_href: string };
   news_section_enabled: boolean;
@@ -1440,8 +1440,8 @@ metrics:
     label: "Active projects"
 why_mongolia_intro: "Placeholder intro."
 why_mongolia_cards: []
-why_azzuro_intro: "Placeholder intro."
-why_azzuro_cards: []
+why_azzoro_intro: "Placeholder intro."
+why_azzoro_cards: []
 sustainability_teaser:
   heading: "Sustainability"
   body: "Placeholder body."
@@ -1584,7 +1584,7 @@ general_email: "contact@azzororesources.com"
 - [ ] **Step 4:** Create `content/settings/site.yml`
 
 ```yaml
-brand_name: "Azzuro Resources"
+brand_name: "Azzoro Resources"
 logo: "/uploads/logo.png"
 logo_dark: "/uploads/logo-dark.png"
 stock_ticker: "TBD"
@@ -1905,7 +1905,7 @@ export async function Navbar({ locale }: Props) {
     <header className="border-b border-border bg-background">
       <div className="container-wide flex items-center justify-between py-4">
         <Link href={`/${locale}`} className="font-display text-xl font-semibold">
-          Azzuro
+          Azzoro
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {nav.items.map((item) => (
@@ -2337,7 +2337,7 @@ git commit -m "feat: add sitemap.ts with hreflang alternates for both locales"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Azzuro Resources — Admin</title>
+    <title>Azzoro Resources — Admin</title>
   </head>
   <body>
     <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
@@ -2352,7 +2352,7 @@ Loading Sveltia from unpkg keeps the bundle out of our repo. For production we c
 ```yaml
 backend:
   name: github
-  repo: REPLACE_WITH_GITHUB_ORG/azzuro-resources
+  repo: REPLACE_WITH_GITHUB_ORG/azzoro-resources
   branch: main
   base_url: https://api.netlify.com  # placeholder; Sveltia GitHub App URL replaces this in Task 36
   auth_endpoint: auth
@@ -2487,9 +2487,9 @@ Append a new top-level collection:
               - { label: Icon, name: icon, widget: string, required: false }
               - { label: Title, name: title, widget: string, i18n: true }
               - { label: Body, name: body, widget: text, i18n: true }
-          - { label: Why Azzuro intro, name: why_azzuro_intro, widget: text, i18n: true }
-          - label: Why Azzuro cards
-            name: why_azzuro_cards
+          - { label: Why Azzoro intro, name: why_azzoro_intro, widget: text, i18n: true }
+          - label: Why Azzoro cards
+            name: why_azzoro_cards
             widget: list
             fields:
               - { label: Icon, name: icon, widget: string, required: false }
@@ -2748,7 +2748,7 @@ This is a one-time setup. After this, editors can sign into `/admin` with GitHub
 
 1. **Register a GitHub App**
    - Go to https://github.com/settings/apps/new
-   - GitHub App name: `Azzuro Resources CMS`
+   - GitHub App name: `Azzoro Resources CMS`
    - Homepage URL: `https://azzororesources.com`
    - Callback URL: `https://azzororesources.com/admin` (and add `http://localhost:3000/admin` for dev)
    - Untick "Webhook" → "Active"
@@ -2760,14 +2760,14 @@ This is a one-time setup. After this, editors can sign into `/admin` with GitHub
    - Generate a client secret, save it.
 
 2. **Install the App on the repo**
-   - In the App's settings → "Install App" → select `azzuro-resources`.
+   - In the App's settings → "Install App" → select `azzoro-resources`.
 
 3. **Update `public/admin/config.yml` backend block**
 
    ```yaml
    backend:
      name: github
-     repo: <github-org>/azzuro-resources
+     repo: <github-org>/azzoro-resources
      branch: main
      app_id: <APP_ID_FROM_STEP_1>
    ```
@@ -2884,7 +2884,7 @@ git push -u origin next-migration
 
 Go to https://vercel.com/dashboard and click "Add New… → Project."
 
-- [ ] **Step 3:** Import the `azzuro-resources` repo (or current name)
+- [ ] **Step 3:** Import the `azzoro-resources` repo (or current name)
 
 Pick the repo. Vercel auto-detects Next.js. Accept defaults except:
 - **Production branch:** set to `main` (we'll merge `next-migration` to `main` after staging is validated)
@@ -2909,7 +2909,7 @@ git push
 
 - [ ] **Step 6:** Verify deploy succeeds
 
-Watch the Vercel build log. Expect ~90s. On success, Vercel gives a preview URL like `azzuro-resources-xxxxx.vercel.app`.
+Watch the Vercel build log. Expect ~90s. On success, Vercel gives a preview URL like `azzoro-resources-xxxxx.vercel.app`.
 
 - [ ] **Step 7:** Smoke-test the deployed URL
 
@@ -2979,7 +2979,7 @@ Follow `docs/admin-setup.md` to register the GitHub App and install it on the re
 
 Specifically:
 1. Register the GitHub App
-2. Install on the `azzuro-resources` repo
+2. Install on the `azzoro-resources` repo
 3. Add Vercel env vars (`GITHUB_APP_ID`, `GITHUB_APP_CLIENT_ID`, `GITHUB_APP_CLIENT_SECRET`)
 4. Add at least one collaborator (probably yourself)
 
@@ -2990,7 +2990,7 @@ Replace the placeholder `backend:` section in `config.yml`:
 ```yaml
 backend:
   name: github
-  repo: <your-github-org>/azzuro-resources
+  repo: <your-github-org>/azzoro-resources
   branch: main
   app_id: <APP_ID_YOU_REGISTERED>
 ```

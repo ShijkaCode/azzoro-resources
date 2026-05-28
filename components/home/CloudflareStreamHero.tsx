@@ -23,7 +23,7 @@ export function CloudflareStreamHero({
       {hasVideo ? (
         <iframe
           src={`https://customer-${accountId}.cloudflarestream.com/${streamUid}/iframe?autoplay=true&muted=true&loop=true&controls=false&preload=metadata`}
-          title="Azzuro Resources hero video"
+          title="Azzoro Resources hero video"
           className="absolute inset-0 h-full w-full scale-[1.02] pointer-events-none"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           tabIndex={-1}

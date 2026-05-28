@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title: locale === 'mn' ? 'Төслүүд' : 'Projects',
     description:
       locale === 'mn'
-        ? 'Azzuro Resources-ийн төслүүдийг интерактив газрын зураг, түүхий эдийн шүүлтүүрээр үзнэ үү.'
-        : 'Explore Azzuro Resources projects through an interactive map with commodity filters.',
+        ? 'Azzoro Resources-ийн төслүүдийг интерактив газрын зураг, түүхий эдийн шүүлтүүрээр үзнэ үү.'
+        : 'Explore Azzoro Resources projects through an interactive map with commodity filters.',
     locale,
     path: '/projects',
   });

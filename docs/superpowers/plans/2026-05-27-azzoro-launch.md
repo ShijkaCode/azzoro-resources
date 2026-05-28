@@ -1,4 +1,4 @@
-# Azzuro Resources — Launch Implementation Plan (Plan 3 of 3)
+# Azzoro Resources — Launch Implementation Plan (Plan 3 of 3)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack additions vs Plan 2:** axe-core (a11y testing), @next/bundle-analyzer (perf). No runtime additions of consequence.
 
-**Reference spec:** `docs/superpowers/specs/2026-05-27-azzuro-website-renewal-design.md`
+**Reference spec:** `docs/superpowers/specs/2026-05-27-azzoro-website-renewal-design.md`
 
 **What Plan 1 + Plan 2 already shipped (skip in this plan):**
 - Next.js 14 + i18n + middleware + typed CMS content + Sveltia /admin shell (Plan 1)
@@ -27,7 +27,7 @@ These are gating launch unless deferred or accepted in placeholder form. Each ta
 
 | Item | Blocks | If still missing at launch |
 |---|---|---|
-| Real Azzuro logo (SVG + dark variant) | T22 brand finalization | Ship with current `new_logo.png` |
+| Real Azzoro logo (SVG + dark variant) | T22 brand finalization | Ship with current `new_logo.png` |
 | Stock ticker post-rebrand | T15 (stock card displays correct symbol) | Keep `ABM.L` env fallback |
 | Investor portal feed URL + format | T8-T9 (Home news section) | Section hidden via `news_section_enabled: false` |
 | Cloudflare Stream account ID + hero video UID | T6-T7 (hero video) | Static `/uploads/hero-poster.jpg` fallback |
@@ -111,7 +111,7 @@ Expected: push succeeds. If `main` is protected, push to a feature branch and op
 
 - [ ] **Step 1:** Open https://vercel.com/dashboard → Add New → Project
 
-- [ ] **Step 2:** Import the `azzuro-resources` repo (or current name). Accept Next.js detection.
+- [ ] **Step 2:** Import the `azzoro-resources` repo (or current name). Accept Next.js detection.
 
 - [ ] **Step 3:** Configure environment variables under Production + Preview scopes
 
@@ -208,7 +208,7 @@ Follow `docs/admin-setup.md` (created in Plan 1 Task 35).
 
 - [ ] **Step 1:** Register at https://github.com/settings/apps/new
 
-- App name: `Azzuro Resources CMS`
+- App name: `Azzoro Resources CMS`
 - Homepage URL: `https://azzororesources.com`
 - Callback URLs (one per line):
   - `https://staging.azzororesources.com/admin`
@@ -219,7 +219,7 @@ Follow `docs/admin-setup.md` (created in Plan 1 Task 35).
 - Where can this App be installed: Only on this account
 - Save. Note the **App ID** and **Client ID**. Generate a Client Secret, save it.
 
-- [ ] **Step 2:** Install the App on the `azzuro-resources` repo
+- [ ] **Step 2:** Install the App on the `azzoro-resources` repo
 
 App settings → Install App → select the repo only (not the org).
 
@@ -238,7 +238,7 @@ Replace the existing backend block:
 ```yaml
 backend:
   name: github
-  repo: <github-org>/azzuro-resources
+  repo: <github-org>/azzoro-resources
   branch: main
   app_id: <APP_ID>
 ```
@@ -444,7 +444,7 @@ Create `lib/seo/pageMetadata.ts`:
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n/config';
 
-const SITE_NAME = 'Azzuro Resources';
+const SITE_NAME = 'Azzoro Resources';
 
 type Args = {
   title: string;
@@ -497,8 +497,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   if (!isLocale(locale)) return {};
-  const titleEn = 'About Azzuro Resources';
-  const titleMn = 'Azzuro Resources-ийн тухай';
+  const titleEn = 'About Azzoro Resources';
+  const titleMn = 'Azzoro Resources-ийн тухай';
   const descEn = 'Mining exploration in Mongolia — story, leadership, governance.';
   const descMn = 'Монгол дахь уул уурхайн хайгуул — түүх, удирдлага, засаглал.';
   return buildPageMetadata({
@@ -569,7 +569,7 @@ Inside `LocaleLayout`, after `NextIntlClientProvider` opens:
     __html: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Azzuro Resources PLC',
+      name: 'Azzoro Resources PLC',
       url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com',
       logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com'}/uploads/logo.png`,
       sameAs: [
@@ -632,7 +632,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image({ params }: { params: { locale: string } }) {
-  const title = params.locale === 'mn' ? 'Azzuro Resources' : 'Azzuro Resources';
+  const title = params.locale === 'mn' ? 'Azzoro Resources' : 'Azzoro Resources';
   const subtitle =
     params.locale === 'mn'
       ? 'Монгол дахь уул уурхайн хайгуул'
@@ -727,7 +727,7 @@ The point isn't to ship AI-final copy — it's to **kick the placeholder copy ha
 
 - [ ] **Step 2:** For each page, run this prompt with Claude
 
-> You are drafting marketing website copy for Azzuro Resources PLC, a critical-minerals exploration company operating in Mongolia (formerly Asian Battery Metals PLC, just rebranded). Target audiences: institutional investors, regulators, partners, local Mongolian stakeholders. Tone: confident, technical-but-accessible, no AI tells (no "let's dive in", no rhetorical questions).
+> You are drafting marketing website copy for Azzoro Resources PLC, a critical-minerals exploration company operating in Mongolia (formerly Asian Battery Metals PLC, just rebranded). Target audiences: institutional investors, regulators, partners, local Mongolian stakeholders. Tone: confident, technical-but-accessible, no AI tells (no "let's dive in", no rhetorical questions).
 >
 > Read the attached PPT and existing copy. Then output **YAML frontmatter only** (no markdown body, no surrounding commentary) for `content/pages/<PAGE>.en.md`. Use the existing field shape exactly. Pay attention to:
 > - Headlines should be ≤8 words, evocative
@@ -808,7 +808,7 @@ git push
 
 - [ ] **Step 1:** For each updated `.en.md` file, prompt Claude
 
-> Translate the following Azzuro Resources web copy from English to formal Mongolian Cyrillic. Preserve YAML frontmatter structure exactly: translate only string values, not field names or hrefs. Industry vocabulary: use established Mongolian mining/geology terms (геологи, ордын, хайгуул, баялаг, etc.). Output ready-to-save .mn.md content.
+> Translate the following Azzoro Resources web copy from English to formal Mongolian Cyrillic. Preserve YAML frontmatter structure exactly: translate only string values, not field names or hrefs. Industry vocabulary: use established Mongolian mining/geology terms (геологи, ордын, хайгуул, баялаг, etc.). Output ready-to-save .mn.md content.
 
 - [ ] **Step 2:** Apply each output to the matching `.mn.md`
 
@@ -833,7 +833,7 @@ git push
 - [ ] **Step 1:** Create the file
 
 ```markdown
-# Azzuro Resources — Content Review Checklist
+# Azzoro Resources — Content Review Checklist
 
 Site URL: https://staging.azzororesources.com
 Password: <separately>
@@ -842,7 +842,7 @@ Password: <separately>
 
 For each page, scan the EN version, then click the language toggle and scan MN.
 
-- [ ] **Home** — Hero headline, key metrics (are the numbers right?), Why Mongolia cards, Why Azzuro cards, sustainability blurb, leadership blurb
+- [ ] **Home** — Hero headline, key metrics (are the numbers right?), Why Mongolia cards, Why Azzoro cards, sustainability blurb, leadership blurb
 - [ ] **About** — Story, mission, values, Board of Directors, Technical Team (correct people, correct roles, correct order), Leadership & Governance text
 - [ ] **Projects** — Click each pin: side panel shows accurate commodity, region, status. Click "View full project" → check body copy + data cards for accuracy
 - [ ] **ESG** — Approach, Environment, Community
@@ -861,7 +861,7 @@ The /admin login at the same URL lets you edit any of the above. Walk through th
 
 ## What we still need from you
 
-- [ ] Real Azzuro Resources logo (SVG, ideally light + dark)
+- [ ] Real Azzoro Resources logo (SVG, ideally light + dark)
 - [ ] Final stock ticker (post-rebrand)
 - [ ] Investor portal feed URL/format (RSS or JSON)
 - [ ] Real team photos (1:1 ratio, ≥600px wide)
@@ -899,13 +899,13 @@ One-page how-to for the client to maintain the site after launch.
 `docs/editor-guide.md`:
 
 ```markdown
-# Azzuro Resources — Editor Guide
+# Azzoro Resources — Editor Guide
 
 ## Signing in
 
 1. Visit `https://azzororesources.com/admin`
 2. Click **Sign in with GitHub**
-3. Authorize the Azzuro Resources CMS app (only the first time)
+3. Authorize the Azzoro Resources CMS app (only the first time)
 
 You'll land in the editor. The left sidebar groups everything you can edit.
 
@@ -1603,7 +1603,7 @@ Replace the stale Vite-era documentation. Cover:
 # Changelog
 
 ## 1.0.0 — YYYY-MM-DD (Launch)
-- Initial Azzuro Resources website
+- Initial Azzoro Resources website
 - Migrated from POC to Next.js 14 App Router
 - Bilingual EN/MN with Sveltia CMS
 - Interactive projects map with side panel
@@ -1629,7 +1629,7 @@ git push
 - [ ] **Step 1:** Tag and push
 
 ```bash
-git tag -a v1.0.0 -m "Launch: Azzuro Resources website"
+git tag -a v1.0.0 -m "Launch: Azzoro Resources website"
 git push origin v1.0.0
 ```
 
@@ -1646,7 +1646,7 @@ git push origin v1.0.0
 - [ ] **Step 1:** Create the file
 
 ```markdown
-# Azzuro Resources — Handoff Document
+# Azzoro Resources — Handoff Document
 
 ## What you got
 

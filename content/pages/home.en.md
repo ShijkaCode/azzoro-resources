@@ -21,8 +21,8 @@ why_mongolia_cards:
     body: Placeholder content for the Mongolia value proposition.
   - title: Investor narrative space
     body: Placeholder content for the investor-facing story.
-why_azzuro_intro: Azzuro's corporate story will be refined in the content-seeding phase, but the section architecture is already in place.
-why_azzuro_cards:
+why_azzoro_intro: Azzoro's corporate story will be refined in the content-seeding phase, but the section architecture is already in place.
+why_azzoro_cards:
   - title: Bilingual from day one
     body: EN and MN files already resolve through locale-prefixed routes.
   - title: CMS manageable

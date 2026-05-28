@@ -32,10 +32,10 @@ export default function Image({ params }: { params: { locale: string } }) {
             opacity: 0.8,
           }}
         >
-          Azzuro Resources
+          Azzoro Resources
         </div>
         <div>
-          <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>Azzuro Resources</div>
+          <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>Azzoro Resources</div>
           <div style={{ fontSize: 30, marginTop: 24, maxWidth: 760, opacity: 0.88 }}>{subtitle}</div>
         </div>
       </div>

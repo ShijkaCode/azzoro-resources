@@ -17,10 +17,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com'),
   title: {
-    default: 'Azzuro Resources',
-    template: '%s | Azzuro Resources',
+    default: 'Azzoro Resources',
+    template: '%s | Azzoro Resources',
   },
-  description: 'Bilingual corporate website foundation for Azzuro Resources.',
+  description: 'Bilingual corporate website foundation for Azzoro Resources.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

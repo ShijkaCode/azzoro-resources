@@ -1,4 +1,4 @@
-# Azzuro Resources — Manual Setup Runbook
+# Azzoro Resources — Manual Setup Runbook
 
 Everything you have to do **outside the codebase** between now and launch — in execution order, with specific links, field values, and verification steps. Nothing here can be automated from inside Claude Code.
 
@@ -53,7 +53,7 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 **Steps:**
 1. Go to https://github.com/settings/apps/new
 2. Fill the form:
-   - **GitHub App name:** `Azzuro Resources CMS`
+   - **GitHub App name:** `Azzoro Resources CMS`
    - **Homepage URL:** `https://azzororesources.com`
    - **Callback URL** (one per line, click "Add a callback URL" for each):
      ```
@@ -75,7 +75,7 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 5. Scroll down to **Private keys** section. Click **Generate a private key**. A `.pem` file downloads. Keep it — you may need it later for self-hosted Sveltia auth.
 6. Click **Install App** in the left sidebar
 7. Click **Install** next to your account
-8. Choose **Only select repositories** → pick `azzuro-resources` (or whatever the repo is named) → **Install**
+8. Choose **Only select repositories** → pick `azzoro-resources` (or whatever the repo is named) → **Install**
 
 **Verify:** GitHub Apps page shows the app installed on the repo with green "Installed" badge.
 
@@ -91,9 +91,9 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 1. Sign up at https://cloud.maptiler.com/auth/widget/?mode=register
 2. Verify email
 3. Dashboard → **Keys** (left sidebar)
-4. The "Default" key is fine, but for safety create a new one named `azzuro-production`:
+4. The "Default" key is fine, but for safety create a new one named `azzoro-production`:
    - Click **+ New Key**
-   - Name: `azzuro-production`
+   - Name: `azzoro-production`
    - **Allowed HTTP Origins:** add these (one per line — **hostnames only, no `https://` scheme, no port**):
      ```
      azzororesources.com
@@ -130,7 +130,7 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 
 **If POC project exists and deploys current repo:**
 1. Open https://vercel.com/dashboard
-2. Find the project (probably named `azzuro` or similar)
+2. Find the project (probably named `azzoro` or similar)
 3. Settings → Git → confirm:
    - Connected repository: correct repo
    - Production branch: `main`
@@ -147,7 +147,7 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 
 **Verify:** Vercel build log shows "Compiled successfully" + a list of pre-rendered routes (every `/en/*` and `/mn/*` page).
 
-Once deployed, note the auto-assigned URL (looks like `azzuro-resources-xxxxx.vercel.app`).
+Once deployed, note the auto-assigned URL (looks like `azzoro-resources-xxxxx.vercel.app`).
 
 ---
 
@@ -198,7 +198,7 @@ This is one small code edit I can do for you once you have the App ID. Or do it 
    ```yaml
    backend:
      name: github
-     repo: <YOUR-GITHUB-USERNAME>/azzuro-resources
+     repo: <YOUR-GITHUB-USERNAME>/azzoro-resources
      branch: main
      app_id: <APP_ID_FROM_1.1>
    ```
@@ -213,7 +213,7 @@ This is one small code edit I can do for you once you have the App ID. Or do it 
 **Verify:** Vercel auto-deploys. After deploy:
 1. Visit `https://<vercel-url>/admin`
 2. You should see a Sveltia sign-in page with a "Sign in with GitHub" button
-3. Click it → GitHub OAuth flow → Authorize the Azzuro Resources CMS app
+3. Click it → GitHub OAuth flow → Authorize the Azzoro Resources CMS app
 4. You land in the Sveltia dashboard with the left sidebar showing all collections (Pages, Team, Projects, Governance, Gallery, Partners, Settings)
 5. **End-to-end smoke test:** Click Pages → Home → change the EN headline → Save. Wait ~90s. Refresh `/en` on the site. The new headline shows.
 
@@ -255,7 +255,7 @@ If sign-in fails, the most common causes:
 1. Vercel → Project → **Settings** → **Deployment Protection**
 2. Find **Vercel Authentication** or **Password Protection** for Preview Deployments
 3. Enable it. Pick **Password Protection** (simpler than Vercel SSO for non-team users)
-4. Set a password (e.g., `azzuro-staging-2026` — anything memorable)
+4. Set a password (e.g., `azzoro-staging-2026` — anything memorable)
 5. Save
 
 **Verify:** Open `https://staging.azzororesources.com` in incognito — prompted for password. Enter it → site loads.

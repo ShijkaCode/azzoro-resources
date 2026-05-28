@@ -1,6 +1,6 @@
-# Azzuro Resources Website
+# Azzoro Resources Website
 
-Marketing and investor-facing website for Azzuro Resources PLC, built on Next.js 14 App Router with bilingual EN/MN routing, markdown-backed content, and a Git-based CMS at `/admin`.
+Marketing and investor-facing website for Azzoro Resources PLC, built on Next.js 14 App Router with bilingual EN/MN routing, markdown-backed content, and a Git-based CMS at `/admin`.
 
 ## Stack
 
