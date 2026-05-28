@@ -19,6 +19,7 @@ i18n:
 collections:
   - name: pages
     label: Pages
+    i18n: true
     files:
       - name: home
         label: Home
@@ -263,6 +264,7 @@ collections:
       - { label: Order, name: order, widget: number, value_type: int }
   - name: settings
     label: Settings
+    i18n: true
     files:
       - name: site
         label: Site
