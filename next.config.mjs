@@ -24,6 +24,32 @@ const nextConfig = {
       { source: '/contact', destination: '/en/contact', permanent: true },
     ];
   },
+  async headers() {
+    // OAuth popup flow for Sveltia /admin needs the opener page to permit
+    // postMessage / window.closed polling from its popup. Default strict
+    // Cross-Origin-Opener-Policy blocks both, which manifests as sign-in
+    // succeeding on GitHub but Sveltia never receiving the token.
+    return [
+      {
+        source: '/admin/:path*',
+        headers: [
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+        ],
+      },
+      {
+        source: '/api/auth',
+        headers: [
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+        ],
+      },
+      {
+        source: '/api/callback',
+        headers: [
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+        ],
+      },
+    ];
+  },
 };
 
 export default withBundleAnalyzer(withNextIntl(nextConfig));
