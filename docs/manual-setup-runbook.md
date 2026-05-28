@@ -94,13 +94,14 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 4. The "Default" key is fine, but for safety create a new one named `azzuro-production`:
    - Click **+ New Key**
    - Name: `azzuro-production`
-   - **Allowed origins:** add these (one per line):
+   - **Allowed HTTP Origins:** add these (one per line — **hostnames only, no `https://` scheme, no port**):
      ```
-     https://azzororesources.com
-     https://*.azzororesources.com
-     http://localhost:3000
+     azzororesources.com
+     *.azzororesources.com
+     localhost
      ```
-   - **Allowed referrer:** leave blank
+     MapTiler validates this field strictly — `https://...` or `http://localhost:3000` will fail with "Invalid origin restriction".
+   - **Allowed user-agent header:** leave blank
    - Save
 5. Copy the generated key
 
