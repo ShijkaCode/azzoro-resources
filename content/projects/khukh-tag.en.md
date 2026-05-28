@@ -1,25 +1,60 @@
 ---
-title: KHUKH TAG
+title: Khukh Tag
 commodity:
   - Graphite
-status: Active exploration
-region: Northern Mongolia
-lat: 50.2
-lng: 100.3
-license_area_km2: 45
+status: Resource definition
+region: Dundgovi
+lat: 45.6
+lng: 106.4
+license_area_km2: 9.54
 acquired_date: '2021-06-15'
 hero_image: /uploads/projects/khukh-tag-hero.jpg
-gallery_images: []
-summary: High-grade graphite project positioned to support a future battery materials narrative.
-body: High-grade graphite project positioned to support a future battery materials narrative.
-data_cards:
-  - label: Stage
-    value: Active exploration
-  - label: Focus
-    value: Graphite resource growth
+gallery_images:
+  - /uploads/minerals/core%202.jpg
+  - /uploads/minerals/1.jpg
+  - /uploads/field/IMG_9481.JPG
+summary: A graphite project built around a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with substantial room to grow and mineralisation open in all directions.
+tagline: A graphite project built around a defined JORC 2012 Mineral Resource, with substantial room to grow.
+is_draft: true
+tenure:
+  licence: XV-019603
+  licence_type: Exploration
+  area_km2: 9.54
+  ownership: 100% owned
+  province: Dundgovi (Undurshil soum)
+resource_table:
+  note: JORC 2012 Mineral Resource, November 2023, reported at a 4.3% TGC cut-off.
+  rows:
+    - category: Indicated (Central)
+      tonnes: '1.4'
+      grade: 13.9% TGC
+      contained: 197.7 kt
+    - category: Inferred (Central + North + Discovery)
+      tonnes: '10.8'
+      grade: 12.1% TGC
+      contained: 1,301.1 kt
+    - category: Total Mineral Resource
+      tonnes: '12.2'
+      grade: 12.3% TGC
+      contained: 1,498.8 kt
+exploration_target:
+  label: Exploration Target — Khukh Tag
+  statement: In addition to the Mineral Resource, an Exploration Target of 13.6–84.3 Mt at 5.2–9.1% TGC has been identified, reflecting the project's significant growth potential.
+  cautionary: An Exploration Target is conceptual in nature. There has been insufficient exploration to estimate a Mineral Resource, and it is uncertain whether further exploration will result in the estimation of a Mineral Resource.
+data_cards: []
 documents: []
 ---
 
-KHUKH TAG is seeded here as the graphite-led project story for the renewed site. The project page is ready to hold geology sections, exploration chronology, and downstream relevance once the client confirms the final copy.
+## Overview
 
-Coordinates in this draft are approximate and should be replaced with the real license-area centroid during the client review phase.
+Khukh Tag is the Company's graphite project, built around a defined JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
+
+## Geology and mineralisation
+
+Graphite at Khukh Tag occurs as massive and banded graphitic schist, intercalated with schist and limestone and folded into lenses that range from a few metres to hundreds of metres in length. The mineralised zones are readily mapped using their distinctive geophysical signature — high conductivity and high chargeability — and remain open in all directions.
+
+The deposit is supported by extensive work: **229 surface samples** returning grades from around 1% to over 20% TGC (averaging 7.05% TGC), and **57 diamond drill holes for 3,348 metres** completed to the end of February 2023 across five mineralised areas. Early flotation test work indicated that a high-purity graphite product of more than **94% TGC** could be produced at around 94% carbon recovery — an encouraging signal for product quality.
+
+## Next steps
+
+High-priority follow-up drill areas have already been identified to test the project's growth potential, with the mineralisation open in all directions.

@@ -2,34 +2,59 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react';
 import type { NavItem } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
 import LanguageToggle from './LanguageToggle';
 
-function NavAnchor({ href, label, external, onNavigate }: NavItem & { onNavigate?: () => void }) {
-  const className = 'text-sm font-medium text-white/80 transition hover:text-white';
+type ProjectLink = { slug: string; title: string };
 
-  if (external) {
-    return (
-      <a href={href} target="_blank" rel="noreferrer" className={className} onClick={onNavigate}>
-        {label}
-      </a>
-    );
-  }
+const underline =
+  'relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100';
 
-  return (
-    <Link href={href} className={className} onClick={onNavigate}>
-      {label}
-    </Link>
-  );
+const INVESTOR_LINKS: Record<Locale, { label: string; href: string }[]> = {
+  en: [
+    { label: 'Investor Centre Home', href: 'https://investors.asianbatterymetals.com/' },
+    { label: 'Stock Information', href: 'https://investors.asianbatterymetals.com/' },
+    { label: 'Announcements', href: 'https://investors.asianbatterymetals.com/announcements' },
+    { label: 'Presentations', href: 'https://investors.asianbatterymetals.com/announcements?filter=Presentation' },
+    { label: 'News and Media', href: 'https://investors.asianbatterymetals.com/news-insights' },
+    { label: 'Company reports', href: 'https://investors.asianbatterymetals.com/announcements?filter=reports' },
+  ],
+  mn: [
+    { label: 'Хөрөнгө оруулагчийн төв', href: 'https://investors.asianbatterymetals.com/' },
+    { label: 'Хувьцааны мэдээлэл', href: 'https://investors.asianbatterymetals.com/' },
+    { label: 'Мэдэгдлүүд', href: 'https://investors.asianbatterymetals.com/announcements' },
+    { label: 'Танилцуулга', href: 'https://investors.asianbatterymetals.com/announcements?filter=Presentation' },
+    { label: 'Мэдээ ба хэвлэл', href: 'https://investors.asianbatterymetals.com/news-insights' },
+    { label: 'Компанийн тайлан', href: 'https://investors.asianbatterymetals.com/announcements?filter=reports' },
+  ],
+};
+
+function isProjectsItem(item: NavItem) {
+  return !item.external && item.href.replace(/\/$/, '').endsWith('/projects');
+}
+function isInvestorItem(item: NavItem) {
+  return Boolean(item.external && /investors\./.test(item.href));
 }
 
-export default function Navbar({ items, locale }: { items: NavItem[]; locale: Locale }) {
+export default function Navbar({
+  items,
+  locale,
+  projectLinks,
+}: {
+  items: NavItem[];
+  locale: Locale;
+  projectLinks: ProjectLink[];
+}) {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -38,78 +63,207 @@ export default function Navbar({ items, locale }: { items: NavItem[]; locale: Lo
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
+  const useTransparent = isHome && !isScrolled && !isOpen && !openDropdown;
+
+  const headerClass = [
+    'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
+    useTransparent ? 'bg-transparent border-b border-transparent' : 'bg-[hsl(var(--ink))] border-b border-white/10',
+  ].join(' ');
+
+  const investorLinks = INVESTOR_LINKS[locale] ?? INVESTOR_LINKS.en;
+
+  const dropdownFor = (item: NavItem): { key: string; links: { label: string; href: string; external: boolean }[] } | null => {
+    if (isProjectsItem(item)) {
+      return {
+        key: 'projects',
+        links: projectLinks.map((p) => ({ label: p.title, href: localizeHref(locale, `/projects/${p.slug}`), external: false })),
+      };
+    }
+    if (isInvestorItem(item)) {
+      return { key: 'investor', links: investorLinks.map((l) => ({ ...l, external: true })) };
+    }
+    return null;
+  };
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div
-        className={[
-          'container-wide rounded-[1.75rem] border border-white/10 bg-navy-dark/85 px-5 py-4 text-white shadow-[0_24px_60px_-28px_rgba(15,23,42,0.78)] backdrop-blur',
-          isScrolled ? 'ring-1 ring-white/10' : '',
-        ].join(' ')}
-      >
-        <div className="flex items-center justify-between gap-4">
-          <Link href={`/${locale}`} className="flex items-center gap-3">
-            <Image src="/new_logo.png" alt="" width={160} height={40} className="h-10 w-auto" priority />
-            <span className="sr-only">Azzoro Resources</span>
-            <span aria-hidden="true" className="hidden text-xs font-semibold uppercase tracking-[0.28em] text-white/72 sm:inline">Azzoro Resources</span>
-          </Link>
+    <header className={headerClass}>
+      <div className="flex items-center justify-between gap-4 px-6 py-5 text-white sm:px-10 lg:px-16">
+        <Link href={`/${locale}`} className="flex items-center" aria-label="Azzoro Resources">
+          <Image src="/new_logo.png" alt="Azzoro Resources" width={180} height={44} priority className="h-10 w-auto brightness-0 invert" />
+        </Link>
 
-          <nav className="hidden items-center gap-6 lg:flex">
-            {items.map((item) => (
-              <NavAnchor
+        <nav className="hidden items-center gap-8 lg:flex">
+          {items.map((item) => {
+            const dropdown = dropdownFor(item);
+            const href = item.external ? item.href : localizeHref(locale, item.href);
+
+            if (dropdown) {
+              const open = openDropdown === dropdown.key;
+              return (
+                <div
+                  key={`${item.label}-${item.href}`}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(dropdown.key)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenDropdown(open ? null : dropdown.key)}
+                    className="flex items-center gap-1.5 text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+                    aria-expanded={open}
+                  >
+                    <span className={underline}>{item.label}</span>
+                    <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+                  </button>
+                  {open ? (
+                    <div className="absolute left-0 top-full min-w-[16rem] border border-white/15 bg-[hsl(var(--ink))] py-2">
+                      {dropdown.links.map((link) =>
+                        link.external ? (
+                          <a
+                            key={link.href + link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center justify-between gap-3 px-5 py-2.5 text-[14px] text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white"
+                          >
+                            {link.label}
+                            <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-white/40" />
+                          </a>
+                        ) : (
+                          <Link
+                            key={link.href + link.label}
+                            href={link.href}
+                            className="block px-5 py-2.5 text-[14px] text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white"
+                          >
+                            {link.label}
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            }
+
+            return item.external ? (
+              <a
                 key={`${item.label}-${item.href}`}
-                label={item.label}
-                href={item.external ? item.href : localizeHref(locale, item.href)}
-                external={item.external}
-              />
-            ))}
-          </nav>
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+              >
+                <span className={underline}>{item.label}</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-white/50" />
+              </a>
+            ) : (
+              <Link
+                key={`${item.label}-${item.href}`}
+                href={href}
+                className="text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+              >
+                <span className={underline}>{item.label}</span>
+              </Link>
+            );
+          })}
+        </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <LanguageToggle />
-            <Link
-              href={localizeHref(locale, '/contact')}
-              className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-            >
-              Contact
-            </Link>
-          </div>
-
-          <button
-            type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:bg-white/10 lg:hidden"
-            onClick={() => setIsOpen((open) => !open)}
-            aria-label="Toggle navigation"
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+        <div className="hidden lg:block">
+          <LanguageToggle />
         </div>
 
-        {isOpen ? (
-          <div className="mt-5 space-y-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:hidden">
-            <div className="flex flex-col gap-4">
-              {items.map((item) => (
-                <NavAnchor
-                  key={`${item.label}-${item.href}-mobile`}
-                  label={item.label}
-                  href={item.external ? item.href : localizeHref(locale, item.href)}
-                  external={item.external}
-                  onNavigate={() => setIsOpen(false)}
-                />
-              ))}
-            </div>
-            <div className="flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-              <LanguageToggle />
-              <Link
-                href={localizeHref(locale, '/contact')}
-                className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-        ) : null}
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center border border-white/30 text-white transition-colors hover:bg-white/10 lg:hidden"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label="Toggle navigation"
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
+
+      {isOpen ? (
+        <div className="border-t border-white/10 bg-[hsl(var(--ink))] px-6 pb-8 pt-6 text-white sm:px-10 lg:hidden">
+          <div className="flex flex-col">
+            {items.map((item) => {
+              const dropdown = dropdownFor(item);
+              const href = item.external ? item.href : localizeHref(locale, item.href);
+
+              if (dropdown) {
+                const expanded = mobileExpanded === dropdown.key;
+                return (
+                  <div key={`${item.label}-${item.href}-m`} className="border-b border-white/10">
+                    <button
+                      type="button"
+                      onClick={() => setMobileExpanded(expanded ? null : dropdown.key)}
+                      className="flex w-full items-center justify-between py-4 text-[15px] font-medium text-white"
+                      aria-expanded={expanded}
+                    >
+                      {item.label}
+                      <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+                    </button>
+                    {expanded ? (
+                      <div className="flex flex-col gap-1 pb-4 pl-4">
+                        {dropdown.links.map((link) =>
+                          link.external ? (
+                            <a
+                              key={link.href + link.label}
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center gap-1.5 py-2 text-[14px] text-white/70"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {link.label}
+                              <ArrowUpRight className="h-3.5 w-3.5 text-white/40" />
+                            </a>
+                          ) : (
+                            <Link
+                              key={link.href + link.label}
+                              href={link.href}
+                              className="py-2 text-[14px] text-white/70"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {link.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              }
+
+              return item.external ? (
+                <a
+                  key={`${item.label}-${item.href}-m`}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-1.5 border-b border-white/10 py-4 text-[15px] font-medium text-white"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-white/50" />
+                </a>
+              ) : (
+                <Link
+                  key={`${item.label}-${item.href}-m`}
+                  href={href}
+                  className="border-b border-white/10 py-4 text-[15px] font-medium text-white"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+          <div className="mt-6">
+            <LanguageToggle />
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

@@ -51,7 +51,9 @@ export type EsgContent = {
   approach_body: string;
   environment: { body: string; image?: string };
   community: { body: string; image?: string };
+  governance?: { body: string; image?: string };
   reports_intro: string;
+  gallery?: { image: string; caption?: string }[];
 };
 
 export type GalleryContent = {
@@ -67,6 +69,7 @@ export type ContactOffice = {
   hours?: string;
   lat?: number;
   lng?: number;
+  image?: string;
 };
 
 export type ContactContent = {
@@ -111,6 +114,25 @@ export type Project = {
   body: string;
   data_cards?: { label: string; value: string }[];
   documents?: { label: string; file: string }[];
+  // Optional structured fields (added for the full project profiles).
+  tagline?: string;
+  is_flagship?: boolean;
+  is_draft?: boolean;
+  parent_project?: string;
+  tenure?: {
+    licence?: string;
+    licence_type?: string;
+    area_km2?: number;
+    ownership?: string;
+    province?: string;
+  };
+  drill_highlights?: { hole: string; intercept: string }[];
+  resource_table?: {
+    note?: string;
+    rows: { category: string; tonnes: string; grade: string; contained: string }[];
+  };
+  exploration_target?: { label: string; statement: string; cautionary: string };
+  historical_estimate?: { label: string; statement: string; cautionary: string };
 };
 
 export type GalleryPhoto = {

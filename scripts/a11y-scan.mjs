@@ -5,7 +5,7 @@ const PAGES = [
   '/en',
   '/en/about',
   '/en/projects',
-  '/en/projects/oval',
+  '/en/projects/yambat',
   '/en/esg',
   '/en/gallery',
   '/en/contact',

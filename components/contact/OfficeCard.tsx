@@ -3,25 +3,39 @@ import type { ContactOffice } from '@/lib/content/types';
 
 export function OfficeCard({ office }: { office: ContactOffice }) {
   const mapKey = process.env.NEXT_PUBLIC_MAPTILER_KEY;
-  const mapImageUrl = office.lat && office.lng && mapKey
-    ? `https://api.maptiler.com/maps/streets/static/${office.lng},${office.lat},14/400x200@2x.png?key=${mapKey}`
-    : null;
+  const mapImageUrl =
+    office.lat && office.lng && mapKey
+      ? `https://api.maptiler.com/maps/dataviz-dark/static/${office.lng},${office.lat},13/600x320@2x.png?key=${mapKey}`
+      : null;
+  const media = office.image || mapImageUrl;
 
   return (
-    <article className="overflow-hidden rounded-[1.5rem] border border-border bg-background shadow-[0_18px_50px_-28px_rgba(15,23,42,0.16)]">
-      {mapImageUrl ? (
-        <div className="relative h-36 w-full">
-          <Image src={mapImageUrl} alt={`Map of ${office.name}`} fill className="object-cover" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" unoptimized />
+    <article className="group flex flex-col border border-rule bg-white">
+      {media ? (
+        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-rule">
+          <Image
+            src={media}
+            alt={office.image ? office.name : `Map of ${office.name}`}
+            fill
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            unoptimized={!office.image}
+          />
         </div>
       ) : (
-        <div className="flex h-36 items-center justify-center bg-muted text-sm text-muted-foreground">Map preview unavailable</div>
+        <div className="flex aspect-[16/9] items-center justify-center border-b border-rule bg-paper text-[11px] uppercase tracking-[0.28em] text-muted-ink">
+          —
+        </div>
       )}
-      <div className="p-5">
-        <h2 className="text-xl font-semibold">{office.name}</h2>
-        <address className="mt-3 whitespace-pre-line text-sm not-italic leading-7 text-muted-foreground">{office.address}</address>
-        {office.hours ? <p className="mt-3 text-sm text-muted-foreground">{office.hours}</p> : null}
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
+        <h2 className="font-display text-xl font-medium text-ink sm:text-2xl">{office.name}</h2>
+        <address className="mt-4 whitespace-pre-line text-[14px] not-italic leading-relaxed text-ink/70">{office.address}</address>
+        {office.hours ? <p className="mt-3 text-[13px] text-muted-ink">{office.hours}</p> : null}
         {office.email ? (
-          <a href={`mailto:${office.email}`} className="mt-4 inline-flex text-sm font-semibold text-primary transition hover:text-primary/80">
+          <a
+            href={`mailto:${office.email}`}
+            className="mt-5 inline-flex w-fit items-center border-b border-ink/40 pb-0.5 text-[13px] font-medium text-ink transition-colors hover:border-ink"
+          >
             {office.email}
           </a>
         ) : null}

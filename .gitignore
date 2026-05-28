@@ -21,8 +21,15 @@ temp
 # Local-only video masters (kept out of git and Vercel deploy)
 videos-source/
 
-# Working files from PPT analysis (not for commit)
+# Uploaded media — large originals, synced/optimized separately (not committed yet)
+public/uploads/
+
+# Working / reference material (not deployed)
 docs/.pptx_extract/
+*.docx
+document-*.pdf
+gemini_*.tsx
+technical-team.txt
 
 # Editor directories and files
 .vscode/*

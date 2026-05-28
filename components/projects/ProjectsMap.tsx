@@ -83,9 +83,9 @@ export function ProjectsMap({
   }, [projects]);
 
   return (
-    <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.28)]">
+    <div className="relative overflow-hidden border border-rule bg-white">
       <div ref={containerRef} className="h-[70vh] min-h-[32rem] w-full" />
-      <div className="border-t border-border bg-background/95 px-4 py-3 text-xs text-muted-foreground sm:px-5">
+      <div className="border-t border-rule bg-paper px-4 py-3 text-xs text-muted-ink sm:px-5">
         Map rendering by{' '}
         <a href="https://maplibre.org/" target="_blank" rel="noreferrer" className="font-medium underline underline-offset-2">
           MapLibre

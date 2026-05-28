@@ -1,9 +1,11 @@
 ---
 name: Phil Rundell
-role: Гүйцэтгэх бус захирал
-team_section: Board
-photo: /uploads/team/phil-rundell.png
+role: Санхүүгийн захирал / Компанийн нарийн бичгийн дарга
+team_section: Technical
+photo: /uploads/team/technical_team/Rundell-1-300x300.png
 order: 1
 ---
 
-Phil Rundell-ийн ТУЗ-ийн түр танилцуулга. Эцсийн намтар болон хариуцлагын мэдээллийг хэрэглэгч баталгаажуулсны дараа сольж шинэчилнэ.
+<!-- TODO — client to verify Mongolian translation -->
+
+Phil Rundell нь Coopers & Lybrand (одоогийн PricewaterhouseCoopers)-ийн түнш, Ferrier Hodgson-ийн захирал асан. Тэрээр одоо компанийн нарийн бичиг, нийцэл, нягтлан бодох бүртгэл, бүтцийн өөрчлөлтийн үйлчилгээ үзүүлдэг бие даасан мэргэшсэн нягтлан бодогч юм.

@@ -18,11 +18,11 @@ export function PhotoMasonry({ photos, activeTag }: { photos: GalleryPhoto[]; ac
             key={photo.slug}
             type="button"
             onClick={() => setIndex(itemIndex)}
-            className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-[1rem]"
+            className="group mb-4 block w-full break-inside-avoid overflow-hidden"
             aria-label={photo.caption ?? 'Open photo'}
           >
-            <div className="relative w-full overflow-hidden rounded-[1rem]" style={{ aspectRatio: '4 / 3' }}>
-              <Image src={photo.image} alt={photo.caption ?? ''} fill className="object-cover transition duration-300 hover:scale-[1.03]" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw" />
+            <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4 / 3' }}>
+              <Image src={photo.image} alt={photo.caption ?? ''} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw" />
             </div>
           </button>
         ))}

@@ -1,6 +1,6 @@
 ---
-intro_heading: Gallery
-intro_body: Azzoro's gallery is structured to mix field photography, video, and long-form case studies in one editorial surface. This seeded version uses placeholder assets so the layout, lightbox, and detail routing can be reviewed before client media arrives.
+intro_heading: Stories from the field
+intro_body: Long-form case studies on how Azzoro explores, operates, and works alongside the communities around its licences — supported by field photography and video from across Mongolia.
 filter_tags:
   - slug: all
     label: All

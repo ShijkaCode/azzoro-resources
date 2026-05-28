@@ -2,8 +2,8 @@
 name: Otgonjargal Bayarbat
 role: Senior Geologist (NPG)
 team_section: Technical
-photo: /uploads/team/otgonjargal-bayarbat.png
-order: 1
+photo: /uploads/team/technical_team/OtgonbayarGeo-300x300.png
+order: 4
 ---
 
-Placeholder bio for Otgonjargal Bayarbat. This entry exists so the About route reflects the updated technical team structure from the planning material.
+An exploration geologist with more than 20 years' experience in the minerals industry. He has managed exploration projects for gold, copper, molybdenum, wolfram, graphite, limestone and coal across Mongolia.

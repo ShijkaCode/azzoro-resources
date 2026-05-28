@@ -16,5 +16,5 @@ leadership_governance_body: |-
   Leadership and governance content on this route is structured to support both narrative explanation and downloadable records. The board section introduces people, while the governance section gives investors and partners direct access to formal corporate documents.
 
   This structure also creates a clear handoff between the marketing site and the external investor portal: governance context lives here, while market-sensitive announcements remain on the investor platform.
-governance_documents_intro: The documents below are placeholders for the categories required in the final launch version. They will be replaced with the latest approved PDFs during client review.
+governance_documents_intro: Corporate governance policies, charters and reports are available to download below.
 ---

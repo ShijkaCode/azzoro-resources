@@ -61,46 +61,64 @@ export default async function ContactPage({ params }: { params: { locale: string
           investorCta: 'Visit Investor Center ↗',
         };
 
+  const officesLabel = locale === 'mn' ? 'Оффисууд' : 'Offices';
+
   return (
-    <main id="main-content" className="container-wide py-16 sm:py-20">
-      <section className="surface-card p-8 sm:p-10 lg:p-12">
-        <p className="section-kicker">{labels.title}</p>
-        <h1 className="mt-4 text-balance text-4xl font-semibold sm:text-5xl">{labels.title}</h1>
-        <p className="mt-6 max-w-3xl whitespace-pre-line text-lg leading-8 text-muted-foreground">{contact.intro_body || labels.subtitle}</p>
+    <main id="main-content">
+      <section className="-mt-24 bg-ink text-white">
+        <div className="px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16">
+          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.title}</p>
+          <h1 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
+            {labels.title}
+          </h1>
+          <p className="mt-7 max-w-[60ch] text-base leading-relaxed text-white/75 sm:text-lg">{contact.intro_body || labels.subtitle}</p>
+        </div>
       </section>
 
-      <section className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {contact.offices.map((office) => (
-          <OfficeCard key={office.name} office={office} />
-        ))}
+      <section className="bg-paper px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+        <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{officesLabel}</p>
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {contact.offices.map((office) => (
+            <OfficeCard key={office.name} office={office} />
+          ))}
+        </div>
       </section>
 
-      <section className="mt-12 grid gap-12 lg:grid-cols-2">
-        <div className="surface-card p-8">
-          <p className="section-kicker">{labels.byPhone}</p>
-          <div className="mt-6">
-            <PhoneDropdown groups={contact.phone_groups} />
+      <section className="bg-paper px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 border-t border-rule pt-12 lg:grid-cols-2">
+          <div>
+            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.byPhone}</p>
+            <div className="mt-6">
+              <PhoneDropdown groups={contact.phone_groups} />
+            </div>
+          </div>
+          <div>
+            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.byEmail}</p>
+            <a
+              href={`mailto:${contact.general_email}`}
+              className="mt-6 inline-flex w-fit items-center border-b border-ink/40 pb-1 font-display text-2xl font-medium text-ink transition-colors hover:border-ink sm:text-3xl"
+            >
+              {contact.general_email}
+            </a>
           </div>
         </div>
-        <div className="surface-card p-8">
-          <p className="section-kicker">{labels.byEmail}</p>
-          <a href={`mailto:${contact.general_email}`} className="mt-6 inline-flex text-lg font-semibold text-primary transition hover:text-primary/80">
-            {contact.general_email}
-          </a>
-        </div>
       </section>
 
-      <section className="mt-12 rounded-[1.75rem] border border-border bg-muted/60 p-8 text-center sm:p-10">
-        <p className="text-lg font-semibold">{labels.investorTitle}</p>
-        <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">{labels.investorBody}</p>
-        <a
-          href={site.investor_portal_url}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-        >
-          {labels.investorCta}
-        </a>
+      <section className="bg-ink text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <h2 className="max-w-[18ch] font-display text-3xl font-medium leading-tight sm:text-4xl">{labels.investorTitle}</h2>
+            <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-white/75">{labels.investorBody}</p>
+          </div>
+          <a
+            href={site.investor_portal_url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex w-fit items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:border-white"
+          >
+            {labels.investorCta}
+          </a>
+        </div>
       </section>
     </main>
   );

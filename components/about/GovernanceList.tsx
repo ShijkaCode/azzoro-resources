@@ -1,4 +1,3 @@
-import { PDFDownloadButton } from '@/components/shared/PDFDownloadButton';
 import type { GovernanceDocument } from '@/lib/content/types';
 
 const categories: GovernanceDocument['category'][] = ['Constitution', 'Charters', 'Policies', 'Reports', 'Disclosures'];
@@ -12,40 +11,40 @@ export function GovernanceList({
 }) {
   const labels = {
     heading: locale === 'mn' ? 'Засаглалын баримт бичгүүд' : 'Governance documents',
-    download: locale === 'mn' ? 'PDF татах' : 'Download PDF',
-    effective: locale === 'mn' ? 'Хүчинтэй огноо' : 'Effective',
+    download: locale === 'mn' ? 'Татах' : 'Download',
   };
 
   return (
-    <section className="py-4">
-      <h2 className="text-3xl font-semibold">{labels.heading}</h2>
-      <div className="mt-8 space-y-10">
+    <section>
+      <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{labels.heading}</h2>
+      <div className="mt-8 space-y-8">
         {categories.map((category) => {
           const filtered = documents.filter((document) => document.category === category);
-
           if (filtered.length === 0) {
             return null;
           }
 
           return (
             <div key={category}>
-              <h3 className="text-xl font-semibold">{category}</h3>
-              <ul className="mt-4 space-y-3">
+              <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-muted-ink">{category}</p>
+              <ul className="mt-2 border-t border-rule">
                 {filtered.map((document) => (
-                  <li
-                    key={document.slug}
-                    className="flex flex-wrap items-center justify-between gap-4 rounded-[1.25rem] border border-border bg-background p-5"
-                  >
-                    <div className="max-w-2xl">
-                      <div className="font-medium">{document.title}</div>
-                      {document.description ? (
-                        <div className="mt-1 text-sm text-muted-foreground">{document.description}</div>
-                      ) : null}
-                      <div className="mt-2 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                        {labels.effective}: {new Date(document.effective_date).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU')}
-                      </div>
-                    </div>
-                    <PDFDownloadButton href={document.file} label={labels.download} />
+                  <li key={document.slug}>
+                    <a
+                      href={document.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${labels.download}: ${document.title}`}
+                      className="group flex items-center justify-between gap-4 border-b border-rule py-3 transition-colors hover:bg-ink/[0.03]"
+                    >
+                      <span className="text-[14px] text-ink/85 transition-colors group-hover:text-ink">{document.title}</span>
+                      <span
+                        aria-hidden
+                        className="flex h-7 w-7 shrink-0 items-center justify-center text-ink/40 transition-all group-hover:translate-y-0.5 group-hover:text-ink"
+                      >
+                        ↓
+                      </span>
+                    </a>
                   </li>
                 ))}
               </ul>

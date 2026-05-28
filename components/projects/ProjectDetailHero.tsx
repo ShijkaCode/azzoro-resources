@@ -1,28 +1,35 @@
 import Image from 'next/image';
 import type { Project } from '@/lib/content/types';
-import { colorForCommodity, textColorForCommodity } from '@/lib/map/markers';
 
-export function ProjectDetailHero({ project }: { project: Project }) {
+export function ProjectDetailHero({ project, locale }: { project: Project; locale: 'en' | 'mn' }) {
+  const flagshipLabel = locale === 'mn' ? 'Гол төсөл' : 'Flagship';
+
   return (
-    <section className="relative h-[60vh] min-h-[24rem] w-full overflow-hidden bg-navy-dark text-white">
+    <section className="relative -mt-24 flex min-h-[68vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
       {project.hero_image ? (
         <Image src={project.hero_image} alt={project.title} fill priority className="object-cover" sizes="100vw" />
       ) : null}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/50 to-transparent" />
-      <div className="container-wide absolute inset-x-0 bottom-0 pb-12">
-        <div className="mb-4 flex flex-wrap gap-2">
-          {project.commodity.map((commodity) => (
-            <span
-              key={commodity}
-              className="rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]"
-              style={{ backgroundColor: colorForCommodity(commodity), color: textColorForCommodity(commodity) }}
-            >
-              {commodity}
-            </span>
-          ))}
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
+
+      <div className="relative px-6 pb-12 pt-36 sm:px-10 sm:pb-16 lg:px-16">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          {project.is_flagship ? (
+            <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/70">{flagshipLabel}</span>
+          ) : null}
+          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/55">
+            {project.commodity.join(' · ')}
+          </span>
         </div>
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{project.title}</h1>
-        <p className="mt-3 text-base text-white/80 sm:text-lg">
+
+        <h1 className="mt-5 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.0] tracking-[-0.015em] sm:text-6xl lg:text-7xl">
+          {project.title}
+        </h1>
+
+        {project.tagline ? (
+          <p className="mt-6 max-w-[60ch] text-base leading-relaxed text-white/80 sm:text-lg">{project.tagline}</p>
+        ) : null}
+
+        <p className="mt-6 text-[12px] font-medium uppercase tracking-[0.28em] text-white/55">
           {project.region} · {project.status}
         </p>
       </div>

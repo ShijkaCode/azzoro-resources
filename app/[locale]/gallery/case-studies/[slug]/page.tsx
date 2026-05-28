@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import { loadCollection } from '@/lib/content/loadCollection';
 import type { CaseStudy } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
+import { localizeHref } from '@/lib/i18n/pathname';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 
 export async function generateStaticParams() {
@@ -64,25 +66,44 @@ export default async function CaseStudyPage({ params }: { params: { locale: stri
     notFound();
   }
 
+  const backLabel = locale === 'mn' ? 'Бүх түүх' : 'All stories';
+
   return (
     <main id="main-content">
-      <section className="relative h-[50vh] min-h-[24rem] overflow-hidden bg-navy-dark">
+      <section className="relative -mt-24 flex min-h-[64vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
         <Image src={study.hero_image} alt={study.title} fill priority className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/30 to-transparent" />
-        <div className="container-wide absolute inset-x-0 bottom-0 pb-10 text-white">
-          <div className="text-xs uppercase tracking-[0.18em] text-white/70">{new Date(study.date).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU')}</div>
-          <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{study.title}</h1>
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
+        <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
+          <p className="num-tabular text-[12px] font-medium uppercase tracking-[0.32em] text-white/70">
+            {new Date(study.date).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </p>
+          <h1 className="mt-5 max-w-[22ch] font-display text-balance text-4xl font-medium leading-[1.0] tracking-[-0.015em] sm:text-6xl lg:text-7xl">
+            {study.title}
+          </h1>
         </div>
       </section>
 
-      <article className="container-wide max-w-3xl py-16">
-        <p className="mb-8 text-xl text-muted-foreground">{study.summary}</p>
-        <MarkdownBody>{study.markdown || study.body}</MarkdownBody>
-        {study.pull_quote ? (
-          <blockquote className="my-12 border-l-4 border-primary pl-6 text-2xl italic text-foreground/90">
-            {study.pull_quote}
-          </blockquote>
-        ) : null}
+      <article className="bg-paper px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+        <div className="mx-auto max-w-[68ch]">
+          <p className="border-l-2 border-ink pl-6 font-display text-2xl font-medium leading-snug text-ink">{study.summary}</p>
+          <div className="mt-12">
+            <MarkdownBody>{study.markdown || study.body}</MarkdownBody>
+          </div>
+          {study.pull_quote ? (
+            <blockquote className="my-14 border-t border-rule pt-10 font-display text-3xl italic leading-snug text-ink">
+              “{study.pull_quote}”
+            </blockquote>
+          ) : null}
+          <div className="mt-16 border-t border-rule pt-8">
+            <Link
+              href={localizeHref(locale, '/gallery')}
+              className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.32em] text-ink/60 transition-colors hover:text-ink"
+            >
+              <span aria-hidden="true">←</span>
+              {backLabel}
+            </Link>
+          </div>
+        </div>
       </article>
     </main>
   );

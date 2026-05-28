@@ -1,9 +1,9 @@
 ---
 name: Phil Rundell
-role: Non-Executive Director
-team_section: Board
-photo: /uploads/team/phil-rundell.png
+role: CFO / Company Secretary
+team_section: Technical
+photo: /uploads/team/technical_team/Rundell-1-300x300.png
 order: 1
 ---
 
-Placeholder board profile for Phil Rundell. Final biography and board responsibilities will be replaced once the client confirms approved copy.
+Phil Rundell is a former Partner at Coopers & Lybrand (now PricewaterhouseCoopers) and a Director at Ferrier Hodgson. He is now a sole-practitioner Chartered Accountant specialising in company secretarial, compliance, accounting and reconstruction services.

@@ -6,7 +6,7 @@ import type { Project } from '@/lib/content/types';
 
 const ClientProjectsMap = dynamic(() => import('./ProjectsMap').then((module) => module.ProjectsMap), {
   ssr: false,
-  loading: () => <div className="h-[70vh] min-h-[32rem] animate-pulse rounded-[1.75rem] bg-muted" />,
+  loading: () => <div className="h-[70vh] min-h-[32rem] animate-pulse border border-rule bg-muted" />,
 });
 
 type ProjectsMapWithFiltersProps = {
@@ -30,19 +30,16 @@ export function ProjectsMapWithFilters({ projects }: ProjectsMapWithFiltersProps
     return projects.filter((project) => project.commodity.includes(activeCommodity));
   }, [activeCommodity, projects]);
 
+  const buttonClass = (active: boolean) =>
+    [
+      'border px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.28em] transition-colors',
+      active ? 'border-ink bg-ink text-white' : 'border-rule bg-white text-ink hover:bg-paper',
+    ].join(' ');
+
   return (
     <div>
-      <div className="mb-5 flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => setActiveCommodity(null)}
-          className={[
-            'rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition',
-            activeCommodity === null
-              ? 'border-primary bg-primary text-primary-foreground'
-              : 'border-border bg-background text-foreground hover:bg-muted',
-          ].join(' ')}
-        >
+      <div className="mb-px flex flex-wrap gap-2">
+        <button type="button" onClick={() => setActiveCommodity(null)} className={buttonClass(activeCommodity === null)}>
           All
         </button>
         {allCommodities.map((commodity) => (
@@ -50,12 +47,7 @@ export function ProjectsMapWithFilters({ projects }: ProjectsMapWithFiltersProps
             key={commodity}
             type="button"
             onClick={() => setActiveCommodity(commodity)}
-            className={[
-              'rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition',
-              activeCommodity === commodity
-                ? 'border-primary bg-primary text-primary-foreground'
-                : 'border-border bg-background text-foreground hover:bg-muted',
-            ].join(' ')}
+            className={buttonClass(activeCommodity === commodity)}
           >
             {commodity}
           </button>

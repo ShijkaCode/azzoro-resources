@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import FooterCards from '@/components/home/FooterCards';
 import HeroSection from '@/components/home/HeroSection';
 import IntroSection from '@/components/home/IntroSection';
+import OvalFeature from '@/components/home/OvalFeature';
 import { LatestNewsSection } from '@/components/home/LatestNewsSection';
 import { ProjectsMapPreview } from '@/components/home/ProjectsMapPreview';
 import ESGSection from '@/components/home/ESGSection';
@@ -53,16 +54,17 @@ export default async function HomePage({ params }: { params: { locale: string } 
   return (
     <main id="main-content">
       <HeroSection locale={locale} hero={home.hero} metrics={home.metrics} />
+      <OvalFeature locale={locale} />
       <IntroSection locale={locale} intro={home.why_mongolia_intro} cards={home.why_mongolia_cards} />
-      <WhatWeDo locale={locale} intro={home.why_azzoro_intro} cards={home.why_azzoro_cards} />
       <ProjectsMapPreview projects={projects} />
+      <WhatWeDo locale={locale} intro={home.why_azzoro_intro} cards={home.why_azzoro_cards} />
       <ESGSection locale={locale} teaser={home.sustainability_teaser} />
-      {home.news_section_enabled ? <LatestNewsSection investorPortalUrl={site.investor_portal_url} locale={locale} /> : null}
       {home.stock_section_enabled ? (
         <StockPriceCard investorPortalUrl={site.investor_portal_url} liveEnabled={site.stock_api_enabled} locale={locale} />
       ) : null}
+      {home.news_section_enabled ? <LatestNewsSection investorPortalUrl={site.investor_portal_url} locale={locale} /> : null}
       <FooterCards locale={locale} leadership={home.leadership_teaser} />
-      <PartnerLogos partners={partners} />
+      <PartnerLogos partners={partners} locale={locale} />
     </main>
   );
 }

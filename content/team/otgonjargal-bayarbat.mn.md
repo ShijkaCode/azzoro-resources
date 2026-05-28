@@ -2,8 +2,10 @@
 name: Отгонжаргал Баярбат
 role: Ахлах геологич (NPG)
 team_section: Technical
-photo: /uploads/team/otgonjargal-bayarbat.png
-order: 1
+photo: /uploads/team/technical_team/OtgonbayarGeo-300x300.png
+order: 4
 ---
 
-Отгонжаргал Баярбатын түр намтар. About route дээр техникийн багийн шинэчилсэн бүтцийг тусгахын тулд энэ бичлэгийг нэмсэн.
+<!-- TODO — client to verify Mongolian translation -->
+
+Ашигт малтмалын салбарт 20 гаруй жилийн туршлагатай хайгуулын геологич. Монгол даяар алт, зэс, молибден, вольфрам, бал чулуу, шохойн чулуу, нүүрсний хайгуулын төслүүдийг удирдаж байсан.

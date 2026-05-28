@@ -8,67 +8,89 @@ type LatestNewsSectionProps = {
 };
 
 export async function LatestNewsSection({ investorPortalUrl, locale }: LatestNewsSectionProps) {
-  const items = await fetchInvestorNews(3);
+  const items = await fetchInvestorNews(4);
   const labels =
     locale === 'mn'
       ? {
-          kicker: 'Хамгийн сүүлийн мэдээ',
-          title: 'Хөрөнгө оруулагчийн шинэчлэлтүүд',
-          body: 'Албан ёсны мэдээ, нийтлэл, зах зээлийн шинэчлэлтүүд хөрөнгө оруулагчийн порталд үргэлжлэн нийтлэгдэнэ.',
+          eyebrow: 'Хамгийн сүүлийн мэдээ',
+          headline: 'Хөрөнгө оруулагчийн шинэчлэлтүүд',
+          body: 'Албан ёсны мэдээ, зах зээлийн шинэчлэлтийг хөрөнгө оруулагчийн порталаар тогтмол нийтэлдэг.',
+          fallback: 'Албан ёсны мэдээ, ASX мэдэгдлүүдийг хөрөнгө оруулагчийн порталаар нийтэлдэг.',
           cta: 'Бүх мэдээг үзэх',
-          fallback: 'Инвесторын мэдээний feed тохируулагдаагүй байна. Портал дээрх хамгийн сүүлийн нийтлэлүүдийг үзнэ үү.',
+          read: 'Унших',
         }
       : {
-          kicker: 'Latest news',
-          title: 'Investor updates',
-          body: 'Official releases, market updates, and investor communications continue through the investor portal.',
+          eyebrow: 'Latest news',
+          headline: 'Investor updates',
+          body: 'Official releases and market updates are published regularly through the investor portal.',
+          fallback: 'Official releases and ASX announcements are published through the investor portal.',
           cta: 'View all releases',
-          fallback: 'The investor news feed is not configured yet. Use the portal for the latest releases.',
+          read: 'Read',
         };
 
+  const hasItems = items.length > 0;
+
   return (
-    <section className="container-wide py-8 sm:py-10">
-      <div className="surface-card p-8 sm:p-10 lg:p-12">
+    <section className="bg-paper text-ink">
+      <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <p className="section-kicker">{labels.kicker}</p>
-            <h2 className="mt-4 text-balance text-3xl font-semibold sm:text-4xl">{labels.title}</h2>
-            <p className="mt-4 text-base leading-8 text-muted-foreground">{items.length > 0 ? labels.body : labels.fallback}</p>
+          <div>
+            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.eyebrow}</p>
+            <h2 className="mt-6 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
+              {labels.headline}
+            </h2>
+            <p className="mt-6 max-w-[52ch] text-base leading-relaxed text-ink-soft sm:text-lg">
+              {hasItems ? labels.body : labels.fallback}
+            </p>
           </div>
-          <Link
+          <a
             href={investorPortalUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+            className="inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
           >
             {labels.cta}
-          </Link>
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
 
-        {items.length > 0 ? (
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        {hasItems ? (
+          <ul className="mt-14 border-b border-rule lg:mt-16">
             {items.map((item) => (
-              <article key={item.href} className="rounded-[1.5rem] border border-border bg-background p-6 shadow-[0_18px_40px_-26px_rgba(15,23,42,0.24)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-                  {new Date(item.publishedAt).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
-                </p>
-                <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
-                <p className="mt-4 line-clamp-4 text-sm leading-7 text-muted-foreground">{item.summary}</p>
+              <li key={item.href}>
                 <Link
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex text-sm font-semibold text-primary transition hover:text-primary/80"
+                  className="group grid grid-cols-1 gap-x-10 gap-y-3 border-t border-rule py-8 transition-colors hover:bg-ink/[0.025] sm:py-9 lg:grid-cols-[12rem_1fr_auto]"
                 >
-                  {labels.cta} →
+                  <p className="num-tabular text-[12px] font-medium uppercase tracking-[0.28em] text-muted-ink lg:pt-2">
+                    {new Date(item.publishedAt).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    })}
+                  </p>
+                  <div>
+                    <h3 className="font-display text-xl font-medium leading-snug text-ink transition-colors sm:text-2xl">
+                      {item.title}
+                    </h3>
+                    {item.summary ? (
+                      <p className="mt-3 line-clamp-2 max-w-[64ch] text-[14px] leading-relaxed text-ink/65 sm:text-[15px]">
+                        {item.summary}
+                      </p>
+                    ) : null}
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    className="text-[12px] font-medium uppercase tracking-[0.28em] text-ink/40 transition-all group-hover:translate-x-1 group-hover:text-ink lg:pt-2"
+                  >
+                    {labels.read} →
+                  </span>
                 </Link>
-              </article>
+              </li>
             ))}
-          </div>
+          </ul>
         ) : null}
       </div>
     </section>

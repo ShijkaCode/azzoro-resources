@@ -113,7 +113,21 @@ collections:
             fields:
               - { label: Body, name: body, widget: text }
               - { label: Image, name: image, widget: image, required: false }
+          - label: Governance
+            name: governance
+            widget: object
+            required: false
+            fields:
+              - { label: Body, name: body, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
           - { label: Reports intro, name: reports_intro, widget: text }
+          - label: Gallery
+            name: gallery
+            widget: list
+            required: false
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, required: false }
       - name: gallery
         label: Gallery
         file: content/pages/gallery.{{locale}}.md
@@ -141,6 +155,7 @@ collections:
               - { label: Address, name: address, widget: text }
               - { label: Email, name: email, widget: string, required: false }
               - { label: Hours, name: hours, widget: string, required: false }
+              - { label: Photo, name: image, widget: image, required: false }
               - { label: Latitude, name: lat, widget: number, required: false, value_type: float }
               - { label: Longitude, name: lng, widget: number, required: false, value_type: float }
           - label: Phone groups
@@ -198,6 +213,57 @@ collections:
       - { label: Hero image, name: hero_image, widget: image }
       - { label: Gallery images, name: gallery_images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
       - { label: Summary, name: summary, widget: text }
+      - { label: Tagline, name: tagline, widget: string, required: false }
+      - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false }
+      - { label: Draft (pending Competent Person sign-off), name: is_draft, widget: boolean, required: false, default: false }
+      - { label: Parent project slug, name: parent_project, widget: string, required: false }
+      - label: Tenure
+        name: tenure
+        widget: object
+        required: false
+        fields:
+          - { label: Licence, name: licence, widget: string, required: false }
+          - { label: Licence type, name: licence_type, widget: string, required: false }
+          - { label: Area (km2), name: area_km2, widget: number, required: false, value_type: float }
+          - { label: Ownership, name: ownership, widget: string, required: false }
+          - { label: Province, name: province, widget: string, required: false }
+      - label: Drill highlights
+        name: drill_highlights
+        widget: list
+        required: false
+        fields:
+          - { label: Drillhole, name: hole, widget: string }
+          - { label: Intercept, name: intercept, widget: text }
+      - label: Resource table
+        name: resource_table
+        widget: object
+        required: false
+        fields:
+          - { label: Note, name: note, widget: string, required: false }
+          - label: Rows
+            name: rows
+            widget: list
+            fields:
+              - { label: Category, name: category, widget: string }
+              - { label: Tonnes, name: tonnes, widget: string }
+              - { label: Grade, name: grade, widget: string }
+              - { label: Contained, name: contained, widget: string }
+      - label: Exploration target
+        name: exploration_target
+        widget: object
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Statement, name: statement, widget: text }
+          - { label: Cautionary statement, name: cautionary, widget: text }
+      - label: Historical estimate
+        name: historical_estimate
+        widget: object
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Statement, name: statement, widget: text }
+          - { label: Cautionary statement, name: cautionary, widget: text }
       - label: Data cards
         name: data_cards
         widget: list

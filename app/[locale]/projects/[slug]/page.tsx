@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { ProjectDetailHero } from '@/components/projects/ProjectDetailHero';
+import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectGallery } from '@/components/projects/ProjectBlocks';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
@@ -72,58 +73,93 @@ export default async function ProjectDetailPage({
 
   const nearby = projects.filter((entry) => entry.slug !== slug && entry.region === project.region).slice(0, 3);
 
+  const t =
+    locale === 'mn'
+      ? { draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.', nearby: 'Ойролцоох төслүүд' }
+      : { draft: 'Draft — figures pending Competent Person sign-off prior to publication.', nearby: 'Nearby projects' };
+
   return (
     <main id="main-content">
-      <ProjectDetailHero project={project} />
+      <ProjectDetailHero project={project} locale={locale} />
 
-      <section className="container-wide grid gap-12 py-16 lg:grid-cols-[minmax(0,1fr)_20rem]">
-        <div>
-          <MarkdownBody>{project.markdown || project.body}</MarkdownBody>
+      {project.is_draft ? (
+        <div className="border-b border-rule bg-paper px-6 py-3 text-[11px] font-medium uppercase tracking-[0.24em] text-muted-ink sm:px-10 lg:px-16">
+          {t.draft}
         </div>
-        <div className="space-y-4">
-          {project.data_cards?.map((card) => (
-            <div key={card.label} className="surface-card p-5">
-              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{card.label}</div>
-              <div className="mt-1 text-lg font-semibold">{card.value}</div>
-            </div>
-          ))}
-          {project.license_area_km2 ? (
-            <div className="surface-card p-5">
-              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">License area</div>
-              <div className="mt-1 text-lg font-semibold">{project.license_area_km2} km²</div>
-            </div>
+      ) : null}
+
+      <section className="bg-paper">
+        <TenureBar project={project} locale={locale} />
+      </section>
+
+      <section className="bg-paper px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-5xl space-y-16">
+          <MarkdownBody className="max-w-[68ch]">{project.markdown || project.body}</MarkdownBody>
+
+          <ProjectGallery project={project} locale={locale} />
+
+          <DrillResultsTable project={project} locale={locale} />
+
+          {project.historical_estimate ? (
+            <CautionaryCallout
+              label={project.historical_estimate.label}
+              statement={project.historical_estimate.statement}
+              cautionary={project.historical_estimate.cautionary}
+              locale={locale}
+            />
           ) : null}
-          {project.acquired_date ? (
-            <div className="surface-card p-5">
-              <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Acquired</div>
-              <div className="mt-1 text-lg font-semibold">{new Date(project.acquired_date).getFullYear()}</div>
-            </div>
+
+          <ResourceTable project={project} locale={locale} />
+
+          {project.exploration_target ? (
+            <CautionaryCallout
+              label={project.exploration_target.label}
+              statement={project.exploration_target.statement}
+              cautionary={project.exploration_target.cautionary}
+              locale={locale}
+            />
           ) : null}
-          <div className="surface-card p-5">
-            <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Coordinates</div>
-            <div className="mt-1 text-lg font-semibold">
-              {project.lat.toFixed(2)}, {project.lng.toFixed(2)}
-            </div>
-          </div>
+
+          {project.documents && project.documents.length > 0 ? (
+            <ul className="border-t border-rule">
+              {project.documents.map((doc) => (
+                <li key={doc.file}>
+                  <a
+                    href={doc.file}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center justify-between gap-4 border-b border-rule py-5 text-[15px] text-ink transition-colors hover:bg-ink/[0.025]"
+                  >
+                    <span className="font-medium">{doc.label}</span>
+                    <span aria-hidden="true" className="text-ink/40 transition-all group-hover:translate-x-1 group-hover:text-ink">
+                      ↓
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </section>
 
       {nearby.length > 0 ? (
-        <section className="bg-muted/60 py-16">
-          <div className="container-wide">
-            <h2 className="text-2xl font-semibold">Nearby projects</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {nearby.map((entry) => (
-                <Link
-                  key={entry.slug}
-                  href={localizeHref(locale, `/projects/${entry.slug}`)}
-                  className="surface-card p-6 transition hover:-translate-y-0.5"
-                >
-                  <div className="text-lg font-semibold">{entry.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{entry.region}</div>
-                </Link>
-              ))}
-            </div>
+        <section className="bg-ink text-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
+          <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl">{t.nearby}</h2>
+          <div className="mt-10 grid grid-cols-1 border-l border-t border-white/15 sm:grid-cols-3">
+            {nearby.map((entry) => (
+              <Link
+                key={entry.slug}
+                href={localizeHref(locale, `/projects/${entry.slug}`)}
+                className="group border-b border-r border-white/15 px-6 py-8 transition-colors hover:bg-white/[0.04]"
+              >
+                <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">{entry.commodity.join(' · ')}</p>
+                <p className="mt-4 font-display text-2xl font-medium leading-tight text-white">{entry.title}</p>
+                <p className="mt-2 text-[13px] text-white/60">{entry.region}</p>
+                <span aria-hidden="true" className="mt-6 inline-block text-white/40 transition-all group-hover:translate-x-1 group-hover:text-white">
+                  →
+                </span>
+              </Link>
+            ))}
           </div>
         </section>
       ) : null}

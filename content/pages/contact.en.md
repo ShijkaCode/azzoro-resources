@@ -7,6 +7,7 @@ offices:
       Jamiyangun street, 1st khoroo
       Sukhbaatar district, Ulaanbaatar, Mongolia
     email: contact@azzororesources.com
+    image: /uploads/offices/meru.jpg
     lat: 47.9185
     lng: 106.9177
   - name: Australia office
@@ -14,15 +15,18 @@ offices:
       Suite 8, 16 Nicholson Road
       Subiaco WA 6008
     email: investors@azzororesources.com
+    image: /uploads/offices/not_au_replace_me.jpg
     lat: -31.9489
     lng: 115.8236
   - name: UK office
     address: |-
-      Placeholder London office
-      Investor relations address pending client confirmation
+      The Broadgate Tower
+      20 Primrose Street
+      London EC2A 2EW, United Kingdom
     email: ir@azzororesources.com
-    lat: 51.5072
-    lng: -0.1276
+    image: /uploads/offices/Broadgate_Tower.png
+    lat: 51.5205
+    lng: -0.0817
 phone_groups:
   - category: General inquiries
     numbers:
