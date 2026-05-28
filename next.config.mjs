@@ -29,25 +29,18 @@ const nextConfig = {
     // postMessage / window.closed polling from its popup. Default strict
     // Cross-Origin-Opener-Policy blocks both, which manifests as sign-in
     // succeeding on GitHub but Sveltia never receiving the token.
+    //
+    // The callback page uses unsafe-none because the popup navigates cross-
+    // origin (to github.com) and back — same-origin-allow-popups isn't always
+    // enough to re-join the opener's BCG after a cross-origin trip.
+    const allowPopups = { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' };
+    const noCoop = { key: 'Cross-Origin-Opener-Policy', value: 'unsafe-none' };
     return [
-      {
-        source: '/admin/:path*',
-        headers: [
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
-        ],
-      },
-      {
-        source: '/api/auth',
-        headers: [
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
-        ],
-      },
-      {
-        source: '/api/callback',
-        headers: [
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
-        ],
-      },
+      { source: '/admin', headers: [allowPopups] },
+      { source: '/admin/', headers: [allowPopups] },
+      { source: '/admin/:path*', headers: [allowPopups] },
+      { source: '/api/auth', headers: [allowPopups] },
+      { source: '/api/callback', headers: [noCoop] },
     ];
   },
 };
