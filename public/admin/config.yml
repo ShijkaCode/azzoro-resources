@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ShijkaCode/mongolia-engineering-hub
+  repo: ShijkaCode/azzoro-resources
   branch: main
   app_id: 3895018
 
