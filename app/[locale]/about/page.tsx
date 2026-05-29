@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import { GovernanceList } from '@/components/about/GovernanceList';

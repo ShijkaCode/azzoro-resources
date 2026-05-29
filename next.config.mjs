@@ -9,6 +9,10 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Optimized variants rarely change (media is re-deployed, not hot-swapped),
+    // so cache them aggressively for fast repeat visits. If an image is ever
+    // replaced in place, redeploy or rename to bust.
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       { protocol: 'https', hostname: 'imagedelivery.net' },
       { protocol: 'https', hostname: '**.cloudflarestream.com' },
@@ -41,6 +45,12 @@ const nextConfig = {
       { source: '/admin/:path*', headers: [allowPopups] },
       { source: '/api/auth', headers: [allowPopups] },
       { source: '/api/callback', headers: [noCoop] },
+      // Raw uploads (hero video + poster, lightbox originals) change rarely;
+      // cache hard in the browser so reloads don't re-download them.
+      {
+        source: '/uploads/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' }],
+      },
     ];
   },
 };

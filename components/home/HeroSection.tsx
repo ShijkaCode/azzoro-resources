@@ -47,6 +47,7 @@ export default function HeroSection({ locale, hero }: HeroProps) {
         muted
         loop
         playsInline
+        preload="auto"
         poster="/uploads/hero-poster.jpg"
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"

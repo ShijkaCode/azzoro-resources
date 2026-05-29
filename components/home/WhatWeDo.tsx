@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import type { HomeContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n/config';
 

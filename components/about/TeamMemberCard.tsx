@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { useState } from 'react';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { TeamMember } from '@/lib/content/types';

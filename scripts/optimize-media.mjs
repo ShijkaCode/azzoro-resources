@@ -15,7 +15,7 @@
 // Re-run any time after dropping new originals into media-source/uploads:
 //   node scripts/optimize-media.mjs
 
-import { readdirSync, existsSync, mkdirSync, statSync, copyFileSync } from 'fs';
+import { readdirSync, existsSync, mkdirSync, statSync, copyFileSync, writeFileSync } from 'fs';
 import { readFile } from 'fs/promises';
 import path from 'path';
 import { execFileSync } from 'child_process';
@@ -115,6 +115,15 @@ const refs = await collectReferencedPaths();
 const fieldRefs = collectFieldImages();
 const live = new Set([...refs, ...fieldRefs]);
 
+// LQIP: tiny blurred base64 preview per image, keyed by the decoded /uploads
+// path. MediaImage feeds these to next/image's placeholder="blur" so sharp
+// images fade in instead of popping in one by one.
+async function makeBlur(file) {
+  const buf = await sharp(file).resize(20).webp({ quality: 30 }).toBuffer();
+  return `data:image/webp;base64,${buf.toString('base64')}`;
+}
+
+const blurManifest = {};
 const missing = [];
 let srcTotal = 0;
 let outTotal = 0;
@@ -156,8 +165,40 @@ for (const ref of [...live].sort()) {
   const outSize = statSync(outFile).size;
   outTotal += outSize;
   count++;
+
+  if (IMG_RE.test(outFile)) {
+    try {
+      blurManifest[ref] = await makeBlur(outFile);
+    } catch {
+      /* non-fatal: image just won't get a blur-up placeholder */
+    }
+  }
+
   console.log(`  ${rel}\n      ${mb(srcSize)} -> ${mb(outSize)}`);
 }
+
+// Hero poster MUST match the hero video's first frame, or it flashes on reload.
+// Derive it straight from the optimized video.
+const heroVideo = path.join(OUT, 'drone', 'hero_drone.MP4');
+const heroPoster = path.join(OUT, 'hero-poster.jpg');
+if (existsSync(heroVideo)) {
+  const tmp = path.join(OUT, '.hero-frame.png');
+  execFileSync('ffmpeg', ['-y', '-i', heroVideo, '-frames:v', '1', tmp], {
+    stdio: ['ignore', 'ignore', 'inherit'],
+  });
+  await sharp(tmp)
+    .resize({ width: IMG_MAX_DIM, height: IMG_MAX_DIM, fit: 'inside', withoutEnlargement: true })
+    .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
+    .toFile(heroPoster);
+  try { (await import('fs')).unlinkSync(tmp); } catch {}
+  console.log('  hero-poster.jpg regenerated from video first frame');
+}
+
+// Write the blur manifest for MediaImage to import.
+const manifestDir = path.join(ROOT, 'lib', 'media');
+mkdirSync(manifestDir, { recursive: true });
+writeFileSync(path.join(manifestDir, 'blur-manifest.json'), JSON.stringify(blurManifest, null, 0));
+console.log(`  blur manifest: ${Object.keys(blurManifest).length} entries`);
 
 console.log('\n--- summary ---');
 console.log(`optimized files : ${count}`);

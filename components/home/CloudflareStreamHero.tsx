@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { cn } from '@/lib/utils';
 
 type CloudflareStreamHeroProps = {

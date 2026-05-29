@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { useRef } from 'react';
 
 type GalleryItem = { image: string; caption?: string };

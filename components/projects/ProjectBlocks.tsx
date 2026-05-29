@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import type { Project } from '@/lib/content/types';
 
 type Locale = 'en' | 'mn';

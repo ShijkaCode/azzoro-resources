@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { loadSingleton } from '@/lib/content/loadSingleton';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import { EsgGallery } from '@/components/esg/EsgGallery';

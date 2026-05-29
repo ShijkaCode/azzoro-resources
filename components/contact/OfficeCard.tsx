@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import type { ContactOffice } from '@/lib/content/types';
 
 export function OfficeCard({ office }: { office: ContactOffice }) {
