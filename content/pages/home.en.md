@@ -1,7 +1,7 @@
 ---
 hero:
   video_id: ''
-  headline: Advancing critical mineral discoveries in Mongolia
+  headline: Advancing Base & Precious Metal Discoveries in Mongolia
   subline: Exploring copper, nickel and battery metals across Mongolia — led by the high-grade Oval Cu·Ni·PGE discovery in the Central Asian Orogenic Belt.
   cta_label: Explore projects
   cta_href: /projects

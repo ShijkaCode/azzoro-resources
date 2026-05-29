@@ -7,6 +7,14 @@ const withBundleAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === 'tr
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Ship the OG card fonts + logomark into the serverless functions that render
+  // the share images (they're read with fs at runtime, not imported).
+  experimental: {
+    outputFileTracingIncludes: {
+      '/[locale]/opengraph-image': ['./lib/og/**'],
+      '/[locale]/projects/[slug]/opengraph-image': ['./lib/og/**'],
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     // Optimized variants rarely change (media is re-deployed, not hot-swapped),

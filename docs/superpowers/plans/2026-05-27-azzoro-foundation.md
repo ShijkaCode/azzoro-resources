@@ -1431,7 +1431,7 @@ The actual content arrives in Plan 2. For now we create one bilingual placeholde
 ---
 hero:
   video_id: ""
-  headline: "Advancing critical mineral discoveries in Mongolia"
+  headline: "Advancing Base & Precious Metal Discoveries in Mongolia"
   subline: "Placeholder hero subline — content arrives in Plan 2."
   cta_label: "Explore projects"
   cta_href: "/en/projects"

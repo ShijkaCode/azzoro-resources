@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -11,6 +12,27 @@ import { isLocale, locales } from '@/lib/i18n/config';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+// Base Open Graph / Twitter card metadata for every page under a locale. Pages
+// supply their own title/description (Next falls those through to og/twitter),
+// and the opengraph-image route supplies the preview image. This is what
+// renders the rich preview when a link is shared in Messenger, Viber, etc.
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const { locale } = params;
+  const isMn = locale === 'mn';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
+  return {
+    openGraph: {
+      type: 'website',
+      siteName: 'Azzoro Resources',
+      locale: isMn ? 'mn_MN' : 'en_US',
+      url: `${siteUrl}/${locale}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+    },
+  };
 }
 
 export default async function LocaleLayout({
