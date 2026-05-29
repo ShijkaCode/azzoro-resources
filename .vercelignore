@@ -7,6 +7,10 @@ dist/
 # 4K video master kept for re-encoding; not used at runtime
 videos-source/
 
+# Full-resolution media originals (re-encode source only; optimized copies
+# live in public/uploads which IS deployed)
+media-source/
+
 # Misc local cruft
 .vscode/
 .idea/

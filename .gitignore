@@ -21,8 +21,11 @@ temp
 # Local-only video masters (kept out of git and Vercel deploy)
 videos-source/
 
-# Uploaded media — large originals, synced/optimized separately (not committed yet)
-public/uploads/
+# Full-resolution media originals. The optimized copies in public/uploads ARE
+# committed and deployed (Sveltia CMS also commits media there). These raw
+# originals are the re-encode source only — regenerate via
+# scripts/optimize-media.mjs.
+media-source/
 
 # Working / reference material (not deployed)
 docs/.pptx_extract/
