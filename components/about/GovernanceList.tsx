@@ -26,7 +26,7 @@ export function GovernanceList({
 
           return (
             <div key={category}>
-              <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-muted-ink">{category}</p>
+              <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-muted-ink">{category}</p>
               <ul className="mt-2 border-t border-rule">
                 {filtered.map((document) => (
                   <li key={document.slug}>

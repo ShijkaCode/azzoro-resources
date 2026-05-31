@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-const PER_PAGE = 8;
+const PER_PAGE = 16;
 
 export function FieldGallery({ images, heading }: { images: string[]; heading: string }) {
   const [page, setPage] = useState(0);

@@ -399,6 +399,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Draft (hide from website until ready), name: draft, widget: boolean, required: false, default: false }
       - { label: Summary, name: summary, widget: text }
       - { label: Hero image, name: hero_image, widget: image }
       - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }

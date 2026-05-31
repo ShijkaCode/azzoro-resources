@@ -74,7 +74,7 @@ export default async function CaseStudyPage({ params }: { params: { locale: stri
         <Image src={study.hero_image} alt={study.title} fill priority className="object-cover" sizes="100vw" />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
-          <p className="num-tabular text-[12px] font-medium uppercase tracking-[0.32em] text-white/70">
+          <p className="num-tabular text-[12px] font-medium uppercase tracking-[0.24em] text-white/70">
             {new Date(study.date).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
           <h1 className="mt-5 max-w-[22ch] font-display text-balance text-4xl font-medium leading-[1.0] tracking-[-0.015em] sm:text-6xl lg:text-7xl">
@@ -97,7 +97,7 @@ export default async function CaseStudyPage({ params }: { params: { locale: stri
           <div className="mt-16 border-t border-rule pt-8">
             <Link
               href={localizeHref(locale, '/gallery')}
-              className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.32em] text-ink/60 transition-colors hover:text-ink"
+              className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-ink/60 transition-colors hover:text-ink"
             >
               <span aria-hidden="true">←</span>
               {backLabel}

@@ -72,11 +72,11 @@ export default async function EsgPage({ params }: { params: { locale: string } }
     <main id="main-content">
       <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
         {esg.hero_image ? (
-          <Image src={esg.hero_image} alt="" fill priority className="object-cover" sizes="100vw" />
+          <Image src={esg.hero_image} alt="" fill priority className="object-cover object-bottom" sizes="100vw" />
         ) : null}
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--eco)/0.85)] via-black/45 to-black/20" />
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/75">{labels.eyebrow}</p>
+          <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-white/75">{labels.eyebrow}</p>
           <h1 className="mt-5 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
             {esg.hero_headline || labels.title}
           </h1>
@@ -85,7 +85,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
 
       <section className="bg-[hsl(var(--eco-paper))] px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <div className="border-t-2 border-[hsl(var(--eco))] pt-8">
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--eco))]">{labels.eyebrow}</p>
+          <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{labels.eyebrow}</p>
           <MarkdownBody className="mt-6 max-w-[64ch] prose-p:text-lg prose-p:text-ink/80">{esg.approach_body}</MarkdownBody>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
                 />
                 <div className="flex items-baseline gap-4">
                   <span className="num-display text-3xl font-medium leading-none text-[hsl(var(--eco))] transition-transform duration-300 group-hover:-translate-y-1">{pillar.number}</span>
-                  <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--eco))]">{pillar.label}</p>
+                  <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{pillar.label}</p>
                 </div>
                 <MarkdownBody className="mt-7 max-w-[48ch]">{pillar.body}</MarkdownBody>
               </div>
@@ -125,7 +125,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
       <EsgGallery items={galleryItems} heading={labels.gallery} />
 
       <section className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
-        <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.reports}</p>
+        <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-white/55">{labels.reports}</p>
         <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-white/75">{esg.reports_intro}</p>
       </section>
     </main>

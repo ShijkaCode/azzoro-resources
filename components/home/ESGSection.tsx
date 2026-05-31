@@ -57,7 +57,7 @@ export default function ESGSection({
                     ) : null}
                   </div>
                   <div className="flex flex-1 flex-col px-0 py-7 sm:px-6 sm:py-8">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-ink">{pillar.tag}</p>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-muted-ink">{pillar.tag}</p>
                     <h3 className="mt-4 font-display text-xl font-medium leading-snug text-ink sm:text-2xl">{pillar.title}</h3>
                     <p className="mt-3 max-w-[44ch] text-[14px] leading-relaxed text-ink/70 sm:text-[15px]">{pillar.body}</p>
                   </div>

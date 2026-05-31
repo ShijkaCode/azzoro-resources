@@ -38,7 +38,7 @@ export default function PartnerLogos({ partners, locale = 'en' }: { partners: Pa
   return (
     <section className="bg-paper text-ink">
       <div className="px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
-        <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{copy.eyebrow}</p>
+        <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-muted-ink">{copy.eyebrow}</p>
 
         <ul className="mt-8 grid grid-cols-2 border-l border-t border-rule sm:grid-cols-4">
           {sorted.map((partner) => {

@@ -1,5 +1,6 @@
 ---
 title: Khukh Tag community engagement
+draft: true
 summary: How the Khukh Tag field team treats local engagement as part of day-to-day site planning, access and operating continuity.
 hero_image: /uploads/gallery/case-studies/khukh-tag-community-hero.jpg
 date: '2025-10-01'

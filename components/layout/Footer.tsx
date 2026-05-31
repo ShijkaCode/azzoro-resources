@@ -12,18 +12,18 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
     <footer className="border-t border-white/10 bg-primary text-white">
       <div className="grid gap-x-12 gap-y-8 px-6 py-10 sm:px-10 lg:grid-cols-[1fr_0.9fr] lg:items-start lg:px-16 lg:py-12">
         <div>
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">Azzuro Resources</p>
+          <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-white/55">Azzuro Resources</p>
           <h2 className="mt-4 max-w-[20ch] font-display text-balance text-2xl font-medium leading-[1.1] tracking-[-0.01em] sm:text-3xl">
             {brandLine}
           </h2>
           <p className="mt-5 max-w-[42ch] text-[14px] leading-relaxed text-white/65">{settings.tagline}</p>
-          <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.32em] text-white/45">ASX: AZ9</p>
+          <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.24em] text-white/45">ASX: AZ9</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8">
           {settings.link_columns.map((column) => (
             <div key={column.heading}>
-              <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/55">{column.heading}</p>
+              <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/55">{column.heading}</p>
               <ul className="mt-5 space-y-3 text-[15px] text-white/80">
                 {column.links.map((link) => (
                   <li key={`${column.heading}-${link.label}`}>

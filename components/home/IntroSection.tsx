@@ -33,7 +33,7 @@ export default function IntroSection({
                 />
               ) : null
             )}
-            <div aria-hidden="true" className="absolute bottom-4 right-4 z-10 flex items-center gap-2 bg-black/55 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.32em] text-white/85 sm:bottom-6 sm:right-6">
+            <div aria-hidden="true" className="absolute bottom-4 right-4 z-10 flex items-center gap-2 bg-black/55 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.24em] text-white/85 sm:bottom-6 sm:right-6">
               <span className="num-display text-[11px] leading-none text-[hsl(var(--copper))]">{String(activeIndex + 1).padStart(2, '0')}</span>
               <span aria-hidden="true" className="text-white/40">/</span>
               <span className="num-display text-[11px] leading-none text-white/70">{total}</span>
@@ -69,7 +69,7 @@ export default function IntroSection({
                         {String(idx + 1).padStart(2, '0')}
                       </span>
                       <div>
-                        <p className={`text-[12px] font-medium uppercase tracking-[0.32em] transition-colors ${isActive ? 'text-white' : 'text-white/55 group-hover:text-white/85'}`}>
+                        <p className={`text-[12px] font-medium uppercase tracking-[0.24em] transition-colors ${isActive ? 'text-white' : 'text-white/55 group-hover:text-white/85'}`}>
                           {card.title}
                         </p>
                         {isActive ? (

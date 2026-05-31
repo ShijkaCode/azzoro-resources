@@ -208,6 +208,7 @@ export type CaseStudy = {
   pull_quote?: string;
   related?: string[];
   date: string;
+  draft?: boolean;
 };
 
 export type Partner = {
