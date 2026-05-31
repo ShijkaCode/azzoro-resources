@@ -13,10 +13,12 @@ license_area_km2: 106.07
 acquired_date: '2023-01-01'
 hero_image: /uploads/gallery/photos/discovery_4k.png
 gallery_images:
-  - /uploads/minerals/021.JPG
-  - /uploads/minerals/1.jpg
-  - /uploads/minerals/core%202.jpg
-  - /uploads/field/drill%201.jpg
+  - image: /uploads/projects/oval-magnetics.png
+    caption: Magnetic RTP vertical derivative over the Oval trend — an 880 m mineralised corridor from North Oval to the potential southeast extension.
+  - image: /uploads/projects/oval-drill-core.jpg
+    caption: Drill core from discovery hole OVD021 — massive and disseminated Cu·Ni·PGE sulphides.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: District-scale magnetics across the Yambat licences, placing Oval on the regional massive-sulphide corridor.
 summary: Azzoro's flagship Yambat Project hosts the high-grade Oval copper-nickel-PGE discovery — a magmatic massive-sulphide system in southwestern Mongolia that remains open along strike and at depth.
 tagline: Home to the Oval Cu-Ni-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and now defining a district-scale copper-nickel opportunity.
 is_flagship: true

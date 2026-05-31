@@ -12,9 +12,10 @@ license_area_km2: 0
 acquired_date: '2026-01-01'
 hero_image: /uploads/field/_CP11422.jpg
 gallery_images:
-  - /uploads/minerals/021.JPG
-  - /uploads/field/camp-bilgun.jpg
-  - /uploads/field/IMG_8982.JPG
+  - image: /uploads/projects/red-hill-drilling.jpg
+    caption: Red Hill (Maikhan Uul) drilling — MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
+  - image: /uploads/projects/vms-deposit-model.jpg
+    caption: Schematic volcanogenic massive-sulphide (VMS) deposit model — the system type Red Hill is interpreted to represent.
 summary: A volcanogenic massive-sulphide (VMS) copper-gold project on a granted mining licence to 2045, just 8 km from the Oval discovery and offering high-grade Cu-Au sulphides at depth with shallow gold-silver near surface.
 tagline: A VMS copper-gold project (formerly Maikhan Uul) on a granted mining licence to 2045, just 8 km from the flagship Oval discovery.
 is_draft: true

@@ -12,9 +12,10 @@ license_area_km2: 106.07
 acquired_date: '2024-01-01'
 hero_image: /uploads/field/IMG_8982.JPG
 gallery_images:
-  - /uploads/field/IMG_9481.JPG
-  - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-  - /uploads/field/_CP11422.jpg
+  - image: /uploads/projects/copper-ridge-magnetics.jpg
+    caption: Copper Ridge — magnetics and chargeability with drillholes CRS01–CRS04 testing IOCG-style copper-gold targets.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: Regional magnetic corridor linking Copper Ridge to the wider Yambat project area.
 summary: A copper-gold prospect in the northern Yambat licence, interpreted as a potential IOCG-style system and adding precious-metals exposure 7 km north of the Oval discovery.
 tagline: A copper-gold prospect within the Yambat licence, interpreted as a potential iron-oxide-copper-gold (IOCG) style system.
 is_draft: true

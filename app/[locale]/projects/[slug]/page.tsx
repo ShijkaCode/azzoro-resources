@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { ProjectDetailHero } from '@/components/projects/ProjectDetailHero';
-import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectGallery } from '@/components/projects/ProjectBlocks';
+import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectFigures } from '@/components/projects/ProjectBlocks';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
@@ -73,6 +73,10 @@ export default async function ProjectDetailPage({
 
   const nearby = projects.filter((entry) => entry.slug !== slug && entry.region === project.region).slice(0, 3);
 
+  const figures = project.gallery_images ?? [];
+  const leadFigure = figures[0];
+  const restFigures = figures.slice(1);
+
   const t =
     locale === 'mn'
       ? { draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.', nearby: 'Ойролцоох төслүүд' }
@@ -94,9 +98,11 @@ export default async function ProjectDetailPage({
 
       <section className="bg-paper px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-5xl space-y-16">
+          {leadFigure ? <ProjectFigures figures={[leadFigure]} title={project.title} /> : null}
+
           <MarkdownBody className="max-w-[68ch]">{project.markdown || project.body}</MarkdownBody>
 
-          <ProjectGallery project={project} locale={locale} />
+          <ProjectFigures figures={restFigures} title={project.title} />
 
           <DrillResultsTable project={project} locale={locale} />
 

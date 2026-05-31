@@ -11,9 +11,8 @@ license_area_km2: 7.43
 acquired_date: '2022-09-01'
 hero_image: /uploads/projects/tsagaan-ders-hero.webp
 gallery_images:
-  - /uploads/field/IMG_8982.JPG
-  - /uploads/field/_CP11422.jpg
-  - /uploads/minerals/1.jpg
+  - image: /uploads/projects/tsagaan-ders-targets.png
+    caption: Tsagaan Ders — Quartz Hill, Central and South exploration targets with TSDD drill collars across the licences.
 summary: A lithium project hosting lithium-bearing pegmatites and greisen-altered granite across a 5 km mineralised corridor in Dundgovi, with lithium now confirmed at depth.
 tagline: A pegmatite- and greisen-hosted lithium system traced over a 5 km strike, where maiden drilling has confirmed lithium mineralisation at depth.
 is_draft: true

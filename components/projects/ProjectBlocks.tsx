@@ -129,27 +129,38 @@ export function ResourceTable({ project, locale }: { project: Project; locale: L
   );
 }
 
-export function ProjectGallery({ project, locale }: { project: Project; locale: Locale }) {
-  const t = LABELS[locale] ?? LABELS.en;
-  const images = project.gallery_images?.filter(Boolean) ?? [];
-  if (images.length === 0) return null;
+// Large, captioned geological figures (maps, sections, core). Uses object-contain
+// so detailed map legends and labels are never cropped.
+export function ProjectFigures({
+  figures,
+  title,
+}: {
+  figures?: { image: string; caption?: string }[];
+  title: string;
+}) {
+  const items = (figures ?? []).filter((figure) => figure && figure.image);
+  if (items.length === 0) return null;
 
   return (
-    <div>
-      <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{t.galleryTitle}</h2>
-      <ul className="mt-6 grid grid-cols-2 border-l border-t border-rule lg:grid-cols-3">
-        {images.map((src, idx) => (
-          <li key={`${src}-${idx}`} className="group relative aspect-[4/3] overflow-hidden border-b border-r border-rule">
+    <div className="space-y-8">
+      {items.map((figure, idx) => (
+        <figure key={`${figure.image}-${idx}`} className="border border-rule bg-paper">
+          <div className="relative aspect-[3/2] w-full">
             <Image
-              src={src}
-              alt={`${project.title} — figure ${idx + 1}`}
+              src={figure.image}
+              alt={figure.caption || `${title} — figure ${idx + 1}`}
               fill
-              sizes="(max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-contain"
             />
-          </li>
-        ))}
-      </ul>
+          </div>
+          {figure.caption ? (
+            <figcaption className="border-t border-rule px-4 py-3 text-[13px] leading-relaxed text-muted-ink">
+              {figure.caption}
+            </figcaption>
+          ) : null}
+        </figure>
+      ))}
     </div>
   );
 }

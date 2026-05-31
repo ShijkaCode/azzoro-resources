@@ -11,9 +11,8 @@ license_area_km2: 9.54
 acquired_date: '2021-06-15'
 hero_image: /uploads/projects/khukh-tag-hero.jpg
 gallery_images:
-  - /uploads/minerals/core%202.jpg
-  - /uploads/minerals/1.jpg
-  - /uploads/field/IMG_9481.JPG
+  - image: /uploads/projects/khukh-tag-zones.jpg
+    caption: Khukh Tag graphite — West, Discovery, North and Central zones hosting the defined JORC Mineral Resource, with targets remaining open.
 summary: A graphite project built around a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and substantial room to grow.
 tagline: A graphite project anchored by a defined JORC 2012 Mineral Resource and supported by meaningful growth potential.
 is_draft: true

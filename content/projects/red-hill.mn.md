@@ -12,9 +12,10 @@ license_area_km2: 0
 acquired_date: '2026-01-01'
 hero_image: /uploads/field/_CP11422.jpg
 gallery_images:
-  - /uploads/minerals/021.JPG
-  - /uploads/field/camp-bilgun.jpg
-  - /uploads/field/IMG_8982.JPG
+  - image: /uploads/projects/red-hill-drilling.jpg
+    caption: Red Hill (Майхан Уул) өрөмдлөг — MU2501, MU2601 цооногуудын их сульфидын огтлолууд 155 м тэнхлэгийн дагуу, гүн болон тэнхлэгийн дагуу нээлттэй.
+  - image: /uploads/projects/vms-deposit-model.jpg
+    caption: Галт уулын гаралтай их сульфидын (VMS) ордын бүдүүвч загвар — Red Hill төслийг төлөөлдөг гэж тайлбарласан системийн төрөл.
 summary: 2045 он хүртэл хүчинтэй ашиглалтын лицензтэй, Oval нээлтээс ердөө 8 км-т байрлах галт уулын гаралтай их сульфидын (VMS) зэс-алтны төсөл бөгөөд гүнд өндөр агуулгатай Cu-Au, гадаргууд гүехэн алт-мөнгийг агуулдаг.
 tagline: Гол Oval нээлтээс ердөө 8 км-т, 2045 он хүртэлх ашиглалтын лицензтэй VMS зэс-алтны төсөл, хуучнаар Майхан Уул.
 is_draft: true

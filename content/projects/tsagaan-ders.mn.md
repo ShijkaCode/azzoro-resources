@@ -11,9 +11,8 @@ license_area_km2: 7.43
 acquired_date: '2022-09-01'
 hero_image: /uploads/projects/tsagaan-ders-hero.webp
 gallery_images:
-  - /uploads/field/IMG_8982.JPG
-  - /uploads/field/_CP11422.jpg
-  - /uploads/minerals/1.jpg
+  - image: /uploads/projects/tsagaan-ders-targets.png
+    caption: Цагаан Дэрс — Кварц Хилл, Төв, Өмнөд хайгуулын зорилтууд болон TSDD өрөмдлөгийн цооногууд лицензүүд дээр.
 summary: Дундговь аймагт 5 км эрдэсжилтийн коридор дагуу лити агуулсан пегматит болон грейзенжсэн боржин чулуулгийг агуулсан, гүнд лити батлагдсан литийн төсөл.
 tagline: 5 км тэнхлэгийн уртад мөрдөгдсөн пегматит ба грейзен агуулсан литийн систем бөгөөд анхны өрөмдлөгөөр гүнд литийн эрдэсжилт батлагдсан.
 is_draft: true

@@ -13,10 +13,12 @@ license_area_km2: 106.07
 acquired_date: '2023-01-01'
 hero_image: /uploads/gallery/photos/discovery_4k.png
 gallery_images:
-  - /uploads/minerals/021.JPG
-  - /uploads/minerals/1.jpg
-  - /uploads/minerals/core%202.jpg
-  - /uploads/field/drill%201.jpg
+  - image: /uploads/projects/oval-magnetics.png
+    caption: Oval бүсийн соронзон RTP босоо деривативын зураг — Хойд Овалаас зүүн урдын боломжит үргэлжлэл хүртэлх 880 м ашигт малтмалжсан коридор.
+  - image: /uploads/projects/oval-drill-core.jpg
+    caption: OVD021 нээлтийн цооногийн өрөмдлөгийн зүсэлт — их болон тархмал Cu·Ni·PGE сульфид.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: Ямбатын лицензүүдийг хамарсан бүс нутгийн соронзон зураг, Oval-ийг бүсийн их сульфидын коридорт байрлуулна.
 summary: Azzoro-ийн гол Ямбат төсөл нь баруун өмнөд Монгол дахь өндөр агуулгатай Oval зэс-никель-PGE нээлтийг агуулдаг бөгөөд энэхүү магмын их сульфидын систем нь тэнхлэг болон гүн рүү нээлттэй хэвээр байна.
 tagline: 2024 онд ногоон талбайгаас илрүүлсэн өндөр агуулгатай магмын их сульфидын систем болох Oval Cu-Ni-PGE нээлтийн өлгий бөгөөд бүсийн хэмжээний зэс-никелийн боломжийг тодорхойлж байна.
 is_flagship: true

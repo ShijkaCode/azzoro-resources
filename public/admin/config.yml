@@ -292,7 +292,13 @@ collections:
       - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int }
       - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
       - { label: Hero image, name: hero_image, widget: image }
-      - { label: Gallery images, name: gallery_images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
+      - label: Gallery figures
+        name: gallery_images
+        widget: list
+        required: false
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Caption, name: caption, widget: text, required: false }
       - { label: Summary, name: summary, widget: text }
       - { label: Tagline, name: tagline, widget: string, required: false }
       - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false }

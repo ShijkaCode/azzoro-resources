@@ -12,9 +12,10 @@ license_area_km2: 106.07
 acquired_date: '2024-01-01'
 hero_image: /uploads/field/IMG_8982.JPG
 gallery_images:
-  - /uploads/field/IMG_9481.JPG
-  - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-  - /uploads/field/_CP11422.jpg
+  - image: /uploads/projects/copper-ridge-magnetics.jpg
+    caption: Copper Ridge — соронзон ба цэнэглэгдэх чадварын зураг, CRS01–CRS04 цооногууд IOCG төрлийн зэс-алтны зорилтыг шалгана.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: Copper Ridge-ийг өргөн Ямбатын төслийн бүстэй холбосон бүс нутгийн соронзон коридор.
 summary: Ямбатын лицензийн хойд хэсэгт байрлах зэс-алтны илрэл бөгөөд IOCG төрлийн систем байж болзошгүй гэж тайлбарлагдсан, Oval нээлтээс хойш 7 км-т үнэт металлын боломжийг нэмэгдүүлж буй зорилт.
 tagline: Ямбатын лиценз доторх зэс-алтны илрэл бөгөөд төмрийн исэл-зэс-алт (IOCG) төрлийн систем байж болзошгүй гэж үзэж байна.
 is_draft: true

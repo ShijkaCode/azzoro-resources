@@ -12,9 +12,10 @@ license_area_km2: 33.27
 acquired_date: '2025-01-01'
 hero_image: /uploads/field/camp-bilgun.jpg
 gallery_images:
-  - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-  - /uploads/field/IMG_9481.JPG
-  - /uploads/field/camp-bilgun.jpg
+  - image: /uploads/projects/bayan-sair-magnetics.jpg
+    caption: Баян Сайр болон MS1 зорилтыг хамарсан агаарын соронзон судалгаа, бүс нутгийн бүтэц ба өрөмдлөгийн зорилтыг тодорхойлно.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: Баян Сайрыг Oval, Copper Ridge-ийн хамт агуулсан бүс нутгийн их сульфидын коридор.
 summary: Ямбатын яг өмнөд талд байрлах эрт үе шатны бүсийн лиценз бөгөөд MS1 болон Oval интрузийн бүсийн үргэлжлэл байж болзошгүй тод соронзон аномалийг хамардаг.
 tagline: Ямбат төслийн яг өмнөд талд орших, компанийн дүүргийн хэмжээний загварыг шалгах бүсийн хайгуулын лиценз.
 is_draft: true

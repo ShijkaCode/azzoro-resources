@@ -11,9 +11,8 @@ license_area_km2: 9.54
 acquired_date: '2021-06-15'
 hero_image: /uploads/projects/khukh-tag-hero.jpg
 gallery_images:
-  - /uploads/minerals/core%202.jpg
-  - /uploads/minerals/1.jpg
-  - /uploads/field/IMG_9481.JPG
+  - image: /uploads/projects/khukh-tag-zones.jpg
+    caption: Хөх Таг бал чулуу — Баруун, Нээлт, Хойд, Төв бүсүүд JORC-ийн тогтоосон ашигт малтмалын нөөцийг агуулж, зорилтот биетүүд нээлттэй хэвээр.
 summary: 12.2 сая тонн @ 12.3% TGC хэмжээтэй JORC 2012 стандартын Ашигт малтмалын нөөцөд тулгуурласан, бүх чиглэлд нээлттэй, өсөлтийн боломж ихтэй бал чулууны төсөл.
 tagline: JORC 2012 стандартын тодорхой нөөцөөр баталгаажсан бөгөөд цааш өсөх бодит боломжтой бал чулууны төсөл.
 is_draft: true

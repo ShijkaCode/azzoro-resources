@@ -12,9 +12,10 @@ license_area_km2: 33.27
 acquired_date: '2025-01-01'
 hero_image: /uploads/field/camp-bilgun.jpg
 gallery_images:
-  - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-  - /uploads/field/IMG_9481.JPG
-  - /uploads/field/camp-bilgun.jpg
+  - image: /uploads/projects/bayan-sair-magnetics.jpg
+    caption: Airborne magnetics over Bayan Sair and the MS1 target, defining district-scale structure and drill targets.
+  - image: /uploads/projects/district-magnetics.jpg
+    caption: The regional massive-sulphide corridor that hosts Bayan Sair alongside Oval and Copper Ridge.
 summary: An early-stage regional tenement immediately south of Yambat that covers a prominent magnetic anomaly interpreted as a potential extension of the MS1 and Oval intrusive zones.
 tagline: A regional exploration tenement immediately south of the Yambat Project, testing the Company's district-scale model.
 is_draft: true

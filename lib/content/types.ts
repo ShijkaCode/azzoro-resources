@@ -154,7 +154,7 @@ export type Project = {
   license_area_km2?: number;
   acquired_date?: string;
   hero_image: string;
-  gallery_images?: string[];
+  gallery_images?: { image: string; caption?: string }[];
   summary: string;
   body: string;
   data_cards?: { label: string; value: string }[];
