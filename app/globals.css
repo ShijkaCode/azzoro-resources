@@ -111,6 +111,17 @@
     text-underline-offset: 0.18em;
     font-weight: 600;
   }
+
+  /* Flatten the zoom controls to match the Swiss design (sharp corners, hairline border) */
+  .maplibregl-ctrl-group {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid hsl(var(--rule));
+  }
+
+  .maplibregl-ctrl-group button {
+    border-radius: 0 !important;
+  }
 }
 
 @layer utilities {

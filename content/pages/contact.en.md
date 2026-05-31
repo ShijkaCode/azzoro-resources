@@ -1,5 +1,5 @@
 ---
-intro_body: This route is intentionally informational only. It provides office locations, general contact paths, and a clear hand-off to the investor portal for market-facing enquiries.
+intro_body: Use this page for office locations and general company contact details. Market-sensitive disclosures, announcements and investor materials remain available through the external investor centre.
 offices:
   - name: Mongolia office
     address: |-

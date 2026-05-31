@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-03.jpg
-caption: Төслийн нэвтрэх коридорын ойролцоох байгалийн дүр зураг
+caption: Төслийн нэвтрэх коридор дагуух дүр зураг
 tags:
   - Field
   - Events

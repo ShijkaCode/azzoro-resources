@@ -3,7 +3,7 @@ logo: /new_logo.png
 logo_dark: /new_logo.png
 stock_ticker: AZ9
 stock_api_enabled: true
-investor_portal_url: https://investors.azzororesources.com
+investor_portal_url: https://investors.asianbatterymetals.com
 social:
   linkedin: https://www.linkedin.com
 default_locale: en

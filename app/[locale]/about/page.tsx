@@ -73,14 +73,16 @@ export default async function AboutPage({ params }: { params: { locale: string }
             </h1>
           </div>
           <div className="relative min-h-[44vh] w-full lg:min-h-[68vh]">
-            <Image
-              src="/uploads/team/_CP11385.jpg"
-              alt="Azzoro Resources field geologist on site, Mongolia"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+            {about.hero_image ? (
+              <Image
+                src={about.hero_image}
+                alt={labels.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            ) : null}
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-ink/40 via-transparent to-transparent" />
           </div>
         </div>

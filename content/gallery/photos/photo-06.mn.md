@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-06.webp
-caption: Нөөцийн тодорхойлолтын ажлын үеийн Цагаан Дэрсний дүр зураг
+caption: Талбайн ажлын үеийн Цагаан Дэрсний дүр зураг
 tags:
   - Field
   - Community

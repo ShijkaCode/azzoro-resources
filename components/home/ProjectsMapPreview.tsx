@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Map as MapType, Popup as PopupType, LngLatBoundsLike } from 'maplibre-gl';
 import type { Project } from '@/lib/content/types';
 import { primaryCommodityColor } from '@/lib/map/markers';
-import { getMapStyleUrl } from '@/lib/map/tiles';
+import { getMapStyleUrl, getTerrainTilesUrl } from '@/lib/map/tiles';
 
 const T = {
   en: {
@@ -35,6 +35,13 @@ const PROJECT_ZOOM: Record<string, number> = {
 };
 const DEFAULT_ZOOM = 6;
 
+// Whole-country overview (Mongolia bbox + a little margin) — the default + reset view.
+const MONGOLIA_BOUNDS: [[number, number], [number, number]] = [
+  [87.7, 41.4],
+  [120.2, 52.3],
+];
+const OVERVIEW_PITCH = 40;
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, '&amp;')
@@ -61,7 +68,15 @@ function popupHTML(project: Project): string {
   `;
 }
 
-export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
+export function ProjectsMapPreview({
+  projects,
+  showHeading = true,
+  showViewAll = true,
+}: {
+  projects: Project[];
+  showHeading?: boolean;
+  showViewAll?: boolean;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapType | null>(null);
   const wrapsRef = useRef<Map<string, HTMLElement>>(new Map());
@@ -83,17 +98,66 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
       const maplibregl = module.default;
       const map = new maplibregl.Map({
         container: containerRef.current,
-        style: getMapStyleUrl('outdoor-v2-dark'),
-        center: [105, 47],
+        style: getMapStyleUrl('outdoor-v2'),
+        center: [104, 47.2],
         zoom: 4,
+        pitch: OVERVIEW_PITCH,
+        maxPitch: 72,
         attributionControl: false,
-        scrollZoom: false,
+        scrollZoom: true,
         dragPan: true,
         doubleClickZoom: true,
         touchZoomRotate: true,
         keyboard: false,
       });
       mapRef.current = map;
+
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: true }), 'top-right');
+
+      map.on('load', () => {
+        // 3D terrain + atmospheric sky (MapTiler Terrain-RGB) — lifts hills and relief.
+        try {
+          const terrainUrl = getTerrainTilesUrl();
+          if (terrainUrl && typeof map.setTerrain === 'function') {
+            if (!map.getSource('mt-terrain')) {
+              map.addSource('mt-terrain', { type: 'raster-dem', url: terrainUrl });
+            }
+            map.setTerrain({ source: 'mt-terrain', exaggeration: 1.3 });
+            map.setSky?.({
+              'sky-color': '#cfe0ef',
+              'horizon-color': '#eef2f5',
+              'fog-color': '#eae6dd',
+              'sky-horizon-blend': 0.6,
+              'horizon-fog-blend': 0.6,
+              'fog-ground-blend': 0.4,
+              'atmosphere-blend': 0.6,
+            });
+          }
+        } catch {
+          // terrain is an enhancement; ignore if the DEM source is unavailable
+        }
+
+        // Mongolia outline overlay — crisp national border with a soft halo.
+        fetch('/geo/mongolia.json')
+          .then((response) => response.json())
+          .then((geojson) => {
+            if (!mapRef.current || map.getSource('mn-outline')) return;
+            map.addSource('mn-outline', { type: 'geojson', data: geojson });
+            map.addLayer({
+              id: 'mn-outline-halo',
+              type: 'line',
+              source: 'mn-outline',
+              paint: { 'line-color': '#ffffff', 'line-width': 5, 'line-opacity': 0.5 },
+            });
+            map.addLayer({
+              id: 'mn-outline-line',
+              type: 'line',
+              source: 'mn-outline',
+              paint: { 'line-color': 'hsl(0, 0%, 8%)', 'line-width': 3, 'line-opacity': 0.9 },
+            });
+          })
+          .catch(() => {});
+      });
 
       projects.forEach((project) => {
         const wrap = document.createElement('div');
@@ -118,12 +182,9 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
         new maplibregl.Marker({ element: wrap }).setLngLat([project.lng, project.lat]).addTo(map);
       });
 
-      if (projects.length > 0) {
-        const bounds = new maplibregl.LngLatBounds();
-        projects.forEach((p) => bounds.extend([p.lng, p.lat]));
-        boundsRef.current = bounds;
-        map.fitBounds(bounds, { padding: 80, duration: 0 });
-      }
+      // Default to the whole of Mongolia; clicking a project zooms in.
+      boundsRef.current = MONGOLIA_BOUNDS;
+      map.fitBounds(MONGOLIA_BOUNDS, { padding: 40, duration: 0, pitch: OVERVIEW_PITCH });
 
       cleanup = () => {
         if (popupRef.current) {
@@ -182,6 +243,7 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
       map.easeTo({
         center: [active.lng, active.lat],
         zoom,
+        pitch: 60,
         duration: 1600,
         essential: true,
       });
@@ -192,14 +254,14 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
     setActiveSlug(null);
     const map = mapRef.current;
     if (!map || !boundsRef.current) return;
-    map.fitBounds(boundsRef.current, { padding: 80, duration: 1200, essential: true });
+    map.fitBounds(boundsRef.current, { padding: 40, duration: 1200, pitch: OVERVIEW_PITCH, essential: true });
   }
 
   return (
     <section className="bg-paper text-ink">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
-        <div className="relative bg-[#0b1426]">
-          <div ref={containerRef} className="aspect-[4/3] w-full lg:aspect-auto lg:h-full lg:min-h-[680px]" />
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] lg:h-[calc(100dvh-6rem)]">
+        <div className="relative bg-[#e8e5dd]">
+          <div ref={containerRef} className="aspect-[4/3] w-full lg:aspect-auto lg:h-full" />
 
           <button
             type="button"
@@ -215,13 +277,17 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
           </p>
         </div>
 
-        <div className="flex flex-col border-rule px-6 py-16 sm:px-10 sm:py-20 lg:border-l lg:px-12 lg:py-24">
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{copy.eyebrow}</p>
-          <h2 className="mt-6 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
-            {copy.headline}
-          </h2>
+        <div className="flex flex-col border-rule px-6 py-16 sm:px-10 sm:py-20 lg:h-full lg:overflow-y-auto lg:border-l lg:px-12 lg:py-12">
+          {showHeading ? (
+            <>
+              <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{copy.eyebrow}</p>
+              <h2 className="mt-6 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
+                {copy.headline}
+              </h2>
+            </>
+          ) : null}
 
-          <ul className="mt-12 border-b border-rule">
+          <ul className={`${showHeading ? 'mt-12' : ''} border-b border-rule`}>
             {projects.map((project, idx) => {
               const isActive = project.slug === activeSlug;
               return (
@@ -261,13 +327,15 @@ export function ProjectsMapPreview({ projects }: { projects: Project[] }) {
             })}
           </ul>
 
-          <Link
-            href={`/${locale}/projects`}
-            className="mt-10 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
-          >
-            {copy.viewAll}
-            <span aria-hidden="true">→</span>
-          </Link>
+          {showViewAll ? (
+            <Link
+              href={`/${locale}/projects`}
+              className="mt-10 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
+            >
+              {copy.viewAll}
+              <span aria-hidden="true">→</span>
+            </Link>
+          ) : null}
         </div>
       </div>
     </section>

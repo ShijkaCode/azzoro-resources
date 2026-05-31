@@ -1,4 +1,4 @@
-tagline: Монгол даяар суурь болон үнэт металлын нээлтийг ахиулж буй зэс төвтэй хайгуулын компани.
+tagline: Монгол даяар зэс, никель болон үнэт металлын боломжуудыг ахиулж буй ASX-д бүртгэлтэй хайгуулын компани.
 link_columns:
   - heading: Компани
     links:
@@ -8,11 +8,11 @@ link_columns:
         href: /projects
       - label: Тогтвортой байдал
         href: /esg
-  - heading: Нөөц
+  - heading: Хөрөнгө оруулагчийн холбоосууд
     links:
       - label: Галерей
         href: /gallery
-      - label: Хөрөнгө оруулагчдад
+      - label: Хөрөнгө оруулагчийн төв
         href: https://investors.azzororesources.com
         external: true
       - label: Холбоо барих

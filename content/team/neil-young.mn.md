@@ -1,11 +1,10 @@
 ---
 name: Neil Young
 role: Гүйцэтгэх бус захирал
+home_credential: Эрчим хүчний салбарын үүсгэн байгуулагч, ~30 жилийн туршлагатай, Elixir Energy-ийн ГЗ байсан.
 team_section: Board
 photo: /uploads/team/technical_team/Neil-300x300.png
 order: 4
 ---
 
-<!-- TODO — client to verify Mongolian translation -->
-
-Neil Young нь эрчим хүчний салбарын үүсгэн байгуулагч, захирал бөгөөд тус салбарт бараг 30 жил, үүнээс 10 гаруй жилийг Монголд Elixir Energy Ltd-ийн Гүйцэтгэх захирлаар ажилласан. Тэрээр одоо Australian Carbon Vault Ltd-ийн дарга юм.
+Neil Young нь Elixir Energy Ltd-ийн Гүйцэтгэх захирал бөгөөд эрчим хүчний салбарын upstream болон downstream чиглэлд, EY, Tarong Energy, Santos зэрэг байгууллагуудыг оролцуулан, удирдах түвшний албан тушаалд 20 гаруй жил ажилласан туршлагатай. Тэрээр Казахстан, Япон, АНУ, Монгол Улсад шинэ бизнесийн төслүүдийг хөгжүүлсэн. Эдинбургийн Их Сургуулийн Эдийн засаг, Улс төрийн хамтарсан M.A. (Hons) зэрэгтэй.

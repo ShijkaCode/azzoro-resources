@@ -1,5 +1,6 @@
 ---
 title: Khukh Tag
+order: 6
 commodity:
   - Graphite
 status: Resource definition
@@ -13,8 +14,8 @@ gallery_images:
   - /uploads/minerals/core%202.jpg
   - /uploads/minerals/1.jpg
   - /uploads/field/IMG_9481.JPG
-summary: A graphite project built around a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with substantial room to grow and mineralisation open in all directions.
-tagline: A graphite project built around a defined JORC 2012 Mineral Resource, with substantial room to grow.
+summary: A graphite project built around a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and substantial room to grow.
+tagline: A graphite project anchored by a defined JORC 2012 Mineral Resource and supported by meaningful growth potential.
 is_draft: true
 tenure:
   licence: XV-019603
@@ -57,4 +58,4 @@ The deposit is supported by extensive work: **229 surface samples** returning gr
 
 ## Next steps
 
-High-priority follow-up drill areas have already been identified to test the project's growth potential, with the mineralisation open in all directions.
+High-priority follow-up drill areas have already been identified to test the project's growth potential, with mineralisation remaining open in all directions.

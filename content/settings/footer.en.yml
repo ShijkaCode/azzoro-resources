@@ -1,4 +1,4 @@
-tagline: A copper-focused explorer advancing base and precious metal discoveries across Mongolia.
+tagline: An ASX-listed explorer advancing copper, nickel and precious-metal opportunities across Mongolia.
 link_columns:
   - heading: Company
     links:
@@ -8,11 +8,11 @@ link_columns:
         href: /projects
       - label: ESG
         href: /esg
-  - heading: Resources
+  - heading: Investor Links
     links:
       - label: Gallery
         href: /gallery
-      - label: Investor Center
+      - label: Investor Centre
         href: https://investors.azzororesources.com
         external: true
       - label: Contact us

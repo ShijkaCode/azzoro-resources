@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import type { Project } from '@/lib/content/types';
-import { ProjectsMapWithFilters } from '@/components/projects/ProjectsMapWithFilters';
+import { ProjectsMapPreview } from '@/components/home/ProjectsMapPreview';
 import { isLocale } from '@/lib/i18n/config';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 
@@ -34,19 +34,21 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
 
   setRequestLocale(locale);
 
-  const projects = await loadCollection<Project>('projects', locale);
+  const projects = (await loadCollection<Project>('projects', locale)).sort(
+    (a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
+  );
 
   const labels =
     locale === 'mn'
       ? {
           eyebrow: 'Төслүүд',
           title: 'Монгол даяарх хайгуулын багц',
-          intro: 'Pin дээр дарж төслийн дэлгэрэнгүйг нээнэ үү. Дээрх шүүлтүүрээр түүхий эдээр шүүж болно.',
+          intro: 'Төслийг сонгон газрын зураг дээр байршлыг нь харж, дэлгэрэнгүй техникийн мэдээллийг нь нээнэ үү.',
         }
       : {
           eyebrow: 'Projects',
           title: 'An exploration portfolio across Mongolia',
-          intro: 'Click any pin to open the project panel, or filter the map by commodity. Each project links through to its full technical profile.',
+          intro: 'Select a project to locate it on the map, then open its full technical profile.',
         };
 
   return (
@@ -61,9 +63,7 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
         </div>
       </section>
 
-      <section className="bg-paper px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-        <ProjectsMapWithFilters projects={projects} />
-      </section>
+      <ProjectsMapPreview projects={projects} showHeading={false} showViewAll={false} />
     </main>
   );
 }

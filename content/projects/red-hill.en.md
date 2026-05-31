@@ -1,5 +1,6 @@
 ---
 title: Red Hill
+order: 2
 commodity:
   - Copper
   - Gold
@@ -14,7 +15,7 @@ gallery_images:
   - /uploads/minerals/021.JPG
   - /uploads/field/camp-bilgun.jpg
   - /uploads/field/IMG_8982.JPG
-summary: A volcanogenic massive-sulphide (VMS) copper-gold project on a granted mining licence to 2045, just 8 km from the Oval discovery — offering high-grade Cu-Au sulphides at depth and shallow gold-silver near surface.
+summary: A volcanogenic massive-sulphide (VMS) copper-gold project on a granted mining licence to 2045, just 8 km from the Oval discovery and offering high-grade Cu-Au sulphides at depth with shallow gold-silver near surface.
 tagline: A VMS copper-gold project (formerly Maikhan Uul) on a granted mining licence to 2045, just 8 km from the flagship Oval discovery.
 is_draft: true
 tenure:
@@ -41,7 +42,7 @@ documents: []
 
 ## Overview
 
-Red Hill (formerly the Maikhan Uul project) is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045** — a significant advantage that could provide infrastructure and permitting synergies with the wider Yambat district.
+Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045** — a significant advantage that could create infrastructure and permitting synergies with the wider Yambat district.
 
 The project is well serviced by good infrastructure and high-voltage power, and offers two complementary opportunities: high-grade copper-gold massive sulphides at depth, and shallow high-grade gold-silver mineralisation near surface.
 
@@ -68,7 +69,7 @@ Several features make VMS systems attractive targets:
 
 Red Hill displays the classic hallmarks of a felsic VMS system: a massive sulphide horizon hosted in dacitic and rhyolitic volcanics with associated black schists; a polymetallic copper-gold-zinc signature; folded and deformed geometry; and a stringer / feeder-style component beneath the massive sulphide.
 
-ABM's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
+Azzoro's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
 
 ## Next steps
 

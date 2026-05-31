@@ -1,5 +1,6 @@
 ---
 title: Copper Ridge
+order: 3
 commodity:
   - Copper
   - Gold
@@ -14,8 +15,8 @@ gallery_images:
   - /uploads/field/IMG_9481.JPG
   - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
   - /uploads/field/_CP11422.jpg
-summary: A copper-gold prospect in the northern Yambat licence, interpreted as a potential IOCG-style system — adding precious-metals exposure 7 km north of the Oval discovery.
-tagline: A copper-gold prospect within the Yambat licence, interpreted as a potential iron-oxide-copper-gold (IOCG) system.
+summary: A copper-gold prospect in the northern Yambat licence, interpreted as a potential IOCG-style system and adding precious-metals exposure 7 km north of the Oval discovery.
+tagline: A copper-gold prospect within the Yambat licence, interpreted as a potential iron-oxide-copper-gold (IOCG) style system.
 is_draft: true
 parent_project: yambat
 tenure:

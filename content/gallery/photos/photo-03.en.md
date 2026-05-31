@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-03.jpg
-caption: Landscape view near project access corridor
+caption: Landscape along the project access corridor
 tags:
   - Field
   - Events

@@ -1,5 +1,6 @@
 ---
 title: Tsagaan Ders
+order: 5
 commodity:
   - Lithium
 status: Active exploration
@@ -13,8 +14,8 @@ gallery_images:
   - /uploads/field/IMG_8982.JPG
   - /uploads/field/_CP11422.jpg
   - /uploads/minerals/1.jpg
-summary: A lithium project hosting lithium-bearing pegmatites and greisen-altered granite across a 5 km mineralised corridor in Dundgovi — with lithium now confirmed at depth.
-tagline: A pegmatite- and greisen-hosted lithium system traced over a 5 km strike, with maiden drilling confirming lithium mineralisation at depth.
+summary: A lithium project hosting lithium-bearing pegmatites and greisen-altered granite across a 5 km mineralised corridor in Dundgovi, with lithium now confirmed at depth.
+tagline: A pegmatite- and greisen-hosted lithium system traced over a 5 km strike, where maiden drilling has confirmed lithium mineralisation at depth.
 is_draft: true
 tenure:
   licence: XV-019341 & XV-021740

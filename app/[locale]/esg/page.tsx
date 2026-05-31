@@ -78,7 +78,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/75">{labels.eyebrow}</p>
           <h1 className="mt-5 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
-            {labels.title}
+            {esg.hero_headline || labels.title}
           </h1>
         </div>
       </section>

@@ -1,5 +1,6 @@
 ---
 title: Bayan Sair
+order: 4
 commodity:
   - Copper
   - Nickel
@@ -14,8 +15,8 @@ gallery_images:
   - /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
   - /uploads/field/IMG_9481.JPG
   - /uploads/field/camp-bilgun.jpg
-summary: An early-stage regional tenement immediately south of Yambat, covering a prominent magnetic anomaly interpreted as a potential extension of the MS1 and Oval intrusive zones.
-tagline: A regional exploration tenement testing the Company's district-scale model, immediately south of the Yambat Project.
+summary: An early-stage regional tenement immediately south of Yambat that covers a prominent magnetic anomaly interpreted as a potential extension of the MS1 and Oval intrusive zones.
+tagline: A regional exploration tenement immediately south of the Yambat Project, testing the Company's district-scale model.
 is_draft: true
 tenure:
   licence: XV-023028

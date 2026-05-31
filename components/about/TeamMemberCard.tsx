@@ -36,7 +36,7 @@ export function TeamMemberCard({
               alt={member.name}
               fill
               sizes={compact ? '(min-width: 1024px) 16vw, 33vw' : '(min-width: 1024px) 25vw, 50vw'}
-              className="object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-[1.03]"
+              className="object-cover"
             />
           ) : (
             <div className="flex h-full items-center justify-center font-display text-4xl font-medium text-muted-ink">

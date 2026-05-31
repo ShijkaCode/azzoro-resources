@@ -10,8 +10,6 @@ import type { Locale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
 import LanguageToggle from './LanguageToggle';
 
-type ProjectLink = { slug: string; title: string };
-
 const underline =
   'relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100';
 
@@ -34,9 +32,6 @@ const INVESTOR_LINKS: Record<Locale, { label: string; href: string }[]> = {
   ],
 };
 
-function isProjectsItem(item: NavItem) {
-  return !item.external && item.href.replace(/\/$/, '').endsWith('/projects');
-}
 function isInvestorItem(item: NavItem) {
   return Boolean(item.external && /investors\./.test(item.href));
 }
@@ -44,11 +39,11 @@ function isInvestorItem(item: NavItem) {
 export default function Navbar({
   items,
   locale,
-  projectLinks,
+  investorLinks,
 }: {
   items: NavItem[];
   locale: Locale;
-  projectLinks: ProjectLink[];
+  investorLinks?: { label: string; href: string }[];
 }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -71,17 +66,12 @@ export default function Navbar({
     useTransparent ? 'bg-transparent border-b border-transparent' : 'bg-[hsl(var(--ink))] border-b border-white/10',
   ].join(' ');
 
-  const investorLinks = INVESTOR_LINKS[locale] ?? INVESTOR_LINKS.en;
+  const investorLinkItems =
+    investorLinks && investorLinks.length > 0 ? investorLinks : INVESTOR_LINKS[locale] ?? INVESTOR_LINKS.en;
 
   const dropdownFor = (item: NavItem): { key: string; links: { label: string; href: string; external: boolean }[] } | null => {
-    if (isProjectsItem(item)) {
-      return {
-        key: 'projects',
-        links: projectLinks.map((p) => ({ label: p.title, href: localizeHref(locale, `/projects/${p.slug}`), external: false })),
-      };
-    }
     if (isInvestorItem(item)) {
-      return { key: 'investor', links: investorLinks.map((l) => ({ ...l, external: true })) };
+      return { key: 'investor', links: investorLinkItems.map((l) => ({ ...l, external: true })) };
     }
     return null;
   };

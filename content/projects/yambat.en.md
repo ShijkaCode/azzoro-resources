@@ -1,5 +1,6 @@
 ---
 title: Yambat Project
+order: 1
 commodity:
   - Copper
   - Nickel
@@ -16,8 +17,8 @@ gallery_images:
   - /uploads/minerals/1.jpg
   - /uploads/minerals/core%202.jpg
   - /uploads/field/drill%201.jpg
-summary: The flagship Yambat Project, home to the high-grade Oval copper-nickel-PGE discovery — a magmatic massive-sulphide system in southwestern Mongolia, open along strike and at depth.
-tagline: Home to the Oval Cu-Ni-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024, now driving a district-scale copper-nickel opportunity.
+summary: Azzoro's flagship Yambat Project hosts the high-grade Oval copper-nickel-PGE discovery — a magmatic massive-sulphide system in southwestern Mongolia that remains open along strike and at depth.
+tagline: Home to the Oval Cu-Ni-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and now defining a district-scale copper-nickel opportunity.
 is_flagship: true
 is_draft: true
 tenure:
@@ -43,19 +44,19 @@ documents: []
 
 ## Overview
 
-The Yambat Project is the centre of Asian Battery Metals' strategy and home to the Oval copper-nickel-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and one of the first of its kind found in southwestern Mongolia.
+The Yambat Project sits at the centre of Azzoro's strategy and hosts the Oval copper-nickel-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and one of the first of its kind recognised in southwestern Mongolia.
 
 Since the maiden discovery, sustained diamond drilling and downhole geophysics have repeatedly confirmed continuous high-grade copper-nickel sulphide mineralisation, including intercepts that rank among the highest grades drilled anywhere in recent years. Across the project, more than **65 diamond drillholes for over 11,400 metres** have been completed since 2023, spanning Oval, North Oval, Copper Ridge and the regional prospects.
 
-Over 2025 alone, the Oval mineralised intrusion was extended by roughly **60%**, taking its interpreted strike length to approximately **880 metres** — and it remains open along strike and at depth. Metallurgical test work has since confirmed excellent copper recoveries, materially strengthening the project's development pathway.
+Over 2025 alone, the Oval mineralised intrusion was extended by roughly **60%**, taking its interpreted strike length to approximately **880 metres** — and it remains open along strike and at depth. Metallurgical test work has since confirmed excellent copper recoveries, materially strengthening the project's potential development pathway.
 
-Yambat is more than a single discovery. Oval has validated a geophysical targeting model now guiding exploration across a cluster of look-alike intrusive targets — North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge — positioning the Company to pursue a district-scale opportunity across an emerging copper-nickel belt.
+Yambat is more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive targets — North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge — positioning the Company to pursue district-scale upside across an emerging copper-nickel belt.
 
 ## Location and tenure
 
 Yambat lies in Govi-Altai province in southwestern Mongolia, around 300 km north of the Chinese border and within reach of established infrastructure and high-voltage power. The Company holds the project through exploration licence XV-020515, covering 106.07 km² at a 100% interest.
 
-The project sits within the **Central Asian Orogenic Belt**, a globally significant mineral province that hosts major copper producers, and is geologically connected to the Company's adjacent ground at the Bayan Sair tenement and the nearby Red Hill copper-gold project.
+The project sits within the **Central Asian Orogenic Belt**, a globally significant mineral province that hosts major copper producers, and is geologically linked to the Company's adjacent ground at Bayan Sair and the nearby Red Hill copper-gold project.
 
 ## Geology and mineralisation
 
@@ -74,8 +75,8 @@ Independent test work at ALS Metallurgy in Perth has confirmed that Oval mineral
 - A clean, marketable copper concentrate with no penalty elements identified
 - Nickel and by-product recovery optimisation ongoing, with stepwise improvements already achieved
 
-These results materially de-risk the project's development pathway and reinforce Oval's potential as a future copper producer.
+These results materially de-risk the project's potential development pathway and reinforce Oval's potential as a future copper producer.
 
 ## Next steps
 
-The Company is advancing toward **Phase 4 drilling**, with planning underway. The program will focus on testing the down-dip and along-strike extensions of the Oval intrusion (including the interpreted deeper feeder zone), drill-testing the broader intrusive cluster including the newly modelled MS4 anomaly, and advancing the project toward the potential for a future resource definition.
+The Company is advancing toward **Phase 4 drilling**, with planning underway. The program will focus on testing the down-dip and along-strike extensions of the Oval intrusion, including the interpreted deeper feeder zone, drill-testing the broader intrusive cluster including the newly modelled MS4 anomaly, and progressing the project toward a potential future resource definition.

@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-04.jpg
-caption: Operational planning and site coordination
+caption: Daily planning and site coordination
 tags:
   - Events
   - Community

@@ -1,20 +1,20 @@
 ---
-hero_image: ''
+hero_image: /uploads/team/_CP11385.jpg
 story_body: |-
-  Azzoro Resources is the renewed corporate identity for the business formerly known as Asian Battery Metals. The site now has the structure to tell that story properly across exploration, governance, and sustainability surfaces in both English and Mongolian.
+  Azzoro Resources PLC, formerly Asian Battery Metals, is an ASX-listed explorer advancing copper, nickel, gold and battery-metal opportunities in Mongolia. The portfolio is led by the high-grade Oval Cu·Ni·PGE discovery and supported by graphite, lithium, copper-gold and regional exploration assets across a proven mineral belt.
 
-  This About route is now designed around long-form narrative content instead of short placeholder cards. That gives the client room to refine the company story, update leadership information, and maintain governance materials without returning to development for every change.
-mission: Build a modern, bilingual public company website that supports exploration storytelling, governance transparency, and self-service content updates.
+  The Company is built around disciplined field execution, local operating capability and clear communication with investors. Its public profile combines project-level technical progress with direct access to governance materials, sustainability information and external market disclosures.
+mission: Advance high-quality discoveries in Mongolia through disciplined exploration, transparent governance and responsible engagement with host communities.
 values:
   - title: Clarity
-    body: Present the business, projects, and governance structure in language that investors and partners can scan quickly.
+    body: Communicate the investment case, project progress and governance framework in language investors can assess quickly.
   - title: Discipline
-    body: Keep the site operationally simple so the editorial workflow stays sustainable after launch.
+    body: Allocate capital carefully, execute field programs efficiently and focus on the work that advances discovery value.
   - title: Stewardship
-    body: Support a long-term operating model where company updates, team changes, and governance files are client-managed.
+    body: Work with respect for host communities, land access and the long-term responsibilities that come with exploration.
 leadership_governance_body: |-
-  Leadership and governance content on this route is structured to support both narrative explanation and downloadable records. The board section introduces people, while the governance section gives investors and partners direct access to formal corporate documents.
+  Azzoro's board and technical leadership combine practical Mongolian operating experience with international mining, policy and capital-markets expertise. That mix supports disciplined decision-making as the Company advances discovery, evaluation and portfolio management across multiple commodities.
 
-  This structure also creates a clear handoff between the marketing site and the external investor portal: governance context lives here, while market-sensitive announcements remain on the investor platform.
-governance_documents_intro: Corporate governance policies, charters and reports are available to download below.
+  The governance section is intended to give shareholders and stakeholders straightforward access to the formal documents that sit behind that operating model, while market-sensitive announcements continue to be released through the investor platform.
+governance_documents_intro: Corporate governance policies, charters and reports are available below.
 ---

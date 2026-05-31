@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-06.webp
-caption: Tsagaan Ders landscape during resource definition work
+caption: Tsagaan Ders landscape during fieldwork
 tags:
   - Field
   - Community
