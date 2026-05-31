@@ -94,8 +94,8 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         const imageRight = idx % 2 === 1;
         return (
           <section key={pillar.number} className="bg-[hsl(var(--eco-paper))]">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className={`group relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[34rem] ${imageRight ? 'lg:order-2' : ''}`}>
+            <div className="group grid grid-cols-1 lg:grid-cols-2">
+              <div className={`relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[34rem] ${imageRight ? 'lg:order-2' : ''}`}>
                 {pillar.image ? (
                   <Image
                     src={pillar.image}
@@ -106,9 +106,13 @@ export default async function EsgPage({ params }: { params: { locale: string } }
                   />
                 ) : null}
               </div>
-              <div className={`flex flex-col justify-center border-rule px-6 py-16 sm:px-10 lg:px-16 ${imageRight ? 'lg:border-r' : 'lg:border-l'}`}>
+              <div className={`relative flex flex-col justify-center border-rule px-6 py-16 sm:px-10 lg:px-16 ${imageRight ? 'lg:border-r' : 'lg:border-l'}`}>
+                <span
+                  aria-hidden="true"
+                  className="absolute left-0 top-0 h-full w-0.5 origin-top scale-y-0 bg-[hsl(var(--eco))] transition-transform duration-500 ease-out group-hover:scale-y-100"
+                />
                 <div className="flex items-baseline gap-4">
-                  <span className="num-display text-3xl font-medium leading-none text-[hsl(var(--eco))]">{pillar.number}</span>
+                  <span className="num-display text-3xl font-medium leading-none text-[hsl(var(--eco))] transition-transform duration-300 group-hover:-translate-y-1">{pillar.number}</span>
                   <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--eco))]">{pillar.label}</p>
                 </div>
                 <MarkdownBody className="mt-7 max-w-[48ch]">{pillar.body}</MarkdownBody>
