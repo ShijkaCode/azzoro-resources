@@ -1,6 +1,6 @@
-brand_name: Azzoro Resources PLC
-logo: /new_logo.png
-logo_dark: /new_logo.png
+brand_name: Azzuro Resources PLC
+logo: /logo-azzuro-dark.png
+logo_dark: /logo-azzuro-light.png
 stock_ticker: AZ9
 stock_api_enabled: true
 investor_portal_url: https://investors.asianbatterymetals.com

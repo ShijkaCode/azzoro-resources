@@ -49,7 +49,7 @@ why_azzoro:
   eyebrow: Why AZ9
   headline: Copper-nickel-gold exposure with a clear catalyst path.
   image: /uploads/field/drill%201.jpg
-  image_alt: Drilling operations at an Azzoro Resources exploration site, Mongolia
+  image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
   intro: AZ9 offers investors direct exposure to the Oval discovery, the Red Hill / North Hill copper-gold catalyst set, and camp-scale upside across a broader Mongolian portfolio. The Company's edge is execution through an experienced board, a strong local technical team and the ability to move quickly in-country.
   footnote: BHP Xplor is a global accelerator program; participation does not constitute an investment by or affiliation with BHP. Refer to asianbatterymetals.com for disclosures.
   cards:
@@ -64,7 +64,7 @@ why_azzoro:
       tag: BHP Xplor · 2023
 sustainability_teaser:
   heading: An exploration approach that respects land and local communities.
-  body: Azzoro's field programs are built around early environmental baseline work, practical stakeholder engagement and the governance standards expected of an ASX-listed company.
+  body: Azzuro's field programs are built around early environmental baseline work, practical stakeholder engagement and the governance standards expected of an ASX-listed company.
   image: ''
   cta_label: Our approach to ESG
   cta_href: /esg
@@ -163,6 +163,6 @@ news_section_enabled: false
 stock_section_enabled: false
 ---
 
-Azzoro Resources is an ASX-listed Mongolian copper-nickel-gold exploration story led by the Oval discovery. The near-term focus is clear: advance Oval, test the Red Hill / North Hill catalyst set, and continue building camp-scale upside at Copper Ridge and Bayan Sair, with graphite and lithium retained as secondary optionality within the broader portfolio.
+Azzuro Resources is an ASX-listed Mongolian copper-nickel-gold exploration story led by the Oval discovery. The near-term focus is clear: advance Oval, test the Red Hill / North Hill catalyst set, and continue building camp-scale upside at Copper Ridge and Bayan Sair, with graphite and lithium retained as secondary optionality within the broader portfolio.
 
 The homepage is designed to give investors a quick read on the discovery case, 2026 work program, operational credibility in Mongolia and the pathways into the project pages and external investor centre.

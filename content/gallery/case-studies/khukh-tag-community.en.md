@@ -17,7 +17,7 @@ That approach supports more than communication. It helps the team align field ac
 
 At site level, the emphasis is on consistency: maintain a visible field presence, communicate clearly about work programs, and follow through on commitments made during stakeholder discussions. That matters particularly at an exploration project, where trust is usually built through repeated contact rather than a single consultation event.
 
-For Azzoro, that means treating stakeholder engagement, operational planning and field logistics as connected parts of the same workstream. The objective is to keep exploration moving while maintaining practical, respectful relationships with host communities.
+For Azzuro, that means treating stakeholder engagement, operational planning and field logistics as connected parts of the same workstream. The objective is to keep exploration moving while maintaining practical, respectful relationships with host communities.
 
 ## Why it matters
 

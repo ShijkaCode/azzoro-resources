@@ -70,7 +70,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
 
   return (
     <main id="main-content">
-      <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
+      <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
         {esg.hero_image ? (
           <Image src={esg.hero_image} alt="" fill priority className="object-cover" sizes="100vw" />
         ) : null}
@@ -120,7 +120,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
 
       <EsgGallery items={galleryItems} heading={labels.gallery} />
 
-      <section className="bg-ink text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <section className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.reports}</p>
         <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-white/75">{esg.reports_intro}</p>
       </section>

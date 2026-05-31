@@ -149,7 +149,7 @@ export default async function ProjectDetailPage({
       </section>
 
       {nearby.length > 0 ? (
-        <section className="bg-ink text-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
+        <section className="bg-primary text-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
           <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl">{t.nearby}</h2>
           <div className="mt-10 grid grid-cols-1 border-l border-t border-white/15 sm:grid-cols-3">
             {nearby.map((entry) => (

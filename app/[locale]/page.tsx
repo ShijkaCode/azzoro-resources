@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const home = await loadSingleton<HomeContent>('pages/home', locale);
 
   return buildPageMetadata({
-    title: locale === 'mn' ? 'Azzoro Resources' : 'Azzoro Resources',
+    title: locale === 'mn' ? 'Azzuro Resources' : 'Azzuro Resources',
     description: home.hero.subline || home.hero.headline,
     locale,
     path: '/',

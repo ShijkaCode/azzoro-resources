@@ -11,7 +11,7 @@ export default function WhatWeDo({
   const cards = content.cards ?? [];
 
   return (
-    <section className="bg-ink text-white">
+    <section className="bg-primary text-white">
       <div className="relative aspect-[21/9] w-full overflow-hidden lg:aspect-[3/1]">
         {content.image ? (
           <Image src={content.image} alt={content.image_alt || content.headline} fill className="object-cover" sizes="100vw" />
@@ -19,7 +19,7 @@ export default function WhatWeDo({
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
         <div className="absolute inset-0 flex items-end px-6 pb-8 sm:px-10 sm:pb-10 lg:px-16 lg:pb-12">
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/70">{content.eyebrow}</p>
+            <p className="kicker kicker-invert">{content.eyebrow}</p>
             <h2 className="mt-4 max-w-[20ch] font-display text-balance text-3xl font-medium leading-[1.04] tracking-[-0.01em] sm:text-4xl lg:text-5xl">
               {content.headline}
             </h2>
@@ -35,8 +35,12 @@ export default function WhatWeDo({
             const isLast = idx === cards.length - 1;
             const borderClass = isLast ? '' : 'border-b border-white/15 md:border-b-0 md:border-r';
             return (
-              <div key={card.title} className={`flex flex-col py-10 md:px-8 md:py-12 md:first:pl-0 lg:px-10 ${borderClass}`}>
-                <span className="num-display text-3xl font-medium leading-none text-white/40 sm:text-4xl">
+              <div key={card.title} className={`group relative flex flex-col py-10 transition-colors duration-300 hover:bg-white/[0.02] md:px-8 md:py-12 lg:px-10 ${borderClass}`}>
+                <span
+                  aria-hidden="true"
+                  className="absolute left-0 right-0 top-0 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                />
+                <span className="num-display text-3xl font-medium leading-none text-white/40 transition-colors duration-300 group-hover:text-[hsl(var(--copper))] sm:text-4xl">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
                 <h3 className="mt-6 text-[13px] font-medium uppercase tracking-[0.32em] text-white">{card.title}</h3>

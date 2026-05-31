@@ -21,7 +21,7 @@ export default function ESGSection({
       <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{eyebrow}</p>
+            <p className="kicker">{eyebrow}</p>
             <h2 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.04] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
               {teaser.heading}
             </h2>
@@ -30,10 +30,10 @@ export default function ESGSection({
             <p className="max-w-[52ch] text-base leading-relaxed text-ink-soft sm:text-lg">{teaser.body}</p>
             <Link
               href={localizeHref(locale, teaser.cta_href)}
-              className="mt-8 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
+              className="cta-link mt-8"
             >
               {teaser.cta_label}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="cta-arrow">→</span>
             </Link>
           </div>
         </div>

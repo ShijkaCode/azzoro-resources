@@ -5,7 +5,7 @@ export function ProjectDetailHero({ project, locale }: { project: Project; local
   const flagshipLabel = locale === 'mn' ? 'Гол төсөл' : 'Flagship';
 
   return (
-    <section className="relative -mt-24 flex min-h-[68vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
+    <section className="relative -mt-24 flex min-h-[68vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
       {project.hero_image ? (
         <Image src={project.hero_image} alt={project.title} fill priority className="object-cover" sizes="100vw" />
       ) : null}

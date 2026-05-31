@@ -60,11 +60,11 @@ export async function StockPriceCard({
   ];
 
   return (
-    <section className="bg-ink text-white">
+    <section className="bg-primary text-white">
       <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{eyebrow}</p>
+            <p className="kicker kicker-invert">{eyebrow}</p>
             <h2 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.04] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
               {headline}
             </h2>
@@ -73,10 +73,10 @@ export async function StockPriceCard({
             href={investorPortalUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-fit items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:border-white"
+            className="cta-link cta-link-invert"
           >
             {copy.portal}
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true" className="cta-arrow">↗</span>
           </a>
         </div>
 

@@ -61,7 +61,7 @@ export default function FeaturedProjectSection({
           }`}
         >
           {project.eyebrow ? (
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{project.eyebrow}</p>
+            <p className="kicker">{project.eyebrow}</p>
           ) : null}
           <h2 className="mt-5 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
             {project.headline}
@@ -85,18 +85,18 @@ export default function FeaturedProjectSection({
                 href={ctaHref}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-10 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
+                className="cta-link mt-10"
               >
                 {project.cta_label}
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true" className="cta-arrow">↗</span>
               </a>
             ) : (
               <Link
                 href={ctaHref}
-                className="mt-10 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
+                className="cta-link mt-10"
               >
                 {project.cta_label}
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true" className="cta-arrow">→</span>
               </Link>
             )
           ) : null}

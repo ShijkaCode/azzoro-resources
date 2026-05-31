@@ -6,7 +6,7 @@ import { isLocale } from '@/lib/i18n/config';
 
 export const size = ogSize;
 export const contentType = 'image/png';
-export const alt = 'Azzoro Resources project';
+export const alt = 'Azzuro Resources project';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
 
@@ -29,7 +29,7 @@ export default async function Image({ params }: { params: { locale: string; slug
         logo={logo}
         chips={project?.commodity.slice(0, 3) ?? []}
         eyebrow={project ? [project.status, project.region].filter(Boolean).join(' · ') : undefined}
-        title={project?.title ?? 'Azzoro Resources'}
+        title={project?.title ?? 'Azzuro Resources'}
         caption={project?.summary}
       />
     ),

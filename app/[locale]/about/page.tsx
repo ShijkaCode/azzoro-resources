@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const about = await loadSingleton<AboutContent>('pages/about', locale);
 
   return buildPageMetadata({
-    title: locale === 'mn' ? 'Azzoro Resources-ийн тухай' : 'About Azzoro Resources',
+    title: locale === 'mn' ? 'Azzuro Resources-ийн тухай' : 'About Azzuro Resources',
     description: about.mission,
     locale,
     path: '/about',
@@ -47,7 +47,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
     locale === 'mn'
       ? {
           kicker: 'Бидний тухай',
-          title: 'Azzoro Resources-ийн тухай',
+          title: 'Azzuro Resources-ийн тухай',
           mission: 'Эрхэм зорилго',
           governance: 'Манлайлал ба засаглал',
           board: 'Төлөөлөн удирдах зөвлөл',
@@ -55,7 +55,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
         }
       : {
           kicker: 'About us',
-          title: 'About Azzoro Resources',
+          title: 'About Azzuro Resources',
           mission: 'Mission',
           governance: 'Leadership & Governance',
           board: 'Board of Directors',
@@ -64,7 +64,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
 
   return (
     <main id="main-content">
-      <section className="-mt-24 bg-ink text-white">
+      <section className="-mt-24 bg-primary text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-end px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16 lg:pb-24">
             <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.kicker}</p>
@@ -114,7 +114,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
         </div>
       </section>
 
-      <section id="governance" className="bg-ink text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <section id="governance" className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <div className="grid gap-x-16 gap-y-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.governance}</p>

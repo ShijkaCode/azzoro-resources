@@ -20,7 +20,7 @@ export function FieldGallery({ images, heading }: { images: string[]; heading: s
   const pad = (n: number) => String(n).padStart(2, '0');
 
   return (
-    <section className="bg-ink px-6 py-20 text-white sm:px-10 sm:py-24 lg:px-16">
+    <section className="bg-primary px-6 py-20 text-white sm:px-10 sm:py-24 lg:px-16">
       <div className="flex items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl">{heading}</h2>
         {totalPages > 1 ? (

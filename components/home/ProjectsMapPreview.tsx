@@ -266,7 +266,7 @@ export function ProjectsMapPreview({
           <button
             type="button"
             onClick={resetOverview}
-            className="absolute left-4 top-4 inline-flex items-center gap-2 border border-white/25 bg-black/45 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:bg-black/65 sm:left-6 sm:top-6"
+            className="absolute left-4 top-4 inline-flex items-center gap-2 border border-white/25 bg-black/45 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:border-[hsl(var(--copper))] hover:bg-black/65 sm:left-6 sm:top-6"
           >
             <span aria-hidden="true">←</span>
             {copy.overview}
@@ -280,7 +280,7 @@ export function ProjectsMapPreview({
         <div className="flex flex-col border-rule px-6 py-16 sm:px-10 sm:py-20 lg:h-full lg:overflow-y-auto lg:border-l lg:px-12 lg:py-12">
           {showHeading ? (
             <>
-              <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{copy.eyebrow}</p>
+              <p className="kicker">{copy.eyebrow}</p>
               <h2 className="mt-6 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem]">
                 {copy.headline}
               </h2>
@@ -318,7 +318,7 @@ export function ProjectsMapPreview({
                         </p>
                       ) : null}
                     </div>
-                    <span aria-hidden="true" className={`text-base transition-all ${isActive ? 'translate-x-1 text-ink' : 'text-ink/35 group-hover:translate-x-1 group-hover:text-ink/70'}`}>
+                    <span aria-hidden="true" className={`text-base transition-all ${isActive ? 'translate-x-1 text-[hsl(var(--copper))]' : 'text-ink/35 group-hover:translate-x-1 group-hover:text-[hsl(var(--copper))]'}`}>
                       →
                     </span>
                   </Link>
@@ -330,10 +330,10 @@ export function ProjectsMapPreview({
           {showViewAll ? (
             <Link
               href={`/${locale}/projects`}
-              className="mt-10 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors hover:border-ink"
+              className="cta-link mt-10"
             >
               {copy.viewAll}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="cta-arrow">→</span>
             </Link>
           ) : null}
         </div>

@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   return {
     openGraph: {
       type: 'website',
-      siteName: 'Azzoro Resources',
+      siteName: 'Azzuro Resources',
       locale: isMn ? 'mn_MN' : 'en_US',
       url: `${siteUrl}/${locale}`,
     },
@@ -63,7 +63,7 @@ export default async function LocaleLayout({
     '@type': 'Organization',
     name: site.brand_name,
     url: siteUrl,
-    logo: `${siteUrl}${site.logo || '/new_logo.png'}`,
+    logo: `${siteUrl}${site.logo || '/logo-azzuro-dark.png'}`,
     sameAs: Object.values(site.social ?? {}).filter(Boolean),
     address: [
       {
@@ -100,7 +100,7 @@ export default async function LocaleLayout({
       </a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       <div className="min-h-screen bg-background">
-        <Navbar items={nav.items} locale={locale} investorLinks={nav.investor_links} />
+        <Navbar items={nav.items} locale={locale} investorLinks={nav.investor_links} logo={site.logo_dark} />
         <div className="pt-24">{children}</div>
         <Footer settings={footer} locale={locale} />
       </div>

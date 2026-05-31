@@ -1,5 +1,5 @@
 ---
-intro_body: Use this page to find Azzoro's office locations and general contact details. Market-sensitive disclosures, ASX announcements and formal investor materials remain available through the external investor centre.
+intro_body: Use this page to find Azzuro's office locations and general contact details. Market-sensitive disclosures, ASX announcements and formal investor materials remain available through the external investor centre.
 offices:
   - name: Mongolia office
     address: |-

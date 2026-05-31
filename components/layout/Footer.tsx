@@ -9,10 +9,10 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
   const brandLine = locale === 'mn' ? 'Монгол дахь чухал ашигт малтмалын нээлт.' : 'Critical mineral discoveries in Mongolia.';
 
   return (
-    <footer className="bg-ink text-white">
-      <div className="grid gap-x-12 gap-y-10 px-6 py-14 sm:px-10 lg:grid-cols-[1fr_0.9fr] lg:items-start lg:px-16 lg:py-16">
+    <footer className="border-t border-white/10 bg-primary text-white">
+      <div className="grid gap-x-12 gap-y-8 px-6 py-10 sm:px-10 lg:grid-cols-[1fr_0.9fr] lg:items-start lg:px-16 lg:py-12">
         <div>
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">Azzoro Resources</p>
+          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">Azzuro Resources</p>
           <h2 className="mt-4 max-w-[20ch] font-display text-balance text-2xl font-medium leading-[1.1] tracking-[-0.01em] sm:text-3xl">
             {brandLine}
           </h2>
@@ -28,11 +28,11 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
                 {column.links.map((link) => (
                   <li key={`${column.heading}-${link.label}`}>
                     {link.external ? (
-                      <a href={link.href} target="_blank" rel="noreferrer" className="transition-colors hover:text-white">
+                      <a href={link.href} target="_blank" rel="noreferrer" className="transition-colors hover:text-[hsl(var(--copper))]">
                         {link.label}
                       </a>
                     ) : (
-                      <Link href={localizeHref(locale, link.href)} className="transition-colors hover:text-white">
+                      <Link href={localizeHref(locale, link.href)} className="transition-colors hover:text-[hsl(var(--copper))]">
                         {link.label}
                       </Link>
                     )}
@@ -45,13 +45,13 @@ export default function Footer({ settings, locale }: { settings: FooterSettings;
       </div>
 
       <div className="border-t border-white/15">
-        <div className="flex flex-col gap-4 px-6 py-7 text-[13px] text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
+        <div className="flex flex-col gap-4 px-6 py-6 text-[13px] text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
           <p>
             © {year} {settings.copyright_holder}.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             {settings.legal_links.map((link) => (
-              <Link key={link.label} href={localizeHref(locale, link.href)} className="transition-colors hover:text-white">
+              <Link key={link.label} href={localizeHref(locale, link.href)} className="transition-colors hover:text-[hsl(var(--copper))]">
                 {link.label}
               </Link>
             ))}

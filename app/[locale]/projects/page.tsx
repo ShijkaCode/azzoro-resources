@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title: locale === 'mn' ? 'Төслүүд' : 'Projects',
     description:
       locale === 'mn'
-        ? 'Azzoro Resources-ийн төслүүдийг интерактив газрын зураг, түүхий эдийн шүүлтүүрээр үзнэ үү.'
-        : 'Explore Azzoro Resources projects through an interactive map with commodity filters.',
+        ? 'Azzuro Resources-ийн төслүүдийг интерактив газрын зураг, түүхий эдийн шүүлтүүрээр үзнэ үү.'
+        : 'Explore Azzuro Resources projects through an interactive map with commodity filters.',
     locale,
     path: '/projects',
   });
@@ -53,7 +53,7 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
 
   return (
     <main id="main-content" className="-mt-24">
-      <section className="bg-ink text-white">
+      <section className="bg-primary text-white">
         <div className="px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16">
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.eyebrow}</p>
           <h1 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">

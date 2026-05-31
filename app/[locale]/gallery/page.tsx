@@ -67,7 +67,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
 
   return (
     <main id="main-content">
-      <section className="-mt-24 bg-ink text-white">
+      <section className="-mt-24 bg-primary text-white">
         <div className="px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16">
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{t.eyebrow}</p>
           <h1 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
