@@ -12,7 +12,9 @@ const nextConfig = {
   experimental: {
     outputFileTracingIncludes: {
       '/[locale]/opengraph-image': ['./lib/og/**'],
-      '/[locale]/projects/[slug]/opengraph-image': ['./lib/og/**'],
+      // The project card reads content/*.md at runtime via loadCollection, so
+      // the markdown must be traced into this dynamic function too.
+      '/[locale]/projects/[slug]/opengraph-image': ['./lib/og/**', './content/**'],
     },
   },
   images: {
