@@ -72,7 +72,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
     <main id="main-content">
       <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
         {esg.hero_image ? (
-          <Image src={esg.hero_image} alt="" fill priority className="object-cover" sizes="100vw" />
+          <Image src={esg.hero_image} alt="" fill priority className="object-cover object-bottom" sizes="100vw" />
         ) : null}
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--eco)/0.85)] via-black/45 to-black/20" />
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
