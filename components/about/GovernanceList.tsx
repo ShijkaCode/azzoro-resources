@@ -40,7 +40,7 @@ export function GovernanceList({
                       <span className="text-[14px] text-ink/85 transition-colors group-hover:text-ink">{document.title}</span>
                       <span
                         aria-hidden
-                        className="flex h-7 w-7 shrink-0 items-center justify-center text-ink/40 transition-all group-hover:translate-y-0.5 group-hover:text-ink"
+                        className="flex h-7 w-7 shrink-0 items-center justify-center text-ink/40 transition-all group-hover:translate-y-0.5 group-hover:text-[hsl(var(--copper))]"
                       >
                         ↓
                       </span>

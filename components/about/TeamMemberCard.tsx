@@ -36,7 +36,7 @@ export function TeamMemberCard({
               alt={member.name}
               fill
               sizes={compact ? '(min-width: 1024px) 16vw, 33vw' : '(min-width: 1024px) 25vw, 50vw'}
-              className="object-cover"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
           ) : (
             <div className="flex h-full items-center justify-center font-display text-4xl font-medium text-muted-ink">
@@ -48,7 +48,7 @@ export function TeamMemberCard({
         <p className={roleClass}>{member.role}</p>
         {bio ? (
           <span
-            className={`mt-3 inline-flex items-center gap-1.5 border-b border-ink/40 pb-1 font-medium uppercase tracking-[0.24em] text-ink/80 transition-colors group-hover:border-ink group-hover:text-ink ${
+            className={`mt-3 inline-flex items-center gap-1.5 border-b border-ink/40 pb-1 font-medium uppercase tracking-[0.24em] text-ink/80 transition-colors group-hover:border-[hsl(var(--copper))] group-hover:text-ink ${
               compact ? 'text-[9px]' : 'text-[11px] gap-2 tracking-[0.28em]'
             }`}
           >

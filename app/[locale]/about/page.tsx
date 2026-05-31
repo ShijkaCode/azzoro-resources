@@ -67,7 +67,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
       <section className="-mt-24 bg-primary text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-end px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16 lg:pb-24">
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.kicker}</p>
+            <p className="kicker kicker-invert">{labels.kicker}</p>
             <h1 className="mt-6 max-w-[16ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
               {labels.title}
             </h1>
@@ -92,14 +92,18 @@ export default async function AboutPage({ params }: { params: { locale: string }
         <div className="grid gap-x-16 gap-y-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <MarkdownBody className="max-w-[60ch] prose-p:text-lg">{about.story_body}</MarkdownBody>
           <div className="border-t-2 border-ink pt-6">
-            <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.mission}</p>
+            <p className="kicker">{labels.mission}</p>
             <p className="mt-5 font-display text-2xl font-medium leading-snug text-ink">{about.mission}</p>
           </div>
         </div>
 
         <div className="mt-20 grid grid-cols-1 border-l border-t border-rule md:grid-cols-3">
           {about.values.map((value) => (
-            <article key={value.title} className="border-b border-r border-rule px-6 py-8 sm:px-8 sm:py-10">
+            <article key={value.title} className="group relative border-b border-r border-rule px-6 py-8 transition-colors hover:bg-ink/[0.02] sm:px-8 sm:py-10">
+              <span
+                aria-hidden="true"
+                className="absolute left-0 right-0 top-0 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
+              />
               <h2 className="font-display text-xl font-medium text-ink sm:text-2xl">{value.title}</h2>
               <p className="mt-4 text-[15px] leading-relaxed text-ink/70">{value.body}</p>
             </article>
@@ -117,7 +121,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
       <section id="governance" className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <div className="grid gap-x-16 gap-y-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.governance}</p>
+            <p className="kicker kicker-invert">{labels.governance}</p>
             <MarkdownBody className="mt-6 max-w-[44ch] prose-p:text-white/75 prose-headings:text-white prose-strong:text-white">
               {about.leadership_governance_body}
             </MarkdownBody>
