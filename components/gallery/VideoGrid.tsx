@@ -7,10 +7,15 @@ export function VideoGrid({ videos, heading }: { videos: GalleryVideo[]; heading
 
   return (
     <section className="bg-paper px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
       <h2 className="font-display text-3xl font-medium leading-tight text-ink sm:text-4xl">{heading}</h2>
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {videos.map((video) => (
-          <article key={video.slug} className="border border-rule">
+          <article key={video.slug} className="group relative border border-rule">
+            <span
+              aria-hidden="true"
+              className="absolute left-0 right-0 top-0 z-10 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
+            />
             <div className="relative aspect-video">
               <iframe
                 src={`https://customer-${process.env.NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID ?? 'placeholder'}.cloudflarestream.com/${video.stream_uid}/iframe`}

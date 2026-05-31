@@ -23,7 +23,7 @@ export function CaseStudyCard({ study, locale }: { study: CaseStudy; locale: 'en
       <p className="mt-3 max-w-[44ch] text-[15px] leading-relaxed text-ink/70">{study.summary}</p>
       <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.28em] text-ink/50 transition-colors group-hover:text-ink">
         {readLabel}
-        <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+        <span aria-hidden="true" className="text-[hsl(var(--copper))] transition-transform group-hover:translate-x-1">→</span>
       </span>
     </Link>
   );

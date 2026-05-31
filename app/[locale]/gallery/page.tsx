@@ -69,7 +69,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
     <main id="main-content">
       <section className="-mt-24 bg-primary text-white">
         <div className="px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16">
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{t.eyebrow}</p>
+          <p className="kicker kicker-invert">{t.eyebrow}</p>
           <h1 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
             {gallery.intro_heading}
           </h1>
@@ -94,7 +94,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
               />
             </div>
             <div className="flex flex-col justify-center border-rule px-6 py-16 sm:px-10 sm:py-20 lg:border-l lg:px-16">
-              <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">
+              <p className="kicker">
                 {t.stories} · {new Date(featured.date).toLocaleDateString(locale === 'mn' ? 'mn-MN' : 'en-AU', { year: 'numeric', month: 'short' })}
               </p>
               <h2 className="mt-6 max-w-[18ch] font-display text-balance text-3xl font-medium leading-[1.05] tracking-[-0.01em] sm:text-4xl lg:text-5xl">
@@ -104,9 +104,9 @@ export default async function GalleryPage({ params }: { params: { locale: string
                 <p className="mt-6 max-w-[40ch] font-display text-xl italic leading-snug text-ink/80">“{featured.pull_quote}”</p>
               ) : null}
               <p className="mt-6 max-w-[52ch] text-[15px] leading-relaxed text-ink/70">{featured.summary}</p>
-              <span className="mt-8 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors group-hover:border-ink">
+              <span className="mt-8 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors group-hover:border-[hsl(var(--copper))]">
                 {t.read}
-                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+                <span aria-hidden="true" className="text-[hsl(var(--copper))] transition-transform group-hover:translate-x-1">→</span>
               </span>
             </div>
           </Link>
