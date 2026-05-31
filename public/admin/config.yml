@@ -7,7 +7,7 @@ backend:
 
 media_folder: public/uploads
 public_folder: /uploads
-logo_url: /new_logo.png
+logo_url: /logo-azzuro-dark.png
 site_url: https://azzororesources.com
 display_url: https://azzororesources.com
 
@@ -31,10 +31,14 @@ collections:
             widget: object
             fields:
               - { label: Video ID, name: video_id, widget: string, required: false }
+              - { label: Location label (above headline), name: kicker, widget: string, required: false }
               - { label: Headline, name: headline, widget: string }
-              - { label: Subline, name: subline, widget: text }
+              - { label: Subline, name: subline, widget: text, required: false }
               - { label: CTA Label, name: cta_label, widget: string }
               - { label: CTA Href, name: cta_href, widget: string }
+              - { label: ASX company page URL (hero price tile), name: asx_url, widget: string, required: false }
+              - { label: Latest announcements URL (hero tile), name: announcements_url, widget: string, required: false }
+              - { label: Corporate presentation URL (hero tile), name: presentation_url, widget: string, required: false }
           - label: Metrics
             name: metrics
             widget: list
@@ -42,22 +46,39 @@ collections:
               - { label: Value, name: value, widget: string }
               - { label: Label, name: label, widget: string }
               - { label: Source, name: source, widget: string, required: false }
-          - { label: Why Mongolia intro, name: why_mongolia_intro, widget: text }
-          - label: Why Mongolia cards
-            name: why_mongolia_cards
-            widget: list
+          - label: Why Mongolia
+            name: why_mongolia
+            widget: object
             fields:
-              - { label: Icon, name: icon, widget: string, required: false }
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
-          - { label: Why Azzoro intro, name: why_azzoro_intro, widget: text }
-          - label: Why Azzoro cards
-            name: why_azzoro_cards
-            widget: list
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Footnote, name: footnote, widget: text, required: false }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+                  - { label: Image, name: image, widget: image, required: false }
+                  - { label: Image alt text, name: image_alt, widget: string, required: false }
+          - label: Why Azzuro
+            name: why_azzoro
+            widget: object
             fields:
-              - { label: Icon, name: icon, widget: string, required: false }
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Banner image, name: image, widget: image, required: false }
+              - { label: Banner image alt text, name: image_alt, widget: string, required: false }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Footnote, name: footnote, widget: text, required: false }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+                  - { label: Tag, name: tag, widget: string, required: false }
           - label: Sustainability teaser
             name: sustainability_teaser
             widget: object
@@ -67,6 +88,21 @@ collections:
               - { label: Image, name: image, widget: image, required: false }
               - { label: CTA label, name: cta_label, widget: string }
               - { label: CTA href, name: cta_href, widget: string }
+          - label: Home sustainability cards
+            name: home_sustainability
+            widget: object
+            required: false
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Tag, name: tag, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+                  - { label: Image, name: image, widget: image, required: false }
+                  - { label: Image alt text, name: image_alt, widget: string, required: false }
           - label: Leadership teaser
             name: leadership_teaser
             widget: object
@@ -75,6 +111,48 @@ collections:
               - { label: Body, name: body, widget: text }
               - { label: CTA label, name: cta_label, widget: string }
               - { label: CTA href, name: cta_href, widget: string }
+          - label: Featured projects (home highlights)
+            name: featured_projects
+            widget: list
+            required: false
+            hint: Project highlights shown near the top of the home page. They alternate left / right automatically. Use 3 thumbnails per project.
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Lead paragraph, name: lead, widget: text }
+              - { label: Main image, name: image, widget: image }
+              - { label: Main image alt text, name: image_alt, widget: string, required: false }
+              - label: Stats
+                name: stats
+                widget: list
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+              - label: Thumbnails
+                name: thumbnails
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Caption, name: caption, widget: string, required: false }
+                  - { label: Alt text, name: alt, widget: string, required: false }
+              - { label: CTA label, name: cta_label, widget: string }
+              - { label: CTA link, name: cta_href, widget: string }
+              - { label: Footnote, name: footnote, widget: text, required: false }
+          - label: Investor snapshot
+            name: investor_snapshot
+            widget: object
+            required: false
+            hint: Share price, change and market cap come from the ASX automatically. The figures below are typed in manually and updated after each announcement.
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Headline, name: headline, widget: string }
+              - label: Figures (manual)
+                name: kpis
+                widget: list
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+              - { label: Footnote, name: footnote, widget: text }
           - { label: Show news section, name: news_section_enabled, widget: boolean, default: true, required: false }
           - { label: Show stock section, name: stock_section_enabled, widget: boolean, default: true, required: false }
       - name: about
@@ -100,6 +178,7 @@ collections:
         i18n: true
         fields:
           - { label: Hero image, name: hero_image, widget: image, required: false }
+          - { label: Hero headline, name: hero_headline, widget: string, required: false }
           - { label: Approach body, name: approach_body, widget: text }
           - label: Environment
             name: environment
@@ -181,6 +260,7 @@ collections:
       - { label: Role, name: role, widget: string }
       - { label: Team section, name: team_section, widget: select, options: [Board, Technical] }
       - { label: Photo, name: photo, widget: image, required: false }
+      - { label: Home credential (short line on the home leadership grid), name: home_credential, widget: text, required: false }
       - { label: Bio, name: bio, widget: text }
       - { label: Order, name: order, widget: number, value_type: int }
   - name: governance
@@ -203,6 +283,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Order (lower = higher up the projects list), name: order, widget: number, required: false, value_type: int }
       - { label: Commodity, name: commodity, widget: list }
       - { label: Status, name: status, widget: select, options: [Active exploration, Drilling, Resource definition, Paused] }
       - { label: Region, name: region, widget: string }
@@ -211,7 +292,13 @@ collections:
       - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int }
       - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
       - { label: Hero image, name: hero_image, widget: image }
-      - { label: Gallery images, name: gallery_images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
+      - label: Gallery figures
+        name: gallery_images
+        widget: list
+        required: false
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Caption, name: caption, widget: text, required: false }
       - { label: Summary, name: summary, widget: text }
       - { label: Tagline, name: tagline, widget: string, required: false }
       - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false }
@@ -362,6 +449,13 @@ collections:
               - { label: Label, name: label, widget: string }
               - { label: Href, name: href, widget: string }
               - { label: External, name: external, widget: boolean, required: false }
+          - label: Investor dropdown links
+            name: investor_links
+            widget: list
+            required: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
       - name: footer
         label: Footer
         file: content/settings/footer.{{locale}}.yml

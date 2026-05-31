@@ -19,10 +19,10 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com'),
   title: {
-    default: 'Azzoro Resources',
-    template: '%s | Azzoro Resources',
+    default: 'Azzuro Resources',
+    template: '%s | Azzuro Resources',
   },
-  description: 'Bilingual corporate website foundation for Azzoro Resources.',
+  description: 'Bilingual corporate website foundation for Azzuro Resources.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

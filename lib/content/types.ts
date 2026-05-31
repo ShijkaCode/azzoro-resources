@@ -15,6 +15,7 @@ export type NavItem = { label: string; href: string; external?: boolean };
 
 export type NavSettings = {
   items: NavItem[];
+  investor_links?: { label: string; href: string }[];
 };
 
 export type FooterSettings = {
@@ -24,15 +25,55 @@ export type FooterSettings = {
   legal_links: NavItem[];
 };
 
+// Home page "featured project" highlight (the Oval / Red Hill style sections).
+// Fully CMS-managed so the client can change name, copy, stats, link and photos.
+export type FeaturedProject = {
+  eyebrow?: string;
+  headline: string;
+  lead: string;
+  image: string;
+  image_alt?: string;
+  stats: { value: string; label: string }[];
+  thumbnails: { image: string; caption?: string; alt?: string }[];
+  cta_label: string;
+  cta_href: string;
+  footnote?: string;
+};
+
 export type HomeContent = {
-  hero: { video_id: string; headline: string; subline: string; cta_label: string; cta_href: string };
+  hero: { video_id: string; kicker?: string; headline: string; subline?: string; cta_label: string; cta_href: string; asx_url?: string; announcements_url?: string; presentation_url?: string };
   metrics: { value: string; label: string; source?: string }[];
-  why_mongolia_intro: string;
-  why_mongolia_cards: { icon?: string; title: string; body: string }[];
-  why_azzoro_intro: string;
-  why_azzoro_cards: { icon?: string; title: string; body: string }[];
+  why_mongolia: {
+    eyebrow: string;
+    headline: string;
+    intro: string;
+    footnote?: string;
+    cards: { title: string; body: string; image?: string; image_alt?: string }[];
+  };
+  why_azzoro: {
+    eyebrow: string;
+    headline: string;
+    image?: string;
+    image_alt?: string;
+    intro: string;
+    footnote?: string;
+    cards: { title: string; body: string; tag?: string }[];
+  };
   sustainability_teaser: { heading: string; body: string; image?: string; cta_label: string; cta_href: string };
+  home_sustainability?: {
+    eyebrow: string;
+    cards: { tag: string; title: string; body: string; image?: string; image_alt?: string }[];
+  };
   leadership_teaser: { heading: string; body: string; cta_label: string; cta_href: string };
+  featured_projects?: FeaturedProject[];
+  // Investor snapshot text + manually-maintained figures. Share price, change and
+  // market cap are fetched from the ASX feed (not stored here).
+  investor_snapshot?: {
+    eyebrow: string;
+    headline: string;
+    kpis: { value: string; label: string }[];
+    footnote: string;
+  };
   news_section_enabled: boolean;
   stock_section_enabled: boolean;
 };
@@ -48,6 +89,7 @@ export type AboutContent = {
 
 export type EsgContent = {
   hero_image?: string;
+  hero_headline?: string;
   approach_body: string;
   environment: { body: string; image?: string };
   community: { body: string; image?: string };
@@ -87,6 +129,8 @@ export type TeamMember = {
   photo?: string;
   bio: string;
   order: number;
+  // Short one-line summary shown on the home "Leadership & governance" grid (Board members).
+  home_credential?: string;
 };
 
 export type GovernanceDocument = {
@@ -101,6 +145,7 @@ export type GovernanceDocument = {
 export type Project = {
   slug: string;
   title: string;
+  order?: number;
   commodity: string[];
   status: 'Active exploration' | 'Drilling' | 'Resource definition' | 'Paused';
   region: string;
@@ -109,7 +154,7 @@ export type Project = {
   license_area_km2?: number;
   acquired_date?: string;
   hero_image: string;
-  gallery_images?: string[];
+  gallery_images?: { image: string; caption?: string }[];
   summary: string;
   body: string;
   data_cards?: { label: string; value: string }[];

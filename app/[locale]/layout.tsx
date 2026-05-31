@@ -4,10 +4,9 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
-import { loadCollection } from '@/lib/content/loadCollection';
 import { loadGlobal } from '@/lib/content/loadGlobal';
 import { loadSingleton } from '@/lib/content/loadSingleton';
-import type { FooterSettings, NavSettings, Project, SiteSettings } from '@/lib/content/types';
+import type { FooterSettings, NavSettings, SiteSettings } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
 
 export function generateStaticParams() {
@@ -25,7 +24,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
   return {
     openGraph: {
       type: 'website',
-      siteName: 'Azzoro Resources',
+      siteName: 'Azzuro Resources',
       locale: isMn ? 'mn_MN' : 'en_US',
       url: `${siteUrl}/${locale}`,
     },
@@ -52,22 +51,19 @@ export default async function LocaleLayout({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
 
-  const [messages, nav, footer, site, projects] = await Promise.all([
+  const [messages, nav, footer, site] = await Promise.all([
     getMessages(),
     loadSingleton<NavSettings>('settings/nav', locale),
     loadSingleton<FooterSettings>('settings/footer', locale),
     loadGlobal<SiteSettings>('settings/site'),
-    loadCollection<Project>('projects', locale),
   ]);
-
-  const projectLinks = projects.map((project) => ({ slug: project.slug, title: project.title }));
 
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: site.brand_name,
     url: siteUrl,
-    logo: `${siteUrl}${site.logo || '/new_logo.png'}`,
+    logo: `${siteUrl}${site.logo || '/logo-azzuro-dark.png'}`,
     sameAs: Object.values(site.social ?? {}).filter(Boolean),
     address: [
       {
@@ -104,7 +100,7 @@ export default async function LocaleLayout({
       </a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       <div className="min-h-screen bg-background">
-        <Navbar items={nav.items} locale={locale} projectLinks={projectLinks} />
+        <Navbar items={nav.items} locale={locale} investorLinks={nav.investor_links} logo={site.logo_dark} />
         <div className="pt-24">{children}</div>
         <Footer settings={footer} locale={locale} />
       </div>

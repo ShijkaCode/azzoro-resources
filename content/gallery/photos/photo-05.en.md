@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-05.webp
-caption: Oval project terrain and target area overview
+caption: Overview across the Oval target area and surrounding terrain
 tags:
   - Field
   - Drilling

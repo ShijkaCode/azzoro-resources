@@ -1,6 +1,6 @@
 ---
-intro_heading: Stories from the field
-intro_body: Long-form case studies on how Azzoro explores, operates, and works alongside the communities around its licences — supported by field photography and video from across Mongolia.
+intro_heading: From the field
+intro_body: Photography, video and case studies documenting how Azzuro's field teams work across Mongolia, engage with host communities and advance the project portfolio on the ground.
 filter_tags:
   - slug: all
     label: All

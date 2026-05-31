@@ -1,6 +1,6 @@
-// Generate brand favicons from the Azzoro logomark.
+// Generate brand favicons from the Azzuro logomark.
 //
-// Crops the four-circle logomark out of public/new_logo.png (the wide
+// Crops the four-circle logomark out of public/logo-azzuro-light.png (the wide
 // wordmark), squares it, and emits:
 //   app/icon.png        512x512 transparent   (browser tab / modern)
 //   app/apple-icon.png  180x180 on white      (iOS home screen)
@@ -14,9 +14,9 @@ import { writeFileSync } from 'fs';
 import path from 'path';
 
 const ROOT = process.cwd();
-const LOGO = path.join(ROOT, 'public', 'new_logo.png');
+const LOGO = path.join(ROOT, 'public', 'logo-azzuro-light.png');
 
-// The logomark sits in the left ~248px of the 890px-wide wordmark. Crop that
+// The logomark sits in the left ~250px of the 828px-wide wordmark. Crop that
 // region, then tightly trim transparent padding via the alpha channel (sharp's
 // built-in .trim() misbehaves on transparent edges in this version).
 async function alphaTrim(buf) {
@@ -43,7 +43,7 @@ async function alphaTrim(buf) {
 }
 
 const cropped = await sharp(LOGO)
-  .extract({ left: 0, top: 0, width: 248, height: 280 })
+  .extract({ left: 0, top: 0, width: 250, height: 301 })
   .png()
   .toBuffer();
 const markBuf = await alphaTrim(cropped);

@@ -1,25 +1,25 @@
-tagline: A copper-focused explorer advancing base and precious metal discoveries across Mongolia.
+tagline: An ASX-listed explorer advancing a Mongolian copper-nickel-gold portfolio led by Oval and supported by regional growth.
 link_columns:
   - heading: Company
     links:
-      - label: About us
+      - label: About
         href: /about
       - label: Projects
         href: /projects
       - label: ESG
         href: /esg
-  - heading: Resources
+  - heading: Investor Resources
     links:
       - label: Gallery
         href: /gallery
-      - label: Investor Center
+      - label: Investor Centre
         href: https://investors.azzororesources.com
         external: true
-      - label: Contact us
+      - label: Contact
         href: /contact
-copyright_holder: Azzoro Resources PLC
+copyright_holder: Azzuro Resources PLC
 legal_links:
-  - label: Privacy
+  - label: Privacy Policy
     href: /legal/privacy
-  - label: Terms
+  - label: Terms of Use
     href: /legal/terms

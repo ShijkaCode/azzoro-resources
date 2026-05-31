@@ -1,5 +1,5 @@
 /* Shared Open Graph "share card" used by the opengraph-image routes. Renders a
- * 1200x630 image with a darkened brand photo, the Azzoro logomark + wordmark,
+ * 1200x630 image with a darkened brand photo, the Azzuro logomark + wordmark,
  * a headline and caption — the preview shown when a link is pasted into
  * Messenger, Viber, WhatsApp, Slack, etc.
  *
@@ -15,8 +15,8 @@ export const ogSize = { width: 1200, height: 630 };
 
 const OG_DIR = join(process.cwd(), 'lib', 'og');
 
-const ACCENT = '#27aae1';
-const INK = '#06111f';
+const ACCENT = '#ff6600'; // brand copper — keep in sync with --copper in globals.css
+const INK = '#0d1f2d'; // brand navy — keep in sync with --navy in globals.css
 
 type FontEntry = { name: string; data: Buffer; weight: 400 | 600; style: 'normal' };
 let fontCache: FontEntry[] | null = null;
@@ -88,7 +88,7 @@ export function ShareCard({
         <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logo} width={62} height={62} alt="" />
-          <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '0.26em' }}>AZZORO RESOURCES</div>
+          <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: '0.26em' }}>AZZURO RESOURCES</div>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>

@@ -3,12 +3,25 @@ items:
     href: /about
   - label: Төслүүд
     href: /projects
+  - label: Хөрөнгө оруулагчийн төв
+    href: https://investors.azzororesources.com
+    external: true
   - label: Тогтвортой байдал
     href: /esg
   - label: Галерей
     href: /gallery
-  - label: Хөрөнгө оруулагчдад
-    href: https://investors.azzororesources.com
-    external: true
   - label: Холбоо барих
     href: /contact
+investor_links:
+  - label: Хөрөнгө оруулагчийн төв
+    href: https://investors.asianbatterymetals.com/
+  - label: Хувьцааны мэдээлэл
+    href: https://investors.asianbatterymetals.com/
+  - label: ASX мэдэгдлүүд
+    href: https://investors.asianbatterymetals.com/announcements
+  - label: Танилцуулга
+    href: https://investors.asianbatterymetals.com/announcements?filter=Presentation
+  - label: Мэдээ ба хэвлэл
+    href: https://investors.asianbatterymetals.com/news-insights
+  - label: Компанийн тайлангууд
+    href: https://investors.asianbatterymetals.com/announcements?filter=reports

@@ -1,28 +1,29 @@
 ---
 hero_image: /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
+hero_headline: Exploring responsibly, alongside our communities.
 approach_body: |-
-  Azzoro Resources is developing the new public site with ESG as a first-class narrative rather than a compliance afterthought. The goal is to explain how exploration activity, field programs, community presence, and governance practices relate to one another.
+  ESG at Azzuro is part of how exploration is designed and carried out, not an overlay added later. From the earliest stage of fieldwork, the Company works to understand environmental baselines, maintain open communication with local stakeholders and apply the governance discipline expected of an ASX-listed explorer.
 
-  This route is intentionally structured so the client can later expand it with fuller disclosures, imagery, and reports without changing the page architecture.
+  As projects advance, this page brings together the environmental, community and governance practices that guide field activity across the portfolio in Mongolia.
 environment:
   body: |-
-    Environmental messaging on the renewed site should cover field discipline, baseline data collection, and how the company approaches land access and responsible exploration.
+    Environmental stewardship starts before drilling, with disciplined field procedures, baseline data collection and practical monitoring of the water and land systems around each licence area.
 
-    This is placeholder copy for the final narrative, but the layout is ready for real project-level environmental context.
+    The aim is to understand conditions early, minimise disturbance where possible and manage land access responsibly through each stage of exploration.
   image: /uploads/esg/Well%20monitoring%20at%20Anjiin%20bulag.jpg
 community:
   body: |-
-    Community-facing content will later be expanded with consultation, employment, and stakeholder engagement detail. For now, the route has the right structure for those updates to be entered through the CMS.
+    Azzuro's presence in Mongolia depends on long-term, respectful relationships with host communities, local authorities and other stakeholders around its licences.
 
-    The client can add bilingual edits here without touching code.
+    The Company aims to engage early, communicate clearly and direct practical support toward local priorities where field activity is underway.
   image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
 governance:
   body: |-
-    Azzoro applies the governance standards of an ASX-listed company across its Mongolian operations — board oversight, transparent market disclosure, and rigorous safety and compliance practices.
+    Azzuro applies the governance standards of an ASX-listed company across its Mongolian operations — board oversight, transparent market disclosure, and disciplined safety and compliance practices.
 
-    Open engagement with local stakeholders and regulators underpins every licence area, supported by regular reporting through public industry forums.
+    Open engagement with regulators and local stakeholders underpins each licence area as projects move forward.
   image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
-reports_intro: Reports and disclosures will be linked from this section once the final document set is provided.
+reports_intro: Approved reports, policies and disclosures will be linked from this section as they become available for publication.
 gallery:
   - image: /uploads/esg/IMG20240306121940.jpg
     caption: Field environmental baseline survey

@@ -6,42 +6,48 @@
 
 @layer base {
   :root {
-    /* Swiss palette — monochrome ink on warm paper, single brand accent */
-    --paper: 36 14% 95%;
-    --ink: 0 0% 4%;
-    --ink-soft: 0 0% 12%;
-    --muted-ink: 0 0% 42%;
-    --rule: 0 0% 78%;
-    --brand-accent: 215 60% 18%; /* PROVISIONAL — client to confirm brand accent */
+    /* ============================================================
+       AZZURO RESOURCES — brand palette (client-supplied, 2026)
+       Re-skin the whole site by editing these RAW values only.
+       Stored as HSL channels so lightness/saturation tune freely.
+       ============================================================ */
+    --paper: 38 14% 89%;          /* #e6e3de  warm greige — page surface */
+    --ink: 0 0% 13%;              /* near-black — headings & strong text  */
+    --ink-soft: 0 0% 20%;         /* #333333  — body copy                 */
+    --muted-ink: 0 0% 42%;        /* captions, eyebrows                   */
+    --rule: 0 0% 78%;             /* hairline rules / borders             */
+    --navy: 206 55% 11%;          /* #0d1f2d  deep steel-navy — PRIMARY   */
+    --copper: 24 100% 50%;        /* #ff6600  ACCENT — use sparingly      */
     /* ESG-scoped accent only — NOT the brand accent. Muted institutional green. */
     --eco: 146 32% 26%;
     --eco-paper: 140 16% 95%;
 
     /* Semantic tokens map onto the palette above so existing components inherit the new look without prop changes */
     --background: var(--paper);
-    --foreground: var(--ink);
+    --foreground: var(--ink-soft);     /* body copy = #333 */
     --card: 0 0% 100%;
     --card-foreground: var(--ink);
     --popover: 0 0% 100%;
     --popover-foreground: var(--ink);
-    --primary: var(--brand-accent);
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 95%;
+    --primary: var(--navy);            /* dark brand surfaces, primary buttons */
+    --primary-foreground: 0 0% 100%;   /* white on navy — 15:1 */
+    --secondary: 38 13% 84%;           /* warm neutral surface */
     --secondary-foreground: var(--ink);
-    --muted: 0 0% 95%;
+    --muted: 38 13% 84%;
     --muted-foreground: var(--muted-ink);
-    --accent: var(--brand-accent);
-    --accent-foreground: 0 0% 100%;
+    --accent: var(--copper);
+    --accent-foreground: var(--navy);  /* DARK text on orange — orange fails contrast under white */
     --destructive: 0 72% 38%;
     --destructive-foreground: 0 0% 100%;
     --border: var(--rule);
     --input: var(--rule);
-    --ring: var(--brand-accent);
+    --ring: var(--navy);               /* accessible focus ring (orange ring fails 3:1 on light) */
     --radius: 0;
 
-    /* Legacy aliases — kept so existing `bg-navy-dark` / `text-sky-line` references keep working with the new palette */
-    --navy-dark: var(--ink);
-    --navy-soft: var(--ink-soft);
+    /* Legacy aliases — kept so existing `bg-navy-dark` / `text-sky-line` / `brand-accent` references keep working */
+    --brand-accent: var(--copper);
+    --navy-dark: var(--navy);
+    --navy-soft: 206 40% 16%;
     --sky-line: 0 0% 100%;
   }
 
@@ -65,7 +71,7 @@
   }
 
   .hero-shell {
-    @apply relative overflow-hidden border border-white/10 bg-[hsl(var(--ink))] text-white;
+    @apply relative overflow-hidden border border-white/10 bg-[hsl(var(--primary))] text-white;
   }
 
   .section-kicker {
@@ -74,6 +80,63 @@
 
   .label-eyebrow {
     @apply text-[11px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--muted-ink))];
+  }
+
+  /* Section kicker / eyebrow with a short copper tick — the brand rhythm mark.
+     `.kicker` on light surfaces, add `.kicker-invert` on dark navy surfaces.
+     The tick is a graphic element, so copper-on-any-bg is fine for contrast. */
+  .kicker {
+    @apply inline-flex items-center text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--muted-ink))];
+  }
+
+  .kicker-invert {
+    @apply text-white/60;
+  }
+
+  .kicker::before {
+    content: '';
+    flex: none;
+    width: 1.5rem;
+    height: 2px;
+    margin-right: 0.75rem;
+    background: hsl(var(--copper));
+  }
+
+  /* CTA text-link — copper arrow at rest, copper underline wipes in on hover.
+     Label keeps its readable color (near-black on light; white on dark).
+     Add `.cta-link-invert` on dark surfaces. Wrap the arrow glyph in `.cta-arrow`. */
+  .cta-link {
+    @apply relative inline-flex w-fit items-center gap-3 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--ink))] transition-colors;
+  }
+
+  .cta-link-invert {
+    @apply text-white;
+  }
+
+  .cta-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: hsl(var(--copper));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .cta-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .cta-arrow {
+    color: hsl(var(--copper));
+    transition: transform 200ms ease-out;
+  }
+
+  .cta-link:hover .cta-arrow {
+    transform: translateX(3px);
   }
 
   .surface-card {
@@ -110,6 +173,17 @@
     text-decoration-line: underline !important;
     text-underline-offset: 0.18em;
     font-weight: 600;
+  }
+
+  /* Flatten the zoom controls to match the Swiss design (sharp corners, hairline border) */
+  .maplibregl-ctrl-group {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid hsl(var(--rule));
+  }
+
+  .maplibregl-ctrl-group button {
+    border-radius: 0 !important;
   }
 }
 
@@ -181,7 +255,7 @@
 }
 
 .maplibregl-popup.project-popup .maplibregl-popup-content {
-  background: hsl(var(--ink));
+  background: hsl(var(--primary));
   padding: 0;
   border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -192,21 +266,21 @@
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip,
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip {
-  border-top-color: hsl(var(--ink));
+  border-top-color: hsl(var(--primary));
 }
 
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-top .maplibregl-popup-tip,
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-top-left .maplibregl-popup-tip,
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-top-right .maplibregl-popup-tip {
-  border-bottom-color: hsl(var(--ink));
+  border-bottom-color: hsl(var(--primary));
 }
 
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-left .maplibregl-popup-tip {
-  border-right-color: hsl(var(--ink));
+  border-right-color: hsl(var(--primary));
 }
 
 .maplibregl-popup.project-popup.maplibregl-popup-anchor-right .maplibregl-popup-tip {
-  border-left-color: hsl(var(--ink));
+  border-left-color: hsl(var(--primary));
 }
 
 .project-popup-inner {

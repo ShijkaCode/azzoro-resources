@@ -1,14 +1,27 @@
 items:
-  - label: About us
+  - label: About
     href: /about
   - label: Projects
     href: /projects
-  - label: ESG
+  - label: Investor Centre
+    href: https://investors.azzororesources.com
+    external: true
+  - label: Sustainability
     href: /esg
   - label: Gallery
     href: /gallery
-  - label: Investor Center
-    href: https://investors.azzororesources.com
-    external: true
-  - label: Contact us
+  - label: Contact
     href: /contact
+investor_links:
+  - label: Investor Centre
+    href: https://investors.asianbatterymetals.com/
+  - label: Stock Information
+    href: https://investors.asianbatterymetals.com/
+  - label: ASX Announcements
+    href: https://investors.asianbatterymetals.com/announcements
+  - label: Presentations
+    href: https://investors.asianbatterymetals.com/announcements?filter=Presentation
+  - label: News & Media
+    href: https://investors.asianbatterymetals.com/news-insights
+  - label: Company Reports
+    href: https://investors.asianbatterymetals.com/announcements?filter=reports

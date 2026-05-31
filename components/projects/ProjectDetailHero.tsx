@@ -5,7 +5,7 @@ export function ProjectDetailHero({ project, locale }: { project: Project; local
   const flagshipLabel = locale === 'mn' ? 'Гол төсөл' : 'Flagship';
 
   return (
-    <section className="relative -mt-24 flex min-h-[68vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
+    <section className="relative -mt-24 flex min-h-[68vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
       {project.hero_image ? (
         <Image src={project.hero_image} alt={project.title} fill priority className="object-cover" sizes="100vw" />
       ) : null}
@@ -14,7 +14,7 @@ export function ProjectDetailHero({ project, locale }: { project: Project; local
       <div className="relative px-6 pb-12 pt-36 sm:px-10 sm:pb-16 lg:px-16">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           {project.is_flagship ? (
-            <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/70">{flagshipLabel}</span>
+            <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--copper))]">{flagshipLabel}</span>
           ) : null}
           <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/55">
             {project.commodity.join(' · ')}

@@ -1,4 +1,4 @@
-tagline: Монгол даяар суурь болон үнэт металлын нээлтийг ахиулж буй зэс төвтэй хайгуулын компани.
+tagline: Oval-аар тэргүүлсэн, бүсийн өсөлтийн боломжтой Монгол дахь зэс-никель-алтны багцыг урагшлуулж буй ASX-д бүртгэлтэй хайгуулын компани.
 link_columns:
   - heading: Компани
     links:
@@ -6,20 +6,20 @@ link_columns:
         href: /about
       - label: Төслүүд
         href: /projects
-      - label: Тогтвортой байдал
+      - label: ESG
         href: /esg
-  - heading: Нөөц
+  - heading: Хөрөнгө оруулагчийн мэдээлэл
     links:
       - label: Галерей
         href: /gallery
-      - label: Хөрөнгө оруулагчдад
+      - label: Хөрөнгө оруулагчийн төв
         href: https://investors.azzororesources.com
         external: true
       - label: Холбоо барих
         href: /contact
-copyright_holder: Azzoro Resources PLC
+copyright_holder: Azzuro Resources PLC
 legal_links:
-  - label: Нууцлал
+  - label: Нууцлалын бодлого
     href: /legal/privacy
-  - label: Нөхцөл
+  - label: Ашиглах нөхцөл
     href: /legal/terms

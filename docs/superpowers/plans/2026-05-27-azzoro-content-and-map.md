@@ -2188,7 +2188,7 @@ export async function StockPriceCard({ investorPortalUrl }: Props) {
           className="block max-w-md rounded-2xl border border-border p-6 hover:border-primary"
         >
           <div className="text-xs uppercase tracking-wider text-muted-foreground">Stock</div>
-          <div className="mt-2 text-lg font-semibold">View live price on investor portal ↗</div>
+          <div className="mt-2 text-lg font-semibold">View share price on investor portal ↗</div>
         </Link>
       </section>
     );

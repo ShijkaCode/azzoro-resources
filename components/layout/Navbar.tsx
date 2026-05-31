@@ -10,10 +10,11 @@ import type { Locale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
 import LanguageToggle from './LanguageToggle';
 
-type ProjectLink = { slug: string; title: string };
-
 const underline =
-  'relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100';
+  'relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[hsl(var(--copper))] after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100';
+
+// Persistent copper underline for the current page.
+const underlineActive = `${underline} after:scale-x-100`;
 
 const INVESTOR_LINKS: Record<Locale, { label: string; href: string }[]> = {
   en: [
@@ -34,9 +35,6 @@ const INVESTOR_LINKS: Record<Locale, { label: string; href: string }[]> = {
   ],
 };
 
-function isProjectsItem(item: NavItem) {
-  return !item.external && item.href.replace(/\/$/, '').endsWith('/projects');
-}
 function isInvestorItem(item: NavItem) {
   return Boolean(item.external && /investors\./.test(item.href));
 }
@@ -44,11 +42,13 @@ function isInvestorItem(item: NavItem) {
 export default function Navbar({
   items,
   locale,
-  projectLinks,
+  investorLinks,
+  logo = '/logo-azzuro-light.png',
 }: {
   items: NavItem[];
   locale: Locale;
-  projectLinks: ProjectLink[];
+  investorLinks?: { label: string; href: string }[];
+  logo?: string;
 }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -68,29 +68,24 @@ export default function Navbar({
 
   const headerClass = [
     'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
-    useTransparent ? 'bg-transparent border-b border-transparent' : 'bg-[hsl(var(--ink))] border-b border-white/10',
+    useTransparent ? 'bg-transparent border-b border-transparent' : 'bg-[hsl(var(--primary))] border-b border-white/10',
   ].join(' ');
 
-  const investorLinks = INVESTOR_LINKS[locale] ?? INVESTOR_LINKS.en;
+  const investorLinkItems =
+    investorLinks && investorLinks.length > 0 ? investorLinks : INVESTOR_LINKS[locale] ?? INVESTOR_LINKS.en;
 
   const dropdownFor = (item: NavItem): { key: string; links: { label: string; href: string; external: boolean }[] } | null => {
-    if (isProjectsItem(item)) {
-      return {
-        key: 'projects',
-        links: projectLinks.map((p) => ({ label: p.title, href: localizeHref(locale, `/projects/${p.slug}`), external: false })),
-      };
-    }
     if (isInvestorItem(item)) {
-      return { key: 'investor', links: investorLinks.map((l) => ({ ...l, external: true })) };
+      return { key: 'investor', links: investorLinkItems.map((l) => ({ ...l, external: true })) };
     }
     return null;
   };
 
   return (
     <header className={headerClass}>
-      <div className="flex items-center justify-between gap-4 px-6 py-5 text-white sm:px-10 lg:px-16">
-        <Link href={`/${locale}`} className="flex items-center" aria-label="Azzoro Resources">
-          <Image src="/new_logo.png" alt="Azzoro Resources" width={180} height={44} priority className="h-10 w-auto brightness-0 invert" />
+      <div className="flex items-center justify-between gap-4 px-6 py-4 text-white sm:px-10 lg:px-16">
+        <Link href={`/${locale}`} className="flex items-center" aria-label="Azzuro Resources">
+          <Image src={logo} alt="Azzuro Resources" width={220} height={80} priority className="h-14 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -110,14 +105,14 @@ export default function Navbar({
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(open ? null : dropdown.key)}
-                    className="flex items-center gap-1.5 text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+                    className="flex items-center gap-1.5 text-[17px] font-medium text-white/85 transition-colors hover:text-white"
                     aria-expanded={open}
                   >
                     <span className={underline}>{item.label}</span>
                     <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
                   </button>
                   {open ? (
-                    <div className="absolute left-0 top-full min-w-[16rem] border border-white/15 bg-[hsl(var(--ink))] py-2">
+                    <div className="absolute left-0 top-full min-w-[16rem] border border-white/15 bg-[hsl(var(--primary))] py-2">
                       {dropdown.links.map((link) =>
                         link.external ? (
                           <a
@@ -146,13 +141,15 @@ export default function Navbar({
               );
             }
 
+            const isActive = !item.external && (pathname === href || pathname.startsWith(`${href}/`));
+
             return item.external ? (
               <a
                 key={`${item.label}-${item.href}`}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1 text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+                className="flex items-center gap-1 text-[17px] font-medium text-white/85 transition-colors hover:text-white"
               >
                 <span className={underline}>{item.label}</span>
                 <ArrowUpRight className="h-3.5 w-3.5 text-white/50" />
@@ -161,9 +158,10 @@ export default function Navbar({
               <Link
                 key={`${item.label}-${item.href}`}
                 href={href}
-                className="text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+                aria-current={isActive ? 'page' : undefined}
+                className="text-[17px] font-medium text-white transition-colors"
               >
-                <span className={underline}>{item.label}</span>
+                <span className={isActive ? underlineActive : underline}>{item.label}</span>
               </Link>
             );
           })}
@@ -175,7 +173,7 @@ export default function Navbar({
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center border border-white/30 text-white transition-colors hover:bg-white/10 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center border border-white/30 text-white transition-colors hover:border-[hsl(var(--copper))] hover:bg-white/10 lg:hidden"
           onClick={() => setIsOpen((open) => !open)}
           aria-label="Toggle navigation"
         >
@@ -184,7 +182,7 @@ export default function Navbar({
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/10 bg-[hsl(var(--ink))] px-6 pb-8 pt-6 text-white sm:px-10 lg:hidden">
+        <div className="border-t border-white/10 bg-[hsl(var(--primary))] px-6 pb-8 pt-6 text-white sm:px-10 lg:hidden">
           <div className="flex flex-col">
             {items.map((item) => {
               const dropdown = dropdownFor(item);

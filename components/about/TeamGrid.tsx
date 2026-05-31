@@ -25,6 +25,7 @@ export function TeamGrid({ members, section, heading, locale = 'en', columns = 4
 
   return (
     <section>
+      <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
       <h2 className="font-display text-3xl font-medium leading-tight text-ink sm:text-4xl">{heading}</h2>
       <div className={`mt-10 ${gridClass}`}>
         {filtered.map((member) => (

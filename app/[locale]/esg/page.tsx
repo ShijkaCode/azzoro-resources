@@ -70,7 +70,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
 
   return (
     <main id="main-content">
-      <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
+      <section className="relative -mt-24 flex min-h-[60vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
         {esg.hero_image ? (
           <Image src={esg.hero_image} alt="" fill priority className="object-cover" sizes="100vw" />
         ) : null}
@@ -78,7 +78,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/75">{labels.eyebrow}</p>
           <h1 className="mt-5 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
-            {labels.title}
+            {esg.hero_headline || labels.title}
           </h1>
         </div>
       </section>
@@ -94,8 +94,8 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         const imageRight = idx % 2 === 1;
         return (
           <section key={pillar.number} className="bg-[hsl(var(--eco-paper))]">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className={`group relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[34rem] ${imageRight ? 'lg:order-2' : ''}`}>
+            <div className="group grid grid-cols-1 lg:grid-cols-2">
+              <div className={`relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[34rem] ${imageRight ? 'lg:order-2' : ''}`}>
                 {pillar.image ? (
                   <Image
                     src={pillar.image}
@@ -106,9 +106,13 @@ export default async function EsgPage({ params }: { params: { locale: string } }
                   />
                 ) : null}
               </div>
-              <div className={`flex flex-col justify-center border-rule px-6 py-16 sm:px-10 lg:px-16 ${imageRight ? 'lg:border-r' : 'lg:border-l'}`}>
+              <div className={`relative flex flex-col justify-center border-rule px-6 py-16 sm:px-10 lg:px-16 ${imageRight ? 'lg:border-r' : 'lg:border-l'}`}>
+                <span
+                  aria-hidden="true"
+                  className="absolute left-0 top-0 h-full w-0.5 origin-top scale-y-0 bg-[hsl(var(--eco))] transition-transform duration-500 ease-out group-hover:scale-y-100"
+                />
                 <div className="flex items-baseline gap-4">
-                  <span className="num-display text-3xl font-medium leading-none text-[hsl(var(--eco))]">{pillar.number}</span>
+                  <span className="num-display text-3xl font-medium leading-none text-[hsl(var(--eco))] transition-transform duration-300 group-hover:-translate-y-1">{pillar.number}</span>
                   <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--eco))]">{pillar.label}</p>
                 </div>
                 <MarkdownBody className="mt-7 max-w-[48ch]">{pillar.body}</MarkdownBody>
@@ -120,7 +124,7 @@ export default async function EsgPage({ params }: { params: { locale: string } }
 
       <EsgGallery items={galleryItems} heading={labels.gallery} />
 
-      <section className="bg-ink text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <section className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.reports}</p>
         <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-white/75">{esg.reports_intro}</p>
       </section>

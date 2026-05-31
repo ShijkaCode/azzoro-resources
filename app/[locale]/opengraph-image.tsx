@@ -3,7 +3,7 @@ import { ShareCard, ogSize, loadOgFonts, loadLogomark } from '@/lib/og/share-car
 
 export const size = ogSize;
 export const contentType = 'image/png';
-export const alt = 'Azzoro Resources';
+export const alt = 'Azzuro Resources';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
 
@@ -17,7 +17,7 @@ export default async function Image({ params }: { params: { locale: string } }) 
         bg={`${SITE_URL}/uploads/hero-poster.jpg`}
         logo={logo}
         eyebrow={isMn ? 'Монгол · Эрдэс баялаг' : 'Mongolia · Critical Minerals'}
-        title={isMn ? 'Аззоро Ресорсэс' : 'Azzoro Resources'}
+        title={isMn ? 'Аззуро Ресорсэс' : 'Azzuro Resources'}
         caption={
           isMn
             ? 'Төв Азийн орогенийн бүс дэх зэс-никель-PGE хайгуул, нээлт.'

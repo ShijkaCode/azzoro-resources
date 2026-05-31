@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-01.jpg
-caption: Field camp setup during the summer exploration season
+caption: Field camp prepared ahead of the summer exploration program
 tags:
   - Field
   - Community

@@ -70,7 +70,7 @@ export default async function CaseStudyPage({ params }: { params: { locale: stri
 
   return (
     <main id="main-content">
-      <section className="relative -mt-24 flex min-h-[64vh] w-full flex-col justify-end overflow-hidden bg-ink text-white">
+      <section className="relative -mt-24 flex min-h-[64vh] w-full flex-col justify-end overflow-hidden bg-primary text-white">
         <Image src={study.hero_image} alt={study.title} fill priority className="object-cover" sizes="100vw" />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
         <div className="relative px-6 pb-14 pt-36 sm:px-10 lg:px-16">

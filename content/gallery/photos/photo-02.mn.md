@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-02.jpg
-caption: Хөх Таг дээр ажиллаж буй талбайн баг
+caption: Хөх Тагийн талбайн хөтөлбөрийн үеэр ажиллаж буй баг
 tags:
   - Field
   - Drilling

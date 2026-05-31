@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-05.webp
-caption: OVAL төслийн газар нутаг болон зорилтот талбайн тойм
+caption: Oval зорилтот талбай болон ойр орчмын газрын тогтоцын ерөнхий төрх
 tags:
   - Field
   - Drilling

@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-04.jpg
-caption: Үйл ажиллагааны төлөвлөлт ба талбайн уялдаа холбоо
+caption: Өдөр тутмын төлөвлөлт, талбайн ажлын уялдаа
 tags:
   - Events
   - Community
