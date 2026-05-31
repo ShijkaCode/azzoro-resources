@@ -40,7 +40,7 @@ const COPY: Record<Locale, { livePrice: string; marketCap: string; announcements
 const CELL_BASE =
   'group relative flex items-start gap-4 px-6 py-7 transition ring-1 ring-inset ring-transparent hover:bg-white/[0.05] hover:ring-[hsl(var(--copper))] sm:px-10 sm:py-9 lg:px-16';
 const DIVIDER = 'border-b border-white/15 md:border-b-0 md:border-r';
-const EYEBROW = 'text-[11px] font-medium uppercase tracking-[0.32em] text-white/55';
+const EYEBROW = 'text-[11px] font-medium uppercase tracking-[0.24em] text-white/55';
 const TITLE = 'num-display text-xl font-medium leading-tight sm:text-2xl lg:text-3xl';
 const ARROW = (
   <span

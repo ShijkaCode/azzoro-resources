@@ -19,7 +19,7 @@ export function EsgGallery({ items, heading }: { items: GalleryItem[]; heading: 
   return (
     <section className="bg-[hsl(var(--eco-paper))] py-20 sm:py-24">
       <div className="flex items-end justify-between gap-6 px-6 sm:px-10 lg:px-16">
-        <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--eco))]">{heading}</p>
+        <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{heading}</p>
         <div className="flex">
           <button
             type="button"

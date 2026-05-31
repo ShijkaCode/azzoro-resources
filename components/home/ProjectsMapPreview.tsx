@@ -266,7 +266,7 @@ export function ProjectsMapPreview({
           <button
             type="button"
             onClick={resetOverview}
-            className="absolute left-4 top-4 inline-flex items-center gap-2 border border-white/25 bg-black/45 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:border-[hsl(var(--copper))] hover:bg-black/65 sm:left-6 sm:top-6"
+            className="absolute left-4 top-4 inline-flex items-center gap-2 border border-white/25 bg-black/45 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.24em] text-white transition-colors hover:border-[hsl(var(--copper))] hover:bg-black/65 sm:left-6 sm:top-6"
           >
             <span aria-hidden="true">←</span>
             {copy.overview}

@@ -107,7 +107,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
                 <p className="mt-6 max-w-[40ch] font-display text-xl italic leading-snug text-ink/80">“{featured.pull_quote}”</p>
               ) : null}
               <p className="mt-6 max-w-[52ch] text-[15px] leading-relaxed text-ink/70">{featured.summary}</p>
-              <span className="mt-8 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-ink transition-colors group-hover:border-[hsl(var(--copper))]">
+              <span className="mt-8 inline-flex w-fit items-center gap-3 border-b border-ink/40 pb-1 text-[12px] font-medium uppercase tracking-[0.24em] text-ink transition-colors group-hover:border-[hsl(var(--copper))]">
                 {t.read}
                 <span aria-hidden="true" className="text-[hsl(var(--copper))] transition-transform group-hover:translate-x-1">→</span>
               </span>

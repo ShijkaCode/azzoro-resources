@@ -82,7 +82,7 @@ export async function StockPriceCard({
 
         {snapshot ? (
           <div className="mt-14 flex flex-wrap items-baseline gap-x-6 gap-y-2 border-t border-white/15 pt-8 lg:mt-16">
-            <span className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{snapshot.ticker}</span>
+            <span className="text-[12px] font-medium uppercase tracking-[0.24em] text-white/55">{snapshot.ticker}</span>
             <span className="num-display text-4xl font-medium leading-none text-white sm:text-5xl">
               A${snapshot.price.toFixed(3)}
             </span>

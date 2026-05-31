@@ -14,9 +14,9 @@ export function ProjectDetailHero({ project, locale }: { project: Project; local
       <div className="relative px-6 pb-12 pt-36 sm:px-10 sm:pb-16 lg:px-16">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           {project.is_flagship ? (
-            <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[hsl(var(--copper))]">{flagshipLabel}</span>
+            <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--copper))]">{flagshipLabel}</span>
           ) : null}
-          <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/55">
+          <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/55">
             {project.commodity.join(' · ')}
           </span>
         </div>

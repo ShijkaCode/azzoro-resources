@@ -16,7 +16,7 @@ export default function LanguageToggle() {
     <Link
       href={switchLocaleInPath(pathname, otherLocale)}
       aria-label={otherLocale === 'mn' ? 'Switch to Mongolian' : 'Switch to English'}
-      className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.32em] text-white/85 transition-colors hover:text-white"
+      className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.24em] text-white/85 transition-colors hover:text-white"
     >
       <Globe className="h-3.5 w-3.5" aria-hidden="true" />
       {currentLocale.toUpperCase()}
