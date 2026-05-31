@@ -1,5 +1,5 @@
 ---
-intro_body: Use this page for office locations and general company contact details. Market-sensitive disclosures, announcements and investor materials remain available through the external investor centre.
+intro_body: Use this page to find Azzoro's office locations and general contact details. Market-sensitive disclosures, ASX announcements and formal investor materials remain available through the external investor centre.
 offices:
   - name: Mongolia office
     address: |-
@@ -18,7 +18,7 @@ offices:
     image: /uploads/offices/not_au_replace_me.jpg
     lat: -31.9489
     lng: 115.8236
-  - name: UK office
+  - name: United Kingdom office
     address: |-
       The Broadgate Tower
       20 Primrose Street
@@ -28,13 +28,13 @@ offices:
     lat: 51.5205
     lng: -0.0817
 phone_groups:
-  - category: General inquiries
+  - category: General enquiries
     numbers:
       - label: Mongolia
         number: +976 11 000 000
       - label: Australia
         number: +61 8 0000 0000
-  - category: Investors
+  - category: Investor relations
     numbers:
       - label: Phil Rundell
         number: +61 400 000 000
