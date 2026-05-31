@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-04.jpg
-caption: Өдөр тутмын төлөвлөлт ба талбайн уялдаа
+caption: Өдөр тутмын төлөвлөлт, талбайн ажлын уялдаа
 tags:
   - Events
   - Community

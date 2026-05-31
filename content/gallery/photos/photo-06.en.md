@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-06.webp
-caption: Tsagaan Ders landscape during fieldwork
+caption: Tsagaan Ders landscape during active fieldwork
 tags:
   - Field
   - Community

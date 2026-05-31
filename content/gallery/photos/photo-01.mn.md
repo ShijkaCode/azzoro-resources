@@ -1,6 +1,6 @@
 ---
 image: /uploads/gallery/photos/photo-01.jpg
-caption: Зуны хайгуулын хөтөлбөрийн талбайн баазын бэлтгэл
+caption: Зуны хайгуулын хөтөлбөрийн өмнөх талбайн баазын бэлтгэл
 tags:
   - Field
   - Community
