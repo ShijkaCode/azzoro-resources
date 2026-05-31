@@ -19,8 +19,8 @@ gallery_images:
     caption: Drill core from discovery hole OVD021 — massive and disseminated Cu·Ni·PGE sulphides.
   - image: /uploads/projects/district-magnetics.jpg
     caption: District-scale magnetics across the Yambat licences, placing Oval on the regional massive-sulphide corridor.
-summary: Azzoro's flagship Yambat Project hosts the high-grade Oval copper-nickel-PGE discovery — a magmatic massive-sulphide system in southwestern Mongolia that remains open along strike and at depth.
-tagline: Home to the Oval Cu-Ni-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and now defining a district-scale copper-nickel opportunity.
+summary: "The Company's flagship Yambat Project hosts the high-grade Oval copper-nickel-PGE discovery, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia."
+tagline: "Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across Yambat."
 is_flagship: true
 is_draft: true
 tenure:
@@ -46,13 +46,13 @@ documents: []
 
 ## Overview
 
-The Yambat Project sits at the centre of Azzoro's strategy and hosts the Oval copper-nickel-PGE discovery — a high-grade magmatic massive-sulphide system uncovered from greenfields ground in 2024 and one of the first of its kind recognised in southwestern Mongolia.
+Yambat is the Company's flagship project and the foundation of the Oval copper-nickel-PGE discovery thesis in Mongolia. The high-grade magmatic massive-sulphide system was uncovered from greenfields ground in 2024 and remains one of the most important recent copper-nickel discoveries made in southwestern Mongolia.
 
-Since the maiden discovery, sustained diamond drilling and downhole geophysics have repeatedly confirmed continuous high-grade copper-nickel sulphide mineralisation, including intercepts that rank among the highest grades drilled anywhere in recent years. Across the project, more than **65 diamond drillholes for over 11,400 metres** have been completed since 2023, spanning Oval, North Oval, Copper Ridge and the regional prospects.
+Since the maiden discovery, sustained diamond drilling and downhole geophysics have repeatedly confirmed continuous high-grade copper-nickel sulphide mineralisation, including intercepts that rank among the strongest reported in recent years. Across the project, more than **65 diamond drillholes for over 11,400 metres** have been completed since 2023, spanning Oval, North Oval, Copper Ridge and the wider regional targets.
 
-Over 2025 alone, the Oval mineralised intrusion was extended by roughly **60%**, taking its interpreted strike length to approximately **880 metres** — and it remains open along strike and at depth. Metallurgical test work has since confirmed excellent copper recoveries, materially strengthening the project's potential development pathway.
+Over 2025 alone, the Oval mineralised intrusion was extended by roughly **60%**, taking its interpreted strike length to approximately **880 metres**. The system remains open along strike and at depth, while metallurgical test work has confirmed excellent copper recoveries and strengthened the potential pathway toward development.
 
-Yambat is more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive targets — North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge — positioning the Company to pursue district-scale upside across an emerging copper-nickel belt.
+Yambat is more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive targets including North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge, supporting a broader district-scale growth case.
 
 ## Location and tenure
 
@@ -81,4 +81,4 @@ These results materially de-risk the project's potential development pathway and
 
 ## Next steps
 
-The Company is advancing toward **Phase 4 drilling**, with planning underway. The program will focus on testing the down-dip and along-strike extensions of the Oval intrusion, including the interpreted deeper feeder zone, drill-testing the broader intrusive cluster including the newly modelled MS4 anomaly, and progressing the project toward a potential future resource definition.
+The Company is advancing toward **Phase 4 drilling**, with planning underway. The next program is expected to test the down-dip and along-strike extensions of the Oval intrusion, including the interpreted deeper feeder zone, drill-test the broader intrusive cluster including the newly modelled MS4 anomaly, and continue progressing the project toward potential future resource definition.

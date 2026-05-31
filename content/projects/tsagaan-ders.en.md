@@ -13,8 +13,8 @@ hero_image: /uploads/projects/tsagaan-ders-hero.webp
 gallery_images:
   - image: /uploads/projects/tsagaan-ders-targets.png
     caption: Tsagaan Ders — Quartz Hill, Central and South exploration targets with TSDD drill collars across the licences.
-summary: A lithium project hosting lithium-bearing pegmatites and greisen-altered granite across a 5 km mineralised corridor in Dundgovi, with lithium now confirmed at depth.
-tagline: A pegmatite- and greisen-hosted lithium system traced over a 5 km strike, where maiden drilling has confirmed lithium mineralisation at depth.
+summary: "An early-stage lithium project in Dundgovi where pegmatites and greisen-altered granite define a 5 km mineralised corridor and maiden drilling has confirmed lithium at depth."
+tagline: "A 5 km pegmatite- and greisen-hosted lithium system with depth confirmation from first-pass drilling."
 is_draft: true
 tenure:
   licence: XV-019341 & XV-021740
@@ -35,9 +35,9 @@ documents: []
 
 ## Overview
 
-Tsagaan Ders is the Company's lithium project, hosting lithium-bearing pegmatites and greisen-altered granite across an extensive, walk-up exploration corridor in Dundgovi province. The project benefits from excellent access — around 270 km of sealed highway from Ulaanbaatar to Mandalgovi, then 40 km of gravel road — in the same region that serves Mongolia's flagship Oyu Tolgoi copper-gold and Tavan Tolgoi coal operations.
+Tsagaan Ders gives the Company lithium optionality in Dundgovi, where lithium-bearing pegmatites and greisen-altered granite define an extensive, walk-up exploration corridor. The project benefits from excellent access — around 270 km of sealed highway from Ulaanbaatar to Mandalgovi, then 40 km of gravel road — in the same region that serves Mongolia's flagship Oyu Tolgoi copper-gold and Tavan Tolgoi coal operations.
 
-The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a **5 km strike**. Scout drilling in 2025–26 has confirmed lithium mineralisation at depth for the first time, marking an important step in advancing the project from a surface and trenching target toward a drill-defined system.
+The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a **5 km strike**. Scout drilling in 2025–26 has confirmed lithium mineralisation at depth for the first time, moving the project from a surface-and-trenching story toward a drill-defined system.
 
 ## Geology and mineralisation
 
@@ -47,4 +47,4 @@ Extensive surface work underpins the project: **429 rock-chip samples** define s
 
 ## Next steps
 
-With lithium mineralisation now confirmed at depth, the Company plans further drilling to test the system's continuity and scale, supported by the completed age-dating and ongoing geological interpretation.
+With lithium mineralisation now confirmed at depth, the Company plans further drilling to test the system's continuity and scale, supported by completed age-dating and ongoing geological interpretation.

@@ -16,8 +16,8 @@ gallery_images:
     caption: Copper Ridge — magnetics and chargeability with drillholes CRS01–CRS04 testing IOCG-style copper-gold targets.
   - image: /uploads/projects/district-magnetics.jpg
     caption: Regional magnetic corridor linking Copper Ridge to the wider Yambat project area.
-summary: A copper-gold prospect in the northern Yambat licence, interpreted as a potential IOCG-style system and adding precious-metals exposure 7 km north of the Oval discovery.
-tagline: A copper-gold prospect within the Yambat licence, interpreted as a potential iron-oxide-copper-gold (IOCG) style system.
+summary: "An early-stage copper-gold target in northern Yambat, interpreted as a potential IOCG-style system and broadening the district beyond Oval."
+tagline: "A copper-gold prospect within Yambat that adds a second mineralisation style to the wider district model."
 is_draft: true
 parent_project: yambat
 tenure:
@@ -37,7 +37,7 @@ documents: []
 
 ## Overview
 
-Copper Ridge is a copper-gold prospect in the northern part of the Yambat Project, around 7 km north of the Oval discovery. Identified during 2024 regional reconnaissance, it represents a distinctly different style of mineralisation from Oval — interpreted as a potential **iron-oxide-copper-gold (IOCG)-style system** — adding precious-metals exposure to the Yambat tenement.
+Copper Ridge is a copper-gold prospect in the northern part of the Yambat Project, around 7 km north of the Oval discovery. Identified during 2024 regional reconnaissance, it represents a distinctly different style of mineralisation from Oval and is interpreted as a potential **iron-oxide-copper-gold (IOCG)-style system**. That makes Copper Ridge an important part of the Company's broader regional pipeline around Yambat.
 
 ## Geology and mineralisation
 
@@ -45,4 +45,4 @@ The prospect sits adjacent to a regional northwest-southeast fault zone and comp
 
 ## Exploration to date
 
-Surface rock-chip sampling returned encouraging copper and gold values, and scout drilling has confirmed mineralisation at depth. Five scout holes have been completed at Copper Ridge to date. The prospect remains an early-stage but prospective target for follow-up.
+Surface rock-chip sampling returned encouraging copper and gold values, and scout drilling has confirmed mineralisation at depth. Five scout holes have been completed at Copper Ridge to date, with early drilling suggesting the system may continue beyond the current test area. The prospect remains early stage, but it is a credible follow-up target within the wider Yambat district.

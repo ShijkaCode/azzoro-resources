@@ -16,8 +16,8 @@ gallery_images:
     caption: Red Hill (Maikhan Uul) drilling — MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
   - image: /uploads/projects/vms-deposit-model.jpg
     caption: Schematic volcanogenic massive-sulphide (VMS) deposit model — the system type Red Hill is interpreted to represent.
-summary: A volcanogenic massive-sulphide (VMS) copper-gold project on a granted mining licence to 2045, just 8 km from the Oval discovery and offering high-grade Cu-Au sulphides at depth with shallow gold-silver near surface.
-tagline: A VMS copper-gold project (formerly Maikhan Uul) on a granted mining licence to 2045, just 8 km from the flagship Oval discovery.
+summary: "A VMS copper-gold project on a granted mining licence to 2045, just 8 km from Oval and combining open high-grade Cu-Au sulphides at depth with shallow gold-silver upside near surface."
+tagline: "Granted-licence Cu-Au VMS project near Oval and one of the Company's clearest near-term regional catalysts."
 is_draft: true
 tenure:
   licence: MV-019681
@@ -43,9 +43,9 @@ documents: []
 
 ## Overview
 
-Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045** — a significant advantage that could create infrastructure and permitting synergies with the wider Yambat district.
+Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045**. That granted tenure is a meaningful advantage as the Company builds out the wider Yambat district.
 
-The project is well serviced by good infrastructure and high-voltage power, and offers two complementary opportunities: high-grade copper-gold massive sulphides at depth, and shallow high-grade gold-silver mineralisation near surface.
+The project is well serviced by infrastructure and high-voltage power, and it offers two complementary opportunities: high-grade copper-gold massive sulphides at depth, and shallow high-grade gold-silver mineralisation near surface.
 
 ## Location and tenure
 
@@ -70,8 +70,8 @@ Several features make VMS systems attractive targets:
 
 Red Hill displays the classic hallmarks of a felsic VMS system: a massive sulphide horizon hosted in dacitic and rhyolitic volcanics with associated black schists; a polymetallic copper-gold-zinc signature; folded and deformed geometry; and a stringer / feeder-style component beneath the massive sulphide.
 
-Azzoro's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
+The Company's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
 
 ## Next steps
 
-A gravity survey has been completed across the project, with results now being interpreted to further define the scale and continuity of the massive-sulphide mineralisation. Drilling continues through 2026 to test the system along strike and at depth, with metallurgical test work planned to follow.
+A gravity survey has been completed across the project, with results now being interpreted to further define the scale and continuity of the massive-sulphide mineralisation. Drilling continues through 2026 to test the system along strike and at depth, and metallurgical test work is planned as the project advances.

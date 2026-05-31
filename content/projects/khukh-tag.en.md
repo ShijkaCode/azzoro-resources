@@ -13,8 +13,8 @@ hero_image: /uploads/projects/khukh-tag-hero.jpg
 gallery_images:
   - image: /uploads/projects/khukh-tag-zones.jpg
     caption: Khukh Tag graphite — West, Discovery, North and Central zones hosting the defined JORC Mineral Resource, with targets remaining open.
-summary: A graphite project built around a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and substantial room to grow.
-tagline: A graphite project anchored by a defined JORC 2012 Mineral Resource and supported by meaningful growth potential.
+summary: "A graphite project anchored by a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and clear room to grow."
+tagline: "Defined graphite resource with room to expand and encouraging early metallurgy."
 is_draft: true
 tenure:
   licence: XV-019603
@@ -47,7 +47,7 @@ documents: []
 
 ## Overview
 
-Khukh Tag is the Company's graphite project, built around a defined JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
+Khukh Tag gives the Company defined graphite optionality, anchored by a JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
 
 ## Geology and mineralisation
 
