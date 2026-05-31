@@ -63,7 +63,10 @@ export default async function GalleryPage({ params }: { params: { locale: string
       ? { eyebrow: 'Түүхүүд', stories: 'Кейс судалгаа', photos: 'Талбайн гэрэл зураг', videos: 'Видео', read: 'Унших' }
       : { eyebrow: 'Stories', stories: 'Case studies', photos: 'Field photography', videos: 'Video', read: 'Read the story' };
 
-  const [featured, ...restCases] = cases;
+  // Draft case studies are hidden from the site (toggled in the CMS). When the
+  // collection is effectively empty, the featured + grid blocks render nothing.
+  const publishedCases = cases.filter((study) => !study.draft);
+  const [featured, ...restCases] = publishedCases;
 
   return (
     <main id="main-content">

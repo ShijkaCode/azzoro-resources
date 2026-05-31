@@ -1,5 +1,5 @@
 ---
-hero_image: /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
+hero_image: /uploads/esg/sutai_mountain_esg.jpg
 hero_headline: Exploring responsibly, alongside our communities.
 approach_body: |-
   ESG at Azzuro is part of how exploration is designed and carried out, not an overlay added later. From the earliest stage of fieldwork, the Company works to understand environmental baselines, maintain open communication with local stakeholders and apply the governance discipline expected of an ASX-listed explorer.
