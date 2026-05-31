@@ -10,7 +10,11 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
   const media = office.image || mapImageUrl;
 
   return (
-    <article className="group flex flex-col border border-rule bg-white">
+    <article className="group relative flex flex-col border border-rule bg-white">
+      <span
+        aria-hidden="true"
+        className="absolute left-0 right-0 top-0 z-10 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
+      />
       {media ? (
         <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-rule">
           <Image
@@ -34,7 +38,7 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
         {office.email ? (
           <a
             href={`mailto:${office.email}`}
-            className="mt-5 inline-flex w-fit items-center border-b border-ink/40 pb-0.5 text-[13px] font-medium text-ink transition-colors hover:border-ink"
+            className="mt-5 inline-flex w-fit items-center border-b border-ink/40 pb-0.5 text-[13px] font-medium text-ink transition-colors hover:border-[hsl(var(--copper))]"
           >
             {office.email}
           </a>

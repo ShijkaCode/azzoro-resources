@@ -49,7 +49,7 @@ export default async function ContactPage({ params }: { params: { locale: string
           byEmail: 'Имэйлээр',
           investorTitle: 'Хөрөнгө оруулагчийн асуултад',
           investorBody: 'Хувьцааны мэдээлэл, танилцуулга, investor relations холбоосыг investor portal дээрээс үзнэ үү.',
-          investorCta: 'Investor Center рүү очих ↗',
+          investorCta: 'Investor Center рүү очих',
         }
       : {
           title: 'Contact',
@@ -58,7 +58,7 @@ export default async function ContactPage({ params }: { params: { locale: string
           byEmail: 'By email',
           investorTitle: 'For investor inquiries',
           investorBody: 'Visit the investor portal for stock information, presentations, and dedicated IR updates.',
-          investorCta: 'Visit Investor Center ↗',
+          investorCta: 'Visit Investor Center',
         };
 
   const officesLabel = locale === 'mn' ? 'Оффисууд' : 'Offices';
@@ -67,7 +67,7 @@ export default async function ContactPage({ params }: { params: { locale: string
     <main id="main-content">
       <section className="-mt-24 bg-primary text-white">
         <div className="px-6 pb-16 pt-36 sm:px-10 sm:pb-20 sm:pt-40 lg:px-16">
-          <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-white/55">{labels.title}</p>
+          <p className="kicker kicker-invert">{labels.title}</p>
           <h1 className="mt-6 max-w-[20ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
             {labels.title}
           </h1>
@@ -76,7 +76,7 @@ export default async function ContactPage({ params }: { params: { locale: string
       </section>
 
       <section className="bg-paper px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
-        <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{officesLabel}</p>
+        <p className="kicker">{officesLabel}</p>
         <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {contact.offices.map((office) => (
             <OfficeCard key={office.name} office={office} />
@@ -87,16 +87,16 @@ export default async function ContactPage({ params }: { params: { locale: string
       <section className="bg-paper px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16">
         <div className="grid grid-cols-1 gap-x-16 gap-y-12 border-t border-rule pt-12 lg:grid-cols-2">
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.byPhone}</p>
+            <p className="kicker">{labels.byPhone}</p>
             <div className="mt-6">
               <PhoneDropdown groups={contact.phone_groups} />
             </div>
           </div>
           <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-muted-ink">{labels.byEmail}</p>
+            <p className="kicker">{labels.byEmail}</p>
             <a
               href={`mailto:${contact.general_email}`}
-              className="mt-6 inline-flex w-fit items-center border-b border-ink/40 pb-1 font-display text-2xl font-medium text-ink transition-colors hover:border-ink sm:text-3xl"
+              className="mt-6 inline-flex w-fit items-center border-b border-ink/40 pb-1 font-display text-2xl font-medium text-ink transition-colors hover:border-[hsl(var(--copper))] sm:text-3xl"
             >
               {contact.general_email}
             </a>
@@ -114,9 +114,10 @@ export default async function ContactPage({ params }: { params: { locale: string
             href={site.investor_portal_url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-fit items-center gap-3 border-b border-white/40 pb-1 text-[12px] font-medium uppercase tracking-[0.32em] text-white transition-colors hover:border-white"
+            className="cta-link cta-link-invert"
           >
             {labels.investorCta}
+            <span aria-hidden="true" className="cta-arrow">↗</span>
           </a>
         </div>
       </section>
