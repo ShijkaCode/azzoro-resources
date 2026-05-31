@@ -137,7 +137,7 @@ export default async function ProjectDetailPage({
                     className="group flex items-center justify-between gap-4 border-b border-rule py-5 text-[15px] text-ink transition-colors hover:bg-ink/[0.025]"
                   >
                     <span className="font-medium">{doc.label}</span>
-                    <span aria-hidden="true" className="text-ink/40 transition-all group-hover:translate-x-1 group-hover:text-ink">
+                    <span aria-hidden="true" className="text-ink/40 transition-all group-hover:translate-x-1 group-hover:text-[hsl(var(--copper))]">
                       ↓
                     </span>
                   </a>
@@ -156,12 +156,16 @@ export default async function ProjectDetailPage({
               <Link
                 key={entry.slug}
                 href={localizeHref(locale, `/projects/${entry.slug}`)}
-                className="group border-b border-r border-white/15 px-6 py-8 transition-colors hover:bg-white/[0.04]"
+                className="group relative border-b border-r border-white/15 px-6 py-8 transition-colors hover:bg-white/[0.04]"
               >
+                <span
+                  aria-hidden="true"
+                  className="absolute left-0 right-0 top-0 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                />
                 <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">{entry.commodity.join(' · ')}</p>
                 <p className="mt-4 font-display text-2xl font-medium leading-tight text-white">{entry.title}</p>
                 <p className="mt-2 text-[13px] text-white/60">{entry.region}</p>
-                <span aria-hidden="true" className="mt-6 inline-block text-white/40 transition-all group-hover:translate-x-1 group-hover:text-white">
+                <span aria-hidden="true" className="mt-6 inline-block text-white/40 transition-all group-hover:translate-x-1 group-hover:text-[hsl(var(--copper))]">
                   →
                 </span>
               </Link>

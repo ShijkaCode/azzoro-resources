@@ -7,7 +7,7 @@ backend:
 
 media_folder: public/uploads
 public_folder: /uploads
-logo_url: /new_logo.png
+logo_url: /logo-azzuro-dark.png
 site_url: https://azzororesources.com
 display_url: https://azzororesources.com
 

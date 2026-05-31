@@ -298,11 +298,11 @@ export function ProjectsMapPreview({
                     onFocus={() => setActiveSlug(project.slug)}
                     className={`group relative grid grid-cols-[3rem_1fr_auto] items-baseline gap-x-4 border-t border-rule py-6 transition-colors sm:grid-cols-[4rem_1fr_auto] sm:gap-x-8 sm:py-7 ${isActive ? '' : 'hover:bg-ink/[0.025]'}`}
                   >
-                    <span className={`num-display text-xl font-medium leading-none transition-colors sm:text-2xl ${isActive ? 'text-ink' : 'text-muted-ink group-hover:text-ink'}`}>
+                    <span className={`num-display text-xl font-medium leading-none transition-colors sm:text-2xl ${isActive ? 'text-[hsl(var(--copper))]' : 'text-muted-ink group-hover:text-[hsl(var(--copper))]'}`}>
                       {String(idx + 1).padStart(2, '0')}
                     </span>
                     <div>
-                      <p className={`font-display text-2xl font-medium leading-tight transition-colors sm:text-[1.75rem] ${isActive ? 'text-ink' : 'text-ink/75 group-hover:text-ink'}`}>
+                      <p className={`font-display text-2xl font-medium leading-tight transition-colors sm:text-[1.75rem] ${isActive ? 'text-[hsl(var(--copper))]' : 'text-ink/75 group-hover:text-[hsl(var(--copper))]'}`}>
                         {project.title}
                       </p>
                       <p className="mt-2 flex flex-wrap gap-x-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">

@@ -71,6 +71,7 @@ export function DrillResultsTable({ project, locale }: { project: Project; local
 
   return (
     <div>
+      <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
       <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{t.drillTitle}</h2>
       <div className="mt-6 border border-rule">
         <div className="grid grid-cols-[8rem_1fr] border-b border-rule bg-paper sm:grid-cols-[12rem_1fr]">
@@ -98,6 +99,7 @@ export function ResourceTable({ project, locale }: { project: Project; locale: L
 
   return (
     <div>
+      <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
       <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{t.resourceTitle}</h2>
       {table.note ? <p className="mt-3 text-[14px] leading-relaxed text-ink/70">{table.note}</p> : null}
       <div className="mt-6 overflow-x-auto border border-rule">
