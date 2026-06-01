@@ -7,7 +7,7 @@ backend:
 
 media_folder: public/uploads
 public_folder: /uploads
-logo_url: /logo-azzuro-dark.png
+logo_url: /brand/logo-on-light.svg
 site_url: https://azzororesources.com
 display_url: https://azzororesources.com
 
@@ -179,25 +179,89 @@ collections:
         fields:
           - { label: Hero image, name: hero_image, widget: image, required: false }
           - { label: Hero headline, name: hero_headline, widget: string, required: false }
+          - { label: Hero subline, name: hero_subline, widget: text, required: false }
+          - label: Metrics (animated stat strip)
+            name: metrics
+            widget: list
+            required: false
+            hint: The big numbers near the top of the page. They count up as the visitor scrolls. Keep 4 for the cleanest layout.
+            fields:
+              - { label: Value, name: value, widget: string, hint: "e.g. 90%, 180+, 30, 2,300 — the leading number animates" }
+              - { label: Label, name: label, widget: string }
+              - { label: Detail (small line under the label), name: detail, widget: string, required: false }
           - { label: Approach body, name: approach_body, widget: text }
+          - label: Approach principles
+            name: principles
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Commitments (standards we hold ourselves to)
+            name: commitments
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Engagement steps (how we engage)
+            name: engagement_steps
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
           - label: Environment
             name: environment
             widget: object
             fields:
-              - { label: Body, name: body, widget: text }
+              - { label: Lead body, name: body, widget: text }
               - { label: Image, name: image, widget: image, required: false }
-          - label: Community
+              - label: Topics (water, biodiversity, air, …)
+                name: topics
+                widget: list
+                required: false
+                fields:
+                  - { label: Topic, name: topic, widget: string }
+                  - { label: Body, name: body, widget: text }
+          - label: Stakeholder engagement (intro for SRA + stories)
             name: community
             widget: object
             fields:
               - { label: Body, name: body, widget: text }
               - { label: Image, name: image, widget: image, required: false }
-          - label: Governance
-            name: governance
+          - label: SRA by location
+            name: sra_locations
+            widget: list
+            required: false
+            fields:
+              - { label: Location, name: location, widget: string }
+              - { label: Region (small tag), name: region, widget: string, required: false }
+              - { label: Items, name: items, widget: list }
+          - label: Local investment
+            name: investment
             widget: object
             required: false
             fields:
+              - { label: Intro body, name: body, widget: text }
+              - label: Categories
+                name: categories
+                widget: list
+                fields:
+                  - { label: Category, name: category, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+                  - { label: Image, name: image, widget: image, required: false }
+          - { label: Community stories intro, name: stories_intro, widget: text, required: false }
+          - label: Community stories
+            name: stories
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
               - { label: Body, name: body, widget: text }
+              - { label: Author, name: author, widget: string }
+              - { label: Role, name: role, widget: string }
               - { label: Image, name: image, widget: image, required: false }
           - { label: Reports intro, name: reports_intro, widget: text }
           - label: Gallery

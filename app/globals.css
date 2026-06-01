@@ -21,6 +21,7 @@
     /* ESG-scoped accent only — NOT the brand accent. Muted institutional green. */
     --eco: 146 32% 26%;
     --eco-paper: 140 16% 95%;
+    --eco-bright: 146 45% 62%;     /* lighter eco tint — for green on dark navy surfaces */
 
     /* Semantic tokens map onto the palette above so existing components inherit the new look without prop changes */
     --background: var(--paper);
