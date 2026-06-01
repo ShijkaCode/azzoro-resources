@@ -43,7 +43,7 @@ export default function Navbar({
   items,
   locale,
   investorLinks,
-  logo = '/logo-azzuro-light.png',
+  logo = '/brand/logo-on-dark.svg',
 }: {
   items: NavItem[];
   locale: Locale;
@@ -85,7 +85,7 @@ export default function Navbar({
     <header className={headerClass}>
       <div className="flex items-center justify-between gap-4 px-6 py-4 text-white sm:px-10 lg:px-16">
         <Link href={`/${locale}`} className="flex items-center" aria-label="Azzuro Resources">
-          <Image src={logo} alt="Azzuro Resources" width={220} height={80} priority className="h-14 w-auto" />
+          <Image src={logo} alt="Azzuro Resources" width={220} height={80} priority unoptimized className="h-14 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

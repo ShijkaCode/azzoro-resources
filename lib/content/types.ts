@@ -87,13 +87,31 @@ export type AboutContent = {
   governance_documents_intro: string;
 };
 
+export type EsgMetric = { value: string; label: string; detail?: string };
+
 export type EsgContent = {
   hero_image?: string;
   hero_headline?: string;
+  hero_subline?: string;
   approach_body: string;
-  environment: { body: string; image?: string };
+  // Attention-grabbing stat strip (animated count-up). Concrete, sourced figures.
+  metrics?: EsgMetric[];
+  // "Our approach" — the three field principles (trust, FPIC, herder relations).
+  principles?: { title: string; body: string }[];
+  // Credibility anchors: Responsible Mining Codex, FPIC documentation, resource mapping.
+  commitments?: { title: string; body: string }[];
+  // "How we engage" — the structured step-by-step engagement process.
+  engagement_steps?: { title: string; body: string }[];
+  // Environmental stewardship: lead body + image + themed data topics (water, biodiversity, …).
+  environment: { body: string; image?: string; topics?: { topic: string; body: string }[] };
+  // Stakeholder engagement: Social Responsibility Agreement deliverables, grouped by soum.
   community: { body: string; image?: string };
-  governance?: { body: string; image?: string };
+  sra_locations?: { location: string; region?: string; items: string[] }[];
+  // Local investment, grouped by theme (education, livelihoods, health, environment).
+  investment?: { body: string; categories: { category: string; title: string; body: string; image?: string }[] };
+  // Community stories from the field — first-person, with named author + role.
+  stories_intro?: string;
+  stories?: { title: string; body: string; author: string; role: string; image?: string }[];
   reports_intro: string;
   gallery?: { image: string; caption?: string }[];
 };

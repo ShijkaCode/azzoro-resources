@@ -63,7 +63,7 @@ export default async function LocaleLayout({
     '@type': 'Organization',
     name: site.brand_name,
     url: siteUrl,
-    logo: `${siteUrl}${site.logo || '/logo-azzuro-dark.png'}`,
+    logo: `${siteUrl}${site.logo || '/brand/logo-on-light.png'}`,
     sameAs: Object.values(site.social ?? {}).filter(Boolean),
     address: [
       {

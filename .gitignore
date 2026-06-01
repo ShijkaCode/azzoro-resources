@@ -50,3 +50,7 @@ technical-team.txt
 .env
 .env.*
 !.env.example
+
+# macOS AppleDouble / Finder junk
+._*
+.DS_Store
