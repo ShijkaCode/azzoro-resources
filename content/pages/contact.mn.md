@@ -6,7 +6,7 @@ offices:
       MERU tower
       Жамьян гүний гудамж, 1-р хороо
       Сүхбаатар дүүрэг, Улаанбаатар, Монгол Улс
-    email: contact@azzuroresources.com
+    email: contact@azzororesources.com
     image: /uploads/offices/meru.jpg
     lat: 47.9185
     lng: 106.9177
@@ -14,7 +14,7 @@ offices:
     address: |-
       Suite 8, 16 Nicholson Road
       Subiaco WA 6008
-    email: investors@azzuroresources.com
+    email: investors@azzororesources.com
     image: /uploads/offices/not_au_replace_me.jpg
     lat: -31.9489
     lng: 115.8236
@@ -23,7 +23,7 @@ offices:
       The Broadgate Tower
       20 Primrose Street
       London EC2A 2EW, United Kingdom
-    email: ir@azzuroresources.com
+    email: ir@azzororesources.com
     image: /uploads/offices/Broadgate_Tower.png
     lat: 51.5205
     lng: -0.0817
@@ -42,5 +42,5 @@ phone_groups:
     numbers:
       - label: Компанийн харилцаа
         number: +61 8 0000 0010
-general_email: contact@azzuroresources.com
+general_email: contact@azzororesources.com
 ---
