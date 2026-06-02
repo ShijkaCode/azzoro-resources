@@ -1,9 +1,9 @@
 ---
 name: Neil Young
 role: Гүйцэтгэх бус захирал
-home_credential: Эрчим хүчний салбарын үүсгэн байгуулагч, ~30 жилийн туршлагатай, Elixir Energy-ийн ГЗ байсан.
 team_section: Board
 photo: /uploads/team/technical_team/Neil-300x300.png
+home_credential: Эрчим хүчний салбарын үүсгэн байгуулагч, ~30 жилийн туршлагатай, Elixir Energy-ийн ГЗ байсан.
 order: 4
 ---
 
