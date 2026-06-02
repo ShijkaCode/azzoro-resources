@@ -89,15 +89,19 @@ why_mongolia:
       image_alt: Strategic location
 why_azzoro:
   eyebrow: Why AZ9
-  headline: Mongolia's Next Critical Minerals Leader, Positioned for Growth
-  intro: AZ9 offers investors direct exposure to the Oval discovery, the Red Hill copper-gold catalyst set, and camp-scale upside across a broader Mongolian portfolio. The Company's edge is execution through an experienced board, a strong local technical team and the ability to move quickly in-country.
+  headline: Built to Discover · Positioned to Develop · Driven to Deliver
+  intro: AZ9 gives investors direct exposure to a high-grade copper-nickel discovery at Oval, a copper-gold catalyst at Red Hill, and camp-scale upside across a growing southwest Mongolia portfolio — backed by a board and team built to execute in-country.
   footnote: ''
   cards:
-    - title: Next big Mongolian metals play
-      body: The only ASX-listed junior with a high-grade Cu·Ni discovery aligned to the energy-transition metals trend.
+    - title: High-Grade Flagship Discovery
+      body: The Oval Cu-Ni-PGE project hosts a new high-grade magmatic sulphide system with mineralisation confirmed from surface to 290m depth, and a semi-continuous strike length exceeding 880metres — open at depth and expanding with every drill campaign.
+      image: /uploads/IMG_0654-website.JPG
+      image_alt: ''
       tag: 'ASX: AZ9'
-    - title: Proven execution
-      body: Experienced Mongolian operators, a strong local technical team and countrywide geological knowledge support rapid exploration and efficient drilling.
+    - title: Outstanding Metallurgy
+      body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics.
+      image: /uploads/dji_fly_20240807_211228_166_1726578147600_photo.jpg
+      image_alt: ''
       tag: Local execution
     - title: Early validation
       body: Technical endorsement and non-dilutive funding through the BHP Xplor program.
