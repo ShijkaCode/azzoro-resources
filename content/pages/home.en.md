@@ -28,7 +28,7 @@ featured_projects:
       - image: /uploads/field/20251101_073622736_iOS.jpg
         caption: Massive sulphide intercept · Oval discovery.
         alt: Massive sulphide intercept · Oval discovery zone.
-      - image: /uploads/IMG_0639.JPG
+      - image: /uploads/IMG_0639-website.JPG
         caption: Massive sulphide intercept · Oval discovery.
         alt: Massive sulphide intercept
       - image: /uploads/IMG_0654.JPG
