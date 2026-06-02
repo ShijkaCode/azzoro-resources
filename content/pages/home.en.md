@@ -100,7 +100,7 @@ why_azzoro:
       tag: 'ASX: AZ9'
     - title: Outstanding Metallurgy
       body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics.
-      image: /uploads/20251101_073734859_iOS.jpg
+      image: /uploads/IMG_0961-crop.JPG
       image_alt: ''
       tag: Local execution
     - title: Growing Multi-Asset Project Pipeline
