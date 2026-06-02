@@ -31,8 +31,8 @@ featured_projects:
       - image: /uploads/IMG_0639-website.JPG
         caption: Massive sulphide intercept · Oval discovery.
         alt: Massive sulphide intercept
-      - image: /uploads/IMG_0654.JPG
-        caption: Massive sulphide intercept · Oval discovery zone.
+      - image: /uploads/IMG_0654-website.JPG
+        caption: Massive sulphide intercept · Oval discovery.
         alt: Mineralised drill core close-up
     cta_label: Read the project
     cta_href: /projects/yambat
