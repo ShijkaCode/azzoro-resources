@@ -57,10 +57,10 @@ featured_projects:
         alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602
       - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
         caption: Massive Sulphide Intercept MU2601, Red Hill project
-        alt: ''
-      - image: /uploads/field/IMG_8982.JPG
-        caption: Gobi-Altai field view
-        alt: Exploration team in the Govi-Altai field
+        alt: Massive Sulphide Intercept MU2601, Red Hill project
+      - image: /uploads/MUU 2601-crop.jpg
+        caption: Massive Sulphide Intercept MU2601, Red Hill project
+        alt: Massive Sulphide Intercept MU2601, Red Hill project
     cta_label: Read the project
     cta_href: /projects/red-hill
     footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
