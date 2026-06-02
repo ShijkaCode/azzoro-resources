@@ -100,7 +100,7 @@ why_azzoro:
       tag: 'ASX: AZ9'
     - title: Outstanding Metallurgy
       body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics.
-      image: /uploads/dji_fly_20240807_211228_166_1726578147600_photo.jpg
+      image: /uploads/20251101_073734859_iOS.jpg
       image_alt: ''
       tag: Local execution
     - title: Growing Multi-Asset Project Pipeline
@@ -109,11 +109,11 @@ why_azzoro:
       image_alt: ''
     - title: Prime Location & Infrastructure Access
       body: Projects sit 30km from Altai City with direct access to paved roads, power grid, airport, and limestone supply — significantly reducing development risk and capex requirements
-      image: /uploads/field/1000000443.jpg
+      image: /uploads/_CP11448.jpg
       image_alt: ''
     - title: Experienced Board & Technical Team with Deep In-Country Expertise
       body: Led by a board averaging 25+ years in mining — with direct Mongolia-specific experience including former roles at Oyu Tolgoi and ASX-listed Mongolian operators — and supported by a strong local technical team with deep geological and operational knowledge on the ground. Board and major shareholders hold a significant stake in the Company, demonstrating strong alignment with investor interests.
-      image: /uploads/_CP11385.jpg
+      image: /uploads/HESB4169.JPG
       image_alt: ''
   image: /uploads/20251101_181523.jpg
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
