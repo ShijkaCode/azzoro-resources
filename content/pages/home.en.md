@@ -55,11 +55,11 @@ featured_projects:
       - image: /uploads/Azurite.jpg
         caption: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
         alt: ''
-      - image: /uploads/_CP11422.jpg
-        caption: Red Hill site Gobi-Altai, Mongolia
+      - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
+        caption: Massive Sulphide Intercept MU2601, Red Hill project
         alt: ''
       - image: /uploads/field/IMG_8982.JPG
-        caption: Exploration crew across the Govi-Altai ground.
+        caption: Exploration area across the Gobi-Altai
         alt: Exploration team in the Govi-Altai field
     cta_label: Read the project
     cta_href: /projects/red-hill
