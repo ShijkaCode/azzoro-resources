@@ -53,7 +53,7 @@ featured_projects:
         label: Granted licence tenure
     thumbnails:
       - image: /uploads/Azurite.jpg
-        caption: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
+        caption: Oxidised rhyolite with azurite, drillhole MU2602
         alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
       - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
         caption: Massive Sulphide Intercept MU2601, Red Hill project
