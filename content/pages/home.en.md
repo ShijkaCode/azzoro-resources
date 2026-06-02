@@ -66,7 +66,7 @@ featured_projects:
     footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
 why_mongolia:
   eyebrow: Why Mongolia
-  headline: Mature Jurisdiction · Under-explored Potential · Strategic Location
+  headline: Mature Jurisdiction Under-explored Potential Strategic Location
   image: /uploads/IMG_9141.JPG
   image_alt: Field view · Gobi-Altai, Mongolia
   intro: Strategically located within the prolific Central Asian Orogenic Belt, Mongolia borders the world's primary market for copper and base metals. The country represents a frontier of immense potential, remaining highly underexplored compared to the region’s proven mineral endowments and existing large-scale operations
@@ -89,7 +89,7 @@ why_mongolia:
       image_alt: Strategic location
 why_azzoro:
   eyebrow: Why AZ9
-  headline: Built to Discover · Positioned to Develop · Driven to Deliver
+  headline: Built to Discover Positioned to Develop Driven to Deliver
   intro: AZ9 gives investors direct exposure to a high-grade copper-nickel discovery at Oval, a copper-gold catalyst at Red Hill, and camp-scale upside across a growing southwest Mongolia portfolio — backed by a board and team built to execute in-country.
   footnote: ''
   cards:
