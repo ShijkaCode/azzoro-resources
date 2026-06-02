@@ -3,11 +3,11 @@ items:
     href: /about
   - label: Төслүүд
     href: /projects
-  - label: Хөрөнгө оруулагчийн төв
-    href: https://investors.azzororesources.com
-    external: true
   - label: Тогтвортой байдал
     href: /esg
+  - label: Хөрөнгө оруулагч
+    href: https://investors.azzororesources.com
+    external: true
   - label: Галерей
     href: /gallery
   - label: Холбоо барих

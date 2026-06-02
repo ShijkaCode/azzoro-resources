@@ -3,11 +3,11 @@ items:
     href: /about
   - label: Projects
     href: /projects
-  - label: Investor Centre
-    href: https://investors.azzororesources.com
-    external: true
   - label: Sustainability
     href: /esg
+  - label: Investor
+    href: https://investors.azzororesources.com
+    external: true
   - label: Gallery
     href: /gallery
   - label: Contact
