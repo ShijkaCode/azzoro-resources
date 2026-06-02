@@ -139,7 +139,7 @@ home_sustainability:
     - tag: Governance
       title: Open engagement, clear disclosure
       body: Regular stakeholder meetings, public industry forums and ASX-listed governance practices shape how the Company operates in Mongolia.
-      image: /uploads/IMG_9525.JPG
+      image: /uploads/IMG_1875.JPG
       image_alt: Fo
 investor_snapshot: null
 leadership_teaser:
