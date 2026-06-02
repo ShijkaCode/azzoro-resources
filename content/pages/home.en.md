@@ -1,9 +1,9 @@
 ---
 hero:
   video_id: ''
-  kicker: Mongolia — Central Asian Orogenic Belt
+  kicker: ''
   headline: Advancing Base & Precious Metal Discoveries in Mongolia
-  subline: AZ9 is advancing a copper-nickel-gold-led exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by Red Hill / North Hill as the next catalyst set.
+  subline: AZ9 is advancing a copper-nickel-gold-led exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by Red Hill Cu-Au as the next catalyst set.
   cta_label: Explore projects
   cta_href: /projects
   asx_url: https://www.asx.com.au/markets/company/AZ9
@@ -13,7 +13,7 @@ metrics:
   - value: Oval
     label: Flagship discovery
     source: ''
-  - value: Red Hill / North Hill
+  - value: Red Hill Cu-Au
     label: Near-term catalyst
     source: ''
   - value: Copper Ridge / Bayan Sair
@@ -22,17 +22,17 @@ metrics:
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Strategic location in a proven mining jurisdiction.
-  intro: Mongolia sits on the Central Asian Orogenic Belt, borders the world's largest copper and battery-metals market, and remains underexplored relative to the mines already built across the region.
-  footnote: 'Sources: Fraser Institute Annual Survey of Mining Companies; Mongolia Ministry of Mining and Heavy Industry; National Statistical Organization of Mongolia.'
+  intro: Strategically located within the prolific Central Asian Orogenic Belt, Mongolia borders the world's primary market for copper and base metals. The country represents a frontier of immense potential, remaining highly underexplored compared to the region’s proven mineral endowments and existing large-scale operations
+  footnote: ''
   cards:
+    - title: Top-ranked prospectivity
+      body: Mongolia is recognized by the Fraser Institute as a jurisdiction with high "Best Practice Mineral Potential" and ranked among Asia’s top five most peaceful and stable jurisdictions by the Global Peace Index, making it a premier frontier for strategic investment
+      image: /uploads/chingis statue.jpg
+      image_alt: Chinggis Khan Statue Complex, Tsonjin Boldog, Mongolia
     - title: Proven tier-1 success
       body: Home to Oyu Tolgoi, one of the world's very few tier-1 copper discoveries to reach production in the past 25 years.
       image: /uploads/field/_CP11422.jpg
       image_alt: Field exploration in Mongolia
-    - title: Top-ranked prospectivity
-      body: Ranked among Asia's top jurisdictions for mineral potential in the Fraser Institute mining survey.
-      image: /uploads/field/IMG_9481.JPG
-      image_alt: Geological prospecting in Mongolian terrain
     - title: Strategic position
       body: Rail and road links into China, the world's largest consumer of copper and battery metals.
       image: /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
