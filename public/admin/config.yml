@@ -70,8 +70,8 @@ collections:
               - { label: CTA link, name: cta_href, widget: string, i18n: true }
               - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
             i18n: true
-          - label: Why Azzuro
-            name: why_azzoro
+          - label: Why Mongolia
+            name: why_mongolia
             widget: object
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
@@ -89,8 +89,8 @@ collections:
                   - { label: Tag, name: tag, widget: string, required: false, i18n: true }
                 i18n: true
             i18n: true
-          - label: Why Mongolia
-            name: why_mongolia
+          - label: Why Azzuro
+            name: why_azzoro
             widget: object
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }

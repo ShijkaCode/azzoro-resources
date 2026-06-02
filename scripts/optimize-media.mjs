@@ -179,7 +179,7 @@ for (const ref of [...live].sort()) {
 
 // Hero poster MUST match the hero video's first frame, or it flashes on reload.
 // Derive it straight from the optimized video.
-const heroVideo = path.join(OUT, 'drone', 'hero_drone.MP4');
+const heroVideo = path.join(OUT, 'hero', 'hero.mp4');
 const heroPoster = path.join(OUT, 'hero-poster.jpg');
 if (existsSync(heroVideo)) {
   const tmp = path.join(OUT, '.hero-frame.png');

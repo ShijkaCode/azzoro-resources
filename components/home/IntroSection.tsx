@@ -14,11 +14,13 @@ export default function IntroSection({
   const [activeIndex, setActiveIndex] = useState(0);
   const cards = content.cards ?? [];
   const total = String(cards.length).padStart(2, '0');
+  const hasImages = cards.some((card) => card.image);
 
   return (
     <section className="bg-primary text-white">
       <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:items-start">
+        <div className={`grid grid-cols-1 gap-x-16 gap-y-12 lg:items-start ${hasImages ? 'lg:grid-cols-2' : ''}`}>
+          {hasImages ? (
           <div className="relative aspect-[4/5] overflow-hidden lg:sticky lg:top-28 lg:aspect-auto lg:min-h-[640px]">
             {cards.map((card, idx) =>
               card.image ? (
@@ -39,6 +41,7 @@ export default function IntroSection({
               <span className="num-display text-[11px] leading-none text-white/70">{total}</span>
             </div>
           </div>
+          ) : null}
 
           <div>
             <p className="kicker kicker-invert">{content.eyebrow}</p>

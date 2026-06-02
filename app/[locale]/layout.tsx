@@ -102,7 +102,7 @@ export default async function LocaleLayout({
       <div className="min-h-screen bg-background">
         <Navbar items={nav.items} locale={locale} investorLinks={nav.investor_links} logo={site.logo_dark} />
         <div className="pt-24">{children}</div>
-        <Footer settings={footer} locale={locale} />
+        <Footer settings={footer} locale={locale} social={site.social} />
       </div>
     </NextIntlClientProvider>
   );

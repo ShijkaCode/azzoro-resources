@@ -5,6 +5,6 @@ stock_ticker: AZ9
 stock_api_enabled: true
 investor_portal_url: https://investors.asianbatterymetals.com
 social:
-  linkedin: https://www.linkedin.com
-  x: ''
+  linkedin: https://www.linkedin.com/company/asian-battery-minerals-ltd/?viewAsMember=true
+  x: https://x.com/asianbatterymet
 default_locale: en

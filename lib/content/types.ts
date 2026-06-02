@@ -40,25 +40,27 @@ export type FeaturedProject = {
   footnote?: string;
 };
 
+// Why Mongolia / Why Azzuro sections. One flexible shape covers both the
+// image-gallery layout (IntroSection: per-card images) and the tiles layout
+// (WhatWeDo: banner image + per-card tags).
+export type HomeFeatureSection = {
+  eyebrow: string;
+  headline: string;
+  image?: string;
+  image_alt?: string;
+  intro: string;
+  footnote?: string;
+  cards: { title: string; body: string; image?: string; image_alt?: string; tag?: string }[];
+};
+
 export type HomeContent = {
   hero: { video_id: string; kicker?: string; headline: string; subline?: string; cta_label: string; cta_href: string; asx_url?: string; announcements_url?: string; presentation_url?: string };
   metrics: { value: string; label: string; source?: string }[];
-  why_mongolia: {
-    eyebrow: string;
-    headline: string;
-    intro: string;
-    footnote?: string;
-    cards: { title: string; body: string; image?: string; image_alt?: string }[];
-  };
-  why_azzoro: {
-    eyebrow: string;
-    headline: string;
-    image?: string;
-    image_alt?: string;
-    intro: string;
-    footnote?: string;
-    cards: { title: string; body: string; tag?: string }[];
-  };
+  // Both sections share one shape so either layout component (IntroSection /
+  // WhatWeDo) can render either section — the client swaps presentation in code
+  // and fills the matching fields in the CMS.
+  why_mongolia: HomeFeatureSection;
+  why_azzoro: HomeFeatureSection;
   sustainability_teaser: { heading: string; body: string; image?: string; cta_label: string; cta_href: string };
   home_sustainability?: {
     eyebrow: string;
