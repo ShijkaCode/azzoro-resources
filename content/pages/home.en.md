@@ -3,7 +3,7 @@ hero:
   video_id: ''
   kicker: ''
   headline: Advancing Base & Precious Metal Discoveries in Mongolia
-  subline: AZ9 is advancing a copper-nickel-gold-led exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by Red Hill Cu-Au as the next catalyst set.
+  subline: AZ9 is advancing copper and base metals exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by Red Hill Cu-Au as the next catalyst.
   cta_label: Explore projects
   cta_href: /projects
   asx_url: https://www.asx.com.au/markets/company/AZ9
@@ -25,11 +25,11 @@ featured_projects:
       - value: '2026'
         label: Initial JORC target
     thumbnails:
-      - image: /uploads/20251101_073844668_iOS.jpg
-        caption: Drill core from the OVD021 discovery hole.
+      - image: /uploads/field/20251101_073622736_iOS.jpg
+        caption: Massive sulphide intercept · Oval discovery.
         alt: Massive sulphide intercept · Oval discovery zone.
       - image: /uploads/IMG_0639.JPG
-        caption: Massive sulphide intercept · Oval discovery zone.
+        caption: Massive sulphide intercept · Oval discovery.
         alt: Massive sulphide intercept
       - image: /uploads/IMG_0654.JPG
         caption: Massive sulphide intercept · Oval discovery zone.
