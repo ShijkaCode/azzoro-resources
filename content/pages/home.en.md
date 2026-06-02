@@ -66,31 +66,27 @@ featured_projects:
     footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
 why_mongolia:
   eyebrow: Why Mongolia
-  headline: Strategic location in a proven mining jurisdiction.
-  image_alt: ''
+  headline: Mature Jurisdiction · Under-explored Potential · Strategic Location
+  image: /uploads/IMG_9141.JPG
+  image_alt: Field view · Gobi-Altai, Mongolia
   intro: Strategically located within the prolific Central Asian Orogenic Belt, Mongolia borders the world's primary market for copper and base metals. The country represents a frontier of immense potential, remaining highly underexplored compared to the region’s proven mineral endowments and existing large-scale operations
   footnote: ''
   cards:
-    - title: Top-ranked prospectivity
-      body: Mongolia is recognized by the Fraser Institute as a jurisdiction with high "Best Practice Mineral Potential" and ranked among Asia’s top five most peaceful and stable jurisdictions by the Global Peace Index, making it a premier frontier for strategic investment
+    - title: Top-Tier Mining Jurisdiction
+      body: Rated among Asia's top 5 jurisdictions for mineral potential (Fraser Institute) and top 5 safest countries in Asia (Global Peace Index). Home to Oyu Tolgoi — one of the world's only tier-1 copper discoveries to reach production in the past 25 years.
+      tag: ''
       image: /uploads/chingis statue.jpg
       image_alt: Chinggis Khan Statue Complex, Tsonjin Boldog, Mongolia
-    - title: Proven tier-1 success
-      body: Home to Oyu Tolgoi, one of the world's very few tier-1 copper discoveries to reach production in the past 25 years.
+    - title: Underexplored with Proven Infrastructure
+      body: A highly prospective, cost-effective exploration environment supported by established infrastructure, experienced mining professionals, and a growing ecosystem of majors, mid-tiers, and juniors.
+      tag: ''
       image: /uploads/field/20251028_045635469_iOS.jpg
       image_alt: Field exploration in Mongolia
-    - title: Strategic position
-      body: On China's doorstep, the world's largest consumer of copper and battery metals.
+    - title: Gateway to the World's Largest Copper Market
+      body: Strategically located on China's doorstep — the world's largest consumer of copper and battery metals, capturing half of global copper supply. Mongolia offers direct access to major Chinese smelters, with border crossings within 280km of key project sites.
+      tag: ''
       image: /uploads/location-icon-on-map-generative-ai-photo.jpg
       image_alt: Strategic location
-    - title: Established ecosystem
-      body: Presence of majors, mid-tiers and juniors, supported by export-ready infrastructure and experienced mining professionals
-      image: /uploads/dji_fly_20240807_211228_166_1726578147600_photo.jpg
-      image_alt: Field camp at the Bilgun project site
-    - title: Underexplored upside
-      body: Large tracts of prospective ground remain lightly drilled relative to mature tier-1 copper provinces.
-      image: /uploads/field/IMG_8982.JPG
-      image_alt: Open Mongolian steppe under exploration
 why_azzoro:
   eyebrow: Why AZ9
   headline: Mongolia's Next Critical Minerals Leader, Positioned for Growth
