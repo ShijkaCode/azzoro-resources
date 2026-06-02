@@ -1,7 +1,7 @@
 ---
-title: Continuous Disclosure Overview
-category: Disclosures
-file: /uploads/governance/placeholder.pdf
-effective_date: '2024-01-01'
-description: Continuous disclosure entry outlining market disclosure responsibilities and related practice.
+title: Diversity Policy
+category: Policies
+file: /uploads/DiversityPolicy.pdf
+effective_date: 2026-06-03
+description: ''
 ---
