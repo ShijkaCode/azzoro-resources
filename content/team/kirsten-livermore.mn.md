@@ -1,9 +1,9 @@
 ---
 name: Kirsten Livermore
 role: Гүйцэтгэх бус захирал
-home_credential: Уул уурхайн бодлого, зохицуулалтад 25+ жил; Австрали–Монголын олборлох хөтөлбөрийг удирдсан.
 team_section: Board
 photo: /uploads/team/technical_team/kirstenok-300x300.jpg
+home_credential: Уул уурхайн бодлого, зохицуулалтад 25+ жил; Австрали–Монголын олборлох хөтөлбөрийг удирдсан.
 order: 3
 ---
 
