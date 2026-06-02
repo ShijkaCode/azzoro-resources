@@ -8,5 +8,5 @@ social:
   linkedin: https://www.linkedin.com/company/asian-battery-minerals-ltd/?viewAsMember=true
   x: https://x.com/asianbatterymet
 default_locale: en
-font_body: Roboto
-font_display: Raleway
+font_body: Inter
+font_display: Montserrat
