@@ -109,7 +109,7 @@ why_azzoro:
       image_alt: ''
     - title: Prime Location & Infrastructure Access
       body: Projects sit 30km from Altai City with direct access to paved roads, power grid, airport, and limestone supply — significantly reducing development risk and capex requirements
-      image: /uploads/_CP11448.jpg
+      image: /uploads/field/1000000443.jpg
       image_alt: ''
     - title: Experienced Board & Technical Team with Deep In-Country Expertise
       body: Led by a board averaging 25+ years in mining — with direct Mongolia-specific experience including former roles at Oyu Tolgoi and ASX-listed Mongolian operators — and supported by a strong local technical team with deep geological and operational knowledge on the ground. Board and major shareholders hold a significant stake in the Company, demonstrating strong alignment with investor interests.
