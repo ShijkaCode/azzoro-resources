@@ -1,9 +1,10 @@
 brand_name: Azzuro Resources PLC
-logo: /brand/logo-on-light.png
+logo: /uploads/brand/Gradient logo.svg
 logo_dark: /brand/logo-on-dark.svg
 stock_ticker: AZ9
 stock_api_enabled: true
 investor_portal_url: https://investors.asianbatterymetals.com
 social:
   linkedin: https://www.linkedin.com
+  x: ''
 default_locale: en
