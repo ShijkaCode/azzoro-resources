@@ -78,7 +78,7 @@ export default async function HeroSection({ locale, hero, liveEnabled, ticker }:
 
       <div className="relative flex flex-1 flex-col justify-end px-6 pb-8 pt-24 sm:px-10 sm:pb-10 sm:pt-28 lg:px-16 lg:pb-12">
         {hero.kicker ? <p className="kicker kicker-invert">{hero.kicker}</p> : null}
-        <h1 className="mt-5 max-w-[22ch] font-display text-balance text-[2.5rem] font-medium leading-[0.98] tracking-[-0.015em] sm:mt-7 sm:text-[3.5rem] sm:leading-[0.96] lg:text-[5rem] xl:text-[6rem] xl:leading-[0.95]">
+        <h1 className="mt-5 max-w-[24ch] font-display text-balance text-[clamp(1.5rem,6.4vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.02em] sm:mt-7">
           {hero.headline}
         </h1>
         {hero.subline ? (

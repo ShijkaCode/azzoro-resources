@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter, Source_Serif_4 } from 'next/font/google';
+import { Roboto, Montserrat } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-sans',
   display: 'swap',
+  weight: ['400', '500', '700'],
 });
 
-const sourceSerif = Source_Serif_4({
+const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-display',
   display: 'swap',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${roboto.variable} ${montserrat.variable}`}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">{children}</body>
     </html>
   );

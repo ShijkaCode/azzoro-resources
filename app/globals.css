@@ -190,7 +190,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: var(--font-display), Georgia, serif;
+    font-family: var(--font-display), 'Segoe UI', system-ui, sans-serif;
   }
 
   .text-balance {
@@ -198,7 +198,7 @@
   }
 
   .num-display {
-    font-family: var(--font-display), Georgia, serif;
+    font-family: var(--font-display), 'Segoe UI', system-ui, sans-serif;
     font-variant-numeric: tabular-nums slashed-zero;
   }
 
@@ -301,7 +301,7 @@
 }
 
 .project-popup-title {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), 'Segoe UI', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.15;
