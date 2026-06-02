@@ -31,15 +31,15 @@ why_mongolia:
       image_alt: Chinggis Khan Statue Complex, Tsonjin Boldog, Mongolia
     - title: Proven tier-1 success
       body: Home to Oyu Tolgoi, one of the world's very few tier-1 copper discoveries to reach production in the past 25 years.
-      image: /uploads/field/_CP11422.jpg
+      image: /uploads/field/20251028_045635469_iOS.jpg
       image_alt: Field exploration in Mongolia
     - title: Strategic position
-      body: Rail and road links into China, the world's largest consumer of copper and battery metals.
-      image: /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-      image_alt: Aerial drone view of Mongolian landscape
+      body: On China's doorstep, the world's largest consumer of copper and battery metals.
+      image: /uploads/location-icon-on-map-generative-ai-photo.jpg
+      image_alt: Strategic location
     - title: Established ecosystem
-      body: Export-ready logistics, paved access and an operating environment that already supports majors, mid-tiers, juniors and mining contractors.
-      image: /uploads/field/camp-bilgun.jpg
+      body: Presence of majors, mid-tiers and juniors, supported by export-ready infrastructure and experienced mining professionals
+      image: /uploads/dji_fly_20240807_211228_166_1726578147600_photo.jpg
       image_alt: Field camp at the Bilgun project site
     - title: Underexplored upside
       body: Large tracts of prospective ground remain lightly drilled relative to mature tier-1 copper provinces.
@@ -47,11 +47,11 @@ why_mongolia:
       image_alt: Open Mongolian steppe under exploration
 why_azzoro:
   eyebrow: Why AZ9
-  headline: Copper-nickel-gold exposure with a clear catalyst path.
-  image: /uploads/field/drill%201.jpg
+  headline: Mongolia's Next Critical Minerals Leader, Positioned for Growth
+  image: /uploads/20251101_181523.jpg
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
-  intro: AZ9 offers investors direct exposure to the Oval discovery, the Red Hill / North Hill copper-gold catalyst set, and camp-scale upside across a broader Mongolian portfolio. The Company's edge is execution through an experienced board, a strong local technical team and the ability to move quickly in-country.
-  footnote: BHP Xplor is a global accelerator program; participation does not constitute an investment by or affiliation with BHP. Refer to asianbatterymetals.com for disclosures.
+  intro: AZ9 offers investors direct exposure to the Oval discovery, the Red Hill copper-gold catalyst set, and camp-scale upside across a broader Mongolian portfolio. The Company's edge is execution through an experienced board, a strong local technical team and the ability to move quickly in-country.
+  footnote: ''
   cards:
     - title: Next big Mongolian metals play
       body: The only ASX-listed junior with a high-grade Cu·Ni discovery aligned to the energy-transition metals trend.
