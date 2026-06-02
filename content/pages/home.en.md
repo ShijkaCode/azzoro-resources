@@ -119,7 +119,7 @@ why_azzoro:
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
 sustainability_teaser:
   heading: An exploration approach that respects land and local communities.
-  body: Azzuro's field programs are built around early environmental baseline work, practical stakeholder engagement and the governance standards expected of an ASX-listed company.
+  body: The explorations of Azzuro Resources PLC are based on maintaining environmental integrity, building sustainable, shared-value partnership with local communities, and upholding international standards of corporate governance.
   image: ''
   cta_label: Our approach to Sustainability
   cta_href: /esg
@@ -131,10 +131,10 @@ home_sustainability:
       body: We regularly monitor water quality and levels, measure air quality, and perform land reclamation works to protect water sources for local residents, livestock, and wildlife.
       image: /uploads/Environment monitoring-web crop.jpg
       image_alt: Environmental monitoring at Gobi-Altai, Mongolia
-    - tag: Community
+    - tag: Social
       title: Practical support where we work
-      body: From kids' playground to local infrastructure, the Company directs tangible support to the soums that host field activity.
-      image: /uploads/Governor of Rashaant bagh.jpg
+      body: From playgardens to local livelihood, the Company directs tangible support to the soums that host field activity.
+      image: /uploads/IMG_9525-crop.JPG
       image_alt: Community playgarden in Yesunbulag, Mongolia
     - tag: Governance
       title: Open engagement, clear disclosure
