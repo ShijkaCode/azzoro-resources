@@ -54,7 +54,7 @@ featured_projects:
     thumbnails:
       - image: /uploads/Azurite.jpg
         caption: Oxidised rhyolite with azurite, drillhole MU2602
-        alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
+        alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602
       - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
         caption: Massive Sulphide Intercept MU2601, Red Hill project
         alt: ''
