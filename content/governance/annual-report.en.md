@@ -1,7 +1,7 @@
 ---
-title: Annual Report Snapshot
-category: Reports
-file: /uploads/governance/placeholder.pdf
-effective_date: '2024-01-01'
-description: Annual report entry for investor reference and document download.
+title: Articles of Association
+category: Constitution
+file: /uploads/20240325-AZ9-Articles-of-Association.pdf
+effective_date: 2024-03-25
+description: ''
 ---
