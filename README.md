@@ -1,6 +1,6 @@
-# Azzoro Resources Website
+# Azzuro Resources Website
 
-Marketing and investor-facing website for Azzoro Resources PLC (ASX: AZ9, the rebrand of Asian Battery Metals). Next.js 14 App Router, bilingual EN/MN, markdown/YAML content with a Git-based CMS at `/admin`.
+Marketing and investor-facing website for Azzuro Resources PLC (ASX: AZ9, the rebrand of Asian Battery Metals). Next.js 14 App Router, bilingual EN/MN, markdown/YAML content with a Git-based CMS at `/admin`.
 
 ## Stack
 

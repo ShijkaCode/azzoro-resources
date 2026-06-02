@@ -142,7 +142,7 @@ export function ShareCard({
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 38 }}>
             <div style={{ width: 52, height: 4, backgroundColor: ACCENT }} />
-            <div style={{ fontSize: 22, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.78)' }}>azzororesources.com</div>
+            <div style={{ fontSize: 22, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.78)' }}>azzuroresources.com</div>
           </div>
         </div>
       </div>

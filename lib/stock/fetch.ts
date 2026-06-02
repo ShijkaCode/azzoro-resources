@@ -34,7 +34,7 @@ async function fetchFromAsx(symbol: string): Promise<StockSnapshot | null> {
     const response = await fetch(url, {
       next: { revalidate: 300 },
       headers: {
-        'User-Agent': 'azzororesources.com bot (contact: tech@azzororesources.com)',
+        'User-Agent': 'azzuroresources.com bot (contact: tech@azzuroresources.com)',
       },
     });
 
@@ -70,7 +70,7 @@ async function fetchFromYahoo(symbol: string): Promise<StockSnapshot | null> {
     const response = await fetch(url, {
       next: { revalidate: 300 },
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; azzororesources.com bot; contact: tech@azzororesources.com)',
+        'User-Agent': 'Mozilla/5.0 (compatible; azzuroresources.com bot; contact: tech@azzuroresources.com)',
       },
     });
 

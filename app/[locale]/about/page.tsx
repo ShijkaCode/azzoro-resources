@@ -114,7 +114,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
       <section className="bg-paper px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16">
         <div className="space-y-20">
           <TeamGrid members={team} section="Board" heading={labels.board} locale={locale} columns={4} />
-          <TeamGrid members={team} section="Technical" heading={labels.technical} locale={locale} columns={6} />
+          <TeamGrid members={team} section="Technical" heading={labels.technical} locale={locale} columns={5} />
         </div>
       </section>
 

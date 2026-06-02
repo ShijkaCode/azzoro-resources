@@ -8,7 +8,7 @@ export const size = ogSize;
 export const contentType = 'image/png';
 export const alt = 'Azzuro Resources project';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzuroresources.com';
 
 export default async function Image({ params }: { params: { locale: string; slug: string } }) {
   const { locale, slug } = params;

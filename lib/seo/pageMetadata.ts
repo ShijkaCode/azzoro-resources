@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n/config';
 
 const SITE_NAME = 'Azzuro Resources';
-const DEFAULT_SITE_URL = 'https://staging.azzororesources.com';
+const DEFAULT_SITE_URL = 'https://staging.azzuroresources.com';
 
 type PageMetadataArgs = {
   title: string;

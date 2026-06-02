@@ -1,13 +1,13 @@
 # Staging Environment
 
 - Preview URL: pending first Vercel deploy
-- Custom staging domain: `staging.azzororesources.com` pending DNS access
+- Custom staging domain: `staging.azzuroresources.com` pending DNS access
 - `/admin` status: schema wired locally, GitHub App auth pending credentials and Vercel env setup
 - Deployment protection: pending Vercel configuration
 
 ## Required env vars
 
-- `NEXT_PUBLIC_SITE_URL=https://staging.azzororesources.com`
+- `NEXT_PUBLIC_SITE_URL=https://staging.azzuroresources.com`
 - `NEXT_PUBLIC_MAPTILER_KEY=<optional>`
 - `NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID=<optional until video is ready>`
 - `STOCK_API_PROVIDER=yahoo`

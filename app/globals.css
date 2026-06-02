@@ -87,7 +87,7 @@
      `.kicker` on light surfaces, add `.kicker-invert` on dark navy surfaces.
      The tick is a graphic element, so copper-on-any-bg is fine for contrast. */
   .kicker {
-    @apply inline-flex items-center text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--muted-ink))];
+    @apply inline-flex items-center text-[15px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--muted-ink))] sm:text-base;
   }
 
   .kicker-invert {

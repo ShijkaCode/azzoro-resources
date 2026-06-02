@@ -137,7 +137,7 @@ export async function fetchInvestorNews(limit = 3): Promise<InvestorNewsItem[]> 
     const response = await fetch(feedUrl, {
       next: { revalidate: 900 },
       headers: {
-        'User-Agent': 'azzororesources.com bot (contact: tech@azzororesources.com)',
+        'User-Agent': 'azzuroresources.com bot (contact: tech@azzuroresources.com)',
       },
     });
 

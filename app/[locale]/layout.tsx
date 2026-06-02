@@ -20,7 +20,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   const { locale } = params;
   const isMn = locale === 'mn';
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzuroresources.com';
   return {
     openGraph: {
       type: 'website',
@@ -49,7 +49,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzuroresources.com';
 
   const [messages, nav, footer, site] = await Promise.all([
     getMessages(),

@@ -62,7 +62,7 @@ export type HomeContent = {
   // WhatWeDo) can render either section — the client swaps presentation in code
   // and fills the matching fields in the CMS.
   why_mongolia: HomeFeatureSection;
-  why_azzoro: HomeFeatureSection;
+  why_azzuro: HomeFeatureSection;
   sustainability_teaser: { heading: string; body: string; image?: string; cta_label: string; cta_href: string };
   home_sustainability?: {
     eyebrow: string;
@@ -212,8 +212,8 @@ export type GalleryPhoto = {
   slug: string;
   image: string;
   caption?: string;
-  tags: string[];
-  date: string;
+  tags?: string[];
+  date?: string;
   featured?: boolean;
 };
 

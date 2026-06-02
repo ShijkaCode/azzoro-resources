@@ -6,7 +6,7 @@ import { locales } from '@/lib/i18n/config';
 const routes = ['', '/about', '/projects', '/esg', '/gallery', '/contact', '/legal/privacy', '/legal/terms'];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://azzororesources.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://azzuroresources.com';
   const now = new Date();
   const [projectRoutes, caseStudyRoutes] = await Promise.all([
     Promise.all(

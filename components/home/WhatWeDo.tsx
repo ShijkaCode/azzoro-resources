@@ -6,7 +6,7 @@ export default function WhatWeDo({
   content,
 }: {
   locale: Locale;
-  content: HomeContent['why_azzoro'];
+  content: HomeContent['why_azzuro'];
 }) {
   const cards = content.cards ?? [];
 

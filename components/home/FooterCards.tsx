@@ -44,7 +44,7 @@ export default function FooterCards({
         {directors.length > 0 ? (
           <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-10">
             {directors.map((director) => (
-              <article key={director.slug} className="flex flex-col">
+              <article key={director.slug} className="group flex flex-col">
                 <div className="relative aspect-[4/5] overflow-hidden bg-white/[0.04]">
                   {director.photo ? (
                     <Image
@@ -52,7 +52,7 @@ export default function FooterCards({
                       alt={director.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
                   ) : null}
                 </div>

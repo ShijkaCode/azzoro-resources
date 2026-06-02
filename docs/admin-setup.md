@@ -13,8 +13,8 @@ This project uses the static Sveltia CMS shell in `public/admin` with the GitHub
 1. Create a GitHub App for the repo.
 2. Set callback URLs for:
    - `http://localhost:3000/admin`
-   - `https://staging.azzororesources.com/admin`
-   - `https://azzororesources.com/admin`
+   - `https://staging.azzuroresources.com/admin`
+   - `https://azzuroresources.com/admin`
 3. Grant `Contents: Read and write` and `Metadata: Read`.
 4. Install the app on this repository.
 

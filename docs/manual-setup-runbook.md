@@ -1,4 +1,4 @@
-# Azzoro Resources — Manual Setup Runbook
+# Azzuro Resources — Manual Setup Runbook
 
 Everything you have to do **outside the codebase** between now and launch — in execution order, with specific links, field values, and verification steps. Nothing here can be automated from inside Claude Code.
 
@@ -53,12 +53,12 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
 **Steps:**
 1. Go to https://github.com/settings/apps/new
 2. Fill the form:
-   - **GitHub App name:** `Azzoro Resources CMS`
-   - **Homepage URL:** `https://azzororesources.com`
+   - **GitHub App name:** `Azzuro Resources CMS`
+   - **Homepage URL:** `https://azzuroresources.com`
    - **Callback URL** (one per line, click "Add a callback URL" for each):
      ```
-     https://staging.azzororesources.com/admin
-     https://azzororesources.com/admin
+     https://staging.azzuroresources.com/admin
+     https://azzuroresources.com/admin
      http://localhost:3000/admin
      ```
    - **Webhook** → untick "Active"
@@ -96,8 +96,8 @@ Do these in parallel. None depend on each other. All except Cloudflare Stream ar
    - Name: `azzoro-production`
    - **Allowed HTTP Origins:** add these (one per line — **hostnames only, no `https://` scheme, no port**):
      ```
-     azzororesources.com
-     *.azzororesources.com
+     azzuroresources.com
+     *.azzuroresources.com
      localhost
      ```
      MapTiler validates this field strictly — `https://...` or `http://localhost:3000` will fail with "Invalid origin restriction".
@@ -167,7 +167,7 @@ Now we connect the accounts to the codebase via Vercel env vars + a couple of sm
 
 | Key | Value | Source |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | `https://staging.azzororesources.com` (will swap to prod URL at launch) | You |
+| `NEXT_PUBLIC_SITE_URL` | `https://staging.azzuroresources.com` (will swap to prod URL at launch) | You |
 | `NEXT_PUBLIC_MAPTILER_KEY` | The key from 1.2 | MapTiler |
 | `NEXT_PUBLIC_CLOUDFLARE_STREAM_ACCOUNT_ID` | The Account ID from 1.3 | Cloudflare |
 | `STOCK_API_PROVIDER` | `yahoo` | Hardcoded |
@@ -213,7 +213,7 @@ This is one small code edit I can do for you once you have the App ID. Or do it 
 **Verify:** Vercel auto-deploys. After deploy:
 1. Visit `https://<vercel-url>/admin`
 2. You should see a Sveltia sign-in page with a "Sign in with GitHub" button
-3. Click it → GitHub OAuth flow → Authorize the Azzoro Resources CMS app
+3. Click it → GitHub OAuth flow → Authorize the Azzuro Resources CMS app
 4. You land in the Sveltia dashboard with the left sidebar showing all collections (Pages, Team, Projects, Governance, Gallery, Partners, Settings)
 5. **End-to-end smoke test:** Click Pages → Home → change the EN headline → Save. Wait ~90s. Refresh `/en` on the site. The new headline shows.
 
@@ -230,20 +230,20 @@ If sign-in fails, the most common causes:
 
 **Steps:**
 1. Vercel → Project → **Settings** → **Domains**
-2. Type `staging.azzororesources.com` → Add
+2. Type `staging.azzuroresources.com` → Add
 3. Vercel shows a DNS record to add — something like:
    ```
    Type: CNAME
    Name: staging
    Value: cname.vercel-dns.com
    ```
-4. **Go to your domain registrar** (whoever sold you azzororesources.com — likely GoDaddy, Namecheap, Cloudflare, Porkbun, etc.)
-5. Open DNS management for `azzororesources.com`
+4. **Go to your domain registrar** (whoever sold you azzuroresources.com — likely GoDaddy, Namecheap, Cloudflare, Porkbun, etc.)
+5. Open DNS management for `azzuroresources.com`
 6. Add the CNAME record above, TTL 300 seconds
 7. Save at the registrar
 8. Back in Vercel, the domain status flips from "Pending" → "Valid Configuration" within a few minutes (SSL provisions automatically)
 
-**Verify:** Visit `https://staging.azzororesources.com` — green padlock, site loads.
+**Verify:** Visit `https://staging.azzuroresources.com` — green padlock, site loads.
 
 ---
 
@@ -258,7 +258,7 @@ If sign-in fails, the most common causes:
 4. Set a password (e.g., `azzoro-staging-2026` — anything memorable)
 5. Save
 
-**Verify:** Open `https://staging.azzororesources.com` in incognito — prompted for password. Enter it → site loads.
+**Verify:** Open `https://staging.azzuroresources.com` in incognito — prompted for password. Enter it → site loads.
 
 **Hand to client:** the staging URL + password, plus a heads-up that this is private until launch.
 
@@ -387,13 +387,13 @@ Then update `content/settings/site.yml` `logo` and `logo_dark` fields to point a
 
 ---
 
-### 3.9 🚫 DNS access for `azzororesources.com`
+### 3.9 🚫 DNS access for `azzuroresources.com`
 
-**Ask the client:** "We need DNS edit access for `azzororesources.com` to point the domain at our hosting at launch. Two options:
+**Ask the client:** "We need DNS edit access for `azzuroresources.com` to point the domain at our hosting at launch. Two options:
 1. Give us temporary access to the domain registrar account
 2. We send you the exact records to add when we're ready, you add them at the registrar yourself"
 
-**Tell them:** for the staging subdomain we already added (Phase 2.3), they may have already given access. Production cutover needs the apex domain (`azzororesources.com` and `www.azzororesources.com`).
+**Tell them:** for the staging subdomain we already added (Phase 2.3), they may have already given access. Production cutover needs the apex domain (`azzuroresources.com` and `www.azzuroresources.com`).
 
 **Lead time:** Some registrars (corporate-managed) have approval workflows that take days. Find out early.
 
@@ -401,7 +401,7 @@ Then update `content/settings/site.yml` `logo` and `logo_dark` fields to point a
 
 ### 3.10 🚫 Old domain redirect coordination
 
-**Ask the client:** "After we launch at azzororesources.com, we want visitors who land on the old asianbatterymetals.com URLs to be auto-redirected to the new site. Two options:
+**Ask the client:** "After we launch at azzuroresources.com, we want visitors who land on the old asianbatterymetals.com URLs to be auto-redirected to the new site. Two options:
 1. Point asianbatterymetals.com DNS at our Vercel hosting too — we'll catch all the legacy paths and 301 them
 2. Configure 301 redirects at the current asianbatterymetals.com host (whoever runs it today)"
 
@@ -579,7 +579,7 @@ Look for: layout breaks, broken images, map issues, scroll glitches, font fallba
 
 ### 7.4 ⬜ Get client sign-off in writing
 
-Email/Slack: "Are you happy with everything? Once you say yes I'll cut over DNS to make this live at the real azzororesources.com."
+Email/Slack: "Are you happy with everything? Once you say yes I'll cut over DNS to make this live at the real azzuroresources.com."
 
 Don't skip this — having written sign-off protects you if they later say "wait that's not what we wanted."
 
@@ -590,7 +590,7 @@ Don't skip this — having written sign-off protects you if they later say "wait
 **Why:** When you swap DNS, the old record can stay cached for as long as its TTL. Lower it first so the cutover takes minutes, not hours.
 
 **Steps:**
-1. Go to the DNS registrar for `azzororesources.com`
+1. Go to the DNS registrar for `azzuroresources.com`
 2. Find any existing records on the apex / www (probably pointing nowhere right now if it's a fresh domain — but check)
 3. Set TTL to **300 seconds** (5 min) on those records
 4. Wait at least 24 hours before doing Phase 8
@@ -607,8 +607,8 @@ Pick a time: **early morning, mid-week, NOT Friday afternoon.** If something bre
 
 **Steps:**
 1. Vercel → Project → Settings → Domains
-2. Add `azzororesources.com` (apex)
-3. Add `www.azzororesources.com`
+2. Add `azzuroresources.com` (apex)
+3. Add `www.azzuroresources.com`
 4. Vercel shows DNS records — note them
 
 ---
@@ -616,8 +616,8 @@ Pick a time: **early morning, mid-week, NOT Friday afternoon.** If something bre
 ### 8.2 ⬜ Update DNS records at registrar
 
 **Add/replace:**
-- `azzororesources.com` (apex) → **A** record to Vercel's IP (Vercel displays it, commonly `76.76.21.21`)
-- `www.azzororesources.com` → **CNAME** to `cname.vercel-dns.com`
+- `azzuroresources.com` (apex) → **A** record to Vercel's IP (Vercel displays it, commonly `76.76.21.21`)
+- `www.azzuroresources.com` → **CNAME** to `cname.vercel-dns.com`
 
 If your registrar doesn't support apex A records, use Vercel's ALIAS/ANAME workaround per their docs.
 
@@ -627,7 +627,7 @@ If your registrar doesn't support apex A records, use Vercel's ALIAS/ANAME worka
 
 ### 8.3 ⬜ Wait for SSL (~5-15 min)
 
-**Verify:** Visit `https://azzororesources.com` — green padlock, the site loads. If you see "Not secure" wait 5 more minutes, then check Vercel for errors.
+**Verify:** Visit `https://azzuroresources.com` — green padlock, the site loads. If you see "Not secure" wait 5 more minutes, then check Vercel for errors.
 
 ---
 
@@ -636,7 +636,7 @@ If your registrar doesn't support apex A records, use Vercel's ALIAS/ANAME worka
 **Steps:**
 1. Vercel → Project → Settings → Environment Variables
 2. Find `NEXT_PUBLIC_SITE_URL`
-3. Change Production value from `https://staging.azzororesources.com` to `https://azzororesources.com`
+3. Change Production value from `https://staging.azzuroresources.com` to `https://azzuroresources.com`
 4. Trigger a redeploy
 
 **Why:** sitemap, OG images, canonical URLs all use this var. Don't want staging URLs leaking into production.
@@ -650,7 +650,7 @@ If your registrar doesn't support apex A records, use Vercel's ALIAS/ANAME worka
 2. **Production:** turn OFF the password (leave staging ON)
 3. Save
 
-**Verify:** Open `https://azzororesources.com` in an incognito window — site loads without password.
+**Verify:** Open `https://azzuroresources.com` in an incognito window — site loads without password.
 
 ---
 
@@ -658,9 +658,9 @@ If your registrar doesn't support apex A records, use Vercel's ALIAS/ANAME worka
 
 Per Phase 3.10 decision:
 - **If client points old domain at Vercel:** our redirect rules in `next.config.mjs` catch the common paths and 301 them
-- **If old hosting handles redirects:** confirm with client that they've configured `301 → https://azzororesources.com` at the old host's edge
+- **If old hosting handles redirects:** confirm with client that they've configured `301 → https://azzuroresources.com` at the old host's edge
 
-**Test:** visit `https://asianbatterymetals.com/about/` — expect to land on `https://azzororesources.com/en/about/`.
+**Test:** visit `https://asianbatterymetals.com/about/` — expect to land on `https://azzuroresources.com/en/about/`.
 
 ---
 
@@ -678,8 +678,8 @@ Open incognito, walk every page, every locale, every CTA. Test `/admin` sign-in 
 
 **Steps:**
 1. https://search.google.com/search-console
-2. Add Property → `azzororesources.com` → DNS verification → add TXT record at registrar
-3. Once verified: Sitemaps → submit `https://azzororesources.com/sitemap.xml`
+2. Add Property → `azzuroresources.com` → DNS verification → add TXT record at registrar
+3. Once verified: Sitemaps → submit `https://azzuroresources.com/sitemap.xml`
 4. URL Inspection → enter homepage URL → Request Indexing
 
 ---
@@ -708,7 +708,7 @@ Free options:
 - https://uptimerobot.com/ — 5-min interval, 50 monitors free
 - https://www.pingdom.com/ — 14-day free trial
 
-Add `https://azzororesources.com` as a check. Get email/SMS alert if it goes down.
+Add `https://azzuroresources.com` as a check. Get email/SMS alert if it goes down.
 
 ---
 

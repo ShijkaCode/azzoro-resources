@@ -8,8 +8,8 @@ backend:
 media_folder: public/uploads
 public_folder: /uploads
 logo_url: /brand/logo-on-light.svg
-site_url: https://azzororesources.com
-display_url: https://azzororesources.com
+site_url: https://azzuroresources.com
+display_url: https://azzuroresources.com
 
 i18n:
   structure: multiple_files
@@ -90,7 +90,7 @@ collections:
                 i18n: true
             i18n: true
           - label: Why Azzuro
-            name: why_azzoro
+            name: why_azzuro
             widget: object
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
@@ -489,8 +489,8 @@ collections:
     fields:
       - { label: Image, name: image, widget: image, i18n: true }
       - { label: Caption, name: caption, widget: string, required: false, i18n: true }
-      - { label: Tags, name: tags, widget: list, i18n: true }
-      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
+      - { label: Tags, name: tags, widget: list, required: false, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', required: false, i18n: true }
       - { label: Featured, name: featured, widget: boolean, required: false, default: false, i18n: true }
   - name: gallery_videos
     label: Gallery Videos

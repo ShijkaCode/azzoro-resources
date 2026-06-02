@@ -87,7 +87,7 @@ why_mongolia:
       tag: ''
       image: /uploads/location-icon-on-map-generative-ai-photo.jpg
       image_alt: Strategic location
-why_azzoro:
+why_azzuro:
   eyebrow: Why AZ9
   headline: Built to Discover Positioned to Develop Driven to Deliver
   intro: AZ9 gives investors direct exposure to a high-grade copper-nickel discovery at Oval, a copper-gold catalyst at Red Hill, and camp-scale upside across a growing southwest Mongolia portfolio — backed by a board and team built to execute in-country.

@@ -44,7 +44,7 @@ const DEFAULT_BODY = 'Roboto';
 const DEFAULT_DISPLAY = 'Montserrat';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzororesources.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://staging.azzuroresources.com'),
   title: {
     default: 'Azzuro Resources',
     template: '%s | Azzuro Resources',

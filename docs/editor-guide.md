@@ -1,10 +1,10 @@
-# Azzoro Resources - Editor Guide
+# Azzuro Resources - Editor Guide
 
 ## Signing in
 
 1. Visit `/admin` on the staging or production site.
 2. Click **Sign in with GitHub**.
-3. Authorize the Azzoro Resources CMS app the first time.
+3. Authorize the Azzuro Resources CMS app the first time.
 
 ## Common tasks
 

@@ -6,7 +6,7 @@ type TeamGridProps = {
   section: 'Board' | 'Technical';
   heading: string;
   locale?: 'en' | 'mn';
-  columns?: 4 | 6;
+  columns?: 4 | 5;
 };
 
 export function TeamGrid({ members, section, heading, locale = 'en', columns = 4 }: TeamGridProps) {
@@ -18,9 +18,9 @@ export function TeamGrid({ members, section, heading, locale = 'en', columns = 4
     return null;
   }
 
-  const compact = columns === 6;
+  const compact = columns === 5;
   const gridClass = compact
-    ? 'grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6'
+    ? 'grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5'
     : 'grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4';
 
   return (
