@@ -18,17 +18,17 @@ export function PhoneDropdown({ groups }: { groups: ContactContent['phone_groups
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between py-4 text-left"
             >
-              <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-ink">{group.category}</span>
-              <span aria-hidden className={`text-lg leading-none transition-colors ${isOpen ? 'text-[hsl(var(--copper))]' : 'text-ink/50'}`}>{isOpen ? '−' : '+'}</span>
+              <span className="text-[14px] font-medium uppercase tracking-[0.24em] text-ink">{group.category}</span>
+              <span aria-hidden className={`text-2xl leading-none transition-colors ${isOpen ? 'text-[hsl(var(--copper))]' : 'text-ink/50'}`}>{isOpen ? '−' : '+'}</span>
             </button>
             {isOpen ? (
               <div className="space-y-3 pb-5">
                 {group.numbers.map((number) => (
                   <div key={`${group.category}-${number.label}`} className="flex items-baseline justify-between gap-4">
-                    <span className="text-[14px] text-ink/65">{number.label}</span>
+                    <span className="text-base text-ink/65">{number.label}</span>
                     <a
                       href={`tel:${number.number.replace(/\s+/g, '')}`}
-                      className="num-tabular text-[14px] font-medium text-ink transition-colors hover:text-[hsl(var(--copper))]"
+                      className="num-tabular text-base font-medium text-ink transition-colors hover:text-[hsl(var(--copper))]"
                     >
                       {number.number}
                     </a>

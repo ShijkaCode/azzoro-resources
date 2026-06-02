@@ -552,6 +552,40 @@ collections:
               - { label: LinkedIn, name: linkedin, widget: string, required: false }
               - { label: X, name: x, widget: string, required: false }
           - { label: Default locale, name: default_locale, widget: select, options: [ en, mn ] }
+          - label: Body font (text, labels, nav)
+            name: font_body
+            widget: select
+            default: Roboto
+            hint: "Takes effect after the site redeploys. Fonts marked 'Latin only' won't display Mongolian (Cyrillic) text — it falls back to a system font."
+            options:
+              - { label: Roboto, value: Roboto }
+              - { label: Inter, value: Inter }
+              - { label: Montserrat, value: Montserrat }
+              - { label: Raleway, value: Raleway }
+              - { label: Oswald, value: Oswald }
+              - { label: Lora (serif), value: Lora }
+              - { label: PT Serif (serif), value: PT Serif }
+              - { label: Playfair Display (serif), value: Playfair Display }
+              - { label: Poppins (Latin only — no Mongolian), value: Poppins }
+              - { label: Space Grotesk (Latin only — no Mongolian), value: Space Grotesk }
+              - { label: DM Serif Display (serif, Latin only — no Mongolian), value: DM Serif Display }
+          - label: Heading font (hero, titles)
+            name: font_display
+            widget: select
+            default: Montserrat
+            hint: "Takes effect after the site redeploys. Fonts marked 'Latin only' won't display Mongolian (Cyrillic) text — it falls back to a system font."
+            options:
+              - { label: Roboto, value: Roboto }
+              - { label: Inter, value: Inter }
+              - { label: Montserrat, value: Montserrat }
+              - { label: Raleway, value: Raleway }
+              - { label: Oswald, value: Oswald }
+              - { label: Lora (serif), value: Lora }
+              - { label: PT Serif (serif), value: PT Serif }
+              - { label: Playfair Display (serif), value: Playfair Display }
+              - { label: Poppins (Latin only — no Mongolian), value: Poppins }
+              - { label: Space Grotesk (Latin only — no Mongolian), value: Space Grotesk }
+              - { label: DM Serif Display (serif, Latin only — no Mongolian), value: DM Serif Display }
       - name: nav
         label: Navigation
         file: content/settings/nav.{{locale}}.yml

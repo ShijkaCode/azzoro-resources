@@ -85,7 +85,7 @@ export default async function ContactPage({ params }: { params: { locale: string
       </section>
 
       <section className="bg-paper px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-12 border-t border-rule pt-12 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 border-t border-rule pt-12 sm:grid-cols-2">
           <div>
             <p className="kicker">{labels.byPhone}</p>
             <div className="mt-6">

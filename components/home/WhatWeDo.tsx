@@ -43,7 +43,7 @@ export default function WhatWeDo({
                 <span className="num-display text-3xl font-medium leading-none text-white/40 transition-colors duration-300 group-hover:text-[hsl(var(--copper))] sm:text-4xl">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mt-6 text-[13px] font-medium uppercase tracking-[0.24em] text-white">{card.title}</h3>
+                <h3 className="mt-6 text-[15px] font-medium uppercase tracking-[0.2em] text-white sm:text-base">{card.title}</h3>
                 <p className="mt-4 max-w-[40ch] flex-1 text-[15px] leading-relaxed text-white/70">{card.body}</p>
                 {card.tag ? (
                   <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">{card.tag}</p>

@@ -72,7 +72,7 @@ export default function IntroSection({
                         {String(idx + 1).padStart(2, '0')}
                       </span>
                       <div>
-                        <p className={`text-[12px] font-medium uppercase tracking-[0.24em] transition-colors ${isActive ? 'text-white' : 'text-white/55 group-hover:text-white/85'}`}>
+                        <p className={`text-[15px] font-medium uppercase tracking-[0.2em] transition-colors sm:text-base ${isActive ? 'text-white' : 'text-white/55 group-hover:text-white/85'}`}>
                           {card.title}
                         </p>
                         {isActive ? (

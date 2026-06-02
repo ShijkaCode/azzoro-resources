@@ -9,6 +9,8 @@ export type SiteSettings = {
   investor_portal_url: string;
   social: { linkedin?: string; x?: string };
   default_locale: Locale;
+  font_body?: string;
+  font_display?: string;
 };
 
 export type NavItem = { label: string; href: string; external?: boolean };
