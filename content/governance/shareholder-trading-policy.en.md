@@ -1,7 +1,7 @@
 ---
-title: Shareholder Trading Policy
+title: Securities Trading Policy
 category: Policies
-file: /uploads/ShareholderCommunicationsPolicy.pdf
+file: /uploads/SecuritiesTradingPolicy.pdf
 effective_date: 2026-06-03
 description: ''
 ---
