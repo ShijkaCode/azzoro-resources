@@ -1,34 +1,35 @@
 ---
-title: Yambat Project
+title: Oval Cu·Ni·PGE
 order: 1
 commodity:
   - Copper
   - Nickel
   - PGE
 status: Drilling
-region: Govi-Altai
-lat: 46.32
-lng: 96.4
-license_area_km2: 106.07
-acquired_date: '2023-01-01'
+region: Yesonbulag, Gobi-Altai
+lat: 46
+lng: 96
+license_area_km2: 106
+acquired_date: 2023-01-01
 hero_image: /uploads/gallery/photos/discovery_4k.png
 gallery_images:
   - image: /uploads/projects/oval-magnetics.png
-    caption: Magnetic RTP vertical derivative over the Oval trend — an 880 m mineralised corridor from North Oval to the potential southeast extension.
+    caption: Magnetic RTP vertical derivative over the Oval trend — an 880m mineralised corridor from North Oval to the potential southeast extension.
   - image: /uploads/projects/oval-drill-core.jpg
     caption: Drill core from discovery hole OVD021 — massive and disseminated Cu·Ni·PGE sulphides.
   - image: /uploads/projects/district-magnetics.jpg
     caption: District-scale magnetics across the Yambat licences, placing Oval on the regional massive-sulphide corridor.
-summary: "The Company's flagship Yambat Project hosts the high-grade Oval copper-nickel-PGE discovery, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia."
-tagline: "Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across Yambat."
+summary: AZ9's Yambat tenement hosts the high-grade Oval copper-nickel-PGE discovery project, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia.
+tagline: Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across Yambat.
 is_flagship: true
 is_draft: true
+parent_project: ''
 tenure:
-  licence: XV-020515
+  licence: Yambat XV-020515
   licence_type: Exploration
   area_km2: 106.07
   ownership: 100% owned
-  province: Govi-Altai
+  province: Gobi-Altai
 drill_highlights:
   - hole: OVD021
     intercept: 8.8 m @ 6.08% Cu, 3.19% Ni, 1.63 g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
@@ -46,7 +47,7 @@ documents: []
 
 ## Overview
 
-Yambat is the Company's flagship project and the foundation of the Oval copper-nickel-PGE discovery thesis in Mongolia. The high-grade magmatic massive-sulphide system was uncovered from greenfields ground in 2024 and remains one of the most important recent copper-nickel discoveries made in southwestern Mongolia.
+Oval Cu-Ni-PGE is the Company's flagship project and the foundation of the high-grade magmatic system discovery thesis in Mongolia. The high-grade magmatic massive-sulphide system was uncovered from greenfields ground in 2024 and remains one of the most important recent copper-nickel discoveries made in southwestern Mongolia.
 
 Since the maiden discovery, sustained diamond drilling and downhole geophysics have repeatedly confirmed continuous high-grade copper-nickel sulphide mineralisation, including intercepts that rank among the strongest reported in recent years. Across the project, more than **65 diamond drillholes for over 11,400 metres** have been completed since 2023, spanning Oval, North Oval, Copper Ridge and the wider regional targets.
 
