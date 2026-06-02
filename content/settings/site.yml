@@ -1,5 +1,5 @@
 brand_name: Azzuro Resources PLC
-logo: /uploads/brand/Gradient logo.svg
+logo: /uploads/brand/Azuro Logo Dark Background.svg
 logo_dark: /brand/logo-on-dark.svg
 stock_ticker: AZ9
 stock_api_enabled: true
@@ -9,4 +9,4 @@ social:
   x: https://x.com/asianbatterymet
 default_locale: en
 font_body: Roboto
-font_display: Montserrat
+font_display: Raleway
