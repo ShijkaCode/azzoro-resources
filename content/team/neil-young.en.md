@@ -3,8 +3,8 @@ name: Neil Young
 role: Non-Executive Director
 team_section: Board
 photo: /uploads/Neil Young.jpg
-home_credential: Energy-sector founder with ~30 years experience, including as CEO of Elixir Energy.
-bio: Neil Young is Chief Executive Officer of Elixir Energy Ltd and has more than 20 years' experience in senior management roles across the upstream and downstream energy sector, including with EY, Tarong Energy and Santos. He has developed new ventures in Kazakhstan, Japan, the USA and Mongolia. He holds an M.A. (Hons) joint degree in Economics and Politics from the University of Edinburgh.
+home_credential: Mining executive with 30+ years of resource sector leadership
+bio: Neil has more than 30 years’ experience in senior management positions in the upstream and downstream parts of the energy sector, focusing on leadership, business development, new ventures, and general commercial functions. He has worked for a range of companies in the UK and Australia including Elixir Energy, EY, Tarong Energy and Santos. Mr Young founded Golden Horde Ltd in Mongolia which explored for gas on the Chinese border in Mongolia.
 order: 4
 ---
 
