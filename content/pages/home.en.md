@@ -141,22 +141,10 @@ home_sustainability:
       body: Regular stakeholder meetings, public industry forums and ASX-listed governance practices shape how the Company operates in Mongolia.
       image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
       image_alt: Mining Week 2025 engagement with local stakeholders
-investor_snapshot:
-  eyebrow: Investor snapshot
-  headline: ASX-listed, tightly held and positioned for the next phase.
-  kpis:
-    - value: A$6.0M
-      label: Cash (31 Dec 2025)
-    - value: 820.7M
-      label: Shares on issue (CDIs)
-    - value: 409.6M
-      label: Options
-    - value: 47.7%
-      label: Held by board + top 20
-  footnote: Manually-maintained figures are as at the investor presentation dated 12 February 2026 and are subject to change. Share price and market capitalisation are sourced from the ASX and may be delayed by up to 20 minutes. For current information refer to the ASX platform and asianbatterymetals.com.
+investor_snapshot: null
 leadership_teaser:
   heading: Experienced board. Strong local capability.
-  body: The board, business leaders and technical team combine Mongolian operating depth, capital-markets experience and countrywide geological knowledge, giving AZ9 credibility as it advances its 2026 work program.
+  body: The board, business leaders and technical team combine Mongolian operating depth, capital-markets experience and countrywide geological knowledge, giving AZ9 credibility as it advances its exploration program.
   cta_label: Meet the team
   cta_href: /about
 stock_section_enabled: false
