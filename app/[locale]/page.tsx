@@ -67,8 +67,8 @@ export default async function HomePage({ params }: { params: { locale: string } 
           mirrored={index % 2 === 1}
         />
       ))}
-      <IntroSection locale={locale} content={home.why_mongolia} />
       <WhatWeDo locale={locale} content={home.why_azzoro} />
+      <IntroSection locale={locale} content={home.why_mongolia} />
       <ESGSection locale={locale} teaser={home.sustainability_teaser} sustainability={home.home_sustainability} />
       {home.stock_section_enabled ? (
         <StockPriceCard

@@ -1,4 +1,7 @@
+'use client';
+
 import { MediaImage as Image } from '@/components/shared/MediaImage';
+import { useState } from 'react';
 import type { ContactOffice } from '@/lib/content/types';
 
 export function OfficeCard({ office }: { office: ContactOffice }) {
@@ -7,7 +10,12 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
     office.lat && office.lng && mapKey
       ? `https://api.maptiler.com/maps/dataviz-dark/static/${office.lng},${office.lat},13/600x320@2x.png?key=${mapKey}`
       : null;
-  const media = office.image || mapImageUrl;
+
+  // Show the location map first; fall back to the building photo if there are no
+  // coordinates or the map fails to load.
+  const [mapFailed, setMapFailed] = useState(false);
+  const showMap = Boolean(mapImageUrl) && !mapFailed;
+  const media = showMap ? mapImageUrl : office.image;
 
   return (
     <article className="group relative flex flex-col border border-rule bg-white">
@@ -19,11 +27,12 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
         <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-rule">
           <Image
             src={media}
-            alt={office.image ? office.name : `Map of ${office.name}`}
+            alt={showMap ? `Map of ${office.name}` : office.name}
             fill
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             sizes="(min-width: 1024px) 33vw, 100vw"
-            unoptimized={!office.image}
+            unoptimized={showMap}
+            onError={showMap ? () => setMapFailed(true) : undefined}
           />
         </div>
       ) : (

@@ -1,3 +1,4 @@
+import { MediaImage as Image } from '@/components/shared/MediaImage';
 import { MarkdownBody } from '@/components/shared/MarkdownBody';
 
 type LocationEntry = { location: string; region?: string; items: string[] };
@@ -6,6 +7,7 @@ export function SraLocations({
   eyebrow,
   heading,
   body,
+  image,
   locations,
 }: {
   eyebrow: string;
@@ -16,12 +18,19 @@ export function SraLocations({
 }) {
   return (
     <section className="bg-paper px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
-      <div className="max-w-[60ch]">
-        <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{eyebrow}</p>
-        <h2 className="mt-5 max-w-[18ch] font-display text-3xl font-medium leading-[1.05] tracking-[-0.01em] text-ink sm:text-4xl">
-          {heading}
-        </h2>
-        <MarkdownBody className="mt-6 max-w-[52ch] prose-p:text-ink/75">{body}</MarkdownBody>
+      <div className={image ? 'grid gap-x-16 gap-y-10 lg:grid-cols-2 lg:items-center' : ''}>
+        <div className="max-w-[60ch]">
+          <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{eyebrow}</p>
+          <h2 className="mt-5 max-w-[18ch] font-display text-3xl font-medium leading-[1.05] tracking-[-0.01em] text-ink sm:text-4xl">
+            {heading}
+          </h2>
+          <MarkdownBody className="mt-6 max-w-[52ch] prose-p:text-ink/75">{body}</MarkdownBody>
+        </div>
+        {image ? (
+          <div className="relative aspect-[4/3] overflow-hidden border border-rule">
+            <Image src={image} alt="" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+          </div>
+        ) : null}
       </div>
 
       <ul className="mt-12 border-t border-rule">

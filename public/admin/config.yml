@@ -70,24 +70,6 @@ collections:
               - { label: CTA link, name: cta_href, widget: string, i18n: true }
               - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
             i18n: true
-          - label: Why Mongolia
-            name: why_mongolia
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
-              - { label: Headline, name: headline, widget: string, i18n: true }
-              - { label: Intro, name: intro, widget: text, i18n: true }
-              - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
-              - label: Cards
-                name: cards
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string, i18n: true }
-                  - { label: Body, name: body, widget: text, i18n: true }
-                  - { label: Image, name: image, widget: image, required: false, i18n: true }
-                  - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
-                i18n: true
-            i18n: true
           - label: Why Azzuro
             name: why_azzoro
             widget: object
@@ -105,6 +87,24 @@ collections:
                   - { label: Title, name: title, widget: string, i18n: true }
                   - { label: Body, name: body, widget: text, i18n: true }
                   - { label: Tag, name: tag, widget: string, required: false, i18n: true }
+                i18n: true
+            i18n: true
+          - label: Why Mongolia
+            name: why_mongolia
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
+              - { label: Intro, name: intro, widget: text, i18n: true }
+              - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
                 i18n: true
             i18n: true
           - label: Sustainability teaser
