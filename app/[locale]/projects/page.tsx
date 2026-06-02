@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
-import type { Project } from '@/lib/content/types';
+import { loadSingleton } from '@/lib/content/loadSingleton';
+import type { Project, ProjectsPageContent } from '@/lib/content/types';
 import { ProjectsMapPreview } from '@/components/home/ProjectsMapPreview';
 import { isLocale } from '@/lib/i18n/config';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
@@ -34,22 +35,14 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
 
   setRequestLocale(locale);
 
-  const projects = (await loadCollection<Project>('projects', locale)).sort(
-    (a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
-  );
+  const [page, projects] = await Promise.all([
+    loadSingleton<ProjectsPageContent>('pages/projects', locale),
+    loadCollection<Project>('projects', locale),
+  ]);
 
-  const labels =
-    locale === 'mn'
-      ? {
-          eyebrow: 'Төслүүд',
-          title: 'Монгол даяарх хайгуулын багц',
-          intro: 'Төслийг сонгон газрын зураг дээр байршлыг нь харж, дэлгэрэнгүй техникийн мэдээллийг нь нээнэ үү.',
-        }
-      : {
-          eyebrow: 'Projects',
-          title: 'An exploration portfolio across Mongolia',
-          intro: 'Select a project to locate it on the map, then open its full technical profile.',
-        };
+  projects.sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
+
+  const labels = page;
 
   return (
     <main id="main-content" className="-mt-24">

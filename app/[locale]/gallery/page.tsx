@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 import { MediaImage as Image } from '@/components/shared/MediaImage';
 import Link from 'next/link';
-import { readdirSync } from 'fs';
-import path from 'path';
 import { CaseStudyCard } from '@/components/gallery/CaseStudyCard';
-import { FieldGallery } from '@/components/gallery/FieldGallery';
+import { GalleryPhotosSection } from '@/components/gallery/GalleryPhotosSection';
 import { VideoGrid } from '@/components/gallery/VideoGrid';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { loadSingleton } from '@/lib/content/loadSingleton';
-import type { CaseStudy, GalleryContent, GalleryVideo } from '@/lib/content/types';
+import type { CaseStudy, GalleryContent, GalleryPhoto, GalleryVideo } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
@@ -41,22 +39,18 @@ export default async function GalleryPage({ params }: { params: { locale: string
 
   setRequestLocale(locale);
 
-  const [gallery, videos, cases] = await Promise.all([
+  const [gallery, photos, videos, cases] = await Promise.all([
     loadSingleton<GalleryContent>('pages/gallery', locale),
+    loadCollection<GalleryPhoto>('gallery/photos', locale),
     loadCollection<GalleryVideo>('gallery/videos', locale),
     loadCollection<CaseStudy>('gallery/case-studies', locale),
   ]);
 
-  // Auto-collect every web-renderable image in public/uploads/field (alphabetical).
-  let fieldImages: string[] = [];
-  try {
-    fieldImages = readdirSync(path.join(process.cwd(), 'public/uploads/field'))
-      .filter((name) => /\.(jpe?g|png|webp)$/i.test(name))
-      .sort()
-      .map((name) => `/uploads/field/${encodeURIComponent(name)}`);
-  } catch {
-    fieldImages = [];
-  }
+  // CMS-managed photos: featured first, then newest first.
+  const sortedPhotos = [...photos].sort((a, b) => {
+    if (Boolean(b.featured) !== Boolean(a.featured)) return Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+    return (b.date ?? '').localeCompare(a.date ?? '');
+  });
 
   const t =
     locale === 'mn'
@@ -126,7 +120,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
         </section>
       ) : null}
 
-      <FieldGallery images={fieldImages} heading={t.photos} />
+      <GalleryPhotosSection photos={sortedPhotos} tags={gallery.filter_tags} heading={t.photos} />
 
       <VideoGrid videos={videos} heading={t.videos} />
     </main>

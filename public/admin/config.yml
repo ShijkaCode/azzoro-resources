@@ -13,7 +13,7 @@ display_url: https://azzororesources.com
 
 i18n:
   structure: multiple_files
-  locales: [en, mn]
+  locales: [ en, mn ]
   default_locale: en
 
 collections:
@@ -30,289 +30,330 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: Video ID, name: video_id, widget: string, required: false }
-              - { label: Location label (above headline), name: kicker, widget: string, required: false }
-              - { label: Headline, name: headline, widget: string }
-              - { label: Subline, name: subline, widget: text, required: false }
-              - { label: CTA Label, name: cta_label, widget: string }
-              - { label: CTA Href, name: cta_href, widget: string }
-              - { label: ASX company page URL (hero price tile), name: asx_url, widget: string, required: false }
-              - { label: Latest announcements URL (hero tile), name: announcements_url, widget: string, required: false }
-              - { label: Corporate presentation URL (hero tile), name: presentation_url, widget: string, required: false }
-          - label: Metrics
-            name: metrics
-            widget: list
-            fields:
-              - { label: Value, name: value, widget: string }
-              - { label: Label, name: label, widget: string }
-              - { label: Source, name: source, widget: string, required: false }
-          - label: Why Mongolia
-            name: why_mongolia
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Headline, name: headline, widget: string }
-              - { label: Intro, name: intro, widget: text }
-              - { label: Footnote, name: footnote, widget: text, required: false }
-              - label: Cards
-                name: cards
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Body, name: body, widget: text }
-                  - { label: Image, name: image, widget: image, required: false }
-                  - { label: Image alt text, name: image_alt, widget: string, required: false }
-          - label: Why Azzuro
-            name: why_azzoro
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Headline, name: headline, widget: string }
-              - { label: Banner image, name: image, widget: image, required: false }
-              - { label: Banner image alt text, name: image_alt, widget: string, required: false }
-              - { label: Intro, name: intro, widget: text }
-              - { label: Footnote, name: footnote, widget: text, required: false }
-              - label: Cards
-                name: cards
-                widget: list
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Body, name: body, widget: text }
-                  - { label: Tag, name: tag, widget: string, required: false }
-          - label: Sustainability teaser
-            name: sustainability_teaser
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Body, name: body, widget: text }
-              - { label: Image, name: image, widget: image, required: false }
-              - { label: CTA label, name: cta_label, widget: string }
-              - { label: CTA href, name: cta_href, widget: string }
-          - label: Home sustainability cards
-            name: home_sustainability
-            widget: object
-            required: false
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - label: Cards
-                name: cards
-                widget: list
-                fields:
-                  - { label: Tag, name: tag, widget: string }
-                  - { label: Title, name: title, widget: string }
-                  - { label: Body, name: body, widget: text }
-                  - { label: Image, name: image, widget: image, required: false }
-                  - { label: Image alt text, name: image_alt, widget: string, required: false }
-          - label: Leadership teaser
-            name: leadership_teaser
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Body, name: body, widget: text }
-              - { label: CTA label, name: cta_label, widget: string }
-              - { label: CTA href, name: cta_href, widget: string }
+              - { label: Video ID, name: video_id, widget: string, required: false, i18n: true }
+              - { label: Location label (above headline), name: kicker, widget: string, required: false, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
+              - { label: Subline, name: subline, widget: text, required: false, i18n: true }
+              - { label: CTA Label, name: cta_label, widget: string, i18n: true }
+              - { label: CTA Href, name: cta_href, widget: string, i18n: true }
+              - { label: ASX company page URL (hero price tile), name: asx_url, widget: string, required: false, i18n: true }
+              - { label: Latest announcements URL (hero tile), name: announcements_url, widget: string, required: false, i18n: true }
+              - { label: Corporate presentation URL (hero tile), name: presentation_url, widget: string, required: false, i18n: true }
+            i18n: true
           - label: Featured projects (home highlights)
             name: featured_projects
             widget: list
             required: false
             hint: Project highlights shown near the top of the home page. They alternate left / right automatically. Use 3 thumbnails per project.
             fields:
-              - { label: Eyebrow, name: eyebrow, widget: string, required: false }
-              - { label: Headline, name: headline, widget: string }
-              - { label: Lead paragraph, name: lead, widget: text }
-              - { label: Main image, name: image, widget: image }
-              - { label: Main image alt text, name: image_alt, widget: string, required: false }
+              - { label: Eyebrow, name: eyebrow, widget: string, required: false, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
+              - { label: Lead paragraph, name: lead, widget: text, i18n: true }
+              - { label: Main image, name: image, widget: image, i18n: true }
+              - { label: Main image alt text, name: image_alt, widget: string, required: false, i18n: true }
               - label: Stats
                 name: stats
                 widget: list
                 fields:
-                  - { label: Value, name: value, widget: string }
-                  - { label: Label, name: label, widget: string }
+                  - { label: Value, name: value, widget: string, i18n: true }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                i18n: true
               - label: Thumbnails
                 name: thumbnails
                 widget: list
                 fields:
-                  - { label: Image, name: image, widget: image }
-                  - { label: Caption, name: caption, widget: string, required: false }
-                  - { label: Alt text, name: alt, widget: string, required: false }
-              - { label: CTA label, name: cta_label, widget: string }
-              - { label: CTA link, name: cta_href, widget: string }
-              - { label: Footnote, name: footnote, widget: text, required: false }
+                  - { label: Image, name: image, widget: image, i18n: true }
+                  - { label: Caption, name: caption, widget: string, required: false, i18n: true }
+                  - { label: Alt text, name: alt, widget: string, required: false, i18n: true }
+                i18n: true
+              - { label: CTA label, name: cta_label, widget: string, i18n: true }
+              - { label: CTA link, name: cta_href, widget: string, i18n: true }
+              - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
+            i18n: true
+          - label: Why Mongolia
+            name: why_mongolia
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
+              - { label: Intro, name: intro, widget: text, i18n: true }
+              - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
+                i18n: true
+            i18n: true
+          - label: Why Azzuro
+            name: why_azzoro
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
+              - { label: Banner image, name: image, widget: image, required: false, i18n: true }
+              - { label: Banner image alt text, name: image_alt, widget: string, required: false, i18n: true }
+              - { label: Intro, name: intro, widget: text, i18n: true }
+              - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                  - { label: Tag, name: tag, widget: string, required: false, i18n: true }
+                i18n: true
+            i18n: true
+          - label: Sustainability teaser
+            name: sustainability_teaser
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: true }
+              - { label: CTA label, name: cta_label, widget: string, i18n: true }
+              - { label: CTA href, name: cta_href, widget: string, i18n: true }
+            i18n: true
+          - label: Home sustainability cards
+            name: home_sustainability
+            widget: object
+            required: false
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Tag, name: tag, widget: string, i18n: true }
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
+                i18n: true
+            i18n: true
           - label: Investor snapshot
             name: investor_snapshot
             widget: object
             required: false
             hint: Share price, change and market cap come from the ASX automatically. The figures below are typed in manually and updated after each announcement.
             fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Headline, name: headline, widget: string }
+              - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+              - { label: Headline, name: headline, widget: string, i18n: true }
               - label: Figures (manual)
                 name: kpis
                 widget: list
                 fields:
-                  - { label: Value, name: value, widget: string }
-                  - { label: Label, name: label, widget: string }
-              - { label: Footnote, name: footnote, widget: text }
-          - { label: Show news section, name: news_section_enabled, widget: boolean, default: true, required: false }
-          - { label: Show stock section, name: stock_section_enabled, widget: boolean, default: true, required: false }
+                  - { label: Value, name: value, widget: string, i18n: true }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                i18n: true
+              - { label: Footnote, name: footnote, widget: text, i18n: true }
+            i18n: true
+          - label: Leadership teaser
+            name: leadership_teaser
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+              - { label: CTA label, name: cta_label, widget: string, i18n: true }
+              - { label: CTA href, name: cta_href, widget: string, i18n: true }
+            i18n: true
+          - { label: Show stock section, name: stock_section_enabled, widget: boolean, default: true, required: false, i18n: true }
+          - { label: Show news section, name: news_section_enabled, widget: boolean, default: true, required: false, i18n: true }
+          - label: Metrics (not shown on the page — legacy field)
+            name: metrics
+            widget: list
+            required: false
+            fields:
+              - { label: Value, name: value, widget: string, i18n: true }
+              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Source, name: source, widget: string, required: false, i18n: true }
+            i18n: true
       - name: about
         label: About
         file: content/pages/about.{{locale}}.md
         i18n: true
         fields:
-          - { label: Hero image, name: hero_image, widget: image, required: false }
-          - { label: Story body, name: story_body, widget: text }
-          - { label: Mission, name: mission, widget: text }
+          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: true }
+          - { label: Story body, name: story_body, widget: text, i18n: true }
+          - { label: Mission, name: mission, widget: text, i18n: true }
           - label: Values
             name: values
             widget: list
             fields:
-              - { label: Icon, name: icon, widget: string, required: false }
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
-          - { label: Leadership & governance body, name: leadership_governance_body, widget: text }
-          - { label: Governance documents intro, name: governance_documents_intro, widget: text, required: false }
+              - { label: Icon, name: icon, widget: string, required: false, i18n: true }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+            i18n: true
+          - { label: Leadership & governance body, name: leadership_governance_body, widget: text, i18n: true }
+          - { label: Governance documents intro, name: governance_documents_intro, widget: text, required: false, i18n: true }
+      - name: projects_page
+        label: Projects page (intro)
+        file: content/pages/projects.{{locale}}.md
+        i18n: true
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Intro, name: intro, widget: text, i18n: true }
       - name: esg
         label: ESG
         file: content/pages/esg.{{locale}}.md
         i18n: true
         fields:
-          - { label: Hero image, name: hero_image, widget: image, required: false }
-          - { label: Hero headline, name: hero_headline, widget: string, required: false }
-          - { label: Hero subline, name: hero_subline, widget: text, required: false }
+          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: true }
+          - { label: Hero headline, name: hero_headline, widget: string, required: false, i18n: true }
+          - { label: Hero subline, name: hero_subline, widget: text, required: false, i18n: true }
           - label: Metrics (animated stat strip)
             name: metrics
             widget: list
             required: false
             hint: The big numbers near the top of the page. They count up as the visitor scrolls. Keep 4 for the cleanest layout.
             fields:
-              - { label: Value, name: value, widget: string, hint: "e.g. 90%, 180+, 30, 2,300 — the leading number animates" }
-              - { label: Label, name: label, widget: string }
-              - { label: Detail (small line under the label), name: detail, widget: string, required: false }
-          - { label: Approach body, name: approach_body, widget: text }
+              - { label: Value, name: value, widget: string, hint: "e.g. 90%, 180+, 30, 2,300 — the leading number animates", i18n: true }
+              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Detail (small line under the label), name: detail, widget: string, required: false, i18n: true }
+            i18n: true
+          - { label: Approach body, name: approach_body, widget: text, i18n: true }
           - label: Approach principles
             name: principles
             widget: list
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+            i18n: true
           - label: Commitments (standards we hold ourselves to)
             name: commitments
             widget: list
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+            i18n: true
           - label: Engagement steps (how we engage)
             name: engagement_steps
             widget: list
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+            i18n: true
           - label: Environment
             name: environment
             widget: object
             fields:
-              - { label: Lead body, name: body, widget: text }
-              - { label: Image, name: image, widget: image, required: false }
+              - { label: Lead body, name: body, widget: text, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: true }
               - label: Topics (water, biodiversity, air, …)
                 name: topics
                 widget: list
                 required: false
                 fields:
-                  - { label: Topic, name: topic, widget: string }
-                  - { label: Body, name: body, widget: text }
+                  - { label: Topic, name: topic, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                i18n: true
+            i18n: true
           - label: Stakeholder engagement (intro for SRA + stories)
             name: community
             widget: object
             fields:
-              - { label: Body, name: body, widget: text }
-              - { label: Image, name: image, widget: image, required: false }
+              - { label: Body, name: body, widget: text, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: true }
+            i18n: true
           - label: SRA by location
             name: sra_locations
             widget: list
             required: false
             fields:
-              - { label: Location, name: location, widget: string }
-              - { label: Region (small tag), name: region, widget: string, required: false }
-              - { label: Items, name: items, widget: list }
+              - { label: Location, name: location, widget: string, i18n: true }
+              - { label: Region (small tag), name: region, widget: string, required: false, i18n: true }
+              - { label: Items, name: items, widget: list, i18n: true }
+            i18n: true
           - label: Local investment
             name: investment
             widget: object
             required: false
             fields:
-              - { label: Intro body, name: body, widget: text }
+              - { label: Intro body, name: body, widget: text, i18n: true }
               - label: Categories
                 name: categories
                 widget: list
                 fields:
-                  - { label: Category, name: category, widget: string }
-                  - { label: Title, name: title, widget: string }
-                  - { label: Body, name: body, widget: text }
-                  - { label: Image, name: image, widget: image, required: false }
-          - { label: Community stories intro, name: stories_intro, widget: text, required: false }
+                  - { label: Category, name: category, widget: string, i18n: true }
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Body, name: body, widget: text, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                i18n: true
+            i18n: true
+          - { label: Community stories intro, name: stories_intro, widget: text, required: false, i18n: true }
           - label: Community stories
             name: stories
             widget: list
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Body, name: body, widget: text }
-              - { label: Author, name: author, widget: string }
-              - { label: Role, name: role, widget: string }
-              - { label: Image, name: image, widget: image, required: false }
-          - { label: Reports intro, name: reports_intro, widget: text }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Body, name: body, widget: text, i18n: true }
+              - { label: Author, name: author, widget: string, i18n: true }
+              - { label: Role, name: role, widget: string, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: true }
+            i18n: true
+          - { label: Reports intro, name: reports_intro, widget: text, i18n: true }
           - label: Gallery
             name: gallery
             widget: list
             required: false
             fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Caption, name: caption, widget: string, required: false }
+              - { label: Image, name: image, widget: image, i18n: true }
+              - { label: Caption, name: caption, widget: string, required: false, i18n: true }
+            i18n: true
       - name: gallery
         label: Gallery
         file: content/pages/gallery.{{locale}}.md
         i18n: true
         fields:
-          - { label: Intro heading, name: intro_heading, widget: string }
-          - { label: Intro body, name: intro_body, widget: text }
+          - { label: Intro heading, name: intro_heading, widget: string, i18n: true }
+          - { label: Intro body, name: intro_body, widget: text, i18n: true }
           - label: Filter tags
             name: filter_tags
             widget: list
             fields:
-              - { label: Slug, name: slug, widget: string }
-              - { label: Label, name: label, widget: string }
+              - { label: Slug, name: slug, widget: string, i18n: true }
+              - { label: Label, name: label, widget: string, i18n: true }
+            i18n: true
       - name: contact
         label: Contact
         file: content/pages/contact.{{locale}}.md
         i18n: true
         fields:
-          - { label: Intro body, name: intro_body, widget: text }
+          - { label: Intro body, name: intro_body, widget: text, i18n: true }
           - label: Offices
             name: offices
             widget: list
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Address, name: address, widget: text }
-              - { label: Email, name: email, widget: string, required: false }
-              - { label: Hours, name: hours, widget: string, required: false }
-              - { label: Photo, name: image, widget: image, required: false }
-              - { label: Latitude, name: lat, widget: number, required: false, value_type: float }
-              - { label: Longitude, name: lng, widget: number, required: false, value_type: float }
+              - { label: Name, name: name, widget: string, i18n: true }
+              - { label: Address, name: address, widget: text, i18n: true }
+              - { label: Email, name: email, widget: string, required: false, i18n: true }
+              - { label: Hours, name: hours, widget: string, required: false, i18n: true }
+              - { label: Photo, name: image, widget: image, required: false, i18n: true }
+              - { label: Latitude, name: lat, widget: number, required: false, value_type: float, i18n: true }
+              - { label: Longitude, name: lng, widget: number, required: false, value_type: float, i18n: true }
+            i18n: true
           - label: Phone groups
             name: phone_groups
             widget: list
             fields:
-              - { label: Category, name: category, widget: string }
+              - { label: Category, name: category, widget: string, i18n: true }
               - label: Numbers
                 name: numbers
                 widget: list
                 fields:
-                  - { label: Label, name: label, widget: string }
-                  - { label: Number, name: number, widget: string }
-          - { label: General email, name: general_email, widget: string }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                  - { label: Number, name: number, widget: string, i18n: true }
+                i18n: true
+            i18n: true
+          - { label: General email, name: general_email, widget: string, i18n: true }
   - name: team
     label: Team
     folder: content/team
@@ -320,13 +361,13 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Role, name: role, widget: string }
-      - { label: Team section, name: team_section, widget: select, options: [Board, Technical] }
-      - { label: Photo, name: photo, widget: image, required: false }
-      - { label: Home credential (short line on the home leadership grid), name: home_credential, widget: text, required: false }
-      - { label: Bio, name: bio, widget: text }
-      - { label: Order, name: order, widget: number, value_type: int }
+      - { label: Name, name: name, widget: string, i18n: true }
+      - { label: Role, name: role, widget: string, i18n: true }
+      - { label: Team section, name: team_section, widget: select, options: [ Board, Technical ], i18n: true }
+      - { label: Photo, name: photo, widget: image, required: false, i18n: true }
+      - { label: Home credential (short line on the home leadership grid), name: home_credential, widget: text, required: false, i18n: true }
+      - { label: Bio, name: bio, widget: text, i18n: true }
+      - { label: Order, name: order, widget: number, value_type: int, i18n: true }
   - name: governance
     label: Governance
     folder: content/governance
@@ -334,11 +375,11 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Category, name: category, widget: select, options: [Constitution, Charters, Policies, Reports, Disclosures] }
-      - { label: File, name: file, widget: file }
-      - { label: Effective date, name: effective_date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
-      - { label: Description, name: description, widget: text, required: false }
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Category, name: category, widget: select, options: [ Constitution, Charters, Policies, Reports, Disclosures ], i18n: true }
+      - { label: File, name: file, widget: file, i18n: true }
+      - { label: Effective date, name: effective_date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
+      - { label: Description, name: description, widget: text, required: false, i18n: true }
   - name: projects
     label: Projects
     folder: content/projects
@@ -346,90 +387,99 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Order (lower = higher up the projects list), name: order, widget: number, required: false, value_type: int }
-      - { label: Commodity, name: commodity, widget: list }
-      - { label: Status, name: status, widget: select, options: [Active exploration, Drilling, Resource definition, Paused] }
-      - { label: Region, name: region, widget: string }
-      - { label: Latitude, name: lat, widget: number }
-      - { label: Longitude, name: lng, widget: number }
-      - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int }
-      - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
-      - { label: Hero image, name: hero_image, widget: image }
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Order (lower = higher up the projects list), name: order, widget: number, required: false, value_type: int, i18n: true }
+      - { label: Commodity, name: commodity, widget: list, i18n: true }
+      - { label: Status, name: status, widget: select, options: [ Active exploration, Drilling, Resource definition, Paused ], i18n: true }
+      - { label: Region, name: region, widget: string, i18n: true }
+      - { label: Latitude, name: lat, widget: number, i18n: true }
+      - { label: Longitude, name: lng, widget: number, i18n: true }
+      - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int, i18n: true }
+      - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
+      - { label: Hero image, name: hero_image, widget: image, i18n: true }
       - label: Gallery figures
         name: gallery_images
         widget: list
         required: false
         fields:
-          - { label: Image, name: image, widget: image }
-          - { label: Caption, name: caption, widget: text, required: false }
-      - { label: Summary, name: summary, widget: text }
-      - { label: Tagline, name: tagline, widget: string, required: false }
-      - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false }
-      - { label: Draft (pending Competent Person sign-off), name: is_draft, widget: boolean, required: false, default: false }
-      - { label: Parent project slug, name: parent_project, widget: string, required: false }
+          - { label: Image, name: image, widget: image, i18n: true }
+          - { label: Caption, name: caption, widget: text, required: false, i18n: true }
+        i18n: true
+      - { label: Summary, name: summary, widget: text, i18n: true }
+      - { label: Tagline, name: tagline, widget: string, required: false, i18n: true }
+      - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false, i18n: true }
+      - { label: Draft (pending Competent Person sign-off), name: is_draft, widget: boolean, required: false, default: false, i18n: true }
+      - { label: Parent project slug, name: parent_project, widget: string, required: false, i18n: true }
       - label: Tenure
         name: tenure
         widget: object
         required: false
         fields:
-          - { label: Licence, name: licence, widget: string, required: false }
-          - { label: Licence type, name: licence_type, widget: string, required: false }
-          - { label: Area (km2), name: area_km2, widget: number, required: false, value_type: float }
-          - { label: Ownership, name: ownership, widget: string, required: false }
-          - { label: Province, name: province, widget: string, required: false }
+          - { label: Licence, name: licence, widget: string, required: false, i18n: true }
+          - { label: Licence type, name: licence_type, widget: string, required: false, i18n: true }
+          - { label: Area (km2), name: area_km2, widget: number, required: false, value_type: float, i18n: true }
+          - { label: Ownership, name: ownership, widget: string, required: false, i18n: true }
+          - { label: Province, name: province, widget: string, required: false, i18n: true }
+        i18n: true
       - label: Drill highlights
         name: drill_highlights
         widget: list
         required: false
         fields:
-          - { label: Drillhole, name: hole, widget: string }
-          - { label: Intercept, name: intercept, widget: text }
+          - { label: Drillhole, name: hole, widget: string, i18n: true }
+          - { label: Intercept, name: intercept, widget: text, i18n: true }
+        i18n: true
       - label: Resource table
         name: resource_table
         widget: object
         required: false
         fields:
-          - { label: Note, name: note, widget: string, required: false }
+          - { label: Note, name: note, widget: string, required: false, i18n: true }
           - label: Rows
             name: rows
             widget: list
             fields:
-              - { label: Category, name: category, widget: string }
-              - { label: Tonnes, name: tonnes, widget: string }
-              - { label: Grade, name: grade, widget: string }
-              - { label: Contained, name: contained, widget: string }
+              - { label: Category, name: category, widget: string, i18n: true }
+              - { label: Tonnes, name: tonnes, widget: string, i18n: true }
+              - { label: Grade, name: grade, widget: string, i18n: true }
+              - { label: Contained, name: contained, widget: string, i18n: true }
+            i18n: true
+        i18n: true
       - label: Exploration target
         name: exploration_target
         widget: object
         required: false
         fields:
-          - { label: Label, name: label, widget: string }
-          - { label: Statement, name: statement, widget: text }
-          - { label: Cautionary statement, name: cautionary, widget: text }
+          - { label: Label, name: label, widget: string, i18n: true }
+          - { label: Statement, name: statement, widget: text, i18n: true }
+          - { label: Cautionary statement, name: cautionary, widget: text, i18n: true }
+        i18n: true
       - label: Historical estimate
         name: historical_estimate
         widget: object
         required: false
         fields:
-          - { label: Label, name: label, widget: string }
-          - { label: Statement, name: statement, widget: text }
-          - { label: Cautionary statement, name: cautionary, widget: text }
+          - { label: Label, name: label, widget: string, i18n: true }
+          - { label: Statement, name: statement, widget: text, i18n: true }
+          - { label: Cautionary statement, name: cautionary, widget: text, i18n: true }
+        i18n: true
       - label: Data cards
         name: data_cards
         widget: list
         required: false
         fields:
-          - { label: Label, name: label, widget: string }
-          - { label: Value, name: value, widget: string }
+          - { label: Label, name: label, widget: string, i18n: true }
+          - { label: Value, name: value, widget: string, i18n: true }
+        i18n: true
       - label: Documents
         name: documents
         widget: list
         required: false
         fields:
-          - { label: Label, name: label, widget: string }
-          - { label: File, name: file, widget: file }
-      - { label: Body, name: body, widget: markdown }
+          - { label: Label, name: label, widget: string, i18n: true }
+          - { label: File, name: file, widget: file, i18n: true }
+        i18n: true
+      - { label: Body, name: body, widget: markdown, i18n: true }
   - name: gallery_photos
     label: Gallery Photos
     folder: content/gallery/photos
@@ -437,11 +487,11 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Image, name: image, widget: image }
-      - { label: Caption, name: caption, widget: string, required: false }
-      - { label: Tags, name: tags, widget: list }
-      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
-      - { label: Featured, name: featured, widget: boolean, required: false, default: false }
+      - { label: Image, name: image, widget: image, i18n: true }
+      - { label: Caption, name: caption, widget: string, required: false, i18n: true }
+      - { label: Tags, name: tags, widget: list, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
+      - { label: Featured, name: featured, widget: boolean, required: false, default: false, i18n: true }
   - name: gallery_videos
     label: Gallery Videos
     folder: content/gallery/videos
@@ -449,12 +499,12 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: text, required: false }
-      - { label: Stream UID, name: stream_uid, widget: string }
-      - { label: Thumbnail, name: thumbnail, widget: image, required: false }
-      - { label: Tags, name: tags, widget: list }
-      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Description, name: description, widget: text, required: false, i18n: true }
+      - { label: Stream UID, name: stream_uid, widget: string, i18n: true }
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false, i18n: true }
+      - { label: Tags, name: tags, widget: list, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
   - name: case_studies
     label: Case Studies
     folder: content/gallery/case-studies
@@ -462,14 +512,14 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Draft (hide from website until ready), name: draft, widget: boolean, required: false, default: false }
-      - { label: Summary, name: summary, widget: text }
-      - { label: Hero image, name: hero_image, widget: image }
-      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD' }
-      - { label: Pull quote, name: pull_quote, widget: text, required: false }
-      - { label: Related slugs, name: related, widget: list, required: false }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Draft (hide from website until ready), name: draft, widget: boolean, required: false, default: false, i18n: true }
+      - { label: Summary, name: summary, widget: text, i18n: true }
+      - { label: Hero image, name: hero_image, widget: image, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
+      - { label: Pull quote, name: pull_quote, widget: text, required: false, i18n: true }
+      - { label: Related slugs, name: related, widget: list, required: false, i18n: true }
+      - { label: Body, name: body, widget: markdown, i18n: true }
   - name: partners
     label: Partners
     folder: content/partners
@@ -501,7 +551,7 @@ collections:
             fields:
               - { label: LinkedIn, name: linkedin, widget: string, required: false }
               - { label: X, name: x, widget: string, required: false }
-          - { label: Default locale, name: default_locale, widget: select, options: [en, mn] }
+          - { label: Default locale, name: default_locale, widget: select, options: [ en, mn ] }
       - name: nav
         label: Navigation
         file: content/settings/nav.{{locale}}.yml
@@ -511,39 +561,44 @@ collections:
             name: items
             widget: list
             fields:
-              - { label: Label, name: label, widget: string }
-              - { label: Href, name: href, widget: string }
-              - { label: External, name: external, widget: boolean, required: false }
+              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Href, name: href, widget: string, i18n: true }
+              - { label: External, name: external, widget: boolean, required: false, i18n: true }
+            i18n: true
           - label: Investor dropdown links
             name: investor_links
             widget: list
             required: false
             fields:
-              - { label: Label, name: label, widget: string }
-              - { label: Href, name: href, widget: string }
+              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Href, name: href, widget: string, i18n: true }
+            i18n: true
       - name: footer
         label: Footer
         file: content/settings/footer.{{locale}}.yml
         i18n: true
         fields:
-          - { label: Tagline, name: tagline, widget: text }
+          - { label: Tagline, name: tagline, widget: text, i18n: true }
           - label: Link columns
             name: link_columns
             widget: list
             fields:
-              - { label: Heading, name: heading, widget: string }
+              - { label: Heading, name: heading, widget: string, i18n: true }
               - label: Links
                 name: links
                 widget: list
                 fields:
-                  - { label: Label, name: label, widget: string }
-                  - { label: Href, name: href, widget: string }
-                  - { label: External, name: external, widget: boolean, required: false }
-          - { label: Copyright holder, name: copyright_holder, widget: string }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                  - { label: Href, name: href, widget: string, i18n: true }
+                  - { label: External, name: external, widget: boolean, required: false, i18n: true }
+                i18n: true
+            i18n: true
+          - { label: Copyright holder, name: copyright_holder, widget: string, i18n: true }
           - label: Legal links
             name: legal_links
             widget: list
             fields:
-              - { label: Label, name: label, widget: string }
-              - { label: Href, name: href, widget: string }
-              - { label: External, name: external, widget: boolean, required: false }
+              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Href, name: href, widget: string, i18n: true }
+              - { label: External, name: external, widget: boolean, required: false, i18n: true }
+            i18n: true

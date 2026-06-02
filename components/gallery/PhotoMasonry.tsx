@@ -7,7 +7,9 @@ import 'yet-another-react-lightbox/styles.css';
 import type { GalleryPhoto } from '@/lib/content/types';
 
 export function PhotoMasonry({ photos, activeTag }: { photos: GalleryPhoto[]; activeTag?: string | null }) {
-  const filtered = activeTag ? photos.filter((photo) => photo.tags.includes(activeTag)) : photos;
+  const filtered = activeTag
+    ? photos.filter((photo) => photo.tags?.some((tag) => tag.toLowerCase() === activeTag.toLowerCase()))
+    : photos;
   const [index, setIndex] = useState<number | null>(null);
 
   return (

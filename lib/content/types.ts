@@ -122,6 +122,12 @@ export type GalleryContent = {
   filter_tags: { slug: string; label: string }[];
 };
 
+export type ProjectsPageContent = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+};
+
 export type ContactOffice = {
   name: string;
   address: string;

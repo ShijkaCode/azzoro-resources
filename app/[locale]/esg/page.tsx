@@ -8,6 +8,7 @@ import { EnvironmentStewardship } from '@/components/esg/EnvironmentStewardship'
 import { SraLocations } from '@/components/esg/SraLocations';
 import { LocalInvestment } from '@/components/esg/LocalInvestment';
 import { CommunityStories } from '@/components/esg/CommunityStories';
+import { EsgGallery } from '@/components/esg/EsgGallery';
 import type { EsgContent } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
@@ -145,6 +146,8 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         intro={esg.stories_intro ?? ''}
         stories={esg.stories ?? []}
       />
+
+      <EsgGallery items={esg.gallery ?? []} heading={labels.gallery} />
 
       <section className="bg-primary text-white px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
         <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-white/55">{labels.reports}</p>

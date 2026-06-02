@@ -15,7 +15,7 @@ export function TeamMemberCard({
   compact?: boolean;
 }) {
   const [open, setOpen] = useState(false);
-  const bio = (member.markdown?.trim() || member.bio || '').trim();
+  const bio = (member.bio?.trim() || member.markdown?.trim() || '').trim();
   const readLabel = locale === 'mn' ? 'Намтар унших' : 'Read bio';
   const closeLabel = locale === 'mn' ? 'Хаах' : 'Close';
 
