@@ -1,21 +1,13 @@
 'use client';
 
 import { MediaImage as Image } from '@/components/shared/MediaImage';
-import { useState } from 'react';
+import { OfficeMap } from '@/components/contact/OfficeMap';
 import type { ContactOffice } from '@/lib/content/types';
 
 export function OfficeCard({ office }: { office: ContactOffice }) {
-  const mapKey = process.env.NEXT_PUBLIC_MAPTILER_KEY;
-  const mapImageUrl =
-    office.lat && office.lng && mapKey
-      ? `https://api.maptiler.com/maps/dataviz-dark/static/${office.lng},${office.lat},13/600x320@2x.png?key=${mapKey}`
-      : null;
-
-  // Show the location map first; fall back to the building photo if there are no
-  // coordinates or the map fails to load.
-  const [mapFailed, setMapFailed] = useState(false);
-  const showMap = Boolean(mapImageUrl) && !mapFailed;
-  const media = showMap ? mapImageUrl : office.image;
+  // Show the location map first; fall back to the building photo when the
+  // office has no coordinates.
+  const hasCoords = typeof office.lat === 'number' && typeof office.lng === 'number';
 
   return (
     <article className="group relative flex flex-col border border-rule bg-white">
@@ -23,16 +15,18 @@ export function OfficeCard({ office }: { office: ContactOffice }) {
         aria-hidden="true"
         className="absolute left-0 right-0 top-0 z-10 h-0.5 origin-left scale-x-0 bg-[hsl(var(--copper))] transition-transform duration-300 ease-out group-hover:scale-x-100"
       />
-      {media ? (
+      {hasCoords ? (
+        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-rule bg-paper">
+          <OfficeMap lng={office.lng as number} lat={office.lat as number} label={office.name} />
+        </div>
+      ) : office.image ? (
         <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-rule">
           <Image
-            src={media}
-            alt={showMap ? `Map of ${office.name}` : office.name}
+            src={office.image}
+            alt={office.name}
             fill
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             sizes="(min-width: 1024px) 33vw, 100vw"
-            unoptimized={showMap}
-            onError={showMap ? () => setMapFailed(true) : undefined}
           />
         </div>
       ) : (
