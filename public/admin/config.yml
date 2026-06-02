@@ -408,6 +408,7 @@ collections:
       - { label: Summary, name: summary, widget: text, i18n: true }
       - { label: Tagline, name: tagline, widget: string, required: false, i18n: true }
       - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false, i18n: true }
+      - { label: Group under "Other projects" (hidden from the main list), name: group_as_other, widget: boolean, required: false, default: false, i18n: true }
       - { label: Draft (pending Competent Person sign-off), name: is_draft, widget: boolean, required: false, default: false, i18n: true }
       - { label: Parent project slug, name: parent_project, widget: string, required: false, i18n: true }
       - label: Tenure

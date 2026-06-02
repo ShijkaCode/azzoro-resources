@@ -70,13 +70,18 @@ function popupHTML(project: Project): string {
 
 export function ProjectsMapPreview({
   projects,
+  mainProjects,
+  extraListItem,
   showHeading = true,
   showViewAll = true,
 }: {
   projects: Project[];
+  mainProjects?: Project[];
+  extraListItem?: { title: string; meta?: string; href: string };
   showHeading?: boolean;
   showViewAll?: boolean;
 }) {
+  const listProjects = mainProjects ?? projects;
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapType | null>(null);
   const wrapsRef = useRef<Map<string, HTMLElement>>(new Map());
@@ -288,7 +293,7 @@ export function ProjectsMapPreview({
           ) : null}
 
           <ul className={`${showHeading ? 'mt-12' : ''} border-b border-rule`}>
-            {projects.map((project, idx) => {
+            {listProjects.map((project, idx) => {
               const isActive = project.slug === activeSlug;
               return (
                 <li key={project.slug}>
@@ -325,6 +330,33 @@ export function ProjectsMapPreview({
                 </li>
               );
             })}
+            {extraListItem ? (
+              <li>
+                <Link
+                  href={extraListItem.href}
+                  onMouseEnter={resetOverview}
+                  onFocus={resetOverview}
+                  className="group relative grid grid-cols-[3rem_1fr_auto] items-baseline gap-x-4 border-t border-rule py-6 transition-colors hover:bg-ink/[0.025] sm:grid-cols-[4rem_1fr_auto] sm:gap-x-8 sm:py-7"
+                >
+                  <span className="num-display text-xl font-medium leading-none text-muted-ink transition-colors group-hover:text-[hsl(var(--copper))] sm:text-2xl">
+                    {String(listProjects.length + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <p className="font-display text-2xl font-medium leading-tight text-ink/75 transition-colors group-hover:text-[hsl(var(--copper))] sm:text-[1.75rem]">
+                      {extraListItem.title}
+                    </p>
+                    {extraListItem.meta ? (
+                      <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">
+                        {extraListItem.meta}
+                      </p>
+                    ) : null}
+                  </div>
+                  <span aria-hidden="true" className="text-base text-ink/35 transition-all group-hover:translate-x-1 group-hover:text-[hsl(var(--copper))]">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ) : null}
           </ul>
 
           {showViewAll ? (

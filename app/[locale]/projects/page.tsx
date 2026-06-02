@@ -6,6 +6,7 @@ import { loadSingleton } from '@/lib/content/loadSingleton';
 import type { Project, ProjectsPageContent } from '@/lib/content/types';
 import { ProjectsMapPreview } from '@/components/home/ProjectsMapPreview';
 import { isLocale } from '@/lib/i18n/config';
+import { localizeHref } from '@/lib/i18n/pathname';
 import { buildPageMetadata } from '@/lib/seo/pageMetadata';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -42,6 +43,18 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
 
   projects.sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 
+  const mainProjects = projects.filter((project) => !project.group_as_other);
+  const otherProjects = projects.filter((project) => project.group_as_other);
+
+  const otherListItem =
+    otherProjects.length > 0
+      ? {
+          title: locale === 'mn' ? 'Бусад төслүүд' : 'Other projects',
+          meta: otherProjects.map((project) => project.title).join(' · '),
+          href: localizeHref(locale, '/projects/other'),
+        }
+      : undefined;
+
   const labels = page;
 
   return (
@@ -56,7 +69,13 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
         </div>
       </section>
 
-      <ProjectsMapPreview projects={projects} showHeading={false} showViewAll={false} />
+      <ProjectsMapPreview
+        projects={projects}
+        mainProjects={mainProjects}
+        extraListItem={otherListItem}
+        showHeading={false}
+        showViewAll={false}
+      />
     </main>
   );
 }

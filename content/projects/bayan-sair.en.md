@@ -19,6 +19,7 @@ gallery_images:
 summary: "A newly secured regional tenement south of Yambat, testing whether the MS1 and Oval intrusive corridor extends onto a larger copper-nickel search space."
 tagline: "Regional ground south of Yambat aimed at extending the Company's district-scale copper-nickel model."
 is_draft: true
+group_as_other: true
 tenure:
   licence: XV-023028
   licence_type: Exploration

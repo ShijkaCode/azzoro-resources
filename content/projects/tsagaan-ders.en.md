@@ -16,6 +16,7 @@ gallery_images:
 summary: "An early-stage lithium project in Dundgovi where pegmatites and greisen-altered granite define a 5 km mineralised corridor and maiden drilling has confirmed lithium at depth."
 tagline: "A 5 km pegmatite- and greisen-hosted lithium system with depth confirmation from first-pass drilling."
 is_draft: true
+group_as_other: true
 tenure:
   licence: XV-019341 & XV-021740
   licence_type: Exploration

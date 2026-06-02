@@ -16,6 +16,7 @@ gallery_images:
 summary: "A graphite project anchored by a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and clear room to grow."
 tagline: "Defined graphite resource with room to expand and encouraging early metallurgy."
 is_draft: true
+group_as_other: true
 tenure:
   licence: XV-019603
   licence_type: Exploration

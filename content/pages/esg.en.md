@@ -6,15 +6,15 @@ metrics:
   - value: 90%
     label: Responsible Mining Codex
     detail: Self-assessed against MNMA's ESG standard
-  - value: 180+
+  - value: 330+
     label: Herder households supported
-    detail: Hay and fodder distributed, 2024
+    detail: Hay and fodder distributed, 2025
   - value: 30
     label: Day rehabilitation
     detail: Every drill hole capped, backfilled and restored
-  - value: '2,300'
+  - value: '5,000'
     label: Trees planted
-    detail: Elm saplings donated to Khuld soum
+    detail: Various tree saplings donated to Khuld soum
 approach_body: |-
   We believe responsible exploration starts before a drill rig arrives. Our philosophy is grounded in genuine partnership with herder communities, free prior informed consent, and long-term relationships.
 
@@ -52,15 +52,15 @@ environment:
   image: /uploads/esg/Well%20monitoring%20at%20Anjiin%20bulag.jpg
   topics:
     - topic: Water consumption
-      body: Drilling at Yambat uses a closed-loop water circulation system — water drawn for drilling is recycled on-site rather than discharged. No activity occurs within legally required buffers of springs, wells or waterways.
+      body: Drilling at Yambat uses a closed-loop water circulation system — water drawn for drilling is recycled on-site rather than discharged. No exploration activity occurs within the protection zones set by relevant Mongolian laws and regulations.
     - topic: Water quality
-      body: Water samples are taken from the river, springs and wells in the Yambat area and processed at certified laboratories.
+      body: Water samples are taken from rivers, springs and wells in the Maikhan Uul and Yambat areas and processed at certified laboratories.
     - topic: Biodiversity
-      body: 10 vascular plant species across 7 families recorded at Yambat, with none on Mongolia's protected list. Wolves, gazelle, lynx, fox, saiga and argali are documented and avoided in drilling-path planning.
+      body: 10 vascular plant species across 7 families recorded at Yambat, with none on Mongolia's protected list. Wolves, gazelle, lynx, fox, saiga (бөхөн) and argali are documented and avoided in drilling-path planning.
     - topic: Air quality
-      body: The Yambat site sits 25 km from the nearest settlement with no industrial emission sources nearby. PM2.5 and PM10 are monitored, dust suppression is applied on field roads in the dry season, and vehicle speed limits are enforced near herder camps.
+      body: The Yambat and Maikhan Uul sites sit far from settlements with no industrial emission sources nearby. PM2.5 and PM10 are monitored, dust suppression is applied on field roads in the dry season, and field crews are briefed on vehicle speed limits — especially near herder camps.
     - topic: Site rehabilitation
-      body: Every drill hole is capped, backfilled and the surface returned to its original condition within 30 days of drilling completion. Community members are invited to inspect and sign off the Annual Environmental Reports.
+      body: Every drill hole is sealed immediately on drilling completion, then backfilled and the surface returned to its original condition. Management reports are verified by the local community.
     - topic: Environmental Management Plan
       body: Formal EMPs are approved annually by local governors for all sites, covering water, waste, hazardous materials, biodiversity impacts and rehabilitation — reviewed and approved each year.
 community:
@@ -99,25 +99,25 @@ sra_locations:
     items:
       - 208 families, Rashaant bagh
       - 128 families, Ulaantugh bagh
-      - 9 families, Dalanbagh — hay and fodder distributed ahead of extreme winter
+      - 9 families, Dalanbagh — hay and fodder distributed
 investment:
   body: The Company has invested in and supported community development across Dundgovi aimag since 2019 and Govi-Altai aimag since 2022 — covering education, health and livelihoods. Our social responsibility spending is directed by what communities tell us they need, not what we assume.
   categories:
     - category: Education & children
       title: Playgrounds and school incentives
-      body: Playground built in Yesunbulag soum (finalised spring 2026). Teacher and student incentive funding in Yesunbulag and Taishir. Children's Milk Program — 1,000 L supplied to Taishir students in 2025.
+      body: A playground was built in Yesunbulag soum (completed spring 2026). The Company supported teacher and student incentives in Yesunbulag and Taishir, and delivered 1,000 L of milk under Taishir soum's children's milk program.
       image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
     - category: Herder livelihoods
-      title: Emergency fodder and hay support
-      body: 720 bales of hay and 360 bags of fodder distributed to 180 herder households in 2024. Emergency relief reached 345 families across three baghs in December 2025 following dzud conditions.
+      title: Hay and fodder support
+      body: During difficult winter conditions the Company delivered hay and fodder to 180 herder households in 2024 and to 345 households in 2025.
       image: /uploads/esg/IMG_4625.jpeg
     - category: Health
       title: Early-detection screenings
-      body: Funded early-detection medical screenings for senior herders in Rashaant bagh in 2025, bringing specialist services to remote communities that rarely access urban healthcare.
+      body: In 2025 we supported early-detection medical screenings for the senior herders of Rashaant bagh, who live far from regular health services.
       image: /uploads/esg/Picture1.jpg
     - category: Environment
       title: Greening the soum centre
-      body: After donating 2,300 elm saplings, we are now providing 445 ornamental tree saplings and 10 solar-powered streetlights for the landscaping of Khuld soum's festival grounds under a formal agreement.
+      body: We handed over 445 ornamental tree saplings for the landscaping of Khuld soum's festival grounds, 4,600 elm saplings for the soum centre landscaping, and 10 solar-powered streetlights under a formal agreement, and joined the tree-planting works on site.
       image: /uploads/esg/IMG_9542.JPG
 stories_intro: Behind every Social Responsibility Agreement and every data point is a family, a bagh, a way of life. These stories are gathered by our employees during field visits across Govi-Altai and Dundgovi — because sustainability is not a report, it is a dynamic relationship.
 stories:
@@ -132,7 +132,7 @@ stories:
     role: Business Development Manager
     image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
   - title: Local stakeholders at the table — Mining Week 2025
-    body: For the first time, we brought local government representatives — soum and bagh governors, environmental officers — to Mongolia's national Mining Week. They joined roundtable discussions on sustainable development and SRA policy.
+    body: For the first time, we brought local government representatives — soum and bagh governors, environmental officers — to Mongolia's national Mining Week. They joined roundtable discussions on sustainable development and SRA policy. We also organised a Geology and Mining station tour for Rashaant bagh residents to share foundational knowledge about exploration.
     author: Bilguun B.
     role: Environment & Community Specialist
     image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg

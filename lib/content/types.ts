@@ -191,6 +191,7 @@ export type Project = {
   tagline?: string;
   is_flagship?: boolean;
   is_draft?: boolean;
+  group_as_other?: boolean;
   parent_project?: string;
   tenure?: {
     licence?: string;
