@@ -1,6 +1,6 @@
 ---
 name: Kirsten Livermore
-role: Гүйцэтгэх бус захирал
+role: ТУЗ гишүүн
 team_section: Board
 photo: /uploads/team/technical_team/kirstenok-300x300.jpg
 home_credential: Парламентын болон уул уурхайн бодлогын туршлагатай засаглалын мэргэжилтэн.
