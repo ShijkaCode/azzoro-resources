@@ -52,7 +52,7 @@ featured_projects:
       - value: '2045'
         label: Granted licence tenure
     thumbnails:
-      - image: /uploads/Azurite.jpg
+      - image: /uploads/Azurite-crop.jpg
         caption: Oxidised rhyolite with azurite, drillhole MU2602
         alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602
       - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
