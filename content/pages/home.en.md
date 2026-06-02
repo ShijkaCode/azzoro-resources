@@ -112,7 +112,7 @@ why_azzoro:
       image: /uploads/3. Drone view-crop.jpg
       image_alt: ''
     - title: Experienced Board & Technical Team with Deep In-Country Expertise
-      body: Led by a board averaging 25+ years in mining — with direct Mongolia-specific experience including former roles at Oyu Tolgoi and ASX-listed Mongolian operators — and supported by a strong local technical team with deep geological and operational knowledge on the ground. Board and major shareholders hold a significant stake in the Company, demonstrating strong alignment with investor interests.
+      body: Led by a board averaging 25+ years in mining — with direct Mongolia-specific experience including former roles at Oyu Tolgoi and ASX-listed Mongolian operators — and supported by a strong local technical team with deep geological and operational knowledge on the ground.
       image: /uploads/_CP11368-crop.jpg
       image_alt: ''
   image: /uploads/20251101_181523.jpg
