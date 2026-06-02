@@ -46,7 +46,7 @@ featured_projects:
       - value: 2.23% Cu
         label: 14.5m intercept · MU2501
       - value: 6.54 g/t Au
-        label: Shallow gold · 5.2 m
+        label: Shallow gold · 5.2m
       - value: 8 km
         label: From the Oval discovery
       - value: '2045'
