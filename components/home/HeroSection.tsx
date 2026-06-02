@@ -21,7 +21,7 @@ const COPY: Record<Locale, { livePrice: string; marketCap: string; announcements
   en: {
     livePrice: 'Share price',
     marketCap: 'Market capitalisation',
-    announcementsEyebrow: 'ASX Announcements',
+    announcementsEyebrow: 'Announcements',
     investors: 'Investors',
     latestAnnouncements: 'Latest announcements',
     corporatePresentation: 'Corporate Presentation',
@@ -30,7 +30,7 @@ const COPY: Record<Locale, { livePrice: string; marketCap: string; announcements
     // TODO — client to verify Mongolian copy
     livePrice: 'Бодит үнэ',
     marketCap: 'Зах зээлийн үнэлгээ',
-    announcementsEyebrow: 'ASX Announcements',
+    announcementsEyebrow: 'Мэдэгдлүүд',
     investors: 'Хөрөнгө оруулагч',
     latestAnnouncements: 'Сүүлийн мэдэгдлүүд',
     corporatePresentation: 'Компанийн танилцуулга',

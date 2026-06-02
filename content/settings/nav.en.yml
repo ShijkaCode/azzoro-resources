@@ -15,9 +15,11 @@ items:
 investor_links:
   - label: Investor Centre
     href: https://investors.asianbatterymetals.com/
+  - label: Investor communication
+    href: /investor-communication
   - label: Stock Information
     href: https://investors.asianbatterymetals.com/
-  - label: ASX Announcements
+  - label: Announcements
     href: https://investors.asianbatterymetals.com/announcements
   - label: Presentations
     href: https://investors.asianbatterymetals.com/announcements?filter=Presentation

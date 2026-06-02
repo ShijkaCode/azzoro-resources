@@ -149,6 +149,41 @@ export type ContactContent = {
   general_email: string;
 };
 
+export type InvestorRegistryPhoneNumber = { label?: string; number: string };
+export type InvestorRegistryPhoneBlock = { label?: string; numbers: InvestorRegistryPhoneNumber[] };
+export type InvestorRegistry = {
+  name: string;
+  section_label?: string;
+  address?: string;
+  email?: string;
+  website_url?: string;
+  website_label?: string;
+  phones?: InvestorRegistryPhoneBlock[];
+};
+export type InvestorContact = {
+  name: string;
+  role: string;
+  phone?: string;
+  email?: string;
+};
+
+export type InvestorCommunicationContent = {
+  eyebrow: string;
+  headline: string;
+  intro?: string;
+  listing_heading: string;
+  listing_statements: string[];
+  registries_heading: string;
+  registries_intro: string;
+  registries: InvestorRegistry[];
+  receiving_heading: string;
+  receiving_body: string;
+  rights_heading: string;
+  rights_body: string;
+  contacts_heading: string;
+  contacts: InvestorContact[];
+};
+
 export type TeamMember = {
   slug: string;
   name: string;

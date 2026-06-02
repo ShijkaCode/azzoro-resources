@@ -15,9 +15,11 @@ items:
 investor_links:
   - label: Хөрөнгө оруулагчийн төв
     href: https://investors.asianbatterymetals.com/
+  - label: Хөрөнгө оруулагчийн харилцаа
+    href: /investor-communication
   - label: Хувьцааны мэдээлэл
     href: https://investors.asianbatterymetals.com/
-  - label: ASX мэдэгдлүүд
+  - label: Мэдэгдлүүд
     href: https://investors.asianbatterymetals.com/announcements
   - label: Танилцуулга
     href: https://investors.asianbatterymetals.com/announcements?filter=Presentation

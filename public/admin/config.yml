@@ -354,6 +354,57 @@ collections:
                 i18n: true
             i18n: true
           - { label: General email, name: general_email, widget: string, i18n: true }
+      - name: investor_communication
+        label: Investor Communication
+        file: content/pages/investor-communication.{{locale}}.md
+        i18n: true
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Intro body, name: intro, widget: text, required: false, i18n: true }
+          - { label: Listing heading, name: listing_heading, widget: string, i18n: true }
+          - { label: Listing statements (one paragraph each), name: listing_statements, widget: list, i18n: true }
+          - { label: Registries section heading, name: registries_heading, widget: string, i18n: true }
+          - { label: Registries intro (markdown), name: registries_intro, widget: markdown, i18n: true }
+          - label: Registries
+            name: registries
+            widget: list
+            i18n: true
+            fields:
+              - { label: Registry name, name: name, widget: string, i18n: true }
+              - { label: Section label (e.g. "ASX", "UK"), name: section_label, widget: string, required: false, i18n: true }
+              - { label: Address (multi-line), name: address, widget: text, required: false, i18n: true }
+              - { label: Email, name: email, widget: string, required: false, i18n: true }
+              - { label: Website URL, name: website_url, widget: string, required: false, i18n: true }
+              - { label: Website label, name: website_label, widget: string, required: false, i18n: true }
+              - label: Phone blocks
+                name: phones
+                widget: list
+                required: false
+                fields:
+                  - { label: Group label (optional, e.g. "Telephone enquiries"), name: label, widget: string, required: false, i18n: true }
+                  - label: Numbers
+                    name: numbers
+                    widget: list
+                    fields:
+                      - { label: Region / note, name: label, widget: string, required: false, i18n: true }
+                      - { label: Number, name: number, widget: string, i18n: true }
+                    i18n: true
+                i18n: true
+          - { label: Receiving documents heading, name: receiving_heading, widget: string, i18n: true }
+          - { label: Receiving documents body (markdown), name: receiving_body, widget: markdown, i18n: true }
+          - { label: Shareholders' rights heading, name: rights_heading, widget: string, i18n: true }
+          - { label: Shareholders' rights body (markdown), name: rights_body, widget: markdown, i18n: true }
+          - { label: Contacts heading, name: contacts_heading, widget: string, i18n: true }
+          - label: Contacts
+            name: contacts
+            widget: list
+            i18n: true
+            fields:
+              - { label: Name, name: name, widget: string, i18n: true }
+              - { label: Role, name: role, widget: string, i18n: true }
+              - { label: Phone, name: phone, widget: string, required: false, i18n: true }
+              - { label: Email, name: email, widget: string, required: false, i18n: true }
   - name: team
     label: Team
     folder: content/team

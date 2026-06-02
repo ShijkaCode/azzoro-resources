@@ -76,7 +76,10 @@ export default function Navbar({
 
   const dropdownFor = (item: NavItem): { key: string; links: { label: string; href: string; external: boolean }[] } | null => {
     if (isInvestorItem(item)) {
-      return { key: 'investor', links: investorLinkItems.map((l) => ({ ...l, external: true })) };
+      return {
+        key: 'investor',
+        links: investorLinkItems.map((l) => ({ ...l, external: /^https?:/.test(l.href) })),
+      };
     }
     return null;
   };
@@ -128,7 +131,7 @@ export default function Navbar({
                         ) : (
                           <Link
                             key={link.href + link.label}
-                            href={link.href}
+                            href={localizeHref(locale, link.href)}
                             className="block px-5 py-2.5 text-[14px] text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white"
                           >
                             {link.label}
@@ -219,7 +222,7 @@ export default function Navbar({
                           ) : (
                             <Link
                               key={link.href + link.label}
-                              href={link.href}
+                              href={localizeHref(locale, link.href)}
                               className="py-2 text-[14px] text-white/70"
                               onClick={() => setIsOpen(false)}
                             >
