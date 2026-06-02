@@ -103,9 +103,18 @@ why_azzoro:
       image: /uploads/dji_fly_20240807_211228_166_1726578147600_photo.jpg
       image_alt: ''
       tag: Local execution
-    - title: Early validation
-      body: Technical endorsement and non-dilutive funding through the BHP Xplor program.
-      tag: BHP Xplor · 2023
+    - title: Growing Multi-Asset Project Pipeline
+      body: Beyond Oval, AZ9 holds the Red Hill Cu-Au VMS project (acquired 2026) with massive sulphide continuity confirmed over 155m, plus Copper Ridge Cu-Au — forming a compelling cluster of base and precious metal assets in one district
+      image: /uploads/field/0-02-06-a335164536a791b69db2059b127aa5564f25fb28fcedf07595b4d87829195f05_269b84d7634c4796.jpg
+      image_alt: ''
+    - title: Prime Location & Infrastructure Access
+      body: Projects sit 30km from Altai City with direct access to paved roads, power grid, airport, and limestone supply — significantly reducing development risk and capex requirements
+      image: /uploads/drill 1.jpg
+      image_alt: ''
+    - title: Experienced Board & Technical Team with Deep In-Country Expertise
+      body: Led by a board averaging 25+ years in mining — with direct Mongolia-specific experience including former roles at Oyu Tolgoi and ASX-listed Mongolian operators — and supported by a strong local technical team with deep geological and operational knowledge on the ground. Board and major shareholders hold a significant stake in the Company, demonstrating strong alignment with investor interests.
+      image: /uploads/_CP11385.jpg
+      image_alt: ''
   image: /uploads/20251101_181523.jpg
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
 sustainability_teaser:
