@@ -1,9 +1,9 @@
 ---
 name: Ган-Очир Зүндүйсүрэн
 role: Гүйцэтгэх захирал
-home_credential: Салбартаа 22+ жил, Aspire Mining болон Оюу Толгой ХХК-д удирдах албан тушаал хашсан.
 team_section: Board
 photo: /uploads/team/technical_team/Ganochir-Photo-v03-scaled-e1683614731135.webp
+home_credential: Салбартаа 22+ жил, Aspire Mining болон Оюу Толгой ХХК-д удирдах албан тушаал хашсан.
 order: 2
 ---
 
