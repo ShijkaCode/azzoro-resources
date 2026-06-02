@@ -40,7 +40,7 @@ featured_projects:
   - eyebrow: Red Hill — Near-term catalyst
     headline: Red Hill  Cu-Au
     lead: A copper-gold catalyst set just 8 km from Oval, with thick Cu-Au VMS sulphides at Red Hill and shallow high-grade gold-silver at North Hill, all tied to a granted mining licence to 2045.
-    image: /uploads/20251028_042623542_iOS.jpg
+    image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
       - value: 2.23% Cu
@@ -63,10 +63,11 @@ featured_projects:
         alt: Exploration team in the Govi-Altai field
     cta_label: Read the project
     cta_href: /projects/red-hill
-    footnote: Drill results from ASX announcements; assays subject to ongoing verification. Refer to asianbatterymetals.com for full disclosures.
+    footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Strategic location in a proven mining jurisdiction.
+  image_alt: ''
   intro: Strategically located within the prolific Central Asian Orogenic Belt, Mongolia borders the world's primary market for copper and base metals. The country represents a frontier of immense potential, remaining highly underexplored compared to the region’s proven mineral endowments and existing large-scale operations
   footnote: ''
   cards:
