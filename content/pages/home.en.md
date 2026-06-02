@@ -121,26 +121,26 @@ sustainability_teaser:
   heading: An exploration approach that respects land and local communities.
   body: Azzuro's field programs are built around early environmental baseline work, practical stakeholder engagement and the governance standards expected of an ASX-listed company.
   image: ''
-  cta_label: Our approach to ESG
+  cta_label: Our approach to Sustainability
   cta_href: /esg
 home_sustainability:
-  eyebrow: ESG in practice
+  eyebrow: Sustainability in practice
   cards:
     - tag: Environment
-      title: Groundwater monitoring from day one
-      body: We sample and monitor wells across our licence areas to protect the water sources communities depend on.
-      image: /uploads/esg/Well%20monitoring%20at%20Anjiin%20bulag.jpg
-      image_alt: Well monitoring at Anjiin Bulag, Mongolia
+      title: Environmental monitoring from day one
+      body: We regularly monitor water quality and levels, measure air quality, and perform land reclamation works to protect water sources for local residents, livestock, and wildlife.
+      image: ''
+      image_alt: Environmental monitoring at Gobi-Altai, Mongolia
     - tag: Community
       title: Practical support where we work
-      body: From playgardens to local infrastructure, the Company directs tangible support to the soums that host field activity.
-      image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
+      body: From kids' playground to local infrastructure, the Company directs tangible support to the soums that host field activity.
+      image: /uploads/Governor of Rashaant bagh.jpg
       image_alt: Community playgarden in Yesunbulag, Mongolia
     - tag: Governance
       title: Open engagement, clear disclosure
       body: Regular stakeholder meetings, public industry forums and ASX-listed governance practices shape how the Company operates in Mongolia.
-      image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
-      image_alt: Mining Week 2025 engagement with local stakeholders
+      image: /uploads/IMG_9525.JPG
+      image_alt: Fo
 investor_snapshot: null
 leadership_teaser:
   heading: Experienced board. Strong local capability.
