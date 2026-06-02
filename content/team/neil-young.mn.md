@@ -1,6 +1,6 @@
 ---
 name: Neil Young
-role: Гүйцэтгэх бус захирал
+role: ТУЗ гишүүн
 team_section: Board
 photo: /uploads/team/technical_team/Neil-300x300.png
 home_credential: ~30 жилийн туршлагатай Эрчим хүчний салбарын удирдах албан тушаалтан
