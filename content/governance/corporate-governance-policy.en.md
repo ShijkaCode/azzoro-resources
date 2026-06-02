@@ -1,7 +1,7 @@
 ---
-title: Corporate Governance Policy
+title: Code of Conduct
 category: Policies
-file: /uploads/governance/placeholder.pdf
-effective_date: '2024-01-01'
+file: /uploads/CodeofConduct.pdf
+effective_date: 2026-06-03
 description: Corporate governance policy entry covering board oversight, risk management and accountability.
 ---
