@@ -129,7 +129,7 @@ home_sustainability:
     - tag: Environment
       title: Environmental monitoring from day one
       body: We regularly monitor water quality and levels, measure air quality, and perform land reclamation works to protect water sources for local residents, livestock, and wildlife.
-      image: ''
+      image: /uploads/Environment monitoring-web crop.jpg
       image_alt: Environmental monitoring at Gobi-Altai, Mongolia
     - tag: Community
       title: Practical support where we work
