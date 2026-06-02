@@ -54,12 +54,12 @@ featured_projects:
     thumbnails:
       - image: /uploads/Azurite.jpg
         caption: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
-        alt: ''
+        alt: Oxidised rhyolite with azurite and malachite staining, drillhole MU2602 49.73-49.8m
       - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
         caption: Massive Sulphide Intercept MU2601, Red Hill project
         alt: ''
       - image: /uploads/field/IMG_8982.JPG
-        caption: Exploration area across the Gobi-Altai
+        caption: Gobi-Altai field view
         alt: Exploration team in the Govi-Altai field
     cta_label: Read the project
     cta_href: /projects/red-hill
