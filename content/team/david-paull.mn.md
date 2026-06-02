@@ -1,9 +1,9 @@
 ---
 name: David Paull
 role: Гүйцэтгэх бус дарга
-home_credential: Уул уурхайд 30+ жил, үүнээс 10 жил Монголд Aspire Mining-ийн ГЗ, даргаар ажилласан.
 team_section: Board
 photo: /uploads/team/technical_team/david-300x300.png
+home_credential: Уул уурхайд 30+ жил, үүнээс 10 жил Монголд Aspire Mining-ийн ГЗ, даргаар ажилласан.
 order: 1
 ---
 
