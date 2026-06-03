@@ -20,7 +20,7 @@ featured_projects:
         label: Continuous mineralisation
       - value: 89–95%
         label: Metallurgy recovery
-      - value: Open to Depth
+      - value: Open to
         label: Depth & SE, NW directions
       - value: Multiple
         label: Regional targets
@@ -45,8 +45,8 @@ featured_projects:
     stats:
       - value: 2.2% Cu
         label: Massive sulphide zone
-      - value: Open to Depth
-        label: Massive sulphide zone open to depth
+      - value: Massive
+        label: Sulphide zone open to depth
       - value: 500m
         label: Continuous mineralisation
       - value: Au zone
