@@ -72,8 +72,8 @@ export default function FeaturedProjectSection({
             <dl className="mt-9 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-rule pt-8">
               {project.stats.map((stat) => (
                 <div key={stat.label}>
-                  <dt className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">{stat.label}</dt>
-                  <dd className="num-display mt-3 text-4xl font-medium leading-none text-ink sm:text-5xl">{stat.value}</dd>
+                  <dt className="num-display text-4xl font-medium leading-none text-ink sm:text-5xl">{stat.value}</dt>
+                  <dd className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">{stat.label}</dd>
                 </div>
               ))}
             </dl>
