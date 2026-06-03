@@ -12,18 +12,18 @@ hero:
 featured_projects:
   - eyebrow: Oval — Flagship discovery
     headline: Oval Cu·Ni·PGE Discovery
-    lead: A high-grade magmatic sulphide discovery in the Central Asian Orogenic Belt, with mineralisation confirmed from surface to 290 m depth across an 880 m strike and copper recoveries of 89–95%.
+    lead: A high-grade magmatic sulphide discovery in the Central Asian Orogenic Belt, with mineralisation confirmed from surface to 290 m depth across an 880 m strike.
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: ''
     stats:
       - value: 880m
         label: Continuous mineralisation
       - value: 89–95%
-        label: Copper recovery
-      - value: 6.08% Cu
-        label: Best intercept · OVD021
-      - value: '2026'
-        label: Initial JORC target
+        label: Metallurgy recovery
+      - value: Open to Depth
+        label: Depth & SE, NW directions
+      - value: Multiple
+        label: Regional targets
     thumbnails:
       - image: /uploads/field/20251101_073622736_iOS.jpg
         caption: Massive sulphide intercept · Oval discovery.
@@ -43,14 +43,14 @@ featured_projects:
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
-      - value: 2.23% Cu
-        label: 14.5m intercept · MU2501
-      - value: 6.54 g/t Au
-        label: Shallow gold · 5.2m
-      - value: 8 km
-        label: From the Oval discovery
-      - value: '2045'
-        label: Granted licence tenure
+      - value: 2.2% Cu
+        label: Massive sulphide zone
+      - value: Open to Depth
+        label: Massive sulphide zone open to depth
+      - value: 500m
+        label: Continuous mineralisation
+      - value: Au zone
+        label: Shallow gold zone identified
     thumbnails:
       - image: /uploads/Azurite-crop.jpg
         caption: Oxidised rhyolite with azurite, drillhole MU2602
