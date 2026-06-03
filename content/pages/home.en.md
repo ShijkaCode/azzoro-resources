@@ -45,8 +45,8 @@ featured_projects:
     stats:
       - value: 2.2% Cu
         label: Massive sulphide zone
-      - value: Massive
-        label: Sulphide zone open to depth
+      - value: Open
+        label: To depth & along strike
       - value: 500m
         label: Continuous mineralisation
       - value: Au zone
