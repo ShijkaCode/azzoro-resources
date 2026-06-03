@@ -46,10 +46,14 @@ export default async function GalleryPage({ params }: { params: { locale: string
     loadCollection<CaseStudy>('gallery/case-studies', locale),
   ]);
 
-  // CMS-managed photos: featured first, then newest first.
+  // CMS-managed photos: featured first, then newest first. `date` may arrive
+  // as a JS Date when Sveltia saves it unquoted in the YAML frontmatter, so
+  // coerce to an ISO YYYY-MM-DD string before lexicographic compare.
+  const dateKey = (value: unknown): string =>
+    value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? '');
   const sortedPhotos = [...photos].sort((a, b) => {
     if (Boolean(b.featured) !== Boolean(a.featured)) return Number(Boolean(b.featured)) - Number(Boolean(a.featured));
-    return (b.date ?? '').localeCompare(a.date ?? '');
+    return dateKey(b.date).localeCompare(dateKey(a.date));
   });
 
   const t =
