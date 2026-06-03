@@ -12,7 +12,7 @@ hero:
 featured_projects:
   - eyebrow: Oval — Flagship discovery
     headline: Oval Cu·Ni·PGE Discovery
-    lead: A significant high-grade magmatic copper-nickel sulphide discovery in the Central Asian Orogenic Belt, with massive, net-textured and disseminated mineralisation intersected from surface to 290 metres depth across an 880-metre strike extent. The system remains open in multiple directions and at depth, offering substantial resource growth potential. The broader tenement package contains several high-priority prospects associated with confirmed mafic intrusions, reinforcing the project's district-scale exploration opportunity.
+    lead: A significant high-grade magmatic copper-nickel sulphide discovery in the Central Asian Orogenic Belt, with massive, net-textured and disseminated mineralisation intersected from surface to 290 metres depth over an 880-metre strike extent. The system remains open along strike and at depth, offering strong resource growth potential. Multiple additional targets associated with confirmed mafic intrusions across the broader tenement package highlight the project's district-scale exploration upside.
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: ''
     stats:
@@ -20,10 +20,10 @@ featured_projects:
         label: Continuous mineralisation
       - value: 89–95%
         label: Metallurgy recovery
-      - value: Open to
-        label: Depth & SE, NW directions
-      - value: Multiple
-        label: Regional targets
+      - value: Open
+        label: At depth & along strike - NNW & SSE
+      - value: Camp-Scale
+        label: District-scale sulphide corridor emerging
     thumbnails:
       - image: /uploads/field/20251101_073622736_iOS.jpg
         caption: Massive sulphide intercept · Oval discovery.
