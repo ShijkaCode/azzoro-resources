@@ -59,8 +59,8 @@ featured_projects:
         caption: Massive Sulphide Intercept MU2601, Red Hill project
         alt: Massive Sulphide Intercept MU2601, Red Hill project
       - image: /uploads/MUU 2601-crop.jpg
-        caption: Massive Sulphide Intercept MU2601, Red Hill project
-        alt: Massive Sulphide Intercept MU2601, Red Hill project
+        caption: Massive Sulphide Intercept MU2605, Red Hill project
+        alt: Massive Sulphide Intercept MU2605, Red Hill project
     cta_label: Read the project
     cta_href: /projects/red-hill
     footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
