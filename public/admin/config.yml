@@ -372,7 +372,7 @@ collections:
             i18n: true
             fields:
               - { label: Registry name, name: name, widget: string, i18n: true }
-              - { label: Section label (e.g. "ASX", "UK"), name: section_label, widget: string, required: false, i18n: true }
+              - { label: 'Section label (e.g. "ASX", "UK")', name: section_label, widget: string, required: false, i18n: true }
               - { label: Address (multi-line), name: address, widget: text, required: false, i18n: true }
               - { label: Email, name: email, widget: string, required: false, i18n: true }
               - { label: Website URL, name: website_url, widget: string, required: false, i18n: true }
@@ -382,7 +382,7 @@ collections:
                 widget: list
                 required: false
                 fields:
-                  - { label: Group label (optional, e.g. "Telephone enquiries"), name: label, widget: string, required: false, i18n: true }
+                  - { label: 'Group label (optional, e.g. "Telephone enquiries")', name: label, widget: string, required: false, i18n: true }
                   - label: Numbers
                     name: numbers
                     widget: list
@@ -620,7 +620,7 @@ collections:
               - { label: Playfair Display (serif), value: Playfair Display }
               - { label: Poppins (Latin only — no Mongolian), value: Poppins }
               - { label: Space Grotesk (Latin only — no Mongolian), value: Space Grotesk }
-              - { label: DM Serif Display (serif, Latin only — no Mongolian), value: DM Serif Display }
+              - { label: "DM Serif Display (serif, Latin only — no Mongolian)", value: DM Serif Display }
           - label: Heading font (hero, titles)
             name: font_display
             widget: select
@@ -637,7 +637,7 @@ collections:
               - { label: Playfair Display (serif), value: Playfair Display }
               - { label: Poppins (Latin only — no Mongolian), value: Poppins }
               - { label: Space Grotesk (Latin only — no Mongolian), value: Space Grotesk }
-              - { label: DM Serif Display (serif, Latin only — no Mongolian), value: DM Serif Display }
+              - { label: "DM Serif Display (serif, Latin only — no Mongolian)", value: DM Serif Display }
       - name: nav
         label: Navigation
         file: content/settings/nav.{{locale}}.yml
