@@ -67,21 +67,22 @@ featured_projects:
 why_mongolia:
   eyebrow: Яагаад Монгол
   headline: Стратегийн байршилтай, батлагдсан уул уурхайн орчин.
+  image_alt: ''
   intro: Монгол Улс Төв Азийн Орогенийн Бүсэд оршдог, зэс болон батерейн металлын дэлхийн хамгийн том зах зээлтэй хиллэдэг бөгөөд бүс нутагт ашиглалтад орсон уурхайнуудтай харьцуулахад судлагдаагүй боломж ихтэй хэвээр байна.
   footnote: 'Эх сурвалж: Фрейзерийн институтын уул уурхайн жилийн судалгаа; Монгол Улсын Уул уурхай, хүнд үйлдвэрийн яам; Үндэсний статистикийн хороо.'
   cards:
     - title: Дэлхийн хэмжээний жишиг
       body: Сүүлийн 25 жилд ашиглалтад орсон цөөн tier-1 зэсийн нээлтийн нэг болох Оюу Толгой энэ улсад байрладаг.
-      image: /uploads/field/_CP11422.jpg
-      image_alt: Монгол дахь хайгуулын ажил
+      image: /uploads/chingis statue.jpg
+      image_alt: Chinggis Khan Statue Complex, Tsonjin Boldog, Mongolia
     - title: Өндөр эрдэсжилтийн чадамж
       body: Фрейзерийн институтын уул уурхайн судалгаагаар ашигт малтмалын чадамжаараа Азийн тэргүүлэх бүсүүдийн нэгт үнэлэгддэг.
-      image: /uploads/field/IMG_9481.JPG
-      image_alt: Монголын газар нутаг дахь геологийн ажил
+      image: /uploads/field/20251028_045635469_iOS.jpg
+      image_alt: Field exploration in Mongolia
     - title: Стратегийн байршил
       body: Дэлхийн хамгийн том зэс болон батерейн металлын хэрэглэгч Хятад руу төмөр зам, авто замын шууд холболттой.
-      image: /uploads/field/dji_fly_20250528_122142_614_1748406744047_photo.jpg
-      image_alt: Монголын газар нутгийн агаарын зураг
+      image: /uploads/location-icon-on-map-generative-ai-photo.jpg
+      image_alt: Strategic location
     - title: Тогтсон экосистем
       body: Экспортод бэлэн логистик, хатуу хучилттай зам, томоохон болон дунд компани, жуниор хайгуулчид, уул уурхайн гүйцэтгэгчдийг дэмжих үйл ажиллагааны орчин бүрдсэн.
       image: /uploads/field/camp-bilgun.jpg
@@ -101,12 +102,12 @@ why_azzuro:
       tag: 'ASX: AZ9'
     - title: Батлагдсан гүйцэтгэлийн чадавх
       body: Туршлагатай Монгол операторууд, газар дээрээ ажилладаг хүчтэй техникийн баг, орон даяарх геологийн өгөгдөл, түүхэн мэдлэг нь хайгуулыг богино хугацаанд урагшлуулж, өрөмдлөгийг үр ашигтай явуулах суурь болдог.
-      tag: Орон нутгийн гүйцэтгэл
+      tag: Local execution
     - title: Эрт үеийн баталгаажуулалт
       body: BHP Xplor хөтөлбөрөөс техникийн дэмжлэг болон хувьцаа шингэлэхгүй санхүүжилт авсан.
       tag: BHP Xplor · 2023
-  image: /uploads/field/drill%201.jpg
-  image_alt: Azzuro Resources-ийн хайгуулын талбай дахь өрөмдлөгийн ажил, Монгол
+  image: /uploads/20251101_181523.jpg
+  image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
 sustainability_teaser:
   heading: Байгаль орчин болон орон нутгийн иргэдийг хүндэтгэсэн хайгуулын арга барил.
   body: Аззуро Ресоурсес компанийн төслийн үйл ажиллагаа нь байгаль орчны тэнцвэрт байдлыг хадгалах, орон нутгийн иргэдтэй хамтын үнэ цэнэ бүхий тогтвортой хамтын ажиллагааг хөгжүүлэх болон компанийн засаглалын олон улсын стандартыг мөрдлөг болгох зарчимд суурилдаг.
@@ -163,6 +164,6 @@ metrics:
     source: ''
 ---
 
-Azzuro Resources нь Oval нээлтээр тэргүүлсэн, Монголын зэс-никель-алтны хайгуулын ASX-д бүртгэлтэй кейс юм. Ойрын хугацаанд гол анхаарах ажил нь Oval-ыг ахиулах, Red Hill / North Hill-ийн катализаторын багцыг идэвхтэй шалгах, Copper Ridge болон Bayan Sair дээр бүсийн өсөлтийн боломжийг үргэлжлүүлэн тодорхойлох явдал бөгөөд бал чулуу, литийг багцын хоёрдогч optionality хэлбэрээр хадгалж байна.
+Azzuro Resources is an ASX-listed Mongolian copper-nickel-gold exploration story led by the Oval discovery. The near-term focus is clear: advance Oval, test the Red Hill / North Hill catalyst set, and continue building camp-scale upside at Copper Ridge and Bayan Sair, with graphite and lithium retained as secondary optionality within the broader portfolio.
 
-Энэ нүүр хуудас нь хөрөнгө оруулагчдад нээлтийн үндсэн кейс, 2026 оны ажлын чиглэл, Монгол дахь гүйцэтгэлийн чадамж, мөн төслүүдийн дэлгэрэнгүй хуудас болон хөрөнгө оруулагчийн төв рүү орох гарцыг нэг дороос ойлгуулахад зориулагдсан.
+The homepage is designed to give investors a quick read on the discovery case, 2026 work program, operational credibility in Mongolia and the pathways into the project pages and external investor centre.
