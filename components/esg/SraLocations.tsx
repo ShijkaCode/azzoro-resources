@@ -33,6 +33,7 @@ export function SraLocations({
         ) : null}
       </div>
 
+      {locations.length > 0 ? (
       <ul className="mt-12 border-t border-rule">
         {locations.map((entry) => (
           <li
@@ -56,6 +57,7 @@ export function SraLocations({
           </li>
         ))}
       </ul>
+      ) : null}
     </section>
   );
 }

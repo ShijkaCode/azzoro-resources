@@ -5,7 +5,7 @@ import { EsgMetrics } from '@/components/esg/EsgMetrics';
 import { EsgApproach } from '@/components/esg/EsgApproach';
 import { EngagementSteps } from '@/components/esg/EngagementSteps';
 import { EnvironmentStewardship } from '@/components/esg/EnvironmentStewardship';
-// import { SraLocations } from '@/components/esg/SraLocations'; // temporarily hidden — see SRA section below
+import { SraLocations } from '@/components/esg/SraLocations';
 import { LocalInvestment } from '@/components/esg/LocalInvestment';
 import { CommunityStories } from '@/components/esg/CommunityStories';
 import { EsgGallery } from '@/components/esg/EsgGallery';
@@ -125,16 +125,16 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         topics={esg.environment.topics ?? []}
       />
 
-      {/* Social Responsibility Agreements by-location section (Yesunbulag soum,
-          Taishir soum, and others) — temporarily hidden per client request.
-          Restore by uncommenting this block (and the SraLocations import). */}
-      {/* <SraLocations
+      {/* Stakeholder-engagement intro (eyebrow + heading + body + image). The
+          by-location soum cards are intentionally hidden per client request via
+          locations={[]}; to bring the cards back, pass esg.sra_locations again. */}
+      <SraLocations
         eyebrow={labels.sraEyebrow}
         heading={labels.sraHeading}
         body={esg.community.body}
         image={esg.community.image}
-        locations={esg.sra_locations ?? []}
-      /> */}
+        locations={[]}
+      />
 
       <LocalInvestment
         eyebrow={labels.investmentEyebrow}
