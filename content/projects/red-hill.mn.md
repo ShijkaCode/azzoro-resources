@@ -10,7 +10,7 @@ lat: 46.44961
 lng: 95.79281
 license_area_km2: 0
 acquired_date: 2026-01-01
-hero_image: /uploads/Red Hill background photo.jpg
+hero_image: /uploads/Red Hill background photo-crop.jpg
 gallery_images:
   - image: /uploads/projects/red-hill-drilling.jpg
     caption: Red Hill (Майхан Уул) өрөмдлөг — MU2501, MU2601 цооногуудын их сульфидын огтлолууд 155 м тэнхлэгийн дагуу, гүн болон тэнхлэгийн дагуу нээлттэй.
