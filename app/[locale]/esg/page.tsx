@@ -5,7 +5,7 @@ import { EsgMetrics } from '@/components/esg/EsgMetrics';
 import { EsgApproach } from '@/components/esg/EsgApproach';
 import { EngagementSteps } from '@/components/esg/EngagementSteps';
 import { EnvironmentStewardship } from '@/components/esg/EnvironmentStewardship';
-import { SraLocations } from '@/components/esg/SraLocations';
+// import { SraLocations } from '@/components/esg/SraLocations'; // temporarily hidden — see SRA section below
 import { LocalInvestment } from '@/components/esg/LocalInvestment';
 import { CommunityStories } from '@/components/esg/CommunityStories';
 import { EsgGallery } from '@/components/esg/EsgGallery';
@@ -69,7 +69,7 @@ const LABELS = {
     investmentEyebrow: 'Орон нутгийн хөрөнгө оруулалт',
     investmentHeading: 'Орон нутагтаа хөрөнгө оруулах нь',
     storiesEyebrow: 'Орон нутгийн түүхүүд',
-    storiesHeading: 'Жинхэнэ хүмүүс, жинхэнэ орон нутаг',
+    storiesHeading: 'Нутгийн иргэд, орон нутаг',
     gallery: 'Хээрээс',
     reports: 'Тайлан ба нээлттэй мэдээлэл',
   },
@@ -125,13 +125,16 @@ export default async function EsgPage({ params }: { params: { locale: string } }
         topics={esg.environment.topics ?? []}
       />
 
-      <SraLocations
+      {/* Social Responsibility Agreements by-location section (Yesunbulag soum,
+          Taishir soum, and others) — temporarily hidden per client request.
+          Restore by uncommenting this block (and the SraLocations import). */}
+      {/* <SraLocations
         eyebrow={labels.sraEyebrow}
         heading={labels.sraHeading}
         body={esg.community.body}
         image={esg.community.image}
         locations={esg.sra_locations ?? []}
-      />
+      /> */}
 
       <LocalInvestment
         eyebrow={labels.investmentEyebrow}

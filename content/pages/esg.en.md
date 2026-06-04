@@ -65,7 +65,7 @@ environment:
       body: Formal EMPs are approved annually by local governors for all sites, covering water, waste, hazardous materials, biodiversity impacts and rehabilitation — reviewed and approved each year.
 community:
   body: |-
-    Community relations is our highest-materiality topic. We maintain a structured, year-round engagement programme across all project sites — operating under Social Responsibility Agreements, supporting herder livelihoods, and engaging openly with local government and society.
+    Our year-round stakeholder engagement program is underpinned by the Social Responsibility Agreements with local soum and provincial authorities, covering community investment, environmental stewardship, and local participation. The engagement is continuous, with open communication maintained through meetings, consultations, and site visits. We believe responsible exploration depends on meaningful community partnerships — the foundation of our ESG strategy and social license to operate.
   image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
 sra_locations:
   - location: Yesunbulag soum
