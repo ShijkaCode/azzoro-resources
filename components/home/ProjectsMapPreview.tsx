@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Map as MapType, Popup as PopupType, LngLatBoundsLike } from 'maplibre-gl';
 import type { Project } from '@/lib/content/types';
 import { primaryCommodityColor } from '@/lib/map/markers';
-import { getMapStyleUrl, getTerrainTilesUrl } from '@/lib/map/tiles';
+import { getMapStyleUrl } from '@/lib/map/tiles';
 
 const T = {
   en: {
@@ -39,7 +39,7 @@ const MONGOLIA_BOUNDS: [[number, number], [number, number]] = [
   [87.7, 41.4],
   [120.2, 52.3],
 ];
-const OVERVIEW_PITCH = 40;
+const OVERVIEW_PITCH = 0; // top-down (perpendicular) — 3D removed, map stays flat
 
 function escapeHtml(value: string): string {
   return value
@@ -102,11 +102,11 @@ export function ProjectsMapPreview({
       const maplibregl = module.default;
       const map = new maplibregl.Map({
         container: containerRef.current,
-        style: getMapStyleUrl('outdoor-v2'),
+        style: getMapStyleUrl('hybrid'),
         center: [104, 47.2],
         zoom: 4,
         pitch: OVERVIEW_PITCH,
-        maxPitch: 72,
+        maxPitch: 0,
         attributionControl: false,
         scrollZoom: true,
         dragPan: true,
@@ -116,30 +116,14 @@ export function ProjectsMapPreview({
       });
       mapRef.current = map;
 
-      map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: true }), 'top-right');
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), 'top-right');
 
       map.on('load', () => {
-        // 3D terrain + atmospheric sky (MapTiler Terrain-RGB) — lifts hills and relief.
-        try {
-          const terrainUrl = getTerrainTilesUrl();
-          if (terrainUrl && typeof map.setTerrain === 'function') {
-            if (!map.getSource('mt-terrain')) {
-              map.addSource('mt-terrain', { type: 'raster-dem', url: terrainUrl });
-            }
-            map.setTerrain({ source: 'mt-terrain', exaggeration: 1.3 });
-            map.setSky?.({
-              'sky-color': '#cfe0ef',
-              'horizon-color': '#eef2f5',
-              'fog-color': '#eae6dd',
-              'sky-horizon-blend': 0.6,
-              'horizon-fog-blend': 0.6,
-              'fog-ground-blend': 0.4,
-              'atmosphere-blend': 0.6,
-            });
-          }
-        } catch {
-          // terrain is an enhancement; ignore if the DEM source is unavailable
-        }
+        // Rendered flat / top-down (pitch 0, maxPitch 0). 3D terrain is
+        // intentionally NOT enabled: draping the map over a terrain mesh makes
+        // MapLibre re-project HTML markers (our pins) a frame behind the tiles,
+        // so they visibly lag/drift while panning — badly on mobile. The hybrid
+        // satellite style already shows real terrain texture in a flat top-down view.
 
         // Mongolia outline overlay — crisp national border with a soft halo.
         fetch('/geo/mongolia.json')
@@ -157,7 +141,7 @@ export function ProjectsMapPreview({
               id: 'mn-outline-line',
               type: 'line',
               source: 'mn-outline',
-              paint: { 'line-color': 'hsl(0, 0%, 8%)', 'line-width': 3, 'line-opacity': 0.9 },
+              paint: { 'line-color': 'hsl(0, 0%, 100%)', 'line-width': 1, 'line-opacity': 0.9 },
             });
           })
           .catch(() => {});
@@ -247,7 +231,7 @@ export function ProjectsMapPreview({
       map.easeTo({
         center: [active.lng, active.lat],
         zoom,
-        pitch: 60,
+        pitch: 0,
         duration: 1600,
         essential: true,
       });
