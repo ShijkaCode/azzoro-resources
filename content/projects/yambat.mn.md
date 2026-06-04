@@ -7,8 +7,8 @@ commodity:
   - PGE
 status: Drilling
 region: Говь-Алтай
-lat: 46.32
-lng: 96.4
+lat: 46.41654
+lng: 95.88906
 license_area_km2: 139.34
 acquired_date: 2023-01-01
 hero_image: /uploads/gallery/photos/discovery_4k.png

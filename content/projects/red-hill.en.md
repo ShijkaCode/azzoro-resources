@@ -6,8 +6,8 @@ commodity:
   - Gold
 status: Drilling
 region: Govi-Altai
-lat: 46.3
-lng: 96.52
+lat: 46.44961
+lng: 95.79281
 license_area_km2: 0
 acquired_date: '2026-01-01'
 hero_image: /uploads/field/_CP11422.jpg

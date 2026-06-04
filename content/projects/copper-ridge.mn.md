@@ -6,8 +6,8 @@ commodity:
   - Gold
 status: Active exploration
 region: Говь-Алтай
-lat: 46.37
-lng: 96.42
+lat: 46.43152
+lng: 95.91469
 license_area_km2: 106.07
 acquired_date: '2024-01-01'
 hero_image: /uploads/field/IMG_8982.JPG
