@@ -5,8 +5,8 @@ commodity:
   - Graphite
 status: Resource definition
 region: Dundgovi
-lat: 45.6
-lng: 106.4
+lat: 45.52755
+lng: 108.40444
 license_area_km2: 9.54
 acquired_date: '2021-06-15'
 hero_image: /uploads/projects/khukh-tag-hero.jpg

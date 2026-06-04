@@ -6,8 +6,8 @@ commodity:
   - Gold
 status: Active exploration
 region: Govi-Altai
-lat: 46.43152
-lng: 95.91469
+lat: 46.47131
+lng: 95.93144
 license_area_km2: 106.07
 acquired_date: '2024-01-01'
 hero_image: /uploads/field/IMG_8982.JPG

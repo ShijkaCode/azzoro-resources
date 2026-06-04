@@ -5,8 +5,8 @@ commodity:
   - Lithium
 status: Active exploration
 region: Дундговь
-lat: 45.4
-lng: 105.6
+lat: 45.16959
+lng: 106.0146
 license_area_km2: 7.43
 acquired_date: 2022-09-01
 hero_image: /uploads/projects/tsagaan-ders-hero.webp
