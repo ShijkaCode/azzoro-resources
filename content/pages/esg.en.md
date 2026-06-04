@@ -9,7 +9,7 @@ metrics:
   - value: 330+
     label: Herder households supported
     detail: Hay and fodder distributed, 2025
-  - value: 30
+  - value: '30'
     label: Day rehabilitation
     detail: Every drill hole capped, backfilled and restored
   - value: '5,000'
