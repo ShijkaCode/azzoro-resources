@@ -6,28 +6,25 @@ commodity:
   - Gold
 status: Drilling
 region: Govi-Altai
-lat: 46.44961
-lng: 95.79281
+lat: 46
+lng: 95
 license_area_km2: 0
-acquired_date: '2026-01-01'
-hero_image: /uploads/field/_CP11422.jpg
+acquired_date: 2026-01-01
+hero_image: /uploads/Red Hill background photo.jpg
 gallery_images:
   - image: /uploads/projects/red-hill-drilling.jpg
     caption: Red Hill (Maikhan Uul) drilling — MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
   - image: /uploads/projects/vms-deposit-model.jpg
     caption: Schematic volcanogenic massive-sulphide (VMS) deposit model — the system type Red Hill is interpreted to represent.
-summary: "A VMS copper-gold project on a granted mining licence to 2045, just 8 km from Oval and combining open high-grade Cu-Au sulphides at depth with shallow gold-silver upside near surface."
-tagline: "Granted-licence Cu-Au VMS project near Oval and one of the Company's clearest near-term regional catalysts."
+gallery_heading: ''
+summary: A VMS copper-gold project on a granted mining licence to 2045, just 8 km from Oval and combining open high-grade Cu-Au sulphides at depth with shallow gold-silver upside near surface.
+tagline: Granted-licence Cu-Au VMS project near Oval and one of the Company's clearest near-term regional catalysts.
 is_draft: true
 tenure:
   licence: MV-019681
   licence_type: Mining
   ownership: 100% owned
   province: Govi-Altai (Sharga soum)
-historical_estimate:
-  label: Historical (non-JORC) estimate — Maikhan Uul
-  statement: A 2015 foreign estimate for Maikhan Uul reported 5.0 Mt @ 0.58% Cu and 0.16 g/t Au.
-  cautionary: This foreign estimate is not reported in accordance with the JORC Code (2012). A Competent Person has not done sufficient work to classify the foreign estimate as a Mineral Resource in accordance with the JORC Code (2012). It is uncertain that, following evaluation and/or further exploration work, the foreign estimate will be able to be reported as a Mineral Resource in accordance with the JORC Code (2012). The estimate is provided as a guide only and should not be relied upon.
 drill_highlights:
   - hole: MU2501 (Cu-Au massive sulphide)
     intercept: 14.5 m @ 2.23% Cu, 0.73 g/t Au from 132.5 m (including 4.8 m @ 2.80% Cu, 0.88 g/t Au), plus 2.6 m @ 2.28% Cu, 0.49 g/t Au from 154.1 m
@@ -37,11 +34,15 @@ drill_highlights:
     intercept: Extended the massive-sulphide zone to over 155 m of strike, confirming a large, open Cu-Au VMS system
   - hole: North Hill (rock-chip)
     intercept: 600 m by 100 m anomalous gold trend, with samples up to 22.9 g/t Au
+historical_estimate:
+  label: Historical (non-JORC) estimate — Maikhan Uul
+  statement: A 2015 foreign estimate for Maikhan Uul reported 5.0 Mt @ 0.58% Cu and 0.16 g/t Au.
+  cautionary: This foreign estimate is not reported in accordance with the JORC Code (2012). A Competent Person has not done sufficient work to classify the foreign estimate as a Mineral Resource in accordance with the JORC Code (2012). It is uncertain that, following evaluation and/or further exploration work, the foreign estimate will be able to be reported as a Mineral Resource in accordance with the JORC Code (2012). The estimate is provided as a guide only and should not be relied upon.
 data_cards: []
 documents: []
 content_blocks:
   - type: text
-    body: |
+    body: |-
       ## Overview
 
       Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045**. That granted tenure is a meaningful advantage as the Company builds out the wider Yambat district.
