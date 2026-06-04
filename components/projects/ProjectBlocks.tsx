@@ -11,7 +11,7 @@ const LABELS = {
     ownership: 'Ownership',
     province: 'Province',
     galleryTitle: 'Field & core',
-    drillTitle: 'Selected drill highlights',
+    drillTitle: 'Notable drill intercepts',
     drillHole: 'Drillhole',
     drillIntercept: 'Intercept',
     resourceTitle: 'Mineral Resource',
