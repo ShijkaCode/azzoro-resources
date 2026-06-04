@@ -32,20 +32,22 @@ drill_highlights:
     intercept: 8.1 m @ 0.73% Li₂O from 6.4 m, including 4.1 m @ 1.06% Li₂O from 10.4 m — confirming lithium-bearing pegmatite at depth
 data_cards: []
 documents: []
+content_blocks:
+  - type: text
+    body: |
+      ## Overview
+
+      Tsagaan Ders gives the Company lithium optionality in Dundgovi, where lithium-bearing pegmatites and greisen-altered granite define an extensive, walk-up exploration corridor. The project benefits from excellent access — around 270 km of sealed highway from Ulaanbaatar to Mandalgovi, then 40 km of gravel road — in the same region that serves Mongolia's flagship Oyu Tolgoi copper-gold and Tavan Tolgoi coal operations.
+
+      The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a **5 km strike**. Scout drilling in 2025–26 has confirmed lithium mineralisation at depth for the first time, moving the project from a surface-and-trenching story toward a drill-defined system.
+
+      ## Geology and mineralisation
+
+      Tsagaan Ders is a pegmatite- and greisen-hosted lithium system. A 5 km-long, 100–400 m-wide greisen-altered granite zone has been mapped across the property, with lithium hosted both in lithium-rich micas — which can make up 30–50% of the pegmatites — and in spodumene identified in the field and confirmed petrographically.
+
+      Extensive surface work underpins the project: **429 rock-chip samples** define strongly anomalous lithium within the pegmatitic border zone (up to ~14,000 ppm Li), accompanied by elevated caesium, rubidium and tin — a fertile, evolved granite signature. A 2023 trenching programme (1,194.5 m across sixteen trenches) confirmed consistently elevated lithium in zones up to tens of metres wide over hundreds of metres of strike, in both the Central (750 m × 50 m) and South (500 m × 50 m) target zones.
+
+      ## Next steps
+
+      With lithium mineralisation now confirmed at depth, the Company plans further drilling to test the system's continuity and scale, supported by completed age-dating and ongoing geological interpretation.
 ---
-
-## Overview
-
-Tsagaan Ders gives the Company lithium optionality in Dundgovi, where lithium-bearing pegmatites and greisen-altered granite define an extensive, walk-up exploration corridor. The project benefits from excellent access — around 270 km of sealed highway from Ulaanbaatar to Mandalgovi, then 40 km of gravel road — in the same region that serves Mongolia's flagship Oyu Tolgoi copper-gold and Tavan Tolgoi coal operations.
-
-The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a **5 km strike**. Scout drilling in 2025–26 has confirmed lithium mineralisation at depth for the first time, moving the project from a surface-and-trenching story toward a drill-defined system.
-
-## Geology and mineralisation
-
-Tsagaan Ders is a pegmatite- and greisen-hosted lithium system. A 5 km-long, 100–400 m-wide greisen-altered granite zone has been mapped across the property, with lithium hosted both in lithium-rich micas — which can make up 30–50% of the pegmatites — and in spodumene identified in the field and confirmed petrographically.
-
-Extensive surface work underpins the project: **429 rock-chip samples** define strongly anomalous lithium within the pegmatitic border zone (up to ~14,000 ppm Li), accompanied by elevated caesium, rubidium and tin — a fertile, evolved granite signature. A 2023 trenching programme (1,194.5 m across sixteen trenches) confirmed consistently elevated lithium in zones up to tens of metres wide over hundreds of metres of strike, in both the Central (750 m × 50 m) and South (500 m × 50 m) target zones.
-
-## Next steps
-
-With lithium mineralisation now confirmed at depth, the Company plans further drilling to test the system's continuity and scale, supported by completed age-dating and ongoing geological interpretation.

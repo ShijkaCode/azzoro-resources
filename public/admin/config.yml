@@ -49,7 +49,7 @@ collections:
               - { label: Eyebrow, name: eyebrow, widget: string, required: false, i18n: true }
               - { label: Headline, name: headline, widget: string, i18n: true }
               - { label: Lead paragraph, name: lead, widget: text, i18n: true }
-              - { label: Main image, name: image, widget: image, i18n: true }
+              - { label: Main image, name: image, widget: image, i18n: duplicate }
               - { label: Main image alt text, name: image_alt, widget: string, required: false, i18n: true }
               - label: Stats
                 name: stats
@@ -62,7 +62,7 @@ collections:
                 name: thumbnails
                 widget: list
                 fields:
-                  - { label: Image, name: image, widget: image, i18n: true }
+                  - { label: Image, name: image, widget: image, i18n: duplicate }
                   - { label: Caption, name: caption, widget: string, required: false, i18n: true }
                   - { label: Alt text, name: alt, widget: string, required: false, i18n: true }
                 i18n: true
@@ -76,7 +76,7 @@ collections:
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string, i18n: true }
               - { label: Headline, name: headline, widget: string, i18n: true }
-              - { label: Banner image, name: image, widget: image, required: false, i18n: true }
+              - { label: Banner image, name: image, widget: image, required: false, i18n: duplicate }
               - { label: Banner image alt text, name: image_alt, widget: string, required: false, i18n: true }
               - { label: Intro, name: intro, widget: text, i18n: true }
               - { label: Footnote, name: footnote, widget: text, required: false, i18n: true }
@@ -103,7 +103,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string, i18n: true }
                   - { label: Body, name: body, widget: text, i18n: true }
-                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
                   - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
                 i18n: true
             i18n: true
@@ -113,7 +113,7 @@ collections:
             fields:
               - { label: Heading, name: heading, widget: string, i18n: true }
               - { label: Body, name: body, widget: text, i18n: true }
-              - { label: Image, name: image, widget: image, required: false, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
               - { label: CTA label, name: cta_label, widget: string, i18n: true }
               - { label: CTA href, name: cta_href, widget: string, i18n: true }
             i18n: true
@@ -130,7 +130,7 @@ collections:
                   - { label: Tag, name: tag, widget: string, i18n: true }
                   - { label: Title, name: title, widget: string, i18n: true }
                   - { label: Body, name: body, widget: text, i18n: true }
-                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
                   - { label: Image alt text, name: image_alt, widget: string, required: false, i18n: true }
                 i18n: true
             i18n: true
@@ -176,7 +176,7 @@ collections:
         file: content/pages/about.{{locale}}.md
         i18n: true
         fields:
-          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: true }
+          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: duplicate }
           - { label: Story body, name: story_body, widget: text, i18n: true }
           - { label: Mission, name: mission, widget: text, i18n: true }
           - label: Values
@@ -202,7 +202,7 @@ collections:
         file: content/pages/esg.{{locale}}.md
         i18n: true
         fields:
-          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: true }
+          - { label: Hero image, name: hero_image, widget: image, required: false, i18n: duplicate }
           - { label: Hero headline, name: hero_headline, widget: string, required: false, i18n: true }
           - { label: Hero subline, name: hero_subline, widget: text, required: false, i18n: true }
           - label: Metrics (animated stat strip)
@@ -245,7 +245,7 @@ collections:
             widget: object
             fields:
               - { label: Lead body, name: body, widget: text, i18n: true }
-              - { label: Image, name: image, widget: image, required: false, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
               - label: Topics (water, biodiversity, air, …)
                 name: topics
                 widget: list
@@ -260,7 +260,7 @@ collections:
             widget: object
             fields:
               - { label: Body, name: body, widget: text, i18n: true }
-              - { label: Image, name: image, widget: image, required: false, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
             i18n: true
           - label: SRA by location
             name: sra_locations
@@ -284,7 +284,7 @@ collections:
                   - { label: Category, name: category, widget: string, i18n: true }
                   - { label: Title, name: title, widget: string, i18n: true }
                   - { label: Body, name: body, widget: text, i18n: true }
-                  - { label: Image, name: image, widget: image, required: false, i18n: true }
+                  - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
                 i18n: true
             i18n: true
           - { label: Community stories intro, name: stories_intro, widget: text, required: false, i18n: true }
@@ -297,7 +297,7 @@ collections:
               - { label: Body, name: body, widget: text, i18n: true }
               - { label: Author, name: author, widget: string, i18n: true }
               - { label: Role, name: role, widget: string, i18n: true }
-              - { label: Image, name: image, widget: image, required: false, i18n: true }
+              - { label: Image, name: image, widget: image, required: false, i18n: duplicate }
             i18n: true
           - { label: Reports intro, name: reports_intro, widget: text, i18n: true }
           - label: Gallery
@@ -305,7 +305,7 @@ collections:
             widget: list
             required: false
             fields:
-              - { label: Image, name: image, widget: image, i18n: true }
+              - { label: Image, name: image, widget: image, i18n: duplicate }
               - { label: Caption, name: caption, widget: string, required: false, i18n: true }
             i18n: true
       - name: gallery
@@ -336,7 +336,7 @@ collections:
               - { label: Address, name: address, widget: text, i18n: true }
               - { label: Email, name: email, widget: string, required: false, i18n: true }
               - { label: Hours, name: hours, widget: string, required: false, i18n: true }
-              - { label: Photo, name: image, widget: image, required: false, i18n: true }
+              - { label: Photo, name: image, widget: image, required: false, i18n: duplicate }
               - { label: Latitude, name: lat, widget: number, required: false, value_type: float, i18n: true }
               - { label: Longitude, name: lng, widget: number, required: false, value_type: float, i18n: true }
             i18n: true
@@ -415,7 +415,7 @@ collections:
       - { label: Name, name: name, widget: string, i18n: true }
       - { label: Role, name: role, widget: string, i18n: true }
       - { label: Team section, name: team_section, widget: select, options: [ Board, Technical ], i18n: true }
-      - { label: Photo, name: photo, widget: image, required: false, i18n: true }
+      - { label: Photo, name: photo, widget: image, required: false, i18n: duplicate }
       - { label: Home credential (short line on the home leadership grid), name: home_credential, widget: text, required: false, i18n: true }
       - { label: Bio, name: bio, widget: text, i18n: true }
       - { label: Order, name: order, widget: number, value_type: int, i18n: true }
@@ -447,13 +447,13 @@ collections:
       - { label: Longitude, name: lng, widget: number, i18n: true }
       - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int, i18n: true }
       - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
-      - { label: Hero image, name: hero_image, widget: image, i18n: true }
+      - { label: Hero image, name: hero_image, widget: image, i18n: duplicate }
       - label: Gallery figures
         name: gallery_images
         widget: list
         required: false
         fields:
-          - { label: Image, name: image, widget: image, i18n: true }
+          - { label: Image, name: image, widget: image, i18n: duplicate }
           - { label: Caption, name: caption, widget: text, required: false, i18n: true }
         i18n: true
       - { label: Summary, name: summary, widget: text, i18n: true }
@@ -531,7 +531,25 @@ collections:
           - { label: Label, name: label, widget: string, i18n: true }
           - { label: File, name: file, widget: file, i18n: true }
         i18n: true
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - label: Content sections
+        name: content_blocks
+        label_singular: Section
+        widget: list
+        required: false
+        hint: 'Build the project write-up from text and image sections in any order. Add, remove and drag to reorder.'
+        types:
+          - label: Text
+            name: text
+            widget: object
+            fields:
+              - { label: Text, name: body, widget: markdown, i18n: true }
+          - label: Image
+            name: image
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image, i18n: duplicate }
+              - { label: Caption, name: caption, widget: text, required: false, i18n: true }
+        i18n: true
   - name: gallery_photos
     label: Gallery Photos
     folder: content/gallery/photos
@@ -539,7 +557,7 @@ collections:
     i18n: true
     slug: '{{slug}}'
     fields:
-      - { label: Image, name: image, widget: image, i18n: true }
+      - { label: Image, name: image, widget: image, i18n: duplicate }
       - { label: Caption, name: caption, widget: string, required: false, i18n: true }
       - { label: Tags, name: tags, widget: list, required: false, i18n: true }
       - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', required: false, i18n: true }
@@ -554,7 +572,7 @@ collections:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Description, name: description, widget: text, required: false, i18n: true }
       - { label: Stream UID, name: stream_uid, widget: string, i18n: true }
-      - { label: Thumbnail, name: thumbnail, widget: image, required: false, i18n: true }
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false, i18n: duplicate }
       - { label: Tags, name: tags, widget: list, i18n: true }
       - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
   - name: case_studies
@@ -567,7 +585,7 @@ collections:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Draft (hide from website until ready), name: draft, widget: boolean, required: false, default: false, i18n: true }
       - { label: Summary, name: summary, widget: text, i18n: true }
-      - { label: Hero image, name: hero_image, widget: image, i18n: true }
+      - { label: Hero image, name: hero_image, widget: image, i18n: duplicate }
       - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
       - { label: Pull quote, name: pull_quote, widget: text, required: false, i18n: true }
       - { label: Related slugs, name: related, widget: list, required: false, i18n: true }

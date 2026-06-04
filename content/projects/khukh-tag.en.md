@@ -44,18 +44,20 @@ exploration_target:
   cautionary: An Exploration Target is conceptual in nature. There has been insufficient exploration to estimate a Mineral Resource, and it is uncertain whether further exploration will result in the estimation of a Mineral Resource.
 data_cards: []
 documents: []
+content_blocks:
+  - type: text
+    body: |
+      ## Overview
+
+      Khukh Tag gives the Company defined graphite optionality, anchored by a JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
+
+      ## Geology and mineralisation
+
+      Graphite at Khukh Tag occurs as massive and banded graphitic schist, intercalated with schist and limestone and folded into lenses that range from a few metres to hundreds of metres in length. The mineralised zones are readily mapped using their distinctive geophysical signature — high conductivity and high chargeability — and remain open in all directions.
+
+      The deposit is supported by extensive work: **229 surface samples** returning grades from around 1% to over 20% TGC (averaging 7.05% TGC), and **57 diamond drill holes for 3,348 metres** completed to the end of February 2023 across five mineralised areas. Early flotation test work indicated that a high-purity graphite product of more than **94% TGC** could be produced at around 94% carbon recovery — an encouraging signal for product quality.
+
+      ## Next steps
+
+      High-priority follow-up drill areas have already been identified to test the project's growth potential, with mineralisation remaining open in all directions.
 ---
-
-## Overview
-
-Khukh Tag gives the Company defined graphite optionality, anchored by a JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
-
-## Geology and mineralisation
-
-Graphite at Khukh Tag occurs as massive and banded graphitic schist, intercalated with schist and limestone and folded into lenses that range from a few metres to hundreds of metres in length. The mineralised zones are readily mapped using their distinctive geophysical signature — high conductivity and high chargeability — and remain open in all directions.
-
-The deposit is supported by extensive work: **229 surface samples** returning grades from around 1% to over 20% TGC (averaging 7.05% TGC), and **57 diamond drill holes for 3,348 metres** completed to the end of February 2023 across five mineralised areas. Early flotation test work indicated that a high-purity graphite product of more than **94% TGC** could be produced at around 94% carbon recovery — an encouraging signal for product quality.
-
-## Next steps
-
-High-priority follow-up drill areas have already been identified to test the project's growth potential, with mineralisation remaining open in all directions.

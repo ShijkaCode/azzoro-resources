@@ -4,8 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { ProjectDetailHero } from '@/components/projects/ProjectDetailHero';
-import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectFigures } from '@/components/projects/ProjectBlocks';
-import { MarkdownBody } from '@/components/shared/MarkdownBody';
+import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectFigures, ProjectContent } from '@/components/projects/ProjectBlocks';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
@@ -100,7 +99,7 @@ export default async function ProjectDetailPage({
         <div className="mx-auto max-w-5xl space-y-16">
           {leadFigure ? <ProjectFigures figures={[leadFigure]} title={project.title} /> : null}
 
-          <MarkdownBody className="max-w-[68ch]">{project.markdown || project.body}</MarkdownBody>
+          <ProjectContent project={project} />
 
           <ProjectFigures figures={restFigures} title={project.title} />
 

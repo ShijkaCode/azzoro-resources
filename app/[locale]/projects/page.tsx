@@ -49,7 +49,7 @@ export default async function ProjectsPage({ params }: { params: { locale: strin
   const otherListItem =
     otherProjects.length > 0
       ? {
-          title: locale === 'mn' ? 'Бусад төслүүд' : 'Other projects',
+          title: locale === 'mn' ? 'Бусад батерей металлын төслүүд' : 'Other Battery Metals Projects',
           meta: otherProjects.map((project) => project.title).join(' · '),
           href: localizeHref(locale, '/projects/other'),
         }

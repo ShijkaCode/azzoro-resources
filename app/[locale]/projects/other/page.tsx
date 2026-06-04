@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { MediaImage as Image } from '@/components/shared/MediaImage';
-import { MarkdownBody } from '@/components/shared/MarkdownBody';
+import { ProjectContent } from '@/components/projects/ProjectBlocks';
 import type { Project } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
@@ -115,8 +115,8 @@ export default async function OtherProjectsPage({ params }: { params: { locale: 
                 {project.summary}
               </p>
 
-              <div className="mt-10 max-w-[68ch]">
-                <MarkdownBody>{project.markdown || project.body}</MarkdownBody>
+              <div className="mt-10 max-w-[68ch] space-y-10">
+                <ProjectContent project={project} />
               </div>
 
               {project.is_draft ? (

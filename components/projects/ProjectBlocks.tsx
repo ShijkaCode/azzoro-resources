@@ -1,4 +1,5 @@
 import { MediaImage as Image } from '@/components/shared/MediaImage';
+import { MarkdownBody } from '@/components/shared/MarkdownBody';
 import type { Project } from '@/lib/content/types';
 
 type Locale = 'en' | 'mn';
@@ -164,6 +165,41 @@ export function ProjectFigures({
         </figure>
       ))}
     </div>
+  );
+}
+
+// Renders the flexible body: text and image sections in author-defined order.
+// Falls back to the legacy single body for any entry without content_blocks.
+export function ProjectContent({
+  project,
+}: {
+  project: Project & { markdown?: string };
+}) {
+  const blocks = project.content_blocks ?? [];
+
+  if (blocks.length === 0) {
+    const legacy = project.markdown || project.body;
+    return legacy ? <MarkdownBody className="max-w-[68ch]">{legacy}</MarkdownBody> : null;
+  }
+
+  return (
+    <>
+      {blocks.map((block, idx) =>
+        block.type === 'image' ? (
+          block.image ? (
+            <ProjectFigures
+              key={idx}
+              figures={[{ image: block.image, caption: block.caption }]}
+              title={project.title}
+            />
+          ) : null
+        ) : block.body ? (
+          <MarkdownBody key={idx} className="max-w-[68ch]">
+            {block.body}
+          </MarkdownBody>
+        ) : null
+      )}
+    </>
   );
 }
 

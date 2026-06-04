@@ -39,39 +39,41 @@ drill_highlights:
     intercept: 600 m by 100 m anomalous gold trend, with samples up to 22.9 g/t Au
 data_cards: []
 documents: []
+content_blocks:
+  - type: text
+    body: |
+      ## Overview
+
+      Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045**. That granted tenure is a meaningful advantage as the Company builds out the wider Yambat district.
+
+      The project is well serviced by infrastructure and high-voltage power, and it offers two complementary opportunities: high-grade copper-gold massive sulphides at depth, and shallow high-grade gold-silver mineralisation near surface.
+
+      ## Location and tenure
+
+      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
+
+      ## Geology and mineralisation
+
+      Red Hill is a classic felsic VMS deposit of Neo-Proterozoic age, hosting massive sulphide and pyritic/quartz veining. Potentially economic metals are copper, gold and zinc. Multiple deformations have folded the mineralised horizon into complex shapes, with mineralisation closely associated with dacitic and rhyolitic volcanics and black schists.
+
+      ## Understanding VMS deposits
+
+      Volcanogenic massive sulphide (VMS) deposits are among the most important sources of copper, zinc, lead, gold and silver worldwide. They form on and beneath the seafloor, where hot, metal-rich fluids — driven by volcanic activity — vent into cooler seawater and precipitate sulphide minerals.
+
+      Several features make VMS systems attractive targets:
+
+      - **They cluster.** A single favourable volcanic belt typically hosts multiple lenses, so a confirmed deposit raises the prospectivity of the surrounding ground.
+      - **They can be high-grade.** Massive sulphide lenses often carry rich copper, gold, zinc and silver grades in compact zones.
+      - **They are polymetallic.** Copper and gold are frequently accompanied by zinc, silver and other payable metals.
+      - **They have depth and strike continuity.** Lenses can extend well beyond their surface expression, and deformation can stack or repeat the mineralised horizon.
+
+      ## Why Red Hill fits the VMS model
+
+      Red Hill displays the classic hallmarks of a felsic VMS system: a massive sulphide horizon hosted in dacitic and rhyolitic volcanics with associated black schists; a polymetallic copper-gold-zinc signature; folded and deformed geometry; and a stringer / feeder-style component beneath the massive sulphide.
+
+      The Company's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
+
+      ## Next steps
+
+      A gravity survey has been completed across the project, with results now being interpreted to further define the scale and continuity of the massive-sulphide mineralisation. Drilling continues through 2026 to test the system along strike and at depth, and metallurgical test work is planned as the project advances.
 ---
-
-## Overview
-
-Red Hill, formerly the Maikhan Uul project, is a volcanogenic massive-sulphide (VMS) copper-gold project located just **8 km from the flagship Oval discovery**. Secured under option in August 2025 and acquired outright in 2026, Red Hill is held on a granted mining licence with tenure to **2045**. That granted tenure is a meaningful advantage as the Company builds out the wider Yambat district.
-
-The project is well serviced by infrastructure and high-voltage power, and it offers two complementary opportunities: high-grade copper-gold massive sulphides at depth, and shallow high-grade gold-silver mineralisation near surface.
-
-## Location and tenure
-
-Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
-
-## Geology and mineralisation
-
-Red Hill is a classic felsic VMS deposit of Neo-Proterozoic age, hosting massive sulphide and pyritic/quartz veining. Potentially economic metals are copper, gold and zinc. Multiple deformations have folded the mineralised horizon into complex shapes, with mineralisation closely associated with dacitic and rhyolitic volcanics and black schists.
-
-## Understanding VMS deposits
-
-Volcanogenic massive sulphide (VMS) deposits are among the most important sources of copper, zinc, lead, gold and silver worldwide. They form on and beneath the seafloor, where hot, metal-rich fluids — driven by volcanic activity — vent into cooler seawater and precipitate sulphide minerals.
-
-Several features make VMS systems attractive targets:
-
-- **They cluster.** A single favourable volcanic belt typically hosts multiple lenses, so a confirmed deposit raises the prospectivity of the surrounding ground.
-- **They can be high-grade.** Massive sulphide lenses often carry rich copper, gold, zinc and silver grades in compact zones.
-- **They are polymetallic.** Copper and gold are frequently accompanied by zinc, silver and other payable metals.
-- **They have depth and strike continuity.** Lenses can extend well beyond their surface expression, and deformation can stack or repeat the mineralised horizon.
-
-## Why Red Hill fits the VMS model
-
-Red Hill displays the classic hallmarks of a felsic VMS system: a massive sulphide horizon hosted in dacitic and rhyolitic volcanics with associated black schists; a polymetallic copper-gold-zinc signature; folded and deformed geometry; and a stringer / feeder-style component beneath the massive sulphide.
-
-The Company's own drilling has confirmed thick, copper-rich massive sulphide that the historical explorers did not fully recognise, and the system remains open at depth and along strike.
-
-## Next steps
-
-A gravity survey has been completed across the project, with results now being interpreted to further define the scale and continuity of the massive-sulphide mineralisation. Drilling continues through 2026 to test the system along strike and at depth, and metallurgical test work is planned as the project advances.

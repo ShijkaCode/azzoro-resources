@@ -205,6 +205,12 @@ export type GovernanceDocument = {
   description?: string;
 };
 
+// Flexible body: the client adds/reorders text and image sections in the CMS
+// instead of a single long body. Discriminated by `type` (Sveltia list types).
+export type ProjectContentBlock =
+  | { type: 'text'; body: string }
+  | { type: 'image'; image: string; caption?: string };
+
 export type Project = {
   slug: string;
   title: string;
@@ -219,7 +225,10 @@ export type Project = {
   hero_image: string;
   gallery_images?: { image: string; caption?: string }[];
   summary: string;
-  body: string;
+  // Legacy single body (markdown content area) — kept as a fallback for any
+  // entry not yet migrated to content_blocks.
+  body?: string;
+  content_blocks?: ProjectContentBlock[];
   data_cards?: { label: string; value: string }[];
   documents?: { label: string; file: string }[];
   // Optional structured fields (added for the full project profiles).
