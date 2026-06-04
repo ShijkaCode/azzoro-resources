@@ -184,21 +184,34 @@ export function ProjectContent({
 
   return (
     <>
-      {blocks.map((block, idx) =>
-        block.type === 'image' ? (
-          block.image ? (
-            <ProjectFigures
-              key={idx}
-              figures={[{ image: block.image, caption: block.caption }]}
-              title={project.title}
-            />
-          ) : null
-        ) : block.body ? (
+      {blocks.map((block, idx) => {
+        if (block.type === 'image') {
+          return block.image ? (
+            <ProjectFigures key={idx} figures={[{ image: block.image, caption: block.caption }]} title={project.title} />
+          ) : null;
+        }
+
+        if (block.type === 'split') {
+          const text = block.body ? <MarkdownBody>{block.body}</MarkdownBody> : null;
+          const image = block.image ? (
+            <ProjectFigures figures={[{ image: block.image, caption: block.caption }]} title={project.title} />
+          ) : null;
+          if (!text && !image) return null;
+          // Text-first on mobile; on desktop `reverse` swaps the columns.
+          return (
+            <div key={idx} className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+              <div className={block.reverse ? 'lg:order-2' : ''}>{text}</div>
+              <div className={block.reverse ? 'lg:order-1' : ''}>{image}</div>
+            </div>
+          );
+        }
+
+        return block.body ? (
           <MarkdownBody key={idx} className="max-w-[68ch]">
             {block.body}
           </MarkdownBody>
-        ) : null
-      )}
+        ) : null;
+      })}
     </>
   );
 }

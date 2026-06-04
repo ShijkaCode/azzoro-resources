@@ -211,7 +211,9 @@ export type GovernanceDocument = {
 // instead of a single long body. Discriminated by `type` (Sveltia list types).
 export type ProjectContentBlock =
   | { type: 'text'; body: string }
-  | { type: 'image'; image: string; caption?: string };
+  | { type: 'image'; image: string; caption?: string }
+  // Two-column row: text + image side by side. `reverse` puts the image on the left.
+  | { type: 'split'; body?: string; image?: string; caption?: string; reverse?: boolean };
 
 export type Project = {
   slug: string;

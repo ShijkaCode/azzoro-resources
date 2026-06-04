@@ -551,7 +551,7 @@ collections:
         label_singular: Section
         widget: list
         required: false
-        hint: 'Build the project write-up from text and image sections in any order. Add, remove and drag to reorder.'
+        hint: 'Build the project write-up from text, image, and two-column sections in any order. Add, remove and drag to reorder.'
         types:
           - label: Text
             name: text
@@ -564,6 +564,14 @@ collections:
             fields:
               - { label: Image, name: image, widget: image, i18n: duplicate }
               - { label: Caption, name: caption, widget: text, required: false, i18n: true }
+          - label: Text + image (two columns)
+            name: split
+            widget: object
+            fields:
+              - { label: Text, name: body, widget: markdown, i18n: true }
+              - { label: Image, name: image, widget: image, i18n: duplicate }
+              - { label: Caption, name: caption, widget: text, required: false, i18n: true }
+              - { label: Image on the left (swap sides), name: reverse, widget: boolean, default: false, required: false, i18n: duplicate }
         i18n: true
   - name: gallery_videos
     label: Gallery Videos
