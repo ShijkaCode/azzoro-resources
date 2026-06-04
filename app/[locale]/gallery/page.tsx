@@ -39,22 +39,24 @@ export default async function GalleryPage({ params }: { params: { locale: string
 
   setRequestLocale(locale);
 
-  const [gallery, photos, videos, cases] = await Promise.all([
+  const [gallery, videos, cases] = await Promise.all([
     loadSingleton<GalleryContent>('pages/gallery', locale),
-    loadCollection<GalleryPhoto>('gallery/photos', locale),
     loadCollection<GalleryVideo>('gallery/videos', locale),
     loadCollection<CaseStudy>('gallery/case-studies', locale),
   ]);
 
-  // CMS-managed photos: featured first, then newest first. `date` may arrive
-  // as a JS Date when Sveltia saves it unquoted in the YAML frontmatter, so
-  // coerce to an ISO YYYY-MM-DD string before lexicographic compare.
-  const dateKey = (value: unknown): string =>
-    value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? '');
-  const sortedPhotos = [...photos].sort((a, b) => {
-    if (Boolean(b.featured) !== Boolean(a.featured)) return Number(Boolean(b.featured)) - Number(Boolean(a.featured));
-    return dateKey(b.date).localeCompare(dateKey(a.date));
-  });
+  // Photos come from tag-named groups on the gallery page: each image becomes a
+  // masonry item tagged with its group, and the groups double as filter chips.
+  const photoGroups = gallery.photo_groups ?? [];
+  const photos: GalleryPhoto[] = photoGroups.flatMap((group) =>
+    (group.images ?? []).map((image) => ({ slug: image, image, tags: [group.tag] }))
+  );
+  const filterTags = [
+    { slug: 'all', label: locale === 'mn' ? 'Бүгд' : 'All' },
+    ...photoGroups
+      .filter((group) => (group.images?.length ?? 0) > 0)
+      .map((group) => ({ slug: group.tag, label: group.tag })),
+  ];
 
   const t =
     locale === 'mn'
@@ -124,7 +126,7 @@ export default async function GalleryPage({ params }: { params: { locale: string
         </section>
       ) : null}
 
-      <GalleryPhotosSection photos={sortedPhotos} tags={gallery.filter_tags} heading={t.photos} />
+      <GalleryPhotosSection photos={photos} tags={filterTags} heading={t.photos} />
 
       <VideoGrid videos={videos} heading={t.videos} />
     </main>

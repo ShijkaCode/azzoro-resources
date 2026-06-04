@@ -123,7 +123,9 @@ export type EsgContent = {
 export type GalleryContent = {
   intro_heading: string;
   intro_body: string;
-  filter_tags: { slug: string; label: string }[];
+  // Field photos grouped by tag. Each group is a filter chip; images are a
+  // bulk drag-drop array. (Images come from EN via locale fallback.)
+  photo_groups?: { tag: string; images?: string[] }[];
 };
 
 export type ProjectsPageContent = {

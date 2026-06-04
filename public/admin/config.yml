@@ -315,12 +315,16 @@ collections:
         fields:
           - { label: Intro heading, name: intro_heading, widget: string, i18n: true }
           - { label: Intro body, name: intro_body, widget: text, i18n: true }
-          - label: Filter tags
-            name: filter_tags
+          - label: Photo groups
+            name: photo_groups
             widget: list
+            required: false
+            label_singular: Photo group
+            summary: '{{fields.tag}}'
+            hint: Each group becomes a filter button on the gallery. Drag & drop multiple images into a group at once.
             fields:
-              - { label: Slug, name: slug, widget: string, i18n: true }
-              - { label: Label, name: label, widget: string, i18n: true }
+              - { label: Tag (filter button label), name: tag, widget: string, i18n: true }
+              - { label: Images (drag & drop multiple), name: images, widget: image, multiple: true, required: false, i18n: duplicate }
             i18n: true
       - name: contact
         label: Contact
@@ -561,18 +565,6 @@ collections:
               - { label: Image, name: image, widget: image, i18n: duplicate }
               - { label: Caption, name: caption, widget: text, required: false, i18n: true }
         i18n: true
-  - name: gallery_photos
-    label: Gallery Photos
-    folder: content/gallery/photos
-    create: true
-    i18n: true
-    slug: '{{slug}}'
-    fields:
-      - { label: Image, name: image, widget: image, i18n: duplicate }
-      - { label: Caption, name: caption, widget: string, required: false, i18n: true }
-      - { label: Tags, name: tags, widget: list, required: false, i18n: true }
-      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', required: false, i18n: true }
-      - { label: Featured, name: featured, widget: boolean, required: false, default: false, i18n: true }
   - name: gallery_videos
     label: Gallery Videos
     folder: content/gallery/videos
