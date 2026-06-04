@@ -21,7 +21,7 @@ export default function IntroSection({
       <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <div className={`grid grid-cols-1 gap-x-16 gap-y-12 lg:items-start ${hasImages ? 'lg:grid-cols-2' : ''}`}>
           {hasImages ? (
-          <div className="relative aspect-[4/5] overflow-hidden lg:sticky lg:top-28 lg:aspect-auto lg:min-h-[640px]">
+          <div className="relative aspect-[4/5] overflow-hidden lg:sticky lg:top-28 lg:aspect-auto lg:min-h-[780px]">
             {cards.map((card, idx) =>
               card.image ? (
                 <Image

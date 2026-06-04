@@ -21,7 +21,7 @@ export default function FeaturedProjectSection({
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Media column — first on mobile; moves to the right on desktop when mirrored */}
         <div className={`flex flex-col ${mirrored ? 'border-rule lg:order-2 lg:border-l' : ''}`}>
-          <div className="relative aspect-[4/3] lg:aspect-[16/9]">
+          <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-0 lg:flex-1">
             <Image
               src={project.image}
               alt={project.image_alt || project.headline}
@@ -56,14 +56,14 @@ export default function FeaturedProjectSection({
         </div>
 
         <div
-          className={`flex flex-col justify-center px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20 ${
+          className={`flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16 ${
             mirrored ? 'lg:order-1' : 'border-rule lg:border-l'
           }`}
         >
           {project.eyebrow ? (
             <p className="kicker">{project.eyebrow}</p>
           ) : null}
-          <h2 className="mt-5 max-w-[18ch] font-display text-balance text-4xl font-medium leading-[1.02] tracking-[-0.01em] sm:text-5xl lg:text-[3.75rem]">
+          <h2 className="mt-5 max-w-[18ch] font-display text-balance text-3xl font-medium leading-[1.05] tracking-[-0.01em] sm:text-4xl lg:text-5xl">
             {project.headline}
           </h2>
           <p className="mt-6 max-w-[52ch] text-base leading-relaxed text-ink-soft sm:text-lg">{project.lead}</p>
