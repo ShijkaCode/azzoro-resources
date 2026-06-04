@@ -29,7 +29,6 @@ const PROJECT_ZOOM: Record<string, number> = {
   yambat: 6.5,
   'copper-ridge': 7,
   'red-hill': 7,
-  'bayan-sair': 7,
   'khukh-tag': 6,
   'tsagaan-ders': 6,
 };
