@@ -12,9 +12,7 @@ lng: 95
 license_area_km2: 139
 acquired_date: 2023-01-01
 hero_image: /uploads/gallery/photos/discovery_4k.png
-gallery_images:
-  - image: /uploads/projects/district-magnetics.jpg
-    caption: District-scale magnetics across the Yambat licences, placing Oval on the regional massive-sulphide corridor.
+gallery_images: []
 gallery_heading: ''
 summary: AZ9's Yambat tenement hosts the high-grade Oval copper-nickel-PGE discovery project, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia.
 tagline: Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across Yambat.
