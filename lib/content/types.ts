@@ -229,6 +229,11 @@ export type Project = {
   // entry not yet migrated to content_blocks.
   body?: string;
   content_blocks?: ProjectContentBlock[];
+  // "From the field" photo gallery (separate from the technical gallery_images
+  // figures), shown on the project page only when show_gallery is on.
+  show_gallery?: boolean;
+  gallery_heading?: string;
+  gallery?: { image: string; caption?: string }[];
   data_cards?: { label: string; value: string }[];
   documents?: { label: string; file: string }[];
   // Optional structured fields (added for the full project profiles).

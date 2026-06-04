@@ -456,6 +456,17 @@ collections:
           - { label: Image, name: image, widget: image, i18n: duplicate }
           - { label: Caption, name: caption, widget: text, required: false, i18n: true }
         i18n: true
+      - { label: Show "From the field" gallery on the project page, name: show_gallery, widget: boolean, required: false, default: false, i18n: duplicate }
+      - { label: Gallery heading (leave blank for the default "From the field"), name: gallery_heading, widget: string, required: false, i18n: true }
+      - label: From the field gallery (photos)
+        name: gallery
+        widget: list
+        required: false
+        hint: Field photos shown in the "From the field" carousel when the toggle above is on.
+        fields:
+          - { label: Image, name: image, widget: image, i18n: duplicate }
+          - { label: Caption, name: caption, widget: text, required: false, i18n: true }
+        i18n: true
       - { label: Summary, name: summary, widget: text, i18n: true }
       - { label: Tagline, name: tagline, widget: string, required: false, i18n: true }
       - { label: Flagship, name: is_flagship, widget: boolean, required: false, default: false, i18n: true }

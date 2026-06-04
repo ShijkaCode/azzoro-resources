@@ -5,8 +5,29 @@ import { useRef } from 'react';
 
 type GalleryItem = { image: string; caption?: string };
 
-export function EsgGallery({ items, heading }: { items: GalleryItem[]; heading: string }) {
+// Accent is the ESG green by default; project pages pass "copper" to match their theme.
+const ACCENT = {
+  eco: {
+    text: 'text-[hsl(var(--eco))]',
+    btn: 'border-[hsl(var(--eco))] text-[hsl(var(--eco))] hover:bg-[hsl(var(--eco))]',
+  },
+  copper: {
+    text: 'text-[hsl(var(--copper))]',
+    btn: 'border-[hsl(var(--copper))] text-[hsl(var(--copper))] hover:bg-[hsl(var(--copper))]',
+  },
+} as const;
+
+export function EsgGallery({
+  items,
+  heading,
+  accent = 'eco',
+}: {
+  items: GalleryItem[];
+  heading: string;
+  accent?: keyof typeof ACCENT;
+}) {
   const trackRef = useRef<HTMLUListElement>(null);
+  const a = ACCENT[accent];
 
   if (items.length === 0) return null;
 
@@ -19,13 +40,13 @@ export function EsgGallery({ items, heading }: { items: GalleryItem[]; heading: 
   return (
     <section className="bg-paper py-20 sm:py-24">
       <div className="flex items-end justify-between gap-6 px-6 sm:px-10 lg:px-16">
-        <p className="text-[12px] font-medium uppercase tracking-[0.24em] text-[hsl(var(--eco))]">{heading}</p>
+        <p className={`text-[12px] font-medium uppercase tracking-[0.24em] ${a.text}`}>{heading}</p>
         <div className="flex">
           <button
             type="button"
             onClick={() => scrollByPage(-1)}
             aria-label="Previous"
-            className="flex h-11 w-11 items-center justify-center border border-[hsl(var(--eco))] text-[hsl(var(--eco))] transition-colors hover:bg-[hsl(var(--eco))] hover:text-white"
+            className={`flex h-11 w-11 items-center justify-center border transition-colors hover:text-white ${a.btn}`}
           >
             ←
           </button>
@@ -33,7 +54,7 @@ export function EsgGallery({ items, heading }: { items: GalleryItem[]; heading: 
             type="button"
             onClick={() => scrollByPage(1)}
             aria-label="Next"
-            className="-ml-px flex h-11 w-11 items-center justify-center border border-[hsl(var(--eco))] text-[hsl(var(--eco))] transition-colors hover:bg-[hsl(var(--eco))] hover:text-white"
+            className={`-ml-px flex h-11 w-11 items-center justify-center border transition-colors hover:text-white ${a.btn}`}
           >
             →
           </button>
@@ -60,7 +81,7 @@ export function EsgGallery({ items, heading }: { items: GalleryItem[]; heading: 
             </div>
             {item.caption ? (
               <p className="mt-3 text-[13px] leading-snug text-ink/70">
-                <span className="num-tabular mr-2 text-[hsl(var(--eco))]">{String(idx + 1).padStart(2, '0')}</span>
+                <span className={`num-tabular mr-2 ${a.text}`}>{String(idx + 1).padStart(2, '0')}</span>
                 {item.caption}
               </p>
             ) : null}

@@ -5,6 +5,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { ProjectDetailHero } from '@/components/projects/ProjectDetailHero';
 import { TenureBar, DrillResultsTable, ResourceTable, CautionaryCallout, ProjectFigures, ProjectContent } from '@/components/projects/ProjectBlocks';
+import { EsgGallery } from '@/components/esg/EsgGallery';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
@@ -78,8 +79,8 @@ export default async function ProjectDetailPage({
 
   const t =
     locale === 'mn'
-      ? { draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.', nearby: 'Ойролцоох төслүүд' }
-      : { draft: 'Draft — figures pending Competent Person sign-off prior to publication.', nearby: 'Nearby projects' };
+      ? { draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.', nearby: 'Ойролцоох төслүүд', fromTheField: 'Хээрээс' }
+      : { draft: 'Draft — figures pending Competent Person sign-off prior to publication.', nearby: 'Nearby projects', fromTheField: 'From the field' };
 
   return (
     <main id="main-content">
@@ -146,6 +147,10 @@ export default async function ProjectDetailPage({
           ) : null}
         </div>
       </section>
+
+      {project.show_gallery ? (
+        <EsgGallery items={project.gallery ?? []} heading={project.gallery_heading || t.fromTheField} accent="copper" />
+      ) : null}
 
       {nearby.length > 0 ? (
         <section className="bg-primary text-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
