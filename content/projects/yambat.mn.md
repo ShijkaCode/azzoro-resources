@@ -13,7 +13,7 @@ license_area_km2: 139.34
 acquired_date: 2023-01-01
 hero_image: /uploads/gallery/photos/discovery_4k.png
 gallery_images:
-  - image: /uploads/projects/oval-magnetics.png
+  - image: /uploads/projects/district-magnetics.jpg
     caption: Oval бүсийн соронзон RTP босоо деривативын зураг — Хойд Овалаас зүүн урдын боломжит үргэлжлэл хүртэлх 880 м ашигт малтмалжсан коридор.
   - image: /uploads/projects/oval-drill-core.jpg
     caption: OVD021 нээлтийн цооногийн өрөмдлөгийн зүсэлт — их болон тархмал Cu·Ni·PGE сульфид.
@@ -42,4 +42,11 @@ drill_highlights:
     intercept: 9.3 м @ 1.06% Cu, 0.48% Ni (108.2 м-ээс), 3.8 м @ 1.46% Cu, 0.66% Ni-ийг оролцуулан
 data_cards: []
 documents: []
+content_blocks:
+  - null
+  - image: /uploads/projects/oval-magnetics.png
+  - image: /uploads/projects/district-magnetics.jpg
+    reverse: true
+  - null
+  - image: /uploads/Oval long section.jpg
 ---
