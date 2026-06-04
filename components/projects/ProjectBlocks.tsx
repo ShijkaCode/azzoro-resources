@@ -179,7 +179,7 @@ export function ProjectContent({
 
   if (blocks.length === 0) {
     const legacy = project.markdown || project.body;
-    return legacy ? <MarkdownBody className="max-w-[68ch]">{legacy}</MarkdownBody> : null;
+    return legacy ? <MarkdownBody className="mx-auto max-w-[68ch]">{legacy}</MarkdownBody> : null;
   }
 
   return (
@@ -207,7 +207,7 @@ export function ProjectContent({
         }
 
         return block.body ? (
-          <MarkdownBody key={idx} className="max-w-[68ch]">
+          <MarkdownBody key={idx} className="mx-auto max-w-[68ch]">
             {block.body}
           </MarkdownBody>
         ) : null;

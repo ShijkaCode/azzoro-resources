@@ -97,7 +97,9 @@ export default async function ProjectDetailPage({
       </section>
 
       <section className="bg-paper px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-5xl space-y-16">
+        {/* Width tiers: prose is centred at a reading measure (set per text block);
+            images and two-column "split" rows break out to the full container. */}
+        <div className="mx-auto max-w-6xl space-y-16">
           {leadFigure ? <ProjectFigures figures={[leadFigure]} title={project.title} /> : null}
 
           <ProjectContent project={project} />
