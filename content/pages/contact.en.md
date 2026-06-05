@@ -41,13 +41,13 @@ phone_groups:
 investor_contacts:
   - name: Gan-Ochir Zunduisuren
     role: Managing Director
-    email: ganochir@asianbatterymetals.com
+    email: ganochir@azzuroresources.com
     phones:
       - +61 (0) 492 840 272
       - +976 99110973
   - name: David Paull
     role: Chairman
-    email: david@asianbatterymetals.com
+    email: david@azzuroresources.com
     phones:
       - +61 (0) 407 225 291
 general_email: contact@azzuroresources.com

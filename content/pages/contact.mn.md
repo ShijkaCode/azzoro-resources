@@ -7,15 +7,15 @@ offices:
       Жамьян гүний гудамж, 1-р хороо
       Сүхбаатар дүүрэг, Улаанбаатар, Монгол Улс
     email: contact@azzororesources.com
-    image: /uploads/offices/meru.jpg
+    image: /uploads/offices/not_au_replace_me.jpg
     lat: 47.9185
     lng: 106.9177
   - name: Австрали дахь оффис
     address: |-
       Suite 8, 16 Nicholson Road
       Subiaco WA 6008
-    email: investors@azzororesources.com
-    image: /uploads/offices/not_au_replace_me.jpg
+    email: phil@azzororesources.com
+    image: /uploads/offices/meru.jpg
     lat: -31.9489
     lng: 115.8236
   - name: Их Британи дахь оффис
@@ -23,7 +23,7 @@ offices:
       The Broadgate Tower
       20 Primrose Street
       London EC2A 2EW, United Kingdom
-    email: ir@azzororesources.com
+    email: phil@azzororesources.com
     image: /uploads/offices/Broadgate_Tower.png
     lat: 51.5205
     lng: -0.0817
@@ -31,9 +31,9 @@ phone_groups:
   - category: Ерөнхий лавлагаа
     numbers:
       - label: Монгол
-        number: +976 11 000 000
+        number: +976 7777 4114
       - label: Австрали
-        number: +61 8 0000 0000
+        number: +61 417 675 695
   - category: Хэвлэл мэдээллийн лавлагаа
     numbers:
       - label: Компанийн харилцаа
