@@ -56,6 +56,7 @@ content_blocks:
   - type: image
     image: /uploads/projects/red-hill-drilling.jpg
     caption: Red Hill (Maikhan Uul) drilling — MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
+  - type: drill
   - type: text
     body: |-
       ## Why Red Hill fits the VMS model

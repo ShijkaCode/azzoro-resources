@@ -77,6 +77,7 @@ content_blocks:
   - type: image
     image: /uploads/Oval long section.jpg
     caption: ''
+  - type: drill
   - type: text
     body: |-
       ## Metallurgy

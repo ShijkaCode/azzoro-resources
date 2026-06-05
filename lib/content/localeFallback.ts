@@ -32,9 +32,15 @@ export function mergeLocale<T>(base: T, override: unknown): T {
   // Objects: iterate EN keys (structure source); merge MN where present.
   if (typeof base === 'object') {
     if (typeof override !== 'object' || Array.isArray(override)) return base;
-    const out: Record<string, unknown> = {};
     const baseObj = base as Record<string, unknown>;
     const overObj = override as Record<string, unknown>;
+    // Typed list items (content blocks): if the `type` discriminators differ, the
+    // EN/MN structures are misaligned — keep EN's block rather than overlaying a
+    // mismatched one (which would corrupt its shape). EN is the structure source.
+    if (typeof baseObj.type === 'string' && typeof overObj.type === 'string' && baseObj.type !== overObj.type) {
+      return base;
+    }
+    const out: Record<string, unknown> = {};
     for (const key of Object.keys(baseObj)) {
       out[key] = mergeLocale(baseObj[key], overObj[key]);
     }

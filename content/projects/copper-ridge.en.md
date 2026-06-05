@@ -48,6 +48,7 @@ content_blocks:
   - type: image
     image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
     caption: ''
+  - type: drill
   - type: text
     body: |-
       ## Exploration to date
