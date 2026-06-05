@@ -48,7 +48,7 @@ engagement_steps:
     body: Social Responsibility Agreements are renewed with soum governors, and progress on every commitment is reported publicly.
 environment:
   body: Mongolia's steppe, rivers and biodiversity are irreplaceable. Our Environmental Management Plans set out how we minimise impacts at every stage of exploration — from the first survey to the last rehabilitation inspection.
-  image: /uploads/IMG_1875.JPG
+  image: /uploads/IMG_1020.jpeg
   topics:
     - topic: Water consumption
       body: Drilling at Yambat uses a closed-loop water circulation system — water drawn for drilling is recycled on-site rather than discharged. No exploration activity occurs within the protection zones set by relevant Mongolian laws and regulations.
@@ -64,7 +64,7 @@ environment:
       body: Formal EMPs are approved annually by local governors for all sites, covering water, waste, hazardous materials, biodiversity impacts and rehabilitation — reviewed and approved each year.
 community:
   body: Our year-round stakeholder engagement program is underpinned by the Social Responsibility Agreements with local soum and provincial authorities, covering community investment, environmental stewardship, and local participation. The engagement is continuous, with open communication maintained through meetings, consultations, and site visits. We believe responsible exploration depends on meaningful community partnerships — the foundation of our ESG strategy and social license to operate.
-  image: /uploads/IMG_1930.JPG
+  image: /uploads/Governor of Rashaant bagh-crop.jpg
 sra_locations:
   - location: Yesunbulag soum
     region: Govi-Altai
