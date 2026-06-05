@@ -1,6 +1,6 @@
 ---
 hero_image: /uploads/esg/sutai_mountain_esg.jpg
-hero_headline: Exploring responsibly, alongside our communities.
+hero_headline: Exploring responsibly, alongside our communities
 hero_subline: Responsible exploration starts before a drill rig arrives — with genuine partnership, free prior informed consent, and long-term relationships with the herder communities of Govi-Altai and Dundgovi.
 metrics:
   - value: 90%
