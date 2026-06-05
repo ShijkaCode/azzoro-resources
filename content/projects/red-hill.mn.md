@@ -22,6 +22,7 @@ is_draft: true
 tenure:
   licence: MV-019681
   licence_type: Ашиглалт
+  area: 79.14 ha
   ownership: 100% эзэмшил
   province: Говь-Алтай (Шарга сум)
 drill_highlights:
