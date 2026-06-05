@@ -76,8 +76,9 @@ content_blocks:
       To date, 52 diamond drillholes for approximately 8,600 metres have been completed across the Oval and North Oval prospects, confirming the continuity and growth potential of the mineralised system.
   - type: image
     image: /uploads/Oval long section.jpg
-    caption: ''
+    caption: Oval Cu-Ni-PGE Long section
   - type: drill
+    title: ''
   - type: text
     body: |-
       ## Metallurgy
