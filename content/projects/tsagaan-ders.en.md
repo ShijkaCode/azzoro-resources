@@ -5,8 +5,8 @@ commodity:
   - Lithium
 status: Active exploration
 region: Dundgovi
-lat: 45.16959
-lng: 106.0146
+lat: 45
+lng: 106
 license_area_km2: 7
 acquired_date: 2022-09-01
 hero_image: /uploads/projects/tsagaan-ders-hero.webp
@@ -25,9 +25,7 @@ tenure:
   area_km2: 7.43
   ownership: 100% owned
   province: Dundgovi (Khuld soum)
-drill_highlights:
-  - hole: TSDD-1
-    intercept: 8.1 m @ 0.73% Li₂O from 6.4 m, including 4.1 m @ 1.06% Li₂O from 10.4 m — confirming lithium-bearing pegmatite at depth
+drill_highlights: []
 exploration_target:
   label: Exploration Target — Tsagaan Ders
   statement: An Exploration Target with a conceptual grade range of 0.2% to 1.0% Li₂O has been identified at Tsagaan Ders.
@@ -36,23 +34,23 @@ data_cards: []
 documents: []
 content_blocks:
   - type: text
-    body: |
+    body: |-
       ## Overview
 
       Tsagaan Ders gives the Company lithium optionality in Dundgovi, where lithium-bearing pegmatites and greisen-altered granite define an extensive, walk-up exploration corridor. The project benefits from excellent access — around 270 km of sealed highway from Ulaanbaatar to Mandalgovi, then 40 km of gravel road — in the same region that serves Mongolia's flagship Oyu Tolgoi copper-gold and Tavan Tolgoi coal operations.
 
-      The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a 5 km strike. Scout drilling completed in 2025 confirmed lithium-bearing pegmatites at depth for the first time, successfully validating the geological model and advancing Tsagaan Ders from a surface exploration target toward a drill-confirmed lithium system.
+      The project spans three target areas — South, Central and Quartz Hill — within a mineralised system traced over a 5 km strike. Scout drilling completed in 2025 confirmed lithium-bearing pegmatites at depth for the first time, successfully validating the geological model and advancing Tsagaan Ders from a surface exploration target toward a drill-confirmed lithium system.
   - type: text
-    body: |
+    body: |-
       ## Geology and mineralisation
 
       Tsagaan Ders is a pegmatite- and greisen-hosted lithium system. A 5 km-long, 100–400 m-wide greisen-altered granite zone has been mapped across the property, with lithium hosted both in lithium-rich micas — which can make up 30–50% of the pegmatites — and in spodumene identified in the field and confirmed petrographically.
 
-      Extensive surface work underpins the project: 429 rock-chip samples define strongly anomalous lithium within the pegmatitic border zone (up to \~14,000 ppm Li), accompanied by elevated caesium, rubidium and tin, consistent with a fertile and highly evolved lithium-caesium-tantalum (LCT) pegmatite system. A 2023 trenching programme (1,194.5 m across sixteen trenches) confirmed consistently elevated lithium in zones up to tens of metres wide over hundreds of metres of strike, in both the Central (750 m × 50 m) and South (500 m × 50 m) target zones.
+      Extensive surface work underpins the project: 429 rock-chip samples define strongly anomalous lithium within the pegmatitic border zone (up to \~14,000 ppm Li), accompanied by elevated caesium, rubidium and tin, consistent with a fertile and highly evolved lithium-caesium-tantalum (LCT) pegmatite system. A 2023 trenching programme (1,194.5 m across sixteen trenches) confirmed consistently elevated lithium in zones up to tens of metres wide over hundreds of metres of strike, in both the Central (750 m × 50 m) and South (500 m × 50 m) target zones.
 
       A maiden scout drilling program completed in 2025 tested the South target and confirmed lithium-bearing pegmatites at depth for the first time. Four diamond drillholes for 250 metres intersected lithium mineralisation beneath previously mapped and trenched zones, including 8.1 m @ 0.73% Li₂O from 6.4 m, including 4.1 m @ 1.06% Li₂O from 10.4 m. These results successfully validated the geological model, confirmed the presence of lithium-bearing pegmatites at depth and demonstrated the potential for a larger mineralised system beneath the surface expressions mapped across the project.
   - type: text
-    body: |
+    body: |-
       ## Next steps
 
       With lithium-bearing pegmatites now confirmed at depth through drilling, the Company plans to advance exploration across the broader Tsagaan Ders system. Future work will focus on testing the continuity and scale of mineralisation at the South target, while extending drilling and trenching into the Central and Quartz Hill target areas.
