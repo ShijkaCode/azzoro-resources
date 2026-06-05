@@ -116,7 +116,7 @@ export default async function OtherProjectsPage({ params }: { params: { locale: 
               </p>
 
               <div className="mt-10 max-w-[68ch] space-y-10">
-                <ProjectContent project={project} />
+                <ProjectContent project={project} locale={locale} />
               </div>
 
               {project.is_draft ? (

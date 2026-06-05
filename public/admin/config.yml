@@ -583,6 +583,12 @@ collections:
               - { label: Image, name: image, widget: image, i18n: duplicate }
               - { label: Caption, name: caption, widget: text, required: false, i18n: true }
               - { label: Image on the left (swap sides), name: reverse, widget: boolean, default: false, required: false, i18n: duplicate }
+          - label: Drill highlights table
+            name: drill
+            widget: object
+            summary: Drill highlights table
+            fields:
+              - { label: Heading (optional), name: title, widget: string, required: false, i18n: true }
         i18n: true
   - name: gallery_videos
     label: Gallery Videos

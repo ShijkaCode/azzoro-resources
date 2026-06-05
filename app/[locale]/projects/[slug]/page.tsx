@@ -74,6 +74,8 @@ export default async function ProjectDetailPage({
   const nearby = projects.filter((entry) => entry.slug !== slug && entry.region === project.region).slice(0, 3);
 
   const figures = project.gallery_images ?? [];
+  // Drill table can be placed inline via a `drill` content block; if so, skip the standalone section.
+  const hasInlineDrill = (project.content_blocks ?? []).some((block) => block.type === 'drill');
   const leadFigure = figures[0];
   const restFigures = figures.slice(1);
 
@@ -102,11 +104,11 @@ export default async function ProjectDetailPage({
         <div className="mx-auto max-w-6xl space-y-16">
           {leadFigure ? <ProjectFigures figures={[leadFigure]} title={project.title} /> : null}
 
-          <ProjectContent project={project} />
+          <ProjectContent project={project} locale={locale} />
 
           <ProjectFigures figures={restFigures} title={project.title} />
 
-          <DrillResultsTable project={project} locale={locale} />
+          {hasInlineDrill ? null : <DrillResultsTable project={project} locale={locale} />}
 
           {project.historical_estimate ? (
             <CautionaryCallout

@@ -65,7 +65,7 @@ export function TenureBar({ project, locale }: { project: Project; locale: Local
   );
 }
 
-export function DrillResultsTable({ project, locale }: { project: Project; locale: Locale }) {
+export function DrillResultsTable({ project, locale, title }: { project: Project; locale: Locale; title?: string }) {
   const t = LABELS[locale] ?? LABELS.en;
   const rows = project.drill_highlights;
   if (!rows || rows.length === 0) return null;
@@ -73,7 +73,7 @@ export function DrillResultsTable({ project, locale }: { project: Project; local
   return (
     <div>
       <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
-      <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{t.drillTitle}</h2>
+      <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{title || t.drillTitle}</h2>
       <div className="mt-6 border border-rule">
         <div className="grid grid-cols-[8rem_1fr] border-b border-rule bg-paper sm:grid-cols-[12rem_1fr]">
           <div className="px-4 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-muted-ink">{t.drillHole}</div>
@@ -172,8 +172,10 @@ export function ProjectFigures({
 // Falls back to the legacy single body for any entry without content_blocks.
 export function ProjectContent({
   project,
+  locale,
 }: {
   project: Project & { markdown?: string };
+  locale: Locale;
 }) {
   const blocks = project.content_blocks ?? [];
 
@@ -189,6 +191,10 @@ export function ProjectContent({
           return block.image ? (
             <ProjectFigures key={idx} figures={[{ image: block.image, caption: block.caption }]} title={project.title} />
           ) : null;
+        }
+
+        if (block.type === 'drill') {
+          return <DrillResultsTable key={idx} project={project} locale={locale} title={block.title} />;
         }
 
         if (block.type === 'split') {
