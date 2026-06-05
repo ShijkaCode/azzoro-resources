@@ -22,7 +22,7 @@ parent_project: ''
 tenure:
   licence: Yambat XV-020515 + Bayan Sair XV-023028
   licence_type: Exploration
-  area: "139.34 km²"
+  area: 139.34 km²
   ownership: 100% owned
   province: Gobi-Altai
 drill_highlights:
@@ -52,7 +52,7 @@ content_blocks:
       Yambat is more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive targets including North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge, supporting a broader district-scale growth case.
   - type: image
     image: /uploads/projects/oval-magnetics.png
-    caption: ''
+    caption: Oval Cu-Ni-PGE Plan map
   - type: split
     body: |-
       ## Location and tenure
@@ -62,7 +62,7 @@ content_blocks:
       The project is situated within the Central Asian Orogenic Belt, one of the world's most prospective metallogenic provinces. Yambat forms part of an emerging mineral district that hosts multiple copper and nickel exploration targets, including the Company's adjacent Bayan Sair license and the nearby Red Hill copper-gold discovery. The strategic acquisition of the Bayan Sair licence expanded the Company's footprint over prospective intrusive trends identified through regional exploration, reinforcing the potential for a district-scale copper-nickel sulphide system beyond the Oval discovery.
     image: /uploads/projects/district-magnetics.jpg
     caption: ''
-    reverse: true
+    reverse: false
   - type: text
     body: |-
       ## Geology and mineralisation

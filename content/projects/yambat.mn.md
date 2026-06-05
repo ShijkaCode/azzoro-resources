@@ -26,9 +26,10 @@ is_draft: true
 tenure:
   licence: XV-020515 + XV-023028
   licence_type: Хайгуул
-  area_km2: 139.34
+  area: 139.34 km²
   ownership: 100% эзэмшил
   province: Говь-Алтай
+  area_km2: 139.34
 drill_highlights:
   - hole: OVD021
     intercept: 8.8 м @ 6.08% Cu, 3.19% Ni, 1.63 г/т E3, 0.11% Co — сүүлийн жилүүдэд өрөмдсөн хамгийн өндөр агуулгатай огтлолуудын нэг
@@ -46,7 +47,7 @@ content_blocks:
   - null
   - image: /uploads/projects/oval-magnetics.png
   - image: /uploads/projects/district-magnetics.jpg
-    reverse: true
+    reverse: false
   - null
   - image: /uploads/Oval long section.jpg
 ---
