@@ -46,7 +46,7 @@ export function TenureBar({ project, locale }: { project: Project; locale: Local
 
   const cells = [
     tenure.licence ? { label: tenure.licence_type ? `${tenure.licence_type} licence` : t.licence, value: tenure.licence } : null,
-    tenure.area_km2 ? { label: t.area, value: `${tenure.area_km2} km²` } : null,
+    tenure.area ? { label: t.area, value: tenure.area } : null,
     tenure.ownership ? { label: t.ownership, value: tenure.ownership } : null,
     tenure.province ? { label: t.province, value: tenure.province } : null,
   ].filter(Boolean) as { label: string; value: string }[];

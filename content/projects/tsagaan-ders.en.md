@@ -5,8 +5,8 @@ commodity:
   - Lithium
 status: Active exploration
 region: Dundgovi
-lat: 45
-lng: 106
+lat: 45.16959
+lng: 106.0146
 license_area_km2: 7
 acquired_date: 2022-09-01
 hero_image: /uploads/projects/tsagaan-ders-hero.webp
@@ -22,7 +22,7 @@ parent_project: ''
 tenure:
   licence: XV-019341 & XV-021740
   licence_type: Exploration
-  area_km2: 7.43
+  area: "7.43 km²"
   ownership: 100% owned
   province: Dundgovi (Khuld soum)
 drill_highlights: []

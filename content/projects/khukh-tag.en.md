@@ -20,7 +20,7 @@ group_as_other: true
 tenure:
   licence: XV-019603
   licence_type: Exploration
-  area_km2: 9.54
+  area: "9.54 km²"
   ownership: 100% owned
   province: Dundgovi (Undurshil soum)
 resource_table:

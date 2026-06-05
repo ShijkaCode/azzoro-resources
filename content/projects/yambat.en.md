@@ -22,7 +22,7 @@ parent_project: ''
 tenure:
   licence: Yambat XV-020515 + Bayan Sair XV-023028
   licence_type: Exploration
-  area_km2: 139.34
+  area: "139.34 km²"
   ownership: 100% owned
   province: Gobi-Altai
 drill_highlights:

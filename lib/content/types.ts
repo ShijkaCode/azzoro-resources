@@ -259,7 +259,7 @@ export type Project = {
   tenure?: {
     licence?: string;
     licence_type?: string;
-    area_km2?: number;
+    area?: string;
     ownership?: string;
     province?: string;
   };

@@ -6,8 +6,8 @@ commodity:
   - Gold
 status: Drilling
 region: Govi-Altai
-lat: 46
-lng: 95
+lat: 46.44961
+lng: 95.79281
 license_area_km2: 0
 acquired_date: 2026-01-01
 hero_image: /uploads/Red Hill background photo-crop.jpg
@@ -20,7 +20,7 @@ parent_project: ''
 tenure:
   licence: MV-019681
   licence_type: Mining
-  area_km2: null
+  area: "79.14 ha"
   ownership: 100% owned
   province: Govi-Altai (Sharga soum)
 drill_highlights:

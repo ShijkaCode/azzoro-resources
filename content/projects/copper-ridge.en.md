@@ -6,8 +6,8 @@ commodity:
   - Gold
 status: Active exploration
 region: Govi-Altai
-lat: 46
-lng: 95
+lat: 46.47131
+lng: 95.93144
 license_area_km2: 106
 acquired_date: 2024-01-01
 hero_image: /uploads/field/IMG_8982.JPG
@@ -24,7 +24,7 @@ parent_project: yambat
 tenure:
   licence: XV-020515
   licence_type: Exploration
-  area_km2: 106.07
+  area: "106.07 km²"
   ownership: 100% owned
   province: Govi-Altai
 drill_highlights:
