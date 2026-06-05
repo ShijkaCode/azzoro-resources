@@ -24,7 +24,7 @@ parent_project: yambat
 tenure:
   licence: XV-020515
   licence_type: Exploration
-  area: "106.07 km²"
+  area: 106.07 km²
   ownership: 100% owned
   province: Govi-Altai
 drill_highlights:

@@ -23,9 +23,10 @@ parent_project: yambat
 tenure:
   licence: XV-020515
   licence_type: Хайгуул
-  area_km2: 106.07
+  area: 106.07 km²
   ownership: 100% эзэмшил
   province: Говь-Алтай
+  area_km2: 106.07
 drill_highlights:
   - hole: Чулууны дээж
     intercept: Гадаргуугийн дээжээс 0.4% Cu, 0.195 г/т Au хүртэл
