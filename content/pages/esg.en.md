@@ -123,7 +123,7 @@ stories:
     body: The 2024 winter was one of the hardest in memory, with early and prolonged snowfall, and herder families in Rashaant bagh were running low on reserves. For three years running, the Company has delivered hay and fodder, reaching every herder family before the worst of the cold hit.
     author: Batkhurel B.
     role: Project Lead
-    image: /uploads/esg/viber_image_2026-04-06_13-53-37-485.jpg
+    image: /uploads/IMG_9499.JPG
   - title: Revitalising community spaces
     body: Addressing a key community need, we partnered with the Yesunbulag soum administration to create a dedicated play space for local children. Following a formal request at the 2025 SRA meeting, the Company funded and completed the playground; the administration is leading the final landscaping, due in spring 2026.
     author: Purevdorj D.
