@@ -2,7 +2,7 @@
 hero:
   video_id: ''
   kicker: Монгол — Төв Азийн Орогенийн Бүс
-  headline: Монгол дахь суурь ба үнэт металлын нээлтийг урагшлуулж байна
+  headline: Монгол Улсад суурь болон үнэт металлын ордуудыг нээн илрүүлж, хөгжүүлж байна.
   subline: AZ9 нь Монгол дахь зэс-никель-алт төвтэй хайгуулын багцаа Төв Азийн Орогенийн Бүс дэх өндөр агуулгатай Oval Cu·Ni·PGE нээлтэд тулгуурлан урагшлуулж байгаа бөгөөд дараагийн катализатор нь Red Hill / North Hill-ийн зэс-алтны боломж юм.
   cta_label: Төслүүдийг үзэх
   cta_href: /projects
@@ -25,13 +25,13 @@ featured_projects:
       - value: '2026'
         label: Анхны JORC зорилт
     thumbnails:
-      - image: /uploads/minerals/1.jpg
+      - image: /uploads/field/20251101_073622736_iOS.jpg
         caption: OVD021 нээлтийн өрөмдлөгийн зүсэлт.
         alt: Oval нээлтийн өрөмдлөгийн дээж
-      - image: /uploads/minerals/021.JPG
+      - image: /uploads/IMG_0639-website.JPG
         caption: Oval нээлтийн их сульфидын зүсэлт.
         alt: Их сульфидын зүсэлт
-      - image: /uploads/minerals/core%202.jpg
+      - image: /uploads/IMG_0654-website.JPG
         caption: Тархан байрласан Cu·Ni ашигт малтмалжилтын бүс.
         alt: Ашигт малтмалжсан өрөмдлөгийн зүсэлтийн ойролцоо зураг
     cta_label: Төслийн дэлгэрэнгүй
@@ -40,7 +40,7 @@ featured_projects:
   - eyebrow: 02 — Ойрын катализатор
     headline: Red Hill / North Hill Cu-Au
     lead: Oval-аас ердөө 8 км-т байрлах зэс-алтны катализаторын багц бөгөөд Red Hill-д зузаан Cu-Au VMS сульфид, North Hill-д гүехэн өндөр агуулгатай алт-мөнгө илэрсэн, мөн лиценз 2045 он хүртэл хүчинтэй.
-    image: /uploads/field/_CP11422.jpg
+    image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Red Hill (Майхан Уул) төслийн талбайн зураг, Говь-Алтай, Монгол
     stats:
       - value: 2.23% Cu
@@ -52,13 +52,13 @@ featured_projects:
       - value: '2045'
         label: Ашиглалтын лицензийн хугацаа
     thumbnails:
-      - image: /uploads/minerals/021.JPG
+      - image: /uploads/Azurite-crop.jpg
         caption: Зэс-алтны их сульфидын өрөмдлөгийн зүсэлт.
         alt: Red Hill-ийн их сульфидын өрөмдлөгийн зүсэлт
-      - image: /uploads/field/camp-bilgun.jpg
+      - image: /uploads/Massive Sulphide intercept MUU-cropped.jpg
         caption: Red Hill лицензийн талбай дахь бааз.
         alt: Red Hill төслийн хайгуулын бааз
-      - image: /uploads/field/IMG_8982.JPG
+      - image: /uploads/MUU 2601-crop.jpg
         caption: Говь-Алтайн талбай дахь хайгуулын баг.
         alt: Говь-Алтайн хээрийн хайгуулын баг
     cta_label: Төслийн дэлгэрэнгүй
@@ -110,6 +110,8 @@ why_azzuro:
       body: BHP Xplor хөтөлбөрөөс техникийн дэмжлэг болон хувьцаа шингэлэхгүй санхүүжилт авсан.
       image: /uploads/_CP11686-crop.jpg
       tag: BHP Xplor · 2023
+    - image: /uploads/3. Drone view-crop.jpg
+    - image: /uploads/_CP11368-crop.jpg
   image: /uploads/20251101_181523.jpg
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
 sustainability_teaser:
@@ -124,17 +126,17 @@ home_sustainability:
     - tag: Байгаль орчин
       title: Байгаль орчны мониторинг
       body: Нутгийн иргэд, мал сүрэг болон зэрлэг амьтдын усны эх үүсвэрийг хамгаалахын тулд усны чанар, түвшин хэмжилт, агаарын чанарын хэмжилт болон нөхөн сэргээлтийн ажлуудыг тогтмол гүйцэтгэдэг.
-      image: /uploads/esg/Well%20monitoring%20at%20Anjiin%20bulag.jpg
+      image: /uploads/Environment monitoring-web crop.jpg
       image_alt: Анжийн булаг дахь худгийн хяналт, Монгол
     - tag: Нийгэм
       title: Ажиллаж буй орон нутагтаа бодит дэмжлэг үзүүлэх
       body: Хайгуулын үйл ажиллагаа явагдаж буй сумдад хүүхдийн тоглоомын талбай байгуулах, багийн төвийн үйл ажиллагааг дэмжих зэргээс эхлээд иргэдийн амьжиргаанд бодит дэмжлэг үзүүлдэг.
-      image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
+      image: /uploads/IMG_9525-crop.JPG
       image_alt: Есөнбулаг дахь хүүхдийн тоглоомын талбай, Монгол
     - tag: Засаглал
       title: Нээлттэй харилцаа, тодорхой тайлагнал
       body: Орон нутаг зохион байгуулж буй арга хэмжээ, тогтмол уулзалт, салбарын нээлттэй форум, олон нийтэд нээлттэй компанийн засаглалын шаардлага зэрэг нь бидний үйл ажиллагааны хэв маягийг тодорхойлдог.
-      image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
+      image: /uploads/IMG_1875.JPG
       image_alt: Уул уурхайн танин мэдэхүйн өдөрлөг
 investor_snapshot:
   eyebrow: Хөрөнгө оруулагчийн тойм
