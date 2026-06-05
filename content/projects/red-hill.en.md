@@ -58,8 +58,8 @@ content_blocks:
 
       Multiple deformation events have folded and thickened the mineralised sequence, creating a structurally complex system with potential for repeated or stacked mineralisation. The Company's drilling has confirmed thick intervals of copper-rich massive sulphide that were not fully recognised by previous explorers. Mineralisation remains open along strike and at depth, while the interpreted feeder-style mineralisation beneath the massive sulphide horizon represents an additional exploration target.
   - type: image
-    image: /uploads/projects/red-hill-drilling.jpg
-    caption: Red Hill (Maikhan Uul) drilling — MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
+    image: /uploads/MU Plan Map Announcement .jpg
+    caption: Red Hill (Maikhan Uul) drilling plan map— MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
   - type: drill
     title: ''
   - type: text
