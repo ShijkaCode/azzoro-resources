@@ -138,7 +138,7 @@ stories:
     body: Before beginning exploration at Bayan Sair, we partnered with local herders to document pasture routes, sacred land, water sources and seasonal camps. The resulting Natural Resource Map is now integral to our exploration decisions at the site.
     author: Sainbayar B.
     role: Admin Officer
-    image: /uploads/esg/IMG20240306121940.jpg
+    image: /uploads/Natural_resource_mapping_with_Mr.Erdenetuya_at_Bayan_Sair_tenement.jpg
 reports_intro: Approved reports, policies and disclosures will be linked from this section as they become available for publication.
 gallery:
   - image: /uploads/esg/IMG20240306121940.jpg
