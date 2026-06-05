@@ -22,7 +22,7 @@ parent_project: ''
 tenure:
   licence: MV-019681
   licence_type: Mining
-  area_km2: null
+  area_km2: 0.79
   ownership: 100% owned
   province: Govi-Altai (Sharga soum)
 drill_highlights:
@@ -48,7 +48,7 @@ content_blocks:
 
       ## Location and tenure
 
-      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681, covering approximately 79.14 hectares. The acquisition followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
+      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681, covering approximately 79.14 hectares (0.79 km²). The acquisition followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
 
       ## Geology and mineralisation
 
