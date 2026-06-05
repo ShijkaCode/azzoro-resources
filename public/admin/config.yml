@@ -458,8 +458,8 @@ collections:
       - { label: Commodity, name: commodity, widget: list, i18n: true }
       - { label: Status, name: status, widget: select, options: [ Active exploration, Drilling, Resource definition, Paused ], i18n: true }
       - { label: Region, name: region, widget: string, i18n: true }
-      - { label: Latitude, name: lat, widget: number, i18n: true }
-      - { label: Longitude, name: lng, widget: number, i18n: true }
+      - { label: Latitude, name: lat, widget: number, value_type: float, i18n: true }
+      - { label: Longitude, name: lng, widget: number, value_type: float, i18n: true }
       - { label: License area (km2), name: license_area_km2, widget: number, required: false, value_type: int, i18n: true }
       - { label: Acquired date, name: acquired_date, widget: datetime, required: false, format: 'YYYY-MM-DD', time_format: false, date_format: 'YYYY-MM-DD', i18n: true }
       - { label: Hero image, name: hero_image, widget: image, i18n: duplicate }
