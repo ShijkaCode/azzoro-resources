@@ -108,15 +108,15 @@ investment:
     - category: Herder livelihoods
       title: Hay and fodder support
       body: During difficult winter conditions the Company delivered hay and fodder to 180 herder households in 2024 and to 345 households in 2025.
-      image: /uploads/esg/IMG_4625.jpeg
+      image: /uploads/IMG_0471.JPG
     - category: Health
       title: Early-detection screenings
       body: In 2025 we supported early-detection medical screenings for the senior herders of Rashaant bagh, who live far from regular health services.
-      image: /uploads/esg/Picture1.jpg
+      image: /uploads/134fb8c8-89e5-45f5-bf75-6669d8de21cf.jpg
     - category: Environment
       title: Greening the soum centre
       body: We handed over 445 ornamental tree saplings for the landscaping of Khuld soum's festival grounds, 4,600 elm saplings for the soum centre landscaping, and 10 solar-powered streetlights under a formal agreement, and joined the tree-planting works on site.
-      image: /uploads/esg/IMG_9542.JPG
+      image: /uploads/Khuld tree planting_web.jpg
 stories_intro: Behind every Social Responsibility Agreement and every data point is a family, a bagh, a way of life. These stories are gathered by our employees during field visits across Govi-Altai and Dundgovi — because sustainability is not a report, it is a dynamic relationship.
 stories:
   - title: When the dzud came, so did the fodder
