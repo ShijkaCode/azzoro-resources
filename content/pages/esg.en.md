@@ -133,7 +133,7 @@ stories:
     body: For the first time, we brought local government representatives — soum and bagh governors, environmental officers — to Mongolia's national Mining Week. They joined roundtable discussions on sustainable development and SRA policy. We also organised a Geology and Mining station tour for Rashaant bagh residents to share foundational knowledge about exploration.
     author: Bilguun B.
     role: Environment & Community Specialist
-    image: /uploads/esg/Mining%20Week%202025_with%20Local%20stakeholders.jpg
+    image: /uploads/viber_image_2026-06-05_11-44-31-535.jpg
   - title: Mapping the land with those who know it best
     body: Before beginning exploration at Bayan Sair, we partnered with local herders to document pasture routes, sacred land, water sources and seasonal camps. The resulting Natural Resource Map is now integral to our exploration decisions at the site.
     author: Sainbayar B.
