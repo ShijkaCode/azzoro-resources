@@ -104,7 +104,7 @@ investment:
     - category: Education & children
       title: Playgrounds and school incentives
       body: A playground was built in Yesunbulag soum (completed spring 2026). The Company supported teacher and student incentives in Yesunbulag and Taishir, and delivered 1,000 L of milk under Taishir soum's children's milk program.
-      image: /uploads/esg/Playgarden%20in%20Yesunbulag.jpg
+      image: /uploads/Rashaant naadam.jpg
     - category: Herder livelihoods
       title: Hay and fodder support
       body: During difficult winter conditions the Company delivered hay and fodder to 180 herder households in 2024 and to 345 households in 2025.
