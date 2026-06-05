@@ -50,6 +50,10 @@ content_blocks:
       ## Өнөөг хүртэлх хайгуул
 
       Гадаргуугийн чулууны дээж зэс, алтны урамтай утга өгсөн бөгөөд хайгуулын өрөмдлөг гүнд эрдэсжилт байгааг баталсан. Copper Ridge дээр өнөөдрийг хүртэл таван хайгуулын цооног өрөмдөөд байгаа бөгөөд эхний өрөмдлөгийн үр дүн нь систем одоогийн шалгасан бүсээс цааш үргэлжлэх боломжтойг харуулж байна. Илрэл эрт үе шатандаа байгаа ч Ямбатын өргөн бүсэд дараагийн шатны чухал зорилт хэвээр байна.
+    image: /uploads/projects/copper-ridge-magnetics.jpg
   - null
   - image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
+  - null
+  - null
+  - image: /uploads/projects/district-magnetics.jpg
 ---
