@@ -34,13 +34,21 @@ phone_groups:
         number: +976 11 000 000
       - label: Австрали
         number: +61 8 0000 0000
-  - category: Хөрөнгө оруулагчийн харилцаа
-    numbers:
-      - label: Phil Rundell
-        number: +61 400 000 000
   - category: Хэвлэл мэдээллийн лавлагаа
     numbers:
       - label: Компанийн харилцаа
         number: +61 8 0000 0010
+investor_contacts:
+  - name: Gan-Ochir Zunduisuren
+    role: Гүйцэтгэх захирал
+    email: ganochir@asianbatterymetals.com
+    phones:
+      - +61 (0) 492 840 272
+      - +976 99110973
+  - name: David Paull
+    role: Удирдах зөвлөлийн дарга
+    email: david@asianbatterymetals.com
+    phones:
+      - +61 (0) 407 225 291
 general_email: contact@azzororesources.com
 ---

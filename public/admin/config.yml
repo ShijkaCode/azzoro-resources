@@ -357,6 +357,17 @@ collections:
                   - { label: Number, name: number, widget: string, i18n: true }
                 i18n: true
             i18n: true
+          - label: Investor Relations contacts
+            name: investor_contacts
+            widget: list
+            required: false
+            hint: Named contacts shown as cards in the Investor Relations section of the contact page.
+            fields:
+              - { label: Name, name: name, widget: string, i18n: true }
+              - { label: Role, name: role, widget: string, i18n: true }
+              - { label: Email, name: email, widget: string, required: false, i18n: true }
+              - { label: Phone numbers, name: phones, widget: list, required: false, i18n: true }
+            i18n: true
           - { label: General email, name: general_email, widget: string, i18n: true }
       - name: investor_communication
         label: Investor Communication

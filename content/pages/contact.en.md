@@ -38,9 +38,17 @@ phone_groups:
         number: +976 7777 4114
       - label: Australia
         number: +61 417 675 695
-  - category: Investor relations
-    numbers:
-      - label: Phil Rundell
-        number: +61 417 675 695
+investor_contacts:
+  - name: Gan-Ochir Zunduisuren
+    role: Managing Director
+    email: ganochir@asianbatterymetals.com
+    phones:
+      - +61 (0) 492 840 272
+      - +976 99110973
+  - name: David Paull
+    role: Chairman
+    email: david@asianbatterymetals.com
+    phones:
+      - +61 (0) 407 225 291
 general_email: contact@azzuroresources.com
 ---

@@ -293,12 +293,8 @@ export function ProjectsMapPreview({
                       <p className={`font-display text-2xl font-medium leading-tight transition-colors sm:text-[1.75rem] ${isActive ? 'text-[hsl(var(--copper))]' : 'text-ink/75 group-hover:text-[hsl(var(--copper))]'}`}>
                         {project.title}
                       </p>
-                      <p className="mt-2 flex flex-wrap gap-x-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">
-                        <span>{project.commodity.join(' · ')}</span>
-                        <span aria-hidden="true">/</span>
-                        <span>{project.region}</span>
-                        <span aria-hidden="true">/</span>
-                        <span>{project.status}</span>
+                      <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-ink">
+                        {project.commodity.join(' · ')}
                       </p>
                       {isActive ? (
                         <p className="mt-4 max-w-[52ch] text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">

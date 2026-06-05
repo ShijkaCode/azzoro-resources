@@ -144,11 +144,19 @@ export type ContactOffice = {
   image?: string;
 };
 
+export type ContactInvestorContact = {
+  name: string;
+  role: string;
+  email?: string;
+  phones?: string[];
+};
+
 export type ContactContent = {
   intro_body: string;
   offices: ContactOffice[];
   phone_groups: { category: string; numbers: { label: string; number: string }[] }[];
   general_email: string;
+  investor_contacts?: ContactInvestorContact[];
 };
 
 export type InvestorRegistryPhoneNumber = { label?: string; number: string };
