@@ -34,20 +34,16 @@ phone_groups:
         number: +976 7777 4114
       - label: Австрали
         number: +61 417 675 695
-  - category: Хэвлэл мэдээллийн лавлагаа
-    numbers:
-      - label: Компанийн харилцаа
-        number: +61 8 0000 0010
 investor_contacts:
   - name: Gan-Ochir Zunduisuren
     role: Гүйцэтгэх захирал
-    email: ganochir@asianbatterymetals.com
+    email: ganochir@azzuroresources.com
     phones:
       - +61 (0) 492 840 272
       - +976 99110973
   - name: David Paull
-    role: Удирдах зөвлөлийн дарга
-    email: david@asianbatterymetals.com
+    role: ТУЗ дарга
+    email: david@azzuroresources.com
     phones:
       - +61 (0) 407 225 291
 general_email: contact@azzororesources.com
