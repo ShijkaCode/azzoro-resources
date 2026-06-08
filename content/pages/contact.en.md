@@ -3,8 +3,8 @@ intro_body: Use this page to find Azzuro's office locations and general contact 
 offices:
   - name: Australia office
     address: |-
-      Suite 8, 16 Nicholson Road
-      Subiaco WA 6008
+      Corporate office - Suite 8, 16 Nicholson Road, Subiaco WA 6008
+      Registered office - Level 4, 88 William Street, Perth WA 6000
     email: phil@azzuroresources.com
     hours: ''
     image: /uploads/offices/not_au_replace_me.jpg
