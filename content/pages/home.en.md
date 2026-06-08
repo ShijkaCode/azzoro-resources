@@ -47,7 +47,7 @@ featured_projects:
         label: Massive sulphide zone
       - value: Open
         label: To depth & along strike
-      - value: 500m
+      - value: 720m
         label: Continuous mineralisation
       - value: Au zone
         label: Shallow gold zone identified
@@ -63,7 +63,7 @@ featured_projects:
         alt: Massive Sulphide Intercept MU2605, Red Hill project
     cta_label: More about the project
     cta_href: /projects/red-hill
-    footnote: Drill results from ASX announcements. Refer to ASX announcements for full disclosures.
+    footnote: 'Source: ASX Announcements 28 Nov 2025, 10 Jun 2026. Refer to ASX announcements for full disclosures.'
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Mature Jurisdiction Under-explored Potential Strategic Location
@@ -88,23 +88,23 @@ why_mongolia:
       image: /uploads/location-icon-on-map-generative-ai-photo.jpg
       image_alt: Strategic location
 why_azzuro:
-  eyebrow: Why AZ9
+  eyebrow: Why Azzuro Resources
   headline: Built to Discover Positioned to Develop Driven to Deliver
-  intro: AZ9 gives investors direct exposure to a high-grade copper-nickel discovery at Oval, a copper-gold catalyst at Red Hill, and camp-scale upside across a growing southwest Mongolia portfolio — backed by a board and team built to execute in-country.
+  intro: Azzuro Resources gives investors direct exposure to a high-grade copper-nickel discovery at Oval, a copper-gold catalyst at Red Hill, and camp-scale upside across a growing southwest Mongolia portfolio — backed by a board and team built to execute in-country.
   footnote: ''
   cards:
     - title: High-Grade Flagship Discovery
-      body: The Oval Cu-Ni-PGE project hosts a new high-grade magmatic sulphide system with mineralisation confirmed from surface to 290m depth, and a semi-continuous strike length exceeding 880metres — open at depth and expanding with every drill campaign.
+      body: The Oval Cu-Ni-PGE project hosts a new high-grade magmatic sulphide system with mineralisation confirmed from surface to 290m depth, and a semi-continuous strike length exceeding 880metres — open at depth and expanding with every drill campaign (ASX Announcement on 3 Dec 2025).
       image: /uploads/IMG_0654-website.JPG
       image_alt: ''
       tag: 'ASX: AZ9'
     - title: Outstanding Metallurgy
-      body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics.
+      body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics (ASX Announcement on 18 Dec 2025).
       image: /uploads/IMG_0961-crop.JPG
       image_alt: ''
       tag: Local execution
     - title: Growing Multi-Asset Project Pipeline
-      body: Beyond Oval, AZ9 holds the Red Hill Cu-Au VMS project (acquired 2026) with massive sulphide continuity confirmed over 155m, plus Copper Ridge Cu-Au — forming a compelling cluster of base and precious metal assets in one district
+      body: Beyond Oval, AZ9 holds the Red Hill Cu-Au VMS project (acquired 2026) with massive sulphide continuity confirmed over 155m (ASX announcement on 26 May 2026), plus Copper Ridge Cu-Au — forming a compelling cluster of base and precious metal assets in one district
       image: /uploads/_CP11686-crop.jpg
       image_alt: ''
     - title: Prime Location & Infrastructure Access
@@ -119,7 +119,7 @@ why_azzuro:
   image_alt: Drilling operations at an Azzuro Resources exploration site, Mongolia
 sustainability_teaser:
   heading: An exploration approach that respects land and local communities.
-  body: The explorations of Azzuro Resources PLC are based on maintaining environmental integrity, building sustainable, shared-value partnership with local communities, and upholding international standards of corporate governance.
+  body: The exploration & evaluation activities of Azzuro Resources PLC are based on maintaining environmental integrity, building sustainable, shared-value partnership with local communities, and upholding international standards of corporate governance.
   image: ''
   cta_label: Our approach to Sustainability
   cta_href: /esg
@@ -128,19 +128,19 @@ home_sustainability:
   cards:
     - tag: Environment
       title: Environmental monitoring from day one
-      body: We regularly monitor water quality and levels, measure air quality, and perform land reclamation works to protect water sources for local residents, livestock, and wildlife.
+      body: Azzuro Resources regularly monitors water quality and levels, measures air quality, and performs land reclamation works to protect water sources for local residents, livestock, and wildlife.
       image: /uploads/Environment monitoring-web crop.jpg
       image_alt: Environmental monitoring at Gobi-Altai, Mongolia
     - tag: Social
       title: Practical support where we work
-      body: From playgardens to local livelihood, the Company directs tangible support to the soums that host field activity.
+      body: From playgardens to local livelihood, Azzuro Resources directs tangible support to the soums that host field activity.
       image: /uploads/IMG_9525-crop.JPG
       image_alt: Community playgarden in Yesunbulag, Mongolia
     - tag: Governance
       title: Open engagement, clear disclosure
-      body: Regular stakeholder meetings, public industry forums and ASX-listed governance practices shape how the Company operates in Mongolia.
+      body: Regular stakeholder meetings, public industry forums and governance practices shape how Azzuro Resources operates in Mongolia.
       image: /uploads/IMG_1875.JPG
-      image_alt: Fo
+      image_alt: ''
 investor_snapshot: null
 leadership_teaser:
   heading: Experienced board. Strong local capability.
