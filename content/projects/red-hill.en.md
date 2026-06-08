@@ -47,7 +47,7 @@ content_blocks:
     body: |-
       ## Location and tenure
 
-      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition of Red Hill followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
+      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition of the Red Hill licence followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
   - type: text
     body: |-
       ## Geology and mineralisation
