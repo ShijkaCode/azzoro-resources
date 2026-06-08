@@ -36,7 +36,7 @@ featured_projects:
         alt: Mineralised drill core close-up
     cta_label: More about the project
     cta_href: /projects/yambat
-    footnote: 'Source: ASX announcements 28 Oct 2024, 24 Sep 2025, 29 Jan 2026. Refer to ASX announcements for full disclosures.'
+    footnote: 'Source: Refer to ASX announcements on 28 Oct 2024, 24 Sep 2025, 29 Jan 2026 for full disclosures.'
   - eyebrow: Red Hill — Complimentary Cu-Au project
     headline: Red Hill  Cu-Au
     lead: A copper-gold complimentary project set just 8 km from Oval, with thick Cu-Au VMS sulphides at Red Hill and shallow high-grade gold-silver at North Hill, all tied to a granted mining licence to 2045.
@@ -63,7 +63,7 @@ featured_projects:
         alt: Massive Sulphide Intercept MU2605, Red Hill project
     cta_label: More about the project
     cta_href: /projects/red-hill
-    footnote: 'Source: ASX Announcements 28 Nov 2025, 10 Jun 2026. Refer to ASX announcements for full disclosures.'
+    footnote: 'Source: Refer to ASX Announcements on 28 Nov 2025, 10 Jun 2026 for full disclosures.'
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Mature Jurisdiction Under-explored Potential Strategic Location
@@ -94,21 +94,21 @@ why_azzuro:
   footnote: ''
   cards:
     - title: High-Grade Flagship Discovery
-      body: The Oval Cu-Ni-PGE project hosts a new high-grade magmatic sulphide system with mineralisation confirmed from surface to 290m depth, and a semi-continuous strike length exceeding 880metres — open at depth and expanding with every drill campaign (ASX Announcement on 3 Dec 2025).
+      body: The Oval Cu-Ni-PGE project hosts a new high-grade magmatic sulphide system with mineralisation confirmed from surface to 290m depth, and a semi-continuous strike length exceeding 880metres — open at depth and expanding with every drill campaign (Previously announced in ASX announcement on 3 Dec 2025).
       image: /uploads/IMG_0654-website.JPG
       image_alt: ''
       tag: 'ASX: AZ9'
     - title: Outstanding Metallurgy
-      body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics (ASX Announcement on 18 Dec 2025).
+      body: Exceptional copper recoveries of 89–95% confirmed at Oval, using a simple two-product flowsheet — a strong indicator of processing efficiency and future project economics (Previously announced in ASX Announcement on 18 Dec 2025).
       image: /uploads/IMG_0961-crop.JPG
       image_alt: ''
       tag: Local execution
     - title: Growing Multi-Asset Project Pipeline
-      body: Beyond Oval, AZ9 holds the Red Hill Cu-Au VMS project (acquired 2026) with massive sulphide continuity confirmed over 155m (ASX announcement on 26 May 2026), plus Copper Ridge Cu-Au — forming a compelling cluster of base and precious metal assets in one district
+      body: Beyond Oval, AZ9 holds the Red Hill Cu-Au VMS project (acquired 2026) with massive sulphide continuity confirmed over 155m, plus Copper Ridge Cu-Au — forming a compelling cluster of base and precious metal assets in one district (Previously announced in ASX announcement on 26 May 2026).
       image: /uploads/_CP11686-crop.jpg
       image_alt: ''
     - title: Prime Location & Infrastructure Access
-      body: Projects sit 30km from Altai City with direct access to paved roads, power grid, airport, and limestone supply — significantly reducing development risk and capex requirements
+      body: Projects sit 30km from Altai City with direct access to paved roads, power grid, airport, and limestone supply — significantly reducing development risk and capex requirements.
       image: /uploads/3. Drone view-crop.jpg
       image_alt: ''
     - title: Experienced Board & Technical Team with Deep In-Country Expertise
