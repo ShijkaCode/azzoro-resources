@@ -83,9 +83,9 @@ content_blocks:
     body: |-
       ## Metallurgy
 
-      Independent test work completed by ALS Metallurgy in Perth has demonstrated that Oval mineralisation responds well to conventional flotation processing, delivering strong metallurgical performance and supporting the project's development potential (Previously announced in ASX announcement dated 18 December 2025 “Excellent Copper Recoveries Confirmed At The Oval Project”).
+      Independent test work completed by ALS Metallurgy in Perth has demonstrated that Oval mineralisation responds well to conventional flotation processing, delivering strong metallurgical performance and supporting the project's development potential.
 
-      - Payable copper recoveries of 89–95% across all composite samples tested
+      - Payable copper recoveries of 89–95% across all composite samples tested (Previously announced in ASX announcement dated 18 December 2025 “Excellent Copper Recoveries Confirmed At The Oval Project”).
       - A simple two-product flotation flowsheet producing separate copper and nickel concentrates
       - A clean, marketable copper concentrate with no penalty elements identified
       - Nickel and by-product recovery optimisation ongoing, with stepwise improvements already achieved
