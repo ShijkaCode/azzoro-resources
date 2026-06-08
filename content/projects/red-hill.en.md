@@ -5,7 +5,7 @@ commodity:
   - Copper
   - Gold
 status: Drilling
-region: Govi-Altai
+region: Sharga soum, Govi-Altai
 lat: 46.44961
 lng: 95.79281
 license_area_km2: 0
@@ -15,19 +15,19 @@ gallery_images: []
 gallery_heading: ''
 summary: A VMS copper-gold project on a granted mining licence to 2045, just 8 km from Oval and combining open high-grade Cu-Au sulphides at depth with shallow gold-silver upside near surface.
 tagline: Granted-licence Cu-Au VMS project near Oval and one of the Company's clearest near-term regional catalysts.
-is_draft: true
+is_draft: false
 parent_project: ''
 tenure:
   licence: MV-019681
   licence_type: Mining
   area: 79.14 ha
   ownership: 100% owned
-  province: Govi-Altai (Sharga soum)
+  province: Govi-Altai
 drill_highlights:
   - hole: MU2501 (Cu-Au massive sulphide)
-    intercept: 14.5 m @ 2.23% Cu, 0.73 g/t Au from 132.5 m (including 4.8 m @ 2.80% Cu, 0.88 g/t Au), plus 2.6 m @ 2.28% Cu, 0.49 g/t Au from 154.1 m
+    intercept: 14.5m @ 2.23% Cu, 0.73g/t Au from 132.5m (including 4.8m @ 2.80% Cu, 0.88g/t Au), plus 2.6m @ 2.28% Cu, 0.49g/t Au from 154.1m
   - hole: MU2601 onward (2026)
-    intercept: Extended the massive-sulphide zone to over 155 m of strike, confirming a large, open Cu-Au VMS system
+    intercept: Extended the massive-sulphide zone to over 155m of strike, confirming a large, open Cu-Au VMS system
   - hole: MU2603 (Massive Sulphide)
     intercept: 21.9m @ 6.4% (2%-10%) Cpy+Cc and 93.6% Py from 82.75m (Assay pending)
 historical_estimate: null
@@ -38,7 +38,7 @@ content_blocks:
     body: |-
       ## Overview
 
-      Red Hill, formerly known as the Maikhan Uul Project, is a high-grade copper-gold volcanogenic massive sulphide (VMS) project located just 8 km from the Company's flagship Oval discovery. Red Hill is held under a granted Mining Licence valid through to 2045, providing a significant tenure advantage within the emerging Yambat mineral district.
+      Red Hill, formerly known as the Maikhan Uul Project, is a high-grade copper-gold volcanogenic massive sulphide (VMS) project located just 8 km from the Company's flagship Oval discovery. Red Hill is held under a granted Mining Licence valid to 2045, providing a significant tenure advantage within the emerging Yambat mineral district.
 
       The project benefits from excellent access to infrastructure and high-voltage power and presents two complementary exploration and development opportunities: high-grade copper-gold massive sulphide mineralisation at depth and shallow gold-silver mineralisation near surface.
 
@@ -47,7 +47,7 @@ content_blocks:
     body: |-
       ## Location and tenure
 
-      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
+      Red Hill lies in Sharga soum, Govi-Altai province, around 300 km north of the Chinese border. The Company holds a 100% interest through mining licence MV-019681. The acquisition of Red Hill followed a comprehensive technical and legal due diligence program, including confirmatory drilling.
   - type: text
     body: |-
       ## Geology and mineralisation
@@ -59,9 +59,9 @@ content_blocks:
       Multiple deformation events have folded and thickened the mineralised sequence, creating a structurally complex system with potential for repeated or stacked mineralisation. The Company's drilling has confirmed thick intervals of copper-rich massive sulphide that were not fully recognised by previous explorers. Mineralisation remains open along strike and at depth, while the interpreted feeder-style mineralisation beneath the massive sulphide horizon represents an additional exploration target.
   - type: image
     image: /uploads/MU Plan Map Announcement .jpg
-    caption: Red Hill (Maikhan Uul) drilling plan map— MU2501 and MU2601 massive-sulphide intercepts over a 155 m strike, open along trend and at depth.
+    caption: Completed drillholes at Red Hill (Maikhan Uul) Cu-Au Project (Previously announced in ASX announcement "Massive Sulphide Zone Extended at Red Hill Cu-Au Project" on 26 May 2026) — MU2501 and MU2601 massive-sulphide intercepts over a 155m strike, open along trend and at depth.
   - type: drill
-    title: ''
+    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
   - type: text
     body: |-
       ## **Why Red Hill is Significant**
