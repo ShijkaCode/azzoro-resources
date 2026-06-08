@@ -14,7 +14,7 @@ hero_image: /uploads/field/IMG_8982.JPG
 gallery_images: []
 gallery_heading: ''
 summary: An early-stage copper-gold target in northern Yambat, interpreted as a potential IOCG-style system and broadening the district beyond Oval.
-tagline: A copper-gold prospect within Yambat that adds a second mineralisation style to the wider Yambat district model.
+tagline: A copper-gold prospect within Yambat tenement that adds a second mineralisation style to the wider district model.
 is_draft: false
 parent_project: yambat
 tenure:
