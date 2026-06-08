@@ -78,7 +78,7 @@ content_blocks:
     image: /uploads/Oval long section.jpg
     caption: Oval Cu-Ni-PGE Long section of OVD049, OVD050, OVD051, and OVD052 (Previously announced in ASX Announcement on 29 Jan 2026)
   - type: drill
-    title: ''
+    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
   - type: text
     body: |-
       ## Metallurgy
