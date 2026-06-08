@@ -20,9 +20,10 @@ is_draft: true
 tenure:
   licence: XV-019341 & XV-021740
   licence_type: Хайгуул
-  area_km2: 7.43
+  area: 7.43 km²
   ownership: 100% эзэмшил
   province: Дундговь (Хулд сум)
+  area_km2: 7.43
 drill_highlights:
   - hole: TSDD-1
     intercept: 8.1 м @ 0.73% Li₂O (6.4 м-ээс), 4.1 м @ 1.06% Li₂O (10.4 м-ээс)-ийг оролцуулан — гүнд лити агуулсан пегматитыг баталсан
