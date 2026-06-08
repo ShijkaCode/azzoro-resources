@@ -43,7 +43,7 @@ content_blocks:
     body: |-
       ## Geology and mineralisation
 
-      The prospect sits adjacent to a regional northwest-southeast fault zone and comprises silicified, magnetite-altered andesitic volcanic and metasedimentary rocks intruded by trachy-rhyolite and granosyenite dykes. Two alteration zones have been mapped, both carrying a chalcopyrite-magnetite-pyrite-malachite assemblage. A **30 m-wide by 400 m-long** mineralised zone has been delineated at surface before dipping under alluvial cover to the east, leaving an interpreted eastern extension untested.
+      The prospect sits adjacent to a regional northwest-southeast fault zone and comprises silicified, magnetite-altered andesitic volcanic and metasedimentary rocks intruded by trachy-rhyolite and granosyenite dykes. Two alteration zones have been mapped, both carrying a chalcopyrite-magnetite-pyrite-malachite assemblage. A **30m-wide by 400m-long** mineralised zone has been delineated at surface before dipping under alluvial cover to the east, leaving an interpreted eastern extension untested.
   - type: image
     image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
     caption: Drillhole visual grade intersection, backround is the magnetic anomaly being tested by the drilling (Previously announced in ASX announcement "Drilling Confirms Copper Mineralisation at Copper Ridge" dated 23 Sep 2024.
