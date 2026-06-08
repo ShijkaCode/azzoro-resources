@@ -6,7 +6,7 @@ commodity:
   - Nickel
   - PGE
 status: Drilling
-region: Yesonbulag, Gobi-Altai
+region: Yesonbulag soum, Govi-Altai
 lat: 46.41654
 lng: 95.88906
 license_area_km2: 139
@@ -14,28 +14,28 @@ acquired_date: 2023-01-01
 hero_image: /uploads/gallery/photos/discovery_4k.png
 gallery_images: []
 gallery_heading: ''
-summary: AZ9's Yambat tenement hosts the high-grade Oval copper-nickel-PGE discovery project, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia.
-tagline: Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across Yambat.
+summary: Azzuro Resources's Yambat tenement hosts the high-grade Oval copper-nickel-PGE discovery project, where drilling, geophysics and metallurgy are defining a district-scale copper-nickel opportunity in southwestern Mongolia.
+tagline: Flagship Oval Cu-Ni-PGE discovery with growing strike, strong metallurgy and broader district-scale upside across the Yambat tenement.
 is_flagship: true
-is_draft: true
+is_draft: false
 parent_project: ''
 tenure:
   licence: Yambat XV-020515 + Bayan Sair XV-023028
   licence_type: Exploration
   area: 139.34 km²
   ownership: 100% owned
-  province: Gobi-Altai
+  province: Govi-Altai
 drill_highlights:
   - hole: OVD021
-    intercept: 8.8 m @ 6.08% Cu, 3.19% Ni, 1.63 g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
+    intercept: 8.8m @ 6.08% Cu, 3.19% Ni, 1.63g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
   - hole: OVD027
-    intercept: 6.1 m @ 4.16% Cu, 3.51% Ni, 0.93 g/t E3, 0.13% Co from 98.2 m
+    intercept: 6.1m @ 4.16% Cu, 3.51% Ni, 0.93g/t E3, 0.13% Co from 98.2m
   - hole: OVD034
-    intercept: 1.3 m @ 4.70% Cu, 3.65% Ni, 1.19 g/t E3, 0.12% Co from 79.6 m (massive sulphide), within 34.0 m @ 0.51% Cu, 0.47% Ni
+    intercept: 1.3m @ 4.70% Cu, 3.65% Ni, 1.19g/t E3, 0.12% Co from 79.6m (massive sulphide), within 34.0m @ 0.51% Cu, 0.47% Ni
   - hole: OVD033
-    intercept: 88.5 m @ 0.62% Cu, 0.45% Ni, 0.22 g/t E3 from 79.0 m, including higher-grade zones
+    intercept: 88.5m @ 0.62% Cu, 0.45% Ni, 0.22g/t E3 from 79.0m, including higher-grade zones
   - hole: OVD051
-    intercept: 9.3 m @ 1.06% Cu, 0.48% Ni from 108.2 m, including 3.8 m @ 1.46% Cu, 0.66% Ni
+    intercept: 9.3m @ 1.06% Cu, 0.48% Ni from 108.2m, including 3.8m @ 1.46% Cu, 0.66% Ni
 data_cards: []
 documents: []
 content_blocks:
@@ -49,7 +49,7 @@ content_blocks:
 
       During 2025, drilling expanded the interpreted mineralised intrusion by approximately 60%, increasing its strike extent from around 550 metres to approximately 880 metres. The system remains open both along strike and at depth, highlighting significant exploration upside. Metallurgical test work has also delivered excellent copper recoveries, further strengthening the project's potential development pathway.
 
-      Yambat is more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive targets including North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge, supporting a broader district-scale growth case.
+      Yambat tenement hosts more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive areas including North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge, supporting a broader district-scale growth case.
   - type: image
     image: /uploads/projects/oval-magnetics.png
     caption: Oval Cu-Ni-PGE Plan map
@@ -57,7 +57,7 @@ content_blocks:
     body: |-
       ## Location and tenure
 
-      Yambat lies in Govi-Altai Province in southwestern Mongolia, approximately 300 km north of the Chinese border and within reach of established infrastructure and high-voltage power. The Company holds the project through Exploration Licence XV-020515, covering 106.07 km² on a 100% owned basis. Together with the adjacent Bayan Sair licence, the Company's landholding in the district covers more than 139 km² of prospective ground.
+      The project licence is located in Govi-Altai Province in southwestern Mongolia, approximately 300km north of the Chinese border and within reach of established infrastructure and high-voltage power. The Company holds the project through Exploration Licence XV-020515, covering 106.07km² on a 100% owned basis. Together with the adjacent Bayan Sair licence, the Company's landholding in the district covers more than 139km² of prospective ground.
 
       The project is situated within the Central Asian Orogenic Belt, one of the world's most prospective metallogenic provinces. Yambat forms part of an emerging mineral district that hosts multiple copper and nickel exploration targets, including the Company's adjacent Bayan Sair license and the nearby Red Hill copper-gold discovery. The strategic acquisition of the Bayan Sair licence expanded the Company's footprint over prospective intrusive trends identified through regional exploration, reinforcing the potential for a district-scale copper-nickel sulphide system beyond the Oval discovery.
     image: /uploads/projects/district-magnetics.jpg
@@ -76,7 +76,7 @@ content_blocks:
       To date, 52 diamond drillholes for approximately 8,600 metres have been completed across the Oval and North Oval prospects, confirming the continuity and growth potential of the mineralised system.
   - type: image
     image: /uploads/Oval long section.jpg
-    caption: Oval Cu-Ni-PGE Long section
+    caption: Oval Cu-Ni-PGE Long section (ASX Announcement on 29 Jan 2026)
   - type: drill
     title: ''
   - type: text
