@@ -3,12 +3,12 @@ hero:
   video_id: ''
   kicker: ''
   headline: Advancing Base & Precious Metal Discoveries in Mongolia
-  subline: Azzuro Resources is advancing copper and base metals exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by the Red Hill Cu-Au project as the next catalyst to defining a more robust Portfolio.
+  subline: Azzuro Resources is advancing a copper and base metals exploration portfolio in Mongolia, anchored by the high-grade Oval Cu-Ni-PGE discovery and complemented by the Red Hill Cu-Au project, which has the potential to further strengthen and diversify the Company's asset portfolio.
   cta_label: Explore projects
   cta_href: /projects
   asx_url: https://www.asx.com.au/markets/company/AZ9
-  announcements_url: https://investors.asianbatterymetals.com/announcements
-  presentation_url: https://investors.asianbatterymetals.com/announcement-detail/Corporate%20Presentation-OTc5OA==
+  announcements_url: https://investors.azzuroresources.com/announcements
+  presentation_url: https://investors.azzuroresources.com/announcement-detail/Corporate%20Presentation-OTc5OA==
 featured_projects:
   - eyebrow: Oval — Flagship project
     headline: Oval Cu·Ni·PGE Discovery
@@ -34,12 +34,12 @@ featured_projects:
       - image: /uploads/IMG_0654-website.JPG
         caption: Massive sulphide intercept · Oval discovery.
         alt: Mineralised drill core close-up
-    cta_label: Read the project
+    cta_label: More about the project
     cta_href: /projects/yambat
-    footnote: 'Source: ASX announcements 28 Oct 2024, 24 Sep 2025, 29 Jan 2026. Refer to azzuroresources.com for full disclosures.'
-  - eyebrow: Red Hill — Near-term catalyst
+    footnote: 'Source: ASX announcements 28 Oct 2024, 24 Sep 2025, 29 Jan 2026. Refer to ASX announcements for full disclosures.'
+  - eyebrow: Red Hill — Complimentary Cu-Au project
     headline: Red Hill  Cu-Au
-    lead: A copper-gold catalyst set just 8 km from Oval, with thick Cu-Au VMS sulphides at Red Hill and shallow high-grade gold-silver at North Hill, all tied to a granted mining licence to 2045.
+    lead: A copper-gold complimentary project set just 8 km from Oval, with thick Cu-Au VMS sulphides at Red Hill and shallow high-grade gold-silver at North Hill, all tied to a granted mining licence to 2045.
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
@@ -61,9 +61,9 @@ featured_projects:
       - image: /uploads/MUU 2601-crop.jpg
         caption: Massive Sulphide Intercept MU2605, Red Hill project
         alt: Massive Sulphide Intercept MU2605, Red Hill project
-    cta_label: Read the project
+    cta_label: More about the project
     cta_href: /projects/red-hill
-    footnote: Drill results from ASX announcements. Refer to azzuroresources.com for full disclosures.
+    footnote: Drill results from ASX announcements. Refer to ASX announcements for full disclosures.
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Mature Jurisdiction Under-explored Potential Strategic Location
