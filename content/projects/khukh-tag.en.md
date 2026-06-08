@@ -7,20 +7,22 @@ status: Resource definition
 region: Dundgovi
 lat: 45.52755
 lng: 108.40444
-license_area_km2: 9.54
-acquired_date: '2021-06-15'
+license_area_km2: 9
+acquired_date: 2021-06-15
 hero_image: /uploads/projects/khukh-tag-hero.jpg
 gallery_images:
   - image: /uploads/projects/khukh-tag-zones.jpg
     caption: Khukh Tag graphite — West, Discovery, North and Central zones hosting the defined JORC Mineral Resource, with targets remaining open.
-summary: "A graphite project anchored by a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC, with mineralisation open in all directions and clear room to grow."
-tagline: "Defined graphite resource with room to expand and encouraging early metallurgy."
-is_draft: true
+gallery_heading: ''
+summary: A graphite project anchored by a defined JORC 2012 Mineral Resource of 12.2 Mt at 12.3% TGC (ASX announcement "Prospectus" dated 30 Apr 2024), with mineralisation open in all directions and clear room to grow.
+tagline: Defined graphite resource with room to expand and encouraging early metallurgy.
 group_as_other: true
+is_draft: false
+parent_project: ''
 tenure:
   licence: XV-019603
   licence_type: Exploration
-  area: "9.54 km²"
+  area: 9.54 km²
   ownership: 100% owned
   province: Dundgovi (Undurshil soum)
 resource_table:
@@ -46,7 +48,7 @@ data_cards: []
 documents: []
 content_blocks:
   - type: text
-    body: |
+    body: |-
       ## Overview
 
       Khukh Tag gives the Company defined graphite optionality, anchored by a JORC 2012 Mineral Resource with substantial room to grow. Located in Dundgovi province around 320 km southeast of Ulaanbaatar, the project is well positioned for development — **35 km from a paved road and the state power grid, and 80 km from the Airag rail station**, which connects via the main line to the Chinese border crossing at Erenhot.
