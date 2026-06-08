@@ -26,7 +26,7 @@ tenure:
   ownership: 100% owned
   province: Dundgovi (Undurshil soum)
 resource_table:
-  note: JORC 2012 Mineral Resource, November 2023, reported at a 4.3% TGC cut-off.
+  note: JORC 2012 Mineral Resource, November 2023, reported at a 4.3% TGC cut-off (ASX announcement "Prospectus" dated 30 Apr 2024).
   rows:
     - category: Indicated (Central)
       tonnes: '1.4'
@@ -42,7 +42,7 @@ resource_table:
       contained: 1,498.8 kt
 exploration_target:
   label: Exploration Target — Khukh Tag
-  statement: In addition to the Mineral Resource, an Exploration Target of 13.6–84.3 Mt at 5.2–9.1% TGC has been identified, reflecting the project's significant growth potential.
+  statement: In addition to the Mineral Resource, an Exploration Target of 13.6–84.3 Mt at 5.2–9.1% TGC has been identified, reflecting the project's significant growth potential (ASX announcement "Prospectus" dated 30 Apr 2024).
   cautionary: An Exploration Target is conceptual in nature. There has been insufficient exploration to estimate a Mineral Resource, and it is uncertain whether further exploration will result in the estimation of a Mineral Resource.
 data_cards: []
 documents: []
