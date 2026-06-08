@@ -14,7 +14,7 @@ gallery_images:
   - image: /uploads/projects/tsagaan-ders-targets.png
     caption: Tsagaan Ders — Quartz Hill, Central and South exploration targets with TSDD drill collars across the licences.
 gallery_heading: ''
-summary: An early-stage lithium project in Dundgovi where pegmatites and greisen-altered granite define a 5 km mineralised corridor and maiden drilling has confirmed lithium at depth.
+summary: An early-stage lithium project in Dundgovi where pegmatites and greisen-altered granite define a 5km mineralised corridor and maiden drilling has confirmed lithium at depth.
 tagline: A 5 km pegmatite- and greisen-hosted lithium system with depth confirmation from first-pass drilling.
 group_as_other: true
 is_draft: false
@@ -28,7 +28,7 @@ tenure:
 drill_highlights: []
 exploration_target:
   label: Exploration Target — Tsagaan Ders
-  statement: The Tsagaan Ders project exploration target ranges between 1.3Mt to 2.8Mt to a depth of 20m, or 3.3Mt to 6.9Mt to a depth of 50m, or 5.1Mt to 10.5Mt to a depth of 100m at a grade of 0.2% to 1.0% Li2O.
+  statement: The Tsagaan Ders project exploration target ranges between 1.3Mt to 2.8Mt to a depth of 20m, or 3.3Mt to 6.9Mt to a depth of 50m, or 5.1Mt to 10.5Mt to a depth of 100m at a grade of 0.2% to 1.0% Li2O (ASX Announcement "Prospectus" dated 30 Apr 2024).
   cautionary: An Exploration Target is conceptual in nature. There has been insufficient exploration to estimate a Mineral Resource, and it is uncertain whether further exploration will result in the estimation of a Mineral Resource.
 data_cards: []
 documents: []
