@@ -45,7 +45,7 @@ data_cards: []
 documents: []
 content_blocks:
   - null
-  - image: /uploads/projects/oval-magnetics.png
+  - image: /uploads/Oval plan map.png
   - image: /uploads/projects/district-magnetics.jpg
     reverse: false
   - null

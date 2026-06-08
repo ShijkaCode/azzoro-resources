@@ -20,7 +20,7 @@ is_flagship: true
 is_draft: false
 parent_project: ''
 tenure:
-  licence: Yambat XV-020515 + Bayan Sair XV-023028
+  licence: Yambat XV-020515 & Bayan Sair XV-023028
   licence_type: Exploration
   area: 139.34 km²
   ownership: 100% owned
@@ -51,8 +51,8 @@ content_blocks:
 
       Yambat tenement hosts more than a single discovery. Oval has validated a geophysical targeting model that now guides exploration across a cluster of look-alike intrusive areas including North Oval, MS1, MS2, the newly identified MS4 and Copper Ridge, supporting a broader district-scale growth case.
   - type: image
-    image: /uploads/projects/oval-magnetics.png
-    caption: Oval Cu-Ni-PGE Plan map
+    image: /uploads/Oval plan map.png
+    caption: Oval Cu-Ni-PGE Drillhole locations on Reduced to Pole (RTP) Magnetic map (Previously announced in ASX Announcement on 29 Jan 2026)
   - type: split
     body: |-
       ## Location and tenure
@@ -61,7 +61,7 @@ content_blocks:
 
       The project is situated within the Central Asian Orogenic Belt, one of the world's most prospective metallogenic provinces. Yambat forms part of an emerging mineral district that hosts multiple copper and nickel exploration targets, including the Company's adjacent Bayan Sair license and the nearby Red Hill copper-gold discovery. The strategic acquisition of the Bayan Sair licence expanded the Company's footprint over prospective intrusive trends identified through regional exploration, reinforcing the potential for a district-scale copper-nickel sulphide system beyond the Oval discovery.
     image: /uploads/projects/district-magnetics.jpg
-    caption: ''
+    caption: District-scale location map
     reverse: false
   - type: text
     body: |-
@@ -76,14 +76,14 @@ content_blocks:
       To date, 52 diamond drillholes for approximately 8,600 metres have been completed across the Oval and North Oval prospects, confirming the continuity and growth potential of the mineralised system.
   - type: image
     image: /uploads/Oval long section.jpg
-    caption: Oval Cu-Ni-PGE Long section (ASX Announcement on 29 Jan 2026)
+    caption: Oval Cu-Ni-PGE Long section of OVD049, OVD050, OVD051, and OVD052 (Previously announced in ASX Announcement on 29 Jan 2026)
   - type: drill
     title: ''
   - type: text
     body: |-
       ## Metallurgy
 
-      Independent test work completed by ALS Metallurgy in Perth has demonstrated that Oval mineralisation responds well to conventional flotation processing, delivering strong metallurgical performance and supporting the project's development potential.
+      Independent test work completed by ALS Metallurgy in Perth has demonstrated that Oval mineralisation responds well to conventional flotation processing, delivering strong metallurgical performance and supporting the project's development potential (Previously announced in ASX announcement dated 18 December 2025 “Excellent Copper Recoveries Confirmed At The Oval Project”).
 
       - Payable copper recoveries of 89–95% across all composite samples tested
       - A simple two-product flotation flowsheet producing separate copper and nickel concentrates
