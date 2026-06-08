@@ -3,16 +3,16 @@ hero:
   video_id: ''
   kicker: ''
   headline: Advancing Base & Precious Metal Discoveries in Mongolia
-  subline: AZ9 is advancing copper and base metals exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by Red Hill Cu-Au as the next catalyst.
+  subline: Azzuro Resources is advancing copper and base metals exploration portfolio in Mongolia, anchored by the high-grade Oval Cu·Ni·PGE discovery and backed by the Red Hill Cu-Au project as the next catalyst to defining a more robust Portfolio.
   cta_label: Explore projects
   cta_href: /projects
   asx_url: https://www.asx.com.au/markets/company/AZ9
   announcements_url: https://investors.asianbatterymetals.com/announcements
   presentation_url: https://investors.asianbatterymetals.com/announcement-detail/Corporate%20Presentation-OTc5OA==
 featured_projects:
-  - eyebrow: Oval — Flagship discovery
+  - eyebrow: Oval — Flagship project
     headline: Oval Cu·Ni·PGE Discovery
-    lead: A significant high-grade magmatic copper-nickel sulphide discovery in the Central Asian Orogenic Belt, with massive, net-textured and disseminated mineralisation intersected from surface to 290 metres depth over an 880-metre strike extent. The system remains open along strike and at depth, offering strong resource growth potential. Multiple additional targets associated with confirmed mafic intrusions across the broader tenement package highlight the project's district-scale exploration upside.
+    lead: A significant high-grade magmatic copper-nickel sulphide discovery in the Central Asian Orogenic Belt, with massive, net-textured and disseminated mineralisation intersected from surface to 290 metres depth over an 880-metre strike extent. The system remains open along strike and at depth, offering strong resource growth potential. Multiple additional areas associated with confirmed mafic intrusions across the broader tenement package highlight the project's district-scale exploration upside.
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: ''
     stats:
