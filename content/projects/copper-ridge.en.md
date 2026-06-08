@@ -14,8 +14,8 @@ hero_image: /uploads/field/IMG_8982.JPG
 gallery_images: []
 gallery_heading: ''
 summary: An early-stage copper-gold target in northern Yambat, interpreted as a potential IOCG-style system and broadening the district beyond Oval.
-tagline: A copper-gold prospect within Yambat that adds a second mineralisation style to the wider district model.
-is_draft: true
+tagline: A copper-gold prospect within Yambat that adds a second mineralisation style to the wider Yambat district model.
+is_draft: false
 parent_project: yambat
 tenure:
   licence: XV-020515
@@ -46,9 +46,9 @@ content_blocks:
       The prospect sits adjacent to a regional northwest-southeast fault zone and comprises silicified, magnetite-altered andesitic volcanic and metasedimentary rocks intruded by trachy-rhyolite and granosyenite dykes. Two alteration zones have been mapped, both carrying a chalcopyrite-magnetite-pyrite-malachite assemblage. A **30 m-wide by 400 m-long** mineralised zone has been delineated at surface before dipping under alluvial cover to the east, leaving an interpreted eastern extension untested.
   - type: image
     image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
-    caption: Copper ridge cross section
+    caption: Drillhole visual grade intersection, backround is the magnetic anomaly being tested by the drilling (Previously announced in ASX announcement "Drilling Confirms Copper Mineralisation at Copper Ridge" dated 23 Sep 2024.
   - type: drill
-    title: ''
+    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
   - type: text
     body: '##'
   - type: split
@@ -57,6 +57,6 @@ content_blocks:
 
       Surface rock-chip sampling returned encouraging copper and gold values, and scout drilling has confirmed mineralisation at depth. Five scout holes have been completed at Copper Ridge to date, with early drilling suggesting the system may continue beyond the current test area. The prospect remains early stage, but it is a credible follow-up target within the wider Yambat district.
     image: /uploads/projects/district-magnetics.jpg
-    caption: Yambat tenement magnetics
+    caption: Disctrict-scale location map
     reverse: false
 ---
