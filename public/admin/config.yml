@@ -593,6 +593,7 @@ collections:
                 name: rows
                 widget: list
                 i18n: true
+                hint: "Paste a full https:// URL as a cell to show a clickable 'View ↗' link (e.g. an announcement reference)."
                 fields:
                   - { label: Cells (one value per column, in order), name: cells, widget: list, i18n: true }
         i18n: true

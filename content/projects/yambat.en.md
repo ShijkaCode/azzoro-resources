@@ -74,22 +74,36 @@ content_blocks:
         align: left
       - header: Intercept
         align: left
+      - header: Announcement
+        align: left
+      - header: Reference
+        align: left
     rows:
       - cells:
           - OVD021
           - 8.8m @ 6.08% Cu, 3.19% Ni, 1.63g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
+          - 28 Oct 2024 — Outstanding Copper-Nickel Discovery
+          - 'https://investors.azzuroresources.com/announcement-detail/Outstanding%20Copper-Nickel%20Discovery-OTM5NQ=='
       - cells:
           - OVD027
           - 6.1m @ 4.16% Cu, 3.51% Ni, 0.93g/t E3, 0.13% Co from 98.2m
+          - 13 Jan 2025 — High Grade Massive Sulphide Intercepts Confirmed at Oval
+          - 'https://investors.azzuroresources.com/announcement-detail/High%20Grade%20Massive%20Sulphide%20Intercepts%20Confirmed%20at%20Oval-OTM4NQ=='
       - cells:
           - OVD034
           - 1.3m @ 4.70% Cu, 3.65% Ni, 1.19g/t E3, 0.12% Co from 79.6m (massive sulphide), within 34.0m @ 0.51% Cu, 0.47% Ni
+          - 11 Jun 2025 — Assay Results Confirm High-Grade Mineralisation at Oval
+          - 'https://investors.azzuroresources.com/announcement-detail/Assay%20Results%20Confirm%20High-Grade%20Mineralisation%20at%20Oval-OTM2MA=='
       - cells:
           - OVD033
           - 88.5m @ 0.62% Cu, 0.45% Ni, 0.22g/t E3 from 79.0m, including higher-grade zones
+          - 11 Jun 2025 — Assay Results Confirm High-Grade Mineralisation at Oval
+          - 'https://investors.azzuroresources.com/announcement-detail/Assay%20Results%20Confirm%20High-Grade%20Mineralisation%20at%20Oval-OTM2MA=='
       - cells:
           - OVD051
           - 9.3m @ 1.06% Cu, 0.48% Ni from 108.2m, including 3.8m @ 1.46% Cu, 0.66% Ni
+          - 29 Jan 2026 — Significant Exploration Advances at Oval Cu-Ni-PGE Project
+          - 'https://investors.azzuroresources.com/announcement-detail/Significant%20Exploration%20Advances%20at%20Oval%20Cu-Ni-PGE%20Project-OTMyNA=='
   - type: text
     body: |-
       ## Metallurgy

@@ -61,16 +61,26 @@ content_blocks:
         align: left
       - header: Intercept
         align: left
+      - header: Announcement
+        align: left
+      - header: Reference
+        align: left
     rows:
       - cells:
           - MU2501 (Cu-Au massive sulphide)
           - 14.5m @ 2.23% Cu, 0.73g/t Au from 132.5m (including 4.8m @ 2.80% Cu, 0.88g/t Au), plus 2.6m @ 2.28% Cu, 0.49g/t Au from 154.1m
+          - 28 Nov 2025 — Assays Confirm Thick and High-Grade Copper and Gold at Maikhan Uul Project
+          - 'https://investors.azzuroresources.com/announcement-detail/Maikhan%20Uul%20Assays%20Confirm%20Thick%20%26%20High-Grade%20Copper%20%26%20Gold-OTMyOA=='
       - cells:
           - MU2601 onward (2026)
           - Extended the massive-sulphide zone to over 155m of strike, confirming a large, open Cu-Au VMS system
+          - 7 May 2026 — Initial Success at Red Hill (Maikhan Uul) Cu-Au Project
+          - 'https://investors.azzuroresources.com/announcement-detail/Initial%20Success%20at%20Red%20Hill%20(Maikhan%20Uul)%20Cu-Au%20Project-MTM2MDI='
       - cells:
           - MU2603 (Massive Sulphide)
           - 21.9m @ 6.4% (2%-10%) Cpy+Cc and 93.6% Py from 82.75m (Assay pending)
+          - 26 May 2026 — Massive Sulphide Zone Extended at Red Hill Cu-Au Project
+          - 'https://investors.azzuroresources.com/announcement-detail/Massive%20Sulphide%20Zone%20Extended%20at%20Red%20Hill%20Cu-Au%20Project-MTM5MDM='
   - type: text
     body: |-
       ## **Why Red Hill is Significant**

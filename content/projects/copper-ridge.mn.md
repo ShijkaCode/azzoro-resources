@@ -56,6 +56,10 @@ content_blocks:
         align: left
       - header: Огтлол
         align: left
+      - header: Мэдэгдэл
+        align: left
+      - header: Эх сурвалж
+        align: left
     rows:
       - cells:
           - Чулууны дээж

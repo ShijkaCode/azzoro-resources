@@ -68,6 +68,29 @@ type TableBlock = {
 
 const ALIGN_CLASS = { left: 'text-left', right: 'text-right', center: 'text-center' } as const;
 
+// A cell whose entire value is an http(s) URL renders as a compact "View ↗" link
+// (e.g. the drill table "Reference" column links to the ASX announcement). Keeping
+// the cell value a bare URL avoids markdown-escaping issues with the encoded
+// parentheses / ampersands in the investor-portal links.
+const URL_CELL_RE = /^https?:\/\/\S+$/;
+
+function renderCell(value: string) {
+  const trimmed = value.trim();
+  if (URL_CELL_RE.test(trimmed)) {
+    return (
+      <a
+        href={trimmed}
+        target="_blank"
+        rel="noreferrer"
+        className="whitespace-nowrap font-medium text-ink underline underline-offset-2 transition-colors hover:text-[hsl(var(--copper))]"
+      >
+        View ↗
+      </a>
+    );
+  }
+  return value;
+}
+
 // Fully editable table block: the heading, columns (header + alignment) and rows
 // of positional cells all come from the CMS. Cell N renders under column N; any
 // shortfall renders blank and extra cells beyond the columns are ignored, so the
@@ -110,7 +133,7 @@ export function ContentTable({ block }: { block: TableBlock }) {
               <tr key={rowIdx} className="border-t border-rule">
                 {Array.from({ length: colCount }, (_, colIdx) => (
                   <td key={colIdx} className={`num-tabular px-4 py-3 text-ink/85 ${alignClass(colIdx)}`}>
-                    {row.cells?.[colIdx] ?? ''}
+                    {renderCell(row.cells?.[colIdx] ?? '')}
                   </td>
                 ))}
               </tr>

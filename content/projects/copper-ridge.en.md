@@ -50,13 +50,21 @@ content_blocks:
         align: left
       - header: Intercept
         align: left
+      - header: Announcement
+        align: left
+      - header: Reference
+        align: left
     rows:
       - cells:
           - Rock-chip
           - Up to 0.4% Cu and 0.195 g/t Au from surface sampling
+          - 6 Aug 2024 — Regional Exploration Identifies New Copper & Nickel Targets
+          - 'https://investors.azzuroresources.com/announcement-detail/Regional%20Exploration%20Identifies%20New%20Copper%20%26%20Nickel%20Targets-OTQwNw=='
       - cells:
           - CRS01A
           - Continuous disseminated and vein-hosted chalcopyrite from surface over a 200.5 m hole, terminating in mineralisation within a fault zone
+          - 23 Sep 2024 — Drilling Confirms Copper Mineralisation at Copper Ridge
+          - 'https://investors.azzuroresources.com/announcement-detail/Drilling%20Confirms%20Copper%20Mineralisation%20at%20Copper%20Ridge-OTQwMg=='
   - type: text
     body: '##'
   - type: split
