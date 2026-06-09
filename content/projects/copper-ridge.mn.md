@@ -27,11 +27,6 @@ tenure:
   ownership: 100% эзэмшил
   province: Говь-Алтай
   area_km2: 106.07
-drill_highlights:
-  - hole: Чулууны дээж
-    intercept: Гадаргуугийн дээжээс 0.4% Cu, 0.195 г/т Au хүртэл
-  - hole: CRS01A
-    intercept: Гадаргуугаас 200.5 м цооногийн туршид тасралтгүй тархмал ба судал хэлбэрийн халькопирит, хагарлын бүсэд ашигт малтмалаар төгссөн
 data_cards: []
 documents: []
 content_blocks:
@@ -53,7 +48,21 @@ content_blocks:
     image: /uploads/projects/copper-ridge-magnetics.jpg
   - null
   - image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
-  - null
+  - type: table
+    title: Сонгосон өрөмдлөгийн үр дүн
+    note: Дараах хүснэгтэд онцлох өрөмдлөгийн огтлолуудыг нэгтгэн харууллаа. Тайлагнасан бүх огтлолын дэлгэрэнгүй мэдээллийг 2026 оны 3-р сарын 27-нд зарласан "2025 оны Жилийн тайлан ба санхүүгийн тайлан"-гийн Хавсралт A–F хэсгээс үзнэ үү.
+    columns:
+      - header: Цооног
+        align: left
+      - header: Огтлол
+        align: left
+    rows:
+      - cells:
+          - Чулууны дээж
+          - Гадаргуугийн дээжээс 0.4% Cu, 0.195 г/т Au хүртэл
+      - cells:
+          - CRS01A
+          - Гадаргуугаас 200.5 м цооногийн туршид тасралтгүй тархмал ба судал хэлбэрийн халькопирит, хагарлын бүсэд ашигт малтмалаар төгссөн
   - null
   - image: /uploads/projects/district-magnetics.jpg
 ---

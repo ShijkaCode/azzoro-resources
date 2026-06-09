@@ -222,8 +222,15 @@ export type ProjectContentBlock =
   | { type: 'image'; image: string; caption?: string }
   // Two-column row: text + image side by side. `reverse` puts the image on the left.
   | { type: 'split'; body?: string; image?: string; caption?: string; reverse?: boolean }
-  // Drill-highlights table positioned inline in the content flow (data from drill_highlights).
-  | { type: 'drill'; title?: string };
+  // Fully editable table: optional heading + note, custom columns (header + alignment)
+  // and rows of positional cells (cell N fills column N).
+  | {
+      type: 'table';
+      title?: string;
+      note?: string;
+      columns?: { header?: string; align?: 'left' | 'right' | 'center' }[];
+      rows?: { cells?: string[] }[];
+    };
 
 export type Project = {
   slug: string;
@@ -263,7 +270,6 @@ export type Project = {
     ownership?: string;
     province?: string;
   };
-  drill_highlights?: { hole: string; intercept: string }[];
   resource_table?: {
     note?: string;
     rows: { category: string; tonnes: string; grade: string; contained: string }[];

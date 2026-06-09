@@ -23,13 +23,6 @@ tenure:
   area: 79.14 ha
   ownership: 100% owned
   province: Govi-Altai
-drill_highlights:
-  - hole: MU2501 (Cu-Au massive sulphide)
-    intercept: 14.5m @ 2.23% Cu, 0.73g/t Au from 132.5m (including 4.8m @ 2.80% Cu, 0.88g/t Au), plus 2.6m @ 2.28% Cu, 0.49g/t Au from 154.1m
-  - hole: MU2601 onward (2026)
-    intercept: Extended the massive-sulphide zone to over 155m of strike, confirming a large, open Cu-Au VMS system
-  - hole: MU2603 (Massive Sulphide)
-    intercept: 21.9m @ 6.4% (2%-10%) Cpy+Cc and 93.6% Py from 82.75m (Assay pending)
 historical_estimate: null
 data_cards: []
 documents: []
@@ -60,8 +53,24 @@ content_blocks:
   - type: image
     image: /uploads/MU Plan Map Announcement .jpg
     caption: Completed drillholes at Red Hill (Maikhan Uul) Cu-Au Project (Previously announced in ASX announcement "Massive Sulphide Zone Extended at Red Hill Cu-Au Project" on 26 May 2026) — MU2501 and MU2601 massive-sulphide intercepts over a 155m strike, open along trend and at depth.
-  - type: drill
-    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+  - type: table
+    title: Notable drill intercepts
+    note: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+    columns:
+      - header: Drillhole
+        align: left
+      - header: Intercept
+        align: left
+    rows:
+      - cells:
+          - MU2501 (Cu-Au massive sulphide)
+          - 14.5m @ 2.23% Cu, 0.73g/t Au from 132.5m (including 4.8m @ 2.80% Cu, 0.88g/t Au), plus 2.6m @ 2.28% Cu, 0.49g/t Au from 154.1m
+      - cells:
+          - MU2601 onward (2026)
+          - Extended the massive-sulphide zone to over 155m of strike, confirming a large, open Cu-Au VMS system
+      - cells:
+          - MU2603 (Massive Sulphide)
+          - 21.9m @ 6.4% (2%-10%) Cpy+Cc and 93.6% Py from 82.75m (Assay pending)
   - type: text
     body: |-
       ## **Why Red Hill is Significant**

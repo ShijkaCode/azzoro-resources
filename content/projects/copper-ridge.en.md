@@ -23,11 +23,6 @@ tenure:
   area: 106.07 km²
   ownership: 100% owned
   province: Govi-Altai
-drill_highlights:
-  - hole: Rock-chip
-    intercept: Up to 0.4% Cu and 0.195 g/t Au from surface sampling
-  - hole: CRS01A
-    intercept: Continuous disseminated and vein-hosted chalcopyrite from surface over a 200.5 m hole, terminating in mineralisation within a fault zone
 data_cards: []
 documents: []
 content_blocks:
@@ -47,8 +42,21 @@ content_blocks:
   - type: image
     image: /uploads/Copper Ridge Cross section, Assay result intercepts on Inverted magnetics background..jpg
     caption: Drillhole visual grade intersection, backround is the magnetic anomaly being tested by the drilling (Previously announced in ASX announcement "Drilling Confirms Copper Mineralisation at Copper Ridge" dated 23 Sep 2024.
-  - type: drill
-    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+  - type: table
+    title: Notable drill intercepts
+    note: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+    columns:
+      - header: Drillhole
+        align: left
+      - header: Intercept
+        align: left
+    rows:
+      - cells:
+          - Rock-chip
+          - Up to 0.4% Cu and 0.195 g/t Au from surface sampling
+      - cells:
+          - CRS01A
+          - Continuous disseminated and vein-hosted chalcopyrite from surface over a 200.5 m hole, terminating in mineralisation within a fault zone
   - type: text
     body: '##'
   - type: split

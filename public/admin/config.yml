@@ -499,14 +499,6 @@ collections:
           - { label: Ownership, name: ownership, widget: string, required: false, i18n: true }
           - { label: Province, name: province, widget: string, required: false, i18n: true }
         i18n: true
-      - label: Drill highlights
-        name: drill_highlights
-        widget: list
-        required: false
-        fields:
-          - { label: Drillhole, name: hole, widget: string, i18n: true }
-          - { label: Intercept, name: intercept, widget: text, i18n: true }
-        i18n: true
       - label: Resource table
         name: resource_table
         widget: object
@@ -583,12 +575,26 @@ collections:
               - { label: Image, name: image, widget: image, i18n: duplicate }
               - { label: Caption, name: caption, widget: text, required: false, i18n: true }
               - { label: Image on the left (swap sides), name: reverse, widget: boolean, default: false, required: false, i18n: duplicate }
-          - label: Drill highlights table
-            name: drill
+          - label: Table
+            name: table
             widget: object
-            summary: Drill highlights table
+            summary: 'Table: {{fields.title}}'
             fields:
               - { label: Heading (optional), name: title, widget: string, required: false, i18n: true }
+              - { label: Note under heading (optional), name: note, widget: text, required: false, i18n: true }
+              - label: Columns
+                name: columns
+                widget: list
+                i18n: true
+                fields:
+                  - { label: Header, name: header, widget: string, required: false, i18n: true }
+                  - { label: Align, name: align, widget: select, options: [ left, right, center ], default: left, required: false, i18n: true }
+              - label: Rows
+                name: rows
+                widget: list
+                i18n: true
+                fields:
+                  - { label: Cells (one value per column, in order), name: cells, widget: list, i18n: true }
         i18n: true
   - name: gallery_videos
     label: Gallery Videos

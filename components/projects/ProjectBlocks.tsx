@@ -11,9 +11,6 @@ const LABELS = {
     ownership: 'Ownership',
     province: 'Province',
     galleryTitle: 'Field & core',
-    drillTitle: 'Notable drill intercepts',
-    drillHole: 'Drillhole',
-    drillIntercept: 'Intercept',
     resourceTitle: 'Mineral Resource',
     category: 'Category',
     tonnes: 'Tonnes',
@@ -27,9 +24,6 @@ const LABELS = {
     ownership: 'Эзэмшил',
     province: 'Аймаг',
     galleryTitle: 'Хээр ба өрөмдлөгийн зүсэлт',
-    drillTitle: 'Сонгосон өрөмдлөгийн үр дүн',
-    drillHole: 'Цооног',
-    drillIntercept: 'Огтлол',
     resourceTitle: 'Ашигт малтмалын нөөц',
     category: 'Ангилал',
     tonnes: 'Тонн',
@@ -65,29 +59,64 @@ export function TenureBar({ project, locale }: { project: Project; locale: Local
   );
 }
 
-export function DrillResultsTable({ project, locale, title }: { project: Project; locale: Locale; title?: string }) {
-  const t = LABELS[locale] ?? LABELS.en;
-  const rows = project.drill_highlights;
-  if (!rows || rows.length === 0) return null;
+type TableBlock = {
+  title?: string;
+  note?: string;
+  columns?: { header?: string; align?: 'left' | 'right' | 'center' }[];
+  rows?: { cells?: string[] }[];
+};
+
+const ALIGN_CLASS = { left: 'text-left', right: 'text-right', center: 'text-center' } as const;
+
+// Fully editable table block: the heading, columns (header + alignment) and rows
+// of positional cells all come from the CMS. Cell N renders under column N; any
+// shortfall renders blank and extra cells beyond the columns are ignored, so the
+// table never breaks if the counts drift.
+export function ContentTable({ block }: { block: TableBlock }) {
+  const columns = block.columns ?? [];
+  const rows = block.rows ?? [];
+  const colCount = columns.length || rows.reduce((max, row) => Math.max(max, row.cells?.length ?? 0), 0);
+  if (colCount === 0) return null;
+
+  const alignClass = (idx: number) => ALIGN_CLASS[columns[idx]?.align ?? 'left'];
 
   return (
     <div>
-      <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
-      <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{title || t.drillTitle}</h2>
-      <div className="mt-6 border border-rule">
-        <div className="grid grid-cols-[8rem_1fr] border-b border-rule bg-paper sm:grid-cols-[12rem_1fr]">
-          <div className="px-4 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-muted-ink">{t.drillHole}</div>
-          <div className="px-4 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-muted-ink">{t.drillIntercept}</div>
-        </div>
-        {rows.map((row, idx) => (
-          <div
-            key={`${row.hole}-${idx}`}
-            className={`grid grid-cols-[8rem_1fr] sm:grid-cols-[12rem_1fr] ${idx > 0 ? 'border-t border-rule' : ''}`}
-          >
-            <div className="num-tabular px-4 py-4 text-[14px] font-medium text-ink">{row.hole}</div>
-            <div className="num-tabular px-4 py-4 text-[14px] leading-relaxed text-ink/80">{row.intercept}</div>
-          </div>
-        ))}
+      {block.title ? (
+        <>
+          <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-[hsl(var(--copper))]" />
+          <h2 className="font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">{block.title}</h2>
+        </>
+      ) : null}
+      {block.note ? <p className="mt-3 text-[14px] leading-relaxed text-ink/70">{block.note}</p> : null}
+      <div className="mt-6 overflow-x-auto border border-rule">
+        <table className="w-full min-w-[34rem] border-collapse text-[14px]">
+          {columns.length > 0 ? (
+            <thead>
+              <tr className="border-b border-rule bg-paper">
+                {columns.map((column, idx) => (
+                  <th
+                    key={idx}
+                    className={`px-4 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-muted-ink ${alignClass(idx)}`}
+                  >
+                    {column.header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          ) : null}
+          <tbody>
+            {rows.map((row, rowIdx) => (
+              <tr key={rowIdx} className="border-t border-rule">
+                {Array.from({ length: colCount }, (_, colIdx) => (
+                  <td key={colIdx} className={`num-tabular px-4 py-3 text-ink/85 ${alignClass(colIdx)}`}>
+                    {row.cells?.[colIdx] ?? ''}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
@@ -172,10 +201,8 @@ export function ProjectFigures({
 // Falls back to the legacy single body for any entry without content_blocks.
 export function ProjectContent({
   project,
-  locale,
 }: {
   project: Project & { markdown?: string };
-  locale: Locale;
 }) {
   const blocks = project.content_blocks ?? [];
 
@@ -193,8 +220,8 @@ export function ProjectContent({
           ) : null;
         }
 
-        if (block.type === 'drill') {
-          return <DrillResultsTable key={idx} project={project} locale={locale} title={block.title} />;
+        if (block.type === 'table') {
+          return <ContentTable key={idx} block={block} />;
         }
 
         if (block.type === 'split') {

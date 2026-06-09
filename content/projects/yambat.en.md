@@ -25,17 +25,6 @@ tenure:
   area: 139.34 km²
   ownership: 100% owned
   province: Govi-Altai
-drill_highlights:
-  - hole: OVD021
-    intercept: 8.8m @ 6.08% Cu, 3.19% Ni, 1.63g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
-  - hole: OVD027
-    intercept: 6.1m @ 4.16% Cu, 3.51% Ni, 0.93g/t E3, 0.13% Co from 98.2m
-  - hole: OVD034
-    intercept: 1.3m @ 4.70% Cu, 3.65% Ni, 1.19g/t E3, 0.12% Co from 79.6m (massive sulphide), within 34.0m @ 0.51% Cu, 0.47% Ni
-  - hole: OVD033
-    intercept: 88.5m @ 0.62% Cu, 0.45% Ni, 0.22g/t E3 from 79.0m, including higher-grade zones
-  - hole: OVD051
-    intercept: 9.3m @ 1.06% Cu, 0.48% Ni from 108.2m, including 3.8m @ 1.46% Cu, 0.66% Ni
 data_cards: []
 documents: []
 content_blocks:
@@ -77,8 +66,30 @@ content_blocks:
   - type: image
     image: /uploads/Oval long section.jpg
     caption: Oval Cu-Ni-PGE Long section of OVD049, OVD050, OVD051, and OVD052 (Previously announced in ASX Announcement on 29 Jan 2026)
-  - type: drill
-    title: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+  - type: table
+    title: Notable drill intercepts
+    note: The following table summarises notable drill intercepts. Please note that full details for all reported intercepts are available in the Appendices A through F of the "Annual Report and Financial Statements 2025" announced on 27 March 2026.
+    columns:
+      - header: Drillhole
+        align: left
+      - header: Intercept
+        align: left
+    rows:
+      - cells:
+          - OVD021
+          - 8.8m @ 6.08% Cu, 3.19% Ni, 1.63g/t E3, 0.11% Co — among the highest-grade intercepts drilled in recent years
+      - cells:
+          - OVD027
+          - 6.1m @ 4.16% Cu, 3.51% Ni, 0.93g/t E3, 0.13% Co from 98.2m
+      - cells:
+          - OVD034
+          - 1.3m @ 4.70% Cu, 3.65% Ni, 1.19g/t E3, 0.12% Co from 79.6m (massive sulphide), within 34.0m @ 0.51% Cu, 0.47% Ni
+      - cells:
+          - OVD033
+          - 88.5m @ 0.62% Cu, 0.45% Ni, 0.22g/t E3 from 79.0m, including higher-grade zones
+      - cells:
+          - OVD051
+          - 9.3m @ 1.06% Cu, 0.48% Ni from 108.2m, including 3.8m @ 1.46% Cu, 0.66% Ni
   - type: text
     body: |-
       ## Metallurgy
