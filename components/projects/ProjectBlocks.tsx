@@ -66,6 +66,26 @@ type TableBlock = {
   rows?: { cells?: string[] }[];
 };
 
+// Standing JORC-style cautionary note shown on every project page (directly under
+// the tenure cards). Replaces the old draft / "pending sign-off" banner.
+export function CompetentPersonNote({ locale, className }: { locale: Locale; className?: string }) {
+  const isMn = locale === 'mn';
+  const label = isMn ? 'Анхааруулга' : 'Cautionary statement';
+  const body = isMn
+    ? 'Энд толилуулсан мэдээлэл нь Эрх бүхий мэргэжилтний толилуулж, гарын үсэг зурсан мэдээллээс материаллаг байдлаар ялгаатай биш.'
+    : 'The information presented is not materially different from the information presented and signed off by the competent person.';
+  return (
+    <p
+      className={
+        className ??
+        'border-b border-rule bg-paper px-6 py-3 text-[12px] leading-relaxed text-muted-ink sm:px-10 lg:px-16'
+      }
+    >
+      <span className="font-medium text-ink">{label}</span> — {body}
+    </p>
+  );
+}
+
 const ALIGN_CLASS = { left: 'text-left', right: 'text-right', center: 'text-center' } as const;
 
 // A cell whose entire value is an http(s) URL renders as a compact "View ↗" link

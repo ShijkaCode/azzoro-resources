@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { ProjectDetailHero } from '@/components/projects/ProjectDetailHero';
-import { TenureBar, ResourceTable, CautionaryCallout, ProjectFigures, ProjectContent } from '@/components/projects/ProjectBlocks';
+import { TenureBar, CompetentPersonNote, ResourceTable, CautionaryCallout, ProjectFigures, ProjectContent } from '@/components/projects/ProjectBlocks';
 import { EsgGallery } from '@/components/esg/EsgGallery';
 import type { Project } from '@/lib/content/types';
 import { isLocale, locales } from '@/lib/i18n/config';
@@ -79,21 +79,16 @@ export default async function ProjectDetailPage({
 
   const t =
     locale === 'mn'
-      ? { draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.', nearby: 'Ойролцоох төслүүд', fromTheField: 'Хээрээс' }
-      : { draft: 'Draft — figures pending Competent Person sign-off prior to publication.', nearby: 'Nearby projects', fromTheField: 'From the field' };
+      ? { nearby: 'Ойролцоох төслүүд', fromTheField: 'Хээрээс' }
+      : { nearby: 'Nearby projects', fromTheField: 'From the field' };
 
   return (
     <main id="main-content">
       <ProjectDetailHero project={project} locale={locale} />
 
-      {project.is_draft ? (
-        <div className="border-b border-rule bg-paper px-6 py-3 text-[11px] font-medium uppercase tracking-[0.24em] text-muted-ink sm:px-10 lg:px-16">
-          {t.draft}
-        </div>
-      ) : null}
-
       <section className="bg-paper">
         <TenureBar project={project} locale={locale} />
+        <CompetentPersonNote locale={locale} />
       </section>
 
       <section className="bg-paper px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">

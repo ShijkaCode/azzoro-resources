@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { loadCollection } from '@/lib/content/loadCollection';
 import { MediaImage as Image } from '@/components/shared/MediaImage';
-import { ProjectContent } from '@/components/projects/ProjectBlocks';
+import { ProjectContent, CompetentPersonNote } from '@/components/projects/ProjectBlocks';
 import type { Project } from '@/lib/content/types';
 import { isLocale } from '@/lib/i18n/config';
 import { localizeHref } from '@/lib/i18n/pathname';
@@ -18,7 +18,6 @@ const COPY = {
       "Earlier-stage and smaller-footprint exploration interests across the Azzuro Resources portfolio. Each project is summarised below; follow 'View full detail' for the project's complete technical profile.",
     viewDetail: 'View full detail',
     backToList: 'Back to all projects',
-    draft: 'Draft — figures pending Competent Person sign-off prior to publication.',
   },
   mn: {
     eyebrow: 'Багц',
@@ -27,7 +26,6 @@ const COPY = {
       'Аззуро Ресоурсесийн багц дахь эрт үе шатанд буй болон бага хэмжээний хайгуулын төслүүд. Доор төсөл тус бүрийг товчоор танилцуулав; бүрэн техникийн профайлыг харахын тулд "Дэлгэрэнгүй үзэх" товчийг сонгоно уу.',
     viewDetail: 'Дэлгэрэнгүй үзэх',
     backToList: 'Бүх төслүүд рүү буцах',
-    draft: 'Ноорог — тоо баримтыг Эрх бүхий мэргэжилтнээр баталгаажуулах шаардлагатай.',
   },
 } as const;
 
@@ -119,11 +117,10 @@ export default async function OtherProjectsPage({ params }: { params: { locale: 
                 <ProjectContent project={project} />
               </div>
 
-              {project.is_draft ? (
-                <p className="mt-10 max-w-[60ch] border-l-2 border-[hsl(var(--copper))] pl-4 text-[12px] font-medium uppercase tracking-[0.24em] text-muted-ink">
-                  {copy.draft}
-                </p>
-              ) : null}
+              <CompetentPersonNote
+                locale={locale}
+                className="mt-10 max-w-[60ch] border-l-2 border-[hsl(var(--copper))] pl-4 text-[12px] leading-relaxed text-muted-ink"
+              />
 
               <Link
                 href={localizeHref(locale, `/projects/${project.slug}`)}
