@@ -144,7 +144,7 @@ home_sustainability:
 investor_snapshot: null
 leadership_teaser:
   heading: Experienced board. Strong local capability.
-  body: The board, business leaders and technical team combine Mongolian operating depth, capital-markets experience and countrywide geological knowledge, giving AZ9 credibility as it advances its exploration program.
+  body: The board, business leaders and technical team combine Mongolian operating depth, capital-markets experience and countrywide geological knowledge, giving Azzuro Resources credibility as it advances its exploration program.
   cta_label: Meet the team
   cta_href: /about
 stock_section_enabled: false
