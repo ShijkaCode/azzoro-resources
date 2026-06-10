@@ -43,14 +43,14 @@ featured_projects:
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
-      - value: 2.2% Cu
-        label: Massive sulphide zone
+      - value: 2.58% Cu
+        label: High-Grade Massive Sulphide
       - value: Open
         label: To depth & along strike
-      - value: 720m
-        label: Continuous mineralisation
-      - value: Au zone
-        label: Shallow gold zone identified
+      - value: 272m
+        label: Strike length confirmed
+      - value: 6.54 g/t Au
+        label: Shallow gold zone
     thumbnails:
       - image: /uploads/Azurite-crop.jpg
         caption: Oxidised rhyolite with azurite, drillhole MU2602
