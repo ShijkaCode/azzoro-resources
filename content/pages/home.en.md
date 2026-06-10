@@ -49,7 +49,7 @@ featured_projects:
         label: To depth & along strike
       - value: 272m
         label: Strike length confirmed
-      - value: 6.54 g/t Au
+      - value: Au zone
         label: Shallow gold zone
     thumbnails:
       - image: /uploads/Azurite-crop.jpg
