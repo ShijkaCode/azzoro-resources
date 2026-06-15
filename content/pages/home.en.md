@@ -8,7 +8,7 @@ hero:
   cta_href: /projects
   asx_url: https://www.asx.com.au/markets/company/AZ9
   announcements_url: https://investors.azzuroresources.com/announcements
-  presentation_url: https://investors.azzuroresources.com/announcement-detail/Corporate%20Presentation-OTc5OA==
+  presentation_url: https://investors.azzuroresources.com/announcement-detail/Corporate%20Presentation-MTQ3OTc=
 featured_projects:
   - eyebrow: Oval — Flagship project
     headline: Oval Cu·Ni·PGE Discovery
