@@ -23,6 +23,7 @@ photo_groups:
       - /uploads/IMG_1875.JPG
       - /uploads/IMG_1930.JPG
       - /uploads/IMG_9525.JPG
+      - /uploads/IMG_5002.png
   - tag: Өрөмдлөг
     images:
       - /uploads/hero-poster.jpg
