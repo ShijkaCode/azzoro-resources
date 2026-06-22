@@ -13,6 +13,8 @@ photo_groups:
       - /uploads/_CP11396.jpg
       - /uploads/Discovery Team, Discovery Metal, Discovery Hole.JPEG
       - /uploads/Bob site visit 2025.jpg
+      - /uploads/250619_Tony at warehouse (2).jpg
+      - /uploads/_CP11682.jpg
   - tag: Community
     images:
       - /uploads/Environment monitoring (3).jpg
