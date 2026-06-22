@@ -10,6 +10,9 @@ photo_groups:
       - /uploads/_CP11686-crop.jpg
       - /uploads/_CP10934.jpg
       - /uploads/_CP10951.jpg
+      - /uploads/_CP11396.jpg
+      - /uploads/Discovery Team, Discovery Metal, Discovery Hole.JPEG
+      - /uploads/Bob site visit 2025.jpg
   - tag: Орон нутаг
     images:
       - /uploads/Environment monitoring (3).jpg
