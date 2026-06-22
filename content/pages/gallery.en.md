@@ -4,62 +4,15 @@ intro_body: Photography, video and case studies documenting how Azzuro's field t
 photo_groups:
   - tag: Field
     images:
-      - /uploads/_CP10934.jpg
-      - /uploads/_CP10951.jpg
-      - /uploads/_CP10973.jpg
-      - /uploads/_CP11063.jpg
-      - /uploads/_CP11197.jpg
-      - /uploads/_CP11368.jpg
-      - /uploads/_CP11385.jpg
-      - /uploads/_CP11396.jpg
-      - /uploads/_CP11435.jpg
-      - /uploads/_CP11440.jpg
-      - /uploads/_CP11462.jpg
-      - /uploads/_CP11486.jpg
-      - /uploads/_CP11682.jpg
-      - /uploads/_CP11709.jpg
-      - /uploads/_CP11839.jpg
-      - /uploads/_CP11846.jpg
-      - /uploads/_CP11848.jpg
-      - /uploads/250619_Tony at warehouse (2).jpg
-      - /uploads/20250426_161050.jpg
-      - /uploads/Bob site visit 2025.jpg
-      - /uploads/CP site visit 2025.jpg
-      - /uploads/Discovery Team, Discovery Metal, Discovery Hole.JPEG
-      - /uploads/IMG_0705.JPG
-      - /uploads/IMG_2435.JPG
-      - /uploads/IMG_5417.jpg
-      - /uploads/IMG_9200.JPG
-      - /uploads/IMG_9295.JPG
-      - /uploads/_CP10934.jpg
-      - /uploads/_CP10951.jpg
-      - /uploads/_CP10973.jpg
-      - /uploads/_CP11063.jpg
-      - /uploads/_CP11396.jpg
-      - /uploads/_CP11385.jpg
-      - /uploads/_CP11368.jpg
-      - /uploads/_CP11197.jpg
-      - /uploads/_CP11486.jpg
-      - /uploads/_CP11462.jpg
-      - /uploads/_CP11440.jpg
-      - /uploads/_CP11435.jpg
-      - /uploads/_CP11846.jpg
-      - /uploads/_CP11839.jpg
-      - /uploads/_CP11682.jpg
-      - /uploads/Bob site visit 2025.jpg
-      - /uploads/250619_Tony at warehouse (2).jpg
-      - /uploads/20250426_161050.jpg
-      - /uploads/CP site visit 2025.jpg
-      - /uploads/Discovery Team, Discovery Metal, Discovery Hole.JPEG
-      - /uploads/IMG_0705.JPG
-      - /uploads/IMG_2435.JPG
-      - /uploads/IMG_5417.jpg
-      - /uploads/IMG_9200.JPG
-      - /uploads/IMG_9295.JPG
       - /uploads/_CP11385-crop.jpg
       - /uploads/field/0-02-06-a335164536a791b69db2059b127aa5564f25fb28fcedf07595b4d87829195f05_269b84d7634c4796.jpg
       - /uploads/field/0-02-08-776b88f490ed8214d276af20344eaea420be6e99617b3baab39b6129d892d334_3664907482750c1b.jpg
       - /uploads/_CP11686-crop.jpg
+      - /uploads/_CP10934.jpg
+      - /uploads/_CP10951.jpg
+      - /uploads/_CP10973.jpg
+      - /uploads/_CP11063.jpg
+      - /uploads/_CP11197.jpg
   - tag: Community
     images:
       - /uploads/Environment monitoring (3).jpg
