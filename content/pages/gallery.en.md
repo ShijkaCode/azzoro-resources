@@ -15,7 +15,6 @@ photo_groups:
       - /uploads/Bob site visit 2025.jpg
       - /uploads/250619_Tony at warehouse (2).jpg
       - /uploads/_CP11682.jpg
-      - /uploads/IMG_E7646.png
       - /uploads/IMG_9295.JPG
   - tag: Community
     images:
