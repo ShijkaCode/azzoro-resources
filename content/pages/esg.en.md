@@ -142,19 +142,19 @@ stories:
 reports_intro: Approved reports, policies and disclosures will be linked from this section as they become available for publication.
 gallery:
   - image: /uploads/esg/IMG20240306121940.jpg
-    caption: Field environmental baseline survey
+    caption: Hey, fodder donation 2024 - Rashaant bagh, Yesonbulag soum, Govi-Altai
   - image: /uploads/esg/_CP10926.jpg
-    caption: On-site team, Govi-Altai
+    caption: Yesonbulag soum Environmental Inspection Team visit 2025
   - image: /uploads/esg/Picture1.jpg
-    caption: Community engagement session
+    caption: Hey, fodder donation 2025 - Rashaant bagh, Yesonbulag soum, Govi-Altai
   - image: /uploads/esg/IMG_9527.JPG
-    caption: Water resource monitoring
+    caption: Hey, fodder donation 2025 - Rashaant bagh, Yesonbulag soum, Govi-Altai
   - image: /uploads/esg/IMG_9542.JPG
-    caption: Rehabilitation and land care
+    caption: Hey, fodder donation 2025 - Rashaant bagh, Yesonbulag soum, Govi-Altai
   - image: /uploads/esg/viber_image_2026-04-06_13-53-37-485.jpg
-    caption: Local stakeholder visit
+    caption: Ulaantug bagh meeting 2026 - Sharga soum, Govi-Altai
   - image: /uploads/esg/IMG_2440.JPG
-    caption: Exploration camp operations
+    caption: Social Responsibility Agreement Discussion Meeting 2025
   - image: /uploads/esg/IMG_4625.jpeg
-    caption: Community partnership program
+    caption: Children playground installation 2025 (SRA, Yesonbulag soum, Govi-Altai)
 ---
