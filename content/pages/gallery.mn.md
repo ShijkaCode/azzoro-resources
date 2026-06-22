@@ -16,7 +16,6 @@ photo_groups:
       - /uploads/250619_Tony at warehouse (2).jpg
       - /uploads/_CP11682.jpg
       - /uploads/IMG_9295.JPG
-      - /uploads/IMG_E7646.png
   - tag: Орон нутаг
     images:
       - /uploads/Environment monitoring (3).jpg
