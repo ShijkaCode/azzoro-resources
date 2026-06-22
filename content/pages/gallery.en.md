@@ -9,10 +9,6 @@ photo_groups:
       - /uploads/field/0-02-08-776b88f490ed8214d276af20344eaea420be6e99617b3baab39b6129d892d334_3664907482750c1b.jpg
       - /uploads/_CP11686-crop.jpg
       - /uploads/_CP10934.jpg
-      - /uploads/_CP10951.jpg
-      - /uploads/_CP10973.jpg
-      - /uploads/_CP11063.jpg
-      - /uploads/_CP11197.jpg
   - tag: Community
     images:
       - /uploads/Environment monitoring (3).jpg
