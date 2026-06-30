@@ -41,7 +41,7 @@ phone_groups:
 investor_contacts:
   - name: Gan-Ochir Zunduisuren
     role: Managing Director
-    email: ganochir@azzuroresources.com
+    email: gana@azzuroresources.com
     phones:
       - +61 (0) 492 840 272
       - +976 99110973
