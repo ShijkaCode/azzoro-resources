@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ShijkaCode/azzoro-resources
   branch: main
-  base_url: https://azzoro-resources.vercel.app
+  base_url: https://azzuroresources.com
   auth_endpoint: api/auth
 
 media_folder: public/uploads

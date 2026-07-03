@@ -95,4 +95,4 @@ public/         static assets + /admin shell + /uploads media
 
 ## Deployment
 
-Vercel (Next.js preset, `npm run build`). Production + Preview env vars mirror `.env.example`. Deployed at `azzoro-resources.vercel.app` (custom domain pending). The `/admin` OAuth callback is registered for that exact host + localhost — new preview hostnames will 404 on admin auth.
+Vercel (Next.js preset, `npm run build`). Production + Preview env vars mirror `.env.example`. Production domain: `azzuroresources.com` (the default `*.vercel.app` alias was removed to keep it out of search results). The `/admin` OAuth popup uses `base_url` in `public/admin/config.yml` (`https://azzuroresources.com`); the GitHub OAuth App callback must be registered for `https://azzuroresources.com/api/callback` (+ localhost for dev) — other hostnames will 404 on admin auth.
