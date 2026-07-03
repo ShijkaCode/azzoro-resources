@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Roboto, Inter, Montserrat, Lora, Playfair_Display, Oswald, Raleway, PT_Serif, Poppins, Space_Grotesk, DM_Serif_Display } from 'next/font/google';
 import './globals.css';
 import { loadGlobal } from '@/lib/content/loadGlobal';
@@ -78,6 +79,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
