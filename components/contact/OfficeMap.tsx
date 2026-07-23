@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import type { Map as MapType } from 'maplibre-gl';
-import { getMapStyleUrl } from '@/lib/map/tiles';
+import { getMapStyleUrl, isMapTilerLoadError, MAP_FALLBACK_STYLE } from '@/lib/map/tiles';
 
 // Small non-interactive location map for an office card. Uses the same vector
 // tile setup as the projects map (the Static Maps API isn't on the plan).
@@ -29,6 +29,15 @@ export function OfficeMap({ lng, lat, label }: { lng: number; lat: number; label
         interactive: false,
       });
       mapRef.current = map;
+
+      // Fall back to the local OSM raster style if the MapTiler key is rejected
+      // (403 domain restriction, quota, expired key) so the card still shows a map.
+      let usedFallback = false;
+      map.on('error', (event) => {
+        if (usedFallback || !isMapTilerLoadError(event)) return;
+        usedFallback = true;
+        map.setStyle(MAP_FALLBACK_STYLE);
+      });
 
       const pin = document.createElement('div');
       pin.style.cssText =

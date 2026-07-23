@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Map as MapType, Popup as PopupType, LngLatBoundsLike } from 'maplibre-gl';
 import type { Project } from '@/lib/content/types';
 import { primaryCommodityColor } from '@/lib/map/markers';
-import { getMapStyleUrl } from '@/lib/map/tiles';
+import { getMapStyleUrl, isMapTilerLoadError, MAP_FALLBACK_STYLE } from '@/lib/map/tiles';
 
 const T = {
   en: {
@@ -55,7 +55,14 @@ function popupHTML(project: Project): string {
   const meta = escapeHtml(
     [project.commodity.join(' · '), project.region].filter(Boolean).join(' · ')
   );
-  const image = project.hero_image || '';
+  // Route local /uploads heroes through Next's image optimizer so the popup
+  // loads a ~640px WebP/AVIF variant instead of the full-resolution original
+  // (some heroes are multi-MB). CSS backgrounds can't use next/image directly,
+  // so we build the /_next/image URL by hand. External URLs are used as-is.
+  const rawImage = project.hero_image || '';
+  const image = rawImage.startsWith('/')
+    ? `/_next/image?url=${encodeURIComponent(rawImage)}&w=640&q=70`
+    : rawImage;
   return `
     <div class="project-popup-inner">
       <div class="project-popup-image" style="background-image: url('${image.replace(/'/g, '%27')}')"></div>
@@ -118,14 +125,16 @@ export function ProjectsMapPreview({
 
       map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), 'top-right');
 
-      map.on('load', () => {
-        // Rendered flat / top-down (pitch 0, maxPitch 0). 3D terrain is
-        // intentionally NOT enabled: draping the map over a terrain mesh makes
-        // MapLibre re-project HTML markers (our pins) a frame behind the tiles,
-        // so they visibly lag/drift while panning — badly on mobile. The hybrid
-        // satellite style already shows real terrain texture in a flat top-down view.
+      // Rendered flat / top-down (pitch 0, maxPitch 0). 3D terrain is
+      // intentionally NOT enabled: draping the map over a terrain mesh makes
+      // MapLibre re-project HTML markers (our pins) a frame behind the tiles,
+      // so they visibly lag/drift while panning — badly on mobile. The hybrid
+      // satellite style already shows real terrain texture in a flat top-down view.
 
-        // Mongolia outline overlay — crisp national border with a soft halo.
+      // Mongolia outline overlay — crisp national border with a soft halo.
+      // Re-added on every style load so it survives a fallback style swap.
+      function addOutline() {
+        if (!mapRef.current || map.getSource('mn-outline')) return;
         fetch('/geo/mongolia.json')
           .then((response) => response.json())
           .then((geojson) => {
@@ -145,6 +154,19 @@ export function ProjectsMapPreview({
             });
           })
           .catch(() => {});
+      }
+
+      map.on('load', addOutline);
+
+      // If the MapTiler style/tiles are rejected (403 domain restriction, quota,
+      // expired key) fall back to the local OSM raster style once, so the map
+      // still renders instead of leaving a blank container.
+      let usedFallback = false;
+      map.on('error', (event) => {
+        if (usedFallback || !isMapTilerLoadError(event)) return;
+        usedFallback = true;
+        map.setStyle(MAP_FALLBACK_STYLE);
+        map.once('styledata', addOutline);
       });
 
       projects.forEach((project) => {
