@@ -16,14 +16,14 @@ featured_projects:
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: ''
     stats:
+      - value: 6Mt - 25Mt @ 0.59% to 1.5% CuEq
+        label: Exploration Target (Conceptual - JORC 2012)
       - value: 880m
         label: Continuous mineralisation
+      - value: Open
+        label: At depth & along strike
       - value: 89–95%
         label: Metallurgy recovery
-      - value: Open
-        label: At depth & along strike - NNW & SSE
-      - value: Camp-Scale
-        label: District-scale sulphide corridor emerging
     thumbnails:
       - image: /uploads/field/20251101_073622736_iOS.jpg
         caption: Massive sulphide intercept · Oval discovery.
@@ -36,21 +36,21 @@ featured_projects:
         alt: Mineralised drill core close-up
     cta_label: More about the project
     cta_href: /projects/yambat
-    footnote: 'Source: Refer to ASX announcements on 28 Oct 2024, 24 Sep 2025, 29 Jan 2026 for full disclosures.'
+    footnote: 'Source: Refer to ASX announcements on 28 Oct 2024, 24 Sep 2025, 29 Jan 2026, 24 Aug 2026 for full disclosures.'
   - eyebrow: Red Hill — Complimentary Cu-Au project
     headline: Red Hill  Cu-Au
     lead: A copper-gold complimentary project set just 8 km from Oval, with thick Cu-Au VMS sulphides at Red Hill and shallow high-grade gold-silver at North Hill, all tied to a granted mining licence to 2045.
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
-      - value: 2.58% Cu
-        label: High-Grade Massive Sulphide
+      - value: 15Mt to 30Mt @ 0.71% to 0.9% Cu
+        label: Exploration Target (Conceptual - JORC 2012)
+      - value: 550m+
+        label: Strike Confirmed & 150m below surface
       - value: Open
         label: To depth & along strike
-      - value: 272m
-        label: Strike length confirmed
-      - value: Au zone
-        label: Shallow gold zone
+      - value: 600m
+        label: Shallow Gold Corridor Defined
     thumbnails:
       - image: /uploads/Azurite-crop.jpg
         caption: Oxidised rhyolite with azurite, drillhole MU2602
@@ -63,7 +63,7 @@ featured_projects:
         alt: Massive Sulphide Intercept MU2605, Red Hill project
     cta_label: More about the project
     cta_href: /projects/red-hill
-    footnote: 'Source: Refer to ASX Announcements on 28 Nov 2025, 10 Jun 2026 for full disclosures.'
+    footnote: 'Source: Refer to ASX Announcements on 28 Nov 2025, 10 Jun 2026, 24 Aug 2026 for full disclosures.'
 why_mongolia:
   eyebrow: Why Mongolia
   headline: Mature Jurisdiction Under-explored Potential Strategic Location
