@@ -16,8 +16,8 @@ featured_projects:
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: Oval Cu·Ni·PGE нээлтийн талбайн агаарын зураг, Монгол
     stats:
-      - value: 6Mt - 25Mt @ 0.59% to 1.5% CuEq
-        label: Хайгуулын Зорилт (Концепц шинжтэй - JORC 2012 Стандарт)
+      - value: Өндөр агуулга бүхий
+        label: Магматик зэс, никель систем
       - value: 880m
         label: Тасралтгүй эрдэсжилт
       - value: Нээлттэй
@@ -43,8 +43,8 @@ featured_projects:
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Red Hill (Майхан Уул) төслийн талбайн зураг, Говь-Алтай, Монгол
     stats:
-      - value: 15Mt - 30Mt @ 0.71% - 0.9% Cu
-        label: Хайгуулын зорилт (Концепц шинжтэй - JORC 2012)
+      - value: Волканик Цул Сульфидийн Систем
+        label: Хайгуулын зорилт тодорхойлсон
       - value: 550m+
         label: Судлын дагуу баталгаажсан & Гадаргуугаас доош 150м
       - value: Нээлттэй

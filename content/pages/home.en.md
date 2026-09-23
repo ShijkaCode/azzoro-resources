@@ -16,8 +16,8 @@ featured_projects:
     image: /uploads/gallery/photos/discovery_4k.png
     image_alt: ''
     stats:
-      - value: 6Mt - 25Mt @ 0.59% to 1.5% CuEq
-        label: Exploration Target (Conceptual - JORC 2012)
+      - value: High-Grade
+        label: Magmatic Cu-Ni-PGE Sulphide System
       - value: 880m
         label: Continuous mineralisation
       - value: Open
@@ -43,8 +43,8 @@ featured_projects:
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
-      - value: 15Mt to 30Mt @ 0.71% to 0.9% Cu
-        label: Exploration Target (Conceptual - JORC 2012)
+      - value: Volcanogenic Massive Sulphide System
+        label: With Defined Exploration Target
       - value: 550m+
         label: Strike Confirmed & 150m below surface
       - value: Open
