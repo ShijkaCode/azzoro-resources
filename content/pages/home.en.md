@@ -43,7 +43,7 @@ featured_projects:
     image: /uploads/20251028_042623542_iOS_crop.jpg
     image_alt: Drilling at Red Hill (Maikhan Uul) project, Govi-Altai, Mongolia
     stats:
-      - value: Volcanogenic Massive Sulphide System
+      - value: VMS System
         label: With Defined Exploration Target
       - value: 550m+
         label: Strike Confirmed & 150m below surface
